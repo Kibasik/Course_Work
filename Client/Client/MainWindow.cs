@@ -12,12 +12,12 @@ using FastReport;
 
 namespace Client
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
         MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
 
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace Client
             goodsCategoryCB.Items.Clear();
             connection.Open();
             command = new MySqlCommand("SELECT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory " +
-                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = \"" + stationaryRB.Text + "\"", connection);
+                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = '" + stationaryRB.Text + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())
@@ -65,7 +65,7 @@ namespace Client
             goodsCategoryCB.Items.Clear();
             connection.Open();
             command = new MySqlCommand("SELECT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory " +
-                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = \"" + mobileRB.Text + "\"", connection);
+                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = '" + mobileRB.Text + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())
@@ -110,6 +110,37 @@ namespace Client
                 dataView.RowFilter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "'";
                 goodsListDGV.DataSource = dataView;
             }
+            connection.Close();
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void опрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.ShowDialog();
+        }
+
+        private void descriptionButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            DescriptionWindow dw = new DescriptionWindow();
+            dw.goodsName = goodsListDGV.CurrentRow.Cells[0].Value.ToString();
+            command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName FROM goodscatalog INNER JOIN " +
+                                       "goodsdescription ON goodscatalog.GoodsDescriptionID = goodsdescription.GoodsDescriptionID WHERE " +
+                                       "goodscatalog.GoodsName = '" + goodsListDGV.CurrentRow.Cells[0].Value.ToString() + "'", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    dw.description = MyReader.GetString(0);
+                }
+                MyReader.Close();
+            }
+            dw.ShowDialog();
             connection.Close();
         }
     }
