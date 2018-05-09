@@ -1,0 +1,6 @@
+[ODBC]
+DRIVER=MySQL ODBC 5.2 Unicode Driver
+UID=client
+PORT=3306
+DATABASE=course
+SERVER=localhost
