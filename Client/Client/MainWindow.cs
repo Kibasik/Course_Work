@@ -85,6 +85,16 @@ namespace Client
             stationaryRB.Checked = false;
             mobileRB.Checked = false;
             connection.Open();
+            goodsCategoryCB.Items.Clear();
+            command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName FROM categorygoods", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    goodsCategoryCB.Items.Add(MyReader.GetString(0));
+                }
+                MyReader.Close();
+            }
             DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
             dataView.RowFilter = "";
             goodsListDGV.DataSource = dataView;
