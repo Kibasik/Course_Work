@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.goodsListDGV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.goodsCategoryCB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.report1 = new FastReport.Report();
+            this.allGoodsListButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.goodsListDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.report1)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsListDGV
@@ -162,6 +160,7 @@
             this.goodsCategoryCB.Name = "goodsCategoryCB";
             this.goodsCategoryCB.Size = new System.Drawing.Size(188, 21);
             this.goodsCategoryCB.TabIndex = 6;
+            this.goodsCategoryCB.SelectedIndexChanged += new System.EventHandler(this.goodsCategoryCB_SelectedIndexChanged_1);
             // 
             // label2
             // 
@@ -172,10 +171,15 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Категория комплектующего:";
             // 
-            // report1
+            // allGoodsListButton
             // 
-            this.report1.NeedRefresh = false;
-            this.report1.ReportResourceString = resources.GetString("report1.ReportResourceString");
+            this.allGoodsListButton.Location = new System.Drawing.Point(446, 22);
+            this.allGoodsListButton.Name = "allGoodsListButton";
+            this.allGoodsListButton.Size = new System.Drawing.Size(98, 42);
+            this.allGoodsListButton.TabIndex = 9;
+            this.allGoodsListButton.Text = "Показать весь список";
+            this.allGoodsListButton.UseVisualStyleBackColor = true;
+            this.allGoodsListButton.Click += new System.EventHandler(this.allGoodsListButton_Click);
             // 
             // Form1
             // 
@@ -183,6 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.allGoodsListButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.goodsCategoryCB);
             this.Controls.Add(this.label1);
@@ -199,7 +204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsListDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.report1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +229,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox goodsCategoryCB;
         private System.Windows.Forms.Label label2;
-        private FastReport.Report report1;
+        private System.Windows.Forms.Button allGoodsListButton;
     }
 }
 
