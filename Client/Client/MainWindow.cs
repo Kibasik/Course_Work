@@ -249,6 +249,11 @@ namespace Client
                 dataView.RowFilter = "GoodsName LIKE '" + goodsNameTB.Text + "%'";
                 goodsListDGV.DataSource = dataView;
             }
+            else if (goodsNameTB.Text == "")
+            {
+                dataView.RowFilter = "";
+                goodsListDGV.DataSource = dataView;
+            }
             connection.Close();
         }
     }

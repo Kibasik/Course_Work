@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.goodsListDGV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -387,25 +387,26 @@
             this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
             this.goodsNameTB.TabIndex = 23;
             this.goodsNameTB.TextChanged += new System.EventHandler(this.goodsNameTB_TextChanged);
+            this.goodsNameTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsNameTB_KeyPress);
             // 
             // categoryGoodsQuantityChart
             // 
-            chartArea3.AxisX.Title = "Категория комплектующего";
-            chartArea3.AxisY.Title = "Количество";
-            chartArea3.Name = "ChartArea1";
-            this.categoryGoodsQuantityChart.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.Title = "Категория комплектующего";
+            chartArea1.AxisY.Title = "Количество";
+            chartArea1.Name = "ChartArea1";
+            this.categoryGoodsQuantityChart.ChartAreas.Add(chartArea1);
             this.categoryGoodsQuantityChart.DataSource = this.dataTableBindingSource1;
-            legend3.Name = "Legend1";
-            this.categoryGoodsQuantityChart.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.categoryGoodsQuantityChart.Legends.Add(legend1);
             this.categoryGoodsQuantityChart.Location = new System.Drawing.Point(21, 386);
             this.categoryGoodsQuantityChart.Name = "categoryGoodsQuantityChart";
-            series3.ChartArea = "ChartArea1";
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XValueMember = "CategoryGoodsName";
-            series3.YValueMembers = "Quantity";
-            this.categoryGoodsQuantityChart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueMember = "CategoryGoodsName";
+            series1.YValueMembers = "Quantity";
+            this.categoryGoodsQuantityChart.Series.Add(series1);
             this.categoryGoodsQuantityChart.Size = new System.Drawing.Size(586, 322);
             this.categoryGoodsQuantityChart.TabIndex = 24;
             this.categoryGoodsQuantityChart.Text = "Количество типов товаров";
