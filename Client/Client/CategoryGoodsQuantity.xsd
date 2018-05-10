@@ -21,6 +21,7 @@
             <Mappings>
               <Mapping SourceColumn="CategoryGoodsName" DataSetColumn="CategoryGoodsName" />
               <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="TypeCategoryName" DataSetColumn="TypeCategoryName" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -43,6 +44,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:long" />
+              <xs:element name="TypeCategoryName" msprop:Generator_ColumnVarNameInTable="columnTypeCategoryName" msprop:Generator_ColumnPropNameInRow="TypeCategoryName" msprop:Generator_ColumnPropNameInTable="TypeCategoryNameColumn" msprop:Generator_UserColumnName="TypeCategoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

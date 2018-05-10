@@ -99,6 +99,9 @@ namespace Client
         {
             stationaryRB.Checked = false;
             mobileRB.Checked = false;
+            lowPriceTB.Clear();
+            highPriceTB.Clear();
+            manufacturerTB.Clear();
             connection.Open();
             goodsCategoryCB.Items.Clear();
             command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName FROM categorygoods", connection);
@@ -194,19 +197,64 @@ namespace Client
         {
             connection.Open();
             DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            if (lowPriceTB.Text != "" && highPriceTB.Text == "")
+            if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text == "")
             {
                 dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
                 goodsListDGV.DataSource = dataView;
             }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text == "")
+            else if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text == "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text == "")
             {
                 dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
                 goodsListDGV.DataSource = dataView;
             }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text != "")
+            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text == "")
+            {
+                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text == "" && goodsNameTB.Text == "")
             {
                 dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text != "" && goodsNameTB.Text == "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text == "" && goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text != "" && goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
                 goodsListDGV.DataSource = dataView;
             }
             connection.Close();

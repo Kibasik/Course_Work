@@ -387,7 +387,6 @@
             this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
             this.goodsNameTB.TabIndex = 23;
             this.goodsNameTB.TextChanged += new System.EventHandler(this.goodsNameTB_TextChanged);
-            this.goodsNameTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsNameTB_KeyPress);
             // 
             // categoryGoodsQuantityChart
             // 
