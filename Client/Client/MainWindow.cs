@@ -16,16 +16,27 @@ namespace Client
     {
         MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
+        public int id { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            goodsCategoryCB.Items.Clear();
             connection.Open();
+            id = 0;
+            command = new MySqlCommand("SELECT componentslist.BasketID FROM componentslist", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    id = MyReader.GetInt32(0);
+                }
+                MyReader.Close();
+            }
+            goodsCategoryCB.Items.Clear();
             //TODO: данная строка кода позволяет загрузить данные в таблицу "goodsCatalogForClient.DataTable".При необходимости она может быть перемещена или удалена.
             this.dataTableTableAdapter.Fill(this.goodsCatalogForClient.DataTable);
             command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName FROM categorygoods", connection);
@@ -139,6 +150,7 @@ namespace Client
             connection.Open();
             DescriptionWindow dw = new DescriptionWindow();
             dw.goodsName = goodsListDGV.CurrentRow.Cells[0].Value.ToString();
+            dw.manufacturer = goodsListDGV.CurrentRow.Cells[3].Value.ToString();
             command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName FROM goodscatalog INNER JOIN " +
                                        "goodsdescription ON goodscatalog.GoodsDescriptionID = goodsdescription.GoodsDescriptionID WHERE " +
                                        "goodscatalog.GoodsName = '" + goodsListDGV.CurrentRow.Cells[0].Value.ToString() + "'", connection);
@@ -151,6 +163,72 @@ namespace Client
                 MyReader.Close();
             }
             dw.ShowDialog();
+            connection.Close();
+        }
+
+        private void lowPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void highPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void costButton_Click_1(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
+            if (lowPriceTB.Text != "" && highPriceTB.Text == "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text == "")
+            {
+                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            else if (highPriceTB.Text != "" && lowPriceTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            connection.Close();
+        }
+
+        private void filterManufacturerButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
+            if (manufacturerTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsManufacturerName = '" + manufacturerTB.Text + "'";
+                goodsListDGV.DataSource = dataView;
+            }
+            connection.Close();
+        }
+
+        private void корзинаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Basket basket = new Basket();
+            basket.ShowDialog();
+        }
+
+        private void basketButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            //Basket basket = new Basket();
+            //command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID) VALUES " +
+            //                           "('"+ goodsListDGV.CurrentRow.Cells[5].Value + "', '"+ (id + 1) + "')", connection);
+            //command.ExecuteNonQuery();
             connection.Close();
         }
     }

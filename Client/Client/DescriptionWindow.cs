@@ -14,6 +14,8 @@ namespace Client
     {
         public string description { get; set; }
         public string goodsName { get; set; }
+        public string manufacturer { get; set; }
+
         public DescriptionWindow()
         {
             InitializeComponent();
@@ -21,8 +23,7 @@ namespace Client
 
         private void DescriptionWindow_Load(object sender, EventArgs e)
         {
-            string pictureName = @"\" + goodsName + ".jpg"; 
-            descriptionPB.Image = Image.FromFile(Application.StartupPath + @"\" + goodsName + ".jpg");
+            goodsNameLabel.Text = manufacturer + " " + goodsName;
             descriptionRTB.Text = description;
         }
     }

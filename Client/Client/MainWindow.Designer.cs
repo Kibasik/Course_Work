@@ -35,9 +35,9 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goodsCatalogForClient = new Client.GoodsCatalogForClient();
-            this.dataTableTableAdapter = new Client.GoodsCatalogForClientTableAdapters.DataTableTableAdapter();
             this.stationaryRB = new System.Windows.Forms.RadioButton();
             this.mobileRB = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,11 +49,25 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.корзинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionButton = new System.Windows.Forms.Button();
+            this.lowPriceTB = new System.Windows.Forms.TextBox();
+            this.highPriceTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.costButton = new System.Windows.Forms.Button();
+            this.filterManufacturerButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.manufacturerTB = new System.Windows.Forms.TextBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.basketButton = new System.Windows.Forms.Button();
+            this.dataTableTableAdapter = new Client.GoodsCatalogForClientTableAdapters.DataTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.goodsListDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsListDGV
@@ -70,9 +84,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn5,
+            this.goodsIDDataGridViewTextBoxColumn});
             this.goodsListDGV.DataSource = this.dataTableBindingSource;
-            this.goodsListDGV.Location = new System.Drawing.Point(12, 76);
+            this.goodsListDGV.Location = new System.Drawing.Point(12, 73);
             this.goodsListDGV.Name = "goodsListDGV";
             this.goodsListDGV.ReadOnly = true;
             this.goodsListDGV.Size = new System.Drawing.Size(545, 246);
@@ -113,6 +128,14 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
+            // goodsIDDataGridViewTextBoxColumn
+            // 
+            this.goodsIDDataGridViewTextBoxColumn.DataPropertyName = "GoodsID";
+            this.goodsIDDataGridViewTextBoxColumn.HeaderText = "GoodsID";
+            this.goodsIDDataGridViewTextBoxColumn.Name = "goodsIDDataGridViewTextBoxColumn";
+            this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodsIDDataGridViewTextBoxColumn.Visible = false;
+            // 
             // dataTableBindingSource
             // 
             this.dataTableBindingSource.DataMember = "DataTable";
@@ -122,10 +145,6 @@
             // 
             this.goodsCatalogForClient.DataSetName = "GoodsCatalogForClient";
             this.goodsCatalogForClient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTableTableAdapter
-            // 
-            this.dataTableTableAdapter.ClearBeforeFill = true;
             // 
             // stationaryRB
             // 
@@ -192,7 +211,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.справкаToolStripMenuItem,
+            this.корзинаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -229,6 +249,13 @@
             this.опрограммеToolStripMenuItem.Text = "&О программе...";
             this.опрограммеToolStripMenuItem.Click += new System.EventHandler(this.опрограммеToolStripMenuItem_Click);
             // 
+            // корзинаToolStripMenuItem
+            // 
+            this.корзинаToolStripMenuItem.Name = "корзинаToolStripMenuItem";
+            this.корзинаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.корзинаToolStripMenuItem.Text = "&Корзина";
+            this.корзинаToolStripMenuItem.Click += new System.EventHandler(this.корзинаToolStripMenuItem_Click);
+            // 
             // descriptionButton
             // 
             this.descriptionButton.Location = new System.Drawing.Point(577, 76);
@@ -239,12 +266,117 @@
             this.descriptionButton.UseVisualStyleBackColor = true;
             this.descriptionButton.Click += new System.EventHandler(this.descriptionButton_Click);
             // 
-            // Form1
+            // lowPriceTB
+            // 
+            this.lowPriceTB.Location = new System.Drawing.Point(603, 138);
+            this.lowPriceTB.MaxLength = 10;
+            this.lowPriceTB.Name = "lowPriceTB";
+            this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
+            this.lowPriceTB.TabIndex = 12;
+            this.lowPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lowPriceTB_KeyPress);
+            // 
+            // highPriceTB
+            // 
+            this.highPriceTB.Location = new System.Drawing.Point(603, 164);
+            this.highPriceTB.MaxLength = 10;
+            this.highPriceTB.Name = "highPriceTB";
+            this.highPriceTB.Size = new System.Drawing.Size(80, 20);
+            this.highPriceTB.TabIndex = 13;
+            this.highPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.highPriceTB_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(574, 112);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Введите стоимость:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(574, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "От:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(574, 164);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "До:";
+            // 
+            // costButton
+            // 
+            this.costButton.Location = new System.Drawing.Point(577, 190);
+            this.costButton.Name = "costButton";
+            this.costButton.Size = new System.Drawing.Size(75, 23);
+            this.costButton.TabIndex = 17;
+            this.costButton.Text = "Применить";
+            this.costButton.UseVisualStyleBackColor = true;
+            this.costButton.Click += new System.EventHandler(this.costButton_Click_1);
+            // 
+            // filterManufacturerButton
+            // 
+            this.filterManufacturerButton.Location = new System.Drawing.Point(577, 277);
+            this.filterManufacturerButton.Name = "filterManufacturerButton";
+            this.filterManufacturerButton.Size = new System.Drawing.Size(100, 23);
+            this.filterManufacturerButton.TabIndex = 18;
+            this.filterManufacturerButton.Text = "Отфильтровать";
+            this.filterManufacturerButton.UseVisualStyleBackColor = true;
+            this.filterManufacturerButton.Click += new System.EventHandler(this.filterManufacturerButton_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(574, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(168, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Введите фирму производитель:";
+            // 
+            // manufacturerTB
+            // 
+            this.manufacturerTB.Location = new System.Drawing.Point(577, 251);
+            this.manufacturerTB.Name = "manufacturerTB";
+            this.manufacturerTB.Size = new System.Drawing.Size(100, 20);
+            this.manufacturerTB.TabIndex = 20;
+            // 
+            // basketButton
+            // 
+            this.basketButton.Location = new System.Drawing.Point(12, 343);
+            this.basketButton.Name = "basketButton";
+            this.basketButton.Size = new System.Drawing.Size(75, 37);
+            this.basketButton.TabIndex = 21;
+            this.basketButton.Text = "Добавить в корзину";
+            this.basketButton.UseVisualStyleBackColor = true;
+            this.basketButton.Click += new System.EventHandler(this.basketButton_Click);
+            // 
+            // dataTableTableAdapter
+            // 
+            this.dataTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.basketButton);
+            this.Controls.Add(this.manufacturerTB);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.filterManufacturerButton);
+            this.Controls.Add(this.costButton);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.highPriceTB);
+            this.Controls.Add(this.lowPriceTB);
             this.Controls.Add(this.descriptionButton);
             this.Controls.Add(this.allGoodsListButton);
             this.Controls.Add(this.label2);
@@ -258,15 +390,16 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1024, 768);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.ShowIcon = false;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "MainWindow";
+            this.Load += new System.EventHandler(this.MainWindow_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.goodsListDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,11 +415,6 @@
         private GoodsCatalogForClient goodsCatalogForClient;
         private System.Windows.Forms.BindingSource dataTableBindingSource;
         private GoodsCatalogForClientTableAdapters.DataTableTableAdapter dataTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.RadioButton stationaryRB;
         private System.Windows.Forms.RadioButton mobileRB;
         private System.Windows.Forms.Label label1;
@@ -299,6 +427,24 @@
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem опрограммеToolStripMenuItem;
         private System.Windows.Forms.Button descriptionButton;
+        private System.Windows.Forms.TextBox lowPriceTB;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.TextBox highPriceTB;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button costButton;
+        private System.Windows.Forms.Button filterManufacturerButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox manufacturerTB;
+        private System.Windows.Forms.ToolStripMenuItem корзинаToolStripMenuItem;
+        private System.Windows.Forms.Button basketButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
     }
 }
 
