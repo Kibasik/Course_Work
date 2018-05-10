@@ -63,6 +63,8 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.basketButton = new System.Windows.Forms.Button();
             this.dataTableTableAdapter = new Client.GoodsCatalogForClientTableAdapters.DataTableTableAdapter();
+            this.label7 = new System.Windows.Forms.Label();
+            this.goodsNameTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.goodsListDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).BeginInit();
@@ -361,12 +363,31 @@
             // 
             this.dataTableTableAdapter.ClearBeforeFill = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(574, 323);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(167, 13);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Введите наименование товара:";
+            // 
+            // goodsNameTB
+            // 
+            this.goodsNameTB.Location = new System.Drawing.Point(577, 343);
+            this.goodsNameTB.Name = "goodsNameTB";
+            this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
+            this.goodsNameTB.TabIndex = 23;
+            this.goodsNameTB.TextChanged += new System.EventHandler(this.goodsNameTB_TextChanged);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.goodsNameTB);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.basketButton);
             this.Controls.Add(this.manufacturerTB);
             this.Controls.Add(this.label6);
@@ -445,6 +466,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox goodsNameTB;
     }
 }
 

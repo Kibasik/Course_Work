@@ -231,5 +231,17 @@ namespace Client
             //command.ExecuteNonQuery();
             connection.Close();
         }
+
+        private void goodsNameTB_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
+            if (goodsNameTB.Text != "")
+            {
+                dataView.RowFilter = "GoodsName LIKE '" + goodsNameTB.Text + "%'";
+                goodsListDGV.DataSource = dataView;
+            }
+            connection.Close();
+        }
     }
 }
