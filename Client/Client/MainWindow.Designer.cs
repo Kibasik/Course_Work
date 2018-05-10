@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.goodsListDGV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,23 +63,21 @@
             this.filterManufacturerButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.manufacturerTB = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.basketButton = new System.Windows.Forms.Button();
             this.dataTableTableAdapter = new Client.GoodsCatalogForClientTableAdapters.DataTableTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.goodsNameTB = new System.Windows.Forms.TextBox();
             this.categoryGoodsQuantityChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.categoryGoodsQuantity = new Client.CategoryGoodsQuantity();
             this.dataTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryGoodsQuantity = new Client.CategoryGoodsQuantity();
             this.dataTableTableAdapter1 = new Client.CategoryGoodsQuantityTableAdapters.DataTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.goodsListDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGoodsQuantityChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryGoodsQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryGoodsQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsListDGV
@@ -392,35 +390,35 @@
             // 
             // categoryGoodsQuantityChart
             // 
-            chartArea1.AxisX.Title = "Категория комплектующего";
-            chartArea1.AxisY.Title = "Количество";
-            chartArea1.Name = "ChartArea1";
-            this.categoryGoodsQuantityChart.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.Title = "Категория комплектующего";
+            chartArea3.AxisY.Title = "Количество";
+            chartArea3.Name = "ChartArea1";
+            this.categoryGoodsQuantityChart.ChartAreas.Add(chartArea3);
             this.categoryGoodsQuantityChart.DataSource = this.dataTableBindingSource1;
-            legend1.Name = "Legend1";
-            this.categoryGoodsQuantityChart.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.categoryGoodsQuantityChart.Legends.Add(legend3);
             this.categoryGoodsQuantityChart.Location = new System.Drawing.Point(21, 386);
             this.categoryGoodsQuantityChart.Name = "categoryGoodsQuantityChart";
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueMember = "CategoryGoodsName";
-            series1.YValueMembers = "Quantity";
-            this.categoryGoodsQuantityChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.XValueMember = "CategoryGoodsName";
+            series3.YValueMembers = "Quantity";
+            this.categoryGoodsQuantityChart.Series.Add(series3);
             this.categoryGoodsQuantityChart.Size = new System.Drawing.Size(586, 322);
             this.categoryGoodsQuantityChart.TabIndex = 24;
             this.categoryGoodsQuantityChart.Text = "Количество типов товаров";
-            // 
-            // categoryGoodsQuantity
-            // 
-            this.categoryGoodsQuantity.DataSetName = "CategoryGoodsQuantity";
-            this.categoryGoodsQuantity.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTableBindingSource1
             // 
             this.dataTableBindingSource1.DataMember = "DataTable";
             this.dataTableBindingSource1.DataSource = this.categoryGoodsQuantity;
+            // 
+            // categoryGoodsQuantity
+            // 
+            this.categoryGoodsQuantity.DataSetName = "CategoryGoodsQuantity";
+            this.categoryGoodsQuantity.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTableTableAdapter1
             // 
@@ -467,10 +465,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsCatalogForClient)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGoodsQuantityChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryGoodsQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryGoodsQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,7 +496,6 @@
         private System.Windows.Forms.ToolStripMenuItem опрограммеToolStripMenuItem;
         private System.Windows.Forms.Button descriptionButton;
         private System.Windows.Forms.TextBox lowPriceTB;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.TextBox highPriceTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

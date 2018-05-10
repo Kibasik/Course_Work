@@ -113,6 +113,8 @@ namespace Client
             DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
             dataView.RowFilter = "";
             goodsListDGV.DataSource = dataView;
+            dataTableBindingSource1.Filter = "";
+            categoryGoodsQuantityChart.DataBind();
             connection.Close();
         }
 
@@ -135,6 +137,8 @@ namespace Client
                 dataView.RowFilter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "'";
                 goodsListDGV.DataSource = dataView;
             }
+            dataTableBindingSource1.Filter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "'";
+            categoryGoodsQuantityChart.DataBind();
             connection.Close();
         }
 
