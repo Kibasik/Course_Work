@@ -84,6 +84,11 @@
     <Compile Include="Basket.Designer.cs">
       <DependentUpon>Basket.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryGoodsQuantity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoryGoodsQuantity.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +125,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="CategoryGoodsQuantity.xsc">
+      <DependentUpon>CategoryGoodsQuantity.xsd</DependentUpon>
+    </None>
+    <None Include="CategoryGoodsQuantity.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CategoryGoodsQuantity.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CategoryGoodsQuantity.xss">
+      <DependentUpon>CategoryGoodsQuantity.xsd</DependentUpon>
+    </None>
     <None Include="GoodsCatalogForClient.xsc">
       <DependentUpon>GoodsCatalogForClient.xsd</DependentUpon>
     </None>
@@ -149,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -54,7 +54,7 @@
             labelProductName.Name = "labelProductName";
             labelProductName.Size = new System.Drawing.Size(271, 17);
             labelProductName.TabIndex = 19;
-            labelProductName.Text = "Название продукта";
+            labelProductName.Text = "Магазин компьютерной техники";
             labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelVersion
@@ -66,7 +66,7 @@
             labelVersion.Name = "labelVersion";
             labelVersion.Size = new System.Drawing.Size(271, 17);
             labelVersion.TabIndex = 0;
-            labelVersion.Text = "Версия";
+            labelVersion.Text = "Версия: 0.1";
             labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelCopyright

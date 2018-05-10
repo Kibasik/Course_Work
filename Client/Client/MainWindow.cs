@@ -25,6 +25,10 @@ namespace Client
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "categoryGoodsQuantity.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter1.Fill(this.categoryGoodsQuantity.DataTable);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "categoryGoodsQuantity.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter1.Fill(this.categoryGoodsQuantity.DataTable);
             connection.Open();
             id = 0;
             command = new MySqlCommand("SELECT componentslist.BasketID FROM componentslist", connection);
