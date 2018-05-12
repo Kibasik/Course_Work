@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Client
 {
@@ -15,6 +16,8 @@ namespace Client
         public string description { get; set; }
         public string goodsName { get; set; }
         public string manufacturer { get; set; }
+        public string goodsID { get; set; }
+        public byte[] image { get; set; }
 
         public DescriptionWindow()
         {
@@ -25,6 +28,8 @@ namespace Client
         {
             goodsNameLabel.Text = manufacturer + " " + goodsName;
             descriptionRTB.Text = description;
+            var memoryStream = new MemoryStream(image);
+            goodsImagePB.Image = Image.FromStream(memoryStream);
         }
     }
 }

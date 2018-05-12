@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using FastReport;
+using System.IO;
 
 namespace Client
 {
@@ -17,6 +18,7 @@ namespace Client
         MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
         public int id { get; set; }
+        public List<string> stationaryGoodsCategory = new List<string>();
 
         public MainWindow()
         {
@@ -25,97 +27,51 @@ namespace Client
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "categoryGoodsQuantity.DataTable". При необходимости она может быть перемещена или удалена.
-            this.dataTableTableAdapter1.Fill(this.categoryGoodsQuantity.DataTable);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "categoryGoodsQuantity.DataTable". При необходимости она может быть перемещена или удалена.
-            this.dataTableTableAdapter1.Fill(this.categoryGoodsQuantity.DataTable);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "stationaryGoods.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter.Fill(this.stationaryGoods.DataTable);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "stationaryGoodsQuantity.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter1.Fill(this.stationaryGoodsQuantity.DataTable);
             connection.Open();
-            id = 0;
-            command = new MySqlCommand("SELECT componentslist.BasketID FROM componentslist", connection);
+            //id = 0;
+            //command = new MySqlCommand("SELECT componentslist.BasketID FROM componentslist", connection);
+            //using (MySqlDataReader MyReader = command.ExecuteReader())
+            //{
+            //    while (MyReader.Read())
+            //    {
+            //        id = MyReader.GetInt32(0);
+            //    }
+            //    MyReader.Close();
+            //}
+            //goodsCategoryCB.Items.Clear();
+            command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory ON " +
+                                       "categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = 'Стационарное'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())
                 {
-                    id = MyReader.GetInt32(0);
+                    stationaryGoodsCategoryCB.Items.Add(MyReader.GetString(0));
+                    stationaryGoodsCategory.Add(MyReader.GetString(0));
                 }
                 MyReader.Close();
             }
-            goodsCategoryCB.Items.Clear();
-            //TODO: данная строка кода позволяет загрузить данные в таблицу "goodsCatalogForClient.DataTable".При необходимости она может быть перемещена или удалена.
-            this.dataTableTableAdapter.Fill(this.goodsCatalogForClient.DataTable);
-            command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName FROM categorygoods", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
-            {
-                while (MyReader.Read())
-                {
-                    goodsCategoryCB.Items.Add(MyReader.GetString(0));
-                }
-                MyReader.Close();
-            }
-            connection.Close();
-        }
-
-        private void stationaryRB_CheckedChanged_1(object sender, EventArgs e)
-        {
-            goodsCategoryCB.Items.Clear();
-            connection.Open();
-            command = new MySqlCommand("SELECT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory " +
-                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = '" + stationaryRB.Text + "'", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
-            {
-                while (MyReader.Read())
-                {
-                    goodsCategoryCB.Items.Add(MyReader.GetString(0));
-                }
-                MyReader.Close();
-            }
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            dataView.RowFilter = "TypeCategoryName = '" + stationaryRB.Text + "'";
-            goodsListDGV.DataSource = dataView;
-            connection.Close();
-        }
-
-        private void mobileRB_CheckedChanged_1(object sender, EventArgs e)
-        {
-            goodsCategoryCB.Items.Clear();
-            connection.Open();
-            command = new MySqlCommand("SELECT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory " +
-                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = '" + mobileRB.Text + "'", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
-            {
-                while (MyReader.Read())
-                {
-                    goodsCategoryCB.Items.Add(MyReader.GetString(0));
-                }
-                MyReader.Close();
-            }
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            dataView.RowFilter = "TypeCategoryName = '" + mobileRB.Text + "'";
-            goodsListDGV.DataSource = dataView;
             connection.Close();
         }
 
         private void allGoodsListButton_Click(object sender, EventArgs e)
         {
-            stationaryRB.Checked = false;
-            mobileRB.Checked = false;
-            lowPriceTB.Clear();
-            highPriceTB.Clear();
-            manufacturerTB.Clear();
-            connection.Open();
-            goodsCategoryCB.Items.Clear();
-            command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName FROM categorygoods", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
+            stationaryLowPriceTB.Clear();
+            stationaryHighPriceTB.Clear();
+            stationaryManufacturerTB.Clear();
+            stationaryGoodsCategoryCB.ResetText();
+            stationaryGoodsCategoryCB.Items.Clear();
+            for (int i = 0; i < stationaryGoodsCategory.Count; i++)
             {
-                while (MyReader.Read())
-                {
-                    goodsCategoryCB.Items.Add(MyReader.GetString(0));
-                }
-                MyReader.Close();
+                stationaryGoodsCategoryCB.Items.Add(stationaryGoodsCategory[i]);
             }
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
+            connection.Open();
+            DataView dataView = stationaryGoods.Tables[0].DefaultView;
             dataView.RowFilter = "";
-            goodsListDGV.DataSource = dataView;
+            stationaryGoodsDGV.DataSource = dataView;
             dataTableBindingSource1.Filter = "";
             categoryGoodsQuantityChart.DataBind();
             connection.Close();
@@ -124,24 +80,25 @@ namespace Client
         private void goodsCategoryCB_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             connection.Open();
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            if (stationaryRB.Checked == true)
+            DataView dataView = stationaryGoods.Tables[0].DefaultView;
+            dataView.RowFilter = "CategoryGoodsName = '" + stationaryGoodsCategoryCB.SelectedItem.ToString() + "'";
+            if (stationaryLowPriceTB.Text != "")
             {
-                dataView.RowFilter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "' AND TypeCategoryName = '" + stationaryRB.Text + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsCost >= '" + Convert.ToInt32(stationaryLowPriceTB.Text) + "'";
             }
-            else if (mobileRB.Checked == true)
+            if (stationaryHighPriceTB.Text != "")
             {
-                dataView.RowFilter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "' AND TypeCategoryName = '" + mobileRB.Text + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsCost <= '" + Convert.ToInt32(stationaryHighPriceTB.Text) + "'";
             }
-            else
+            if (stationaryManufacturerTB.Text != "")
             {
-                dataView.RowFilter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsManufacturerName = '" + stationaryManufacturerTB.Text + "'";
             }
-            dataTableBindingSource1.Filter = "CategoryGoodsName = '" + goodsCategoryCB.SelectedItem.ToString() + "'";
-            categoryGoodsQuantityChart.DataBind();
+            if(stationaryGoodsNameTB.Text != "")
+            {
+                dataView.RowFilter += "AND GoodsName LIKE '" + stationaryGoodsNameTB.Text + "%'";
+            }
+            stationaryGoodsDGV.DataSource = dataView;
             connection.Close();
         }
 
@@ -160,15 +117,16 @@ namespace Client
         {
             connection.Open();
             DescriptionWindow dw = new DescriptionWindow();
-            dw.goodsName = goodsListDGV.CurrentRow.Cells[0].Value.ToString();
-            dw.manufacturer = goodsListDGV.CurrentRow.Cells[3].Value.ToString();
-            command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName FROM goodscatalog INNER JOIN " +
+            dw.goodsName = stationaryGoodsDGV.CurrentRow.Cells[2].Value.ToString();
+            dw.manufacturer = stationaryGoodsDGV.CurrentRow.Cells[3].Value.ToString();
+            command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName, goodscatalog.GoodsImage FROM goodscatalog INNER JOIN " +
                                        "goodsdescription ON goodscatalog.GoodsDescriptionID = goodsdescription.GoodsDescriptionID WHERE " +
-                                       "goodscatalog.GoodsName = '" + goodsListDGV.CurrentRow.Cells[0].Value.ToString() + "'", connection);
+                                       "goodscatalog.GoodsID = '" + stationaryGoodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())
                 {
+                    dw.image = (byte[])(MyReader[2]);
                     dw.description = MyReader.GetString(0);
                 }
                 MyReader.Close();
@@ -196,79 +154,57 @@ namespace Client
         private void costButton_Click_1(object sender, EventArgs e)
         {
             connection.Open();
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text == "")
+            DataView dataView = stationaryGoods.Tables[0].DefaultView;
+            if (stationaryLowPriceTB.Text != "" && stationaryHighPriceTB.Text == "")
             {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(stationaryLowPriceTB.Text) + "'";
             }
-            else if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text == "")
+            if (stationaryLowPriceTB.Text == "" && stationaryHighPriceTB.Text != "")
             {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(stationaryHighPriceTB.Text) + "'";
             }
-            else if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text != "")
+            if (stationaryLowPriceTB.Text != "" && stationaryHighPriceTB.Text != "")
             {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(stationaryLowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(stationaryHighPriceTB.Text) + "'";
             }
-            else if (lowPriceTB.Text != "" && highPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text != "")
+            if (stationaryManufacturerTB.Text != "")
             {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsManufacturerName = '" + stationaryManufacturerTB.Text + "'";
             }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text == "")
+            if (stationaryGoodsNameTB.Text != "")
             {
-                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsName LIKE '" + stationaryGoodsNameTB.Text + "%'";
             }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text == "")
+            if (stationaryGoodsCategoryCB.SelectedItem != null)
             {
-                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND CategoryGoodsName = '" + stationaryGoodsCategoryCB.SelectedItem.ToString() + "'";
             }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text == "" && goodsNameTB.Text != "")
-            {
-                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
-            }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text == "" && manufacturerTB.Text != "" && goodsNameTB.Text != "")
-            {
-                dataView.RowFilter = "GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
-            }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text == "" && goodsNameTB.Text == "")
-            {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
-                goodsListDGV.DataSource = dataView;
-            }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text != "" && goodsNameTB.Text == "")
-            {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "'";
-                goodsListDGV.DataSource = dataView;
-            }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text == "" && goodsNameTB.Text != "")
-            {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
-            }
-            else if (highPriceTB.Text != "" && lowPriceTB.Text != "" && manufacturerTB.Text != "" && goodsNameTB.Text != "")
-            {
-                dataView.RowFilter = "GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "' AND GoodsManufacturerName = '" + manufacturerTB.Text + "' AND GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
-            }
+            stationaryGoodsDGV.DataSource = dataView;
             connection.Close();
         }
 
         private void filterManufacturerButton_Click(object sender, EventArgs e)
         {
             connection.Open();
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            if (manufacturerTB.Text != "")
+            DataView dataView = stationaryGoods.Tables[0].DefaultView;
+            dataView.RowFilter = "GoodsManufacturerName = '" + stationaryManufacturerTB.Text + "'";
+            if (stationaryLowPriceTB.Text != "")
             {
-                dataView.RowFilter = "GoodsManufacturerName = '" + manufacturerTB.Text + "'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsCost >= '" + Convert.ToInt32(stationaryLowPriceTB.Text) + "'";
             }
+            if (stationaryHighPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND GoodsCost <= '" + Convert.ToInt32(stationaryHighPriceTB.Text) + "'";
+            }
+            if (stationaryGoodsCategoryCB.SelectedItem != null)
+            {
+                dataView.RowFilter += "AND CategoryGoodsName = '" + stationaryGoodsCategoryCB.SelectedItem.ToString() + "'";
+            }
+            if (stationaryGoodsNameTB.Text != "")
+            {
+                dataView.RowFilter += "AND GoodsName LIKE '" + stationaryGoodsNameTB.Text + "%'";
+            }
+            stationaryGoodsDGV.DataSource = dataView;
             connection.Close();
         }
 
@@ -291,17 +227,25 @@ namespace Client
         private void goodsNameTB_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
-            DataView dataView = goodsCatalogForClient.Tables[0].DefaultView;
-            if (goodsNameTB.Text != "")
+            DataView dataView = stationaryGoods.Tables[0].DefaultView;
+            dataView.RowFilter = "GoodsName LIKE '" + stationaryGoodsNameTB.Text + "%'";
+            if (stationaryLowPriceTB.Text != "")
             {
-                dataView.RowFilter = "GoodsName LIKE '" + goodsNameTB.Text + "%'";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsCost >= '" + Convert.ToInt32(stationaryLowPriceTB.Text) + "'";
             }
-            else if (goodsNameTB.Text == "")
+            if (stationaryHighPriceTB.Text != "")
             {
-                dataView.RowFilter = "";
-                goodsListDGV.DataSource = dataView;
+                dataView.RowFilter += "AND GoodsCost <= '" + Convert.ToInt32(stationaryHighPriceTB.Text) + "'";
             }
+            if (stationaryGoodsCategoryCB.SelectedItem != null)
+            {
+                dataView.RowFilter += "AND CategoryGoodsName = '" + stationaryGoodsCategoryCB.SelectedItem.ToString() + "'";
+            }
+            if (stationaryManufacturerTB.Text != "")
+            {
+                dataView.RowFilter += "AND GoodsManufacturerName = '" + stationaryManufacturerTB.Text + "'";
+            }
+            stationaryGoodsDGV.DataSource = dataView;
             connection.Close();
         }
     }
