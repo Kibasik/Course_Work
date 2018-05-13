@@ -49,6 +49,23 @@ namespace Client
                 }
                 MyReader.Close();
             }
+            command = new MySqlCommand("SELECT softwaretype.SoftwareTypeName, software.SoftwareName, software.SoftwareCost, " +
+                                       "chosensoftware.BasketID FROM chosensoftware INNER JOIN software ON chosensoftware.SoftwareID = software.SoftwareID " +
+                                       "INNER JOIN softwaretype ON software.SoftwareTypeID = softwaretype.SoftwareTypeID WHERE chosensoftware.BasketID = '" + basketID + "'", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                int j = 0;
+                while (MyReader.Read())
+                {
+                    softwareDGV.Rows.Add();
+                    softwareDGV[0, j].Value = MyReader.GetString(0);
+                    softwareDGV[1, j].Value = MyReader.GetString(1);
+                    softwareDGV[2, j].Value = MyReader.GetString(2);
+                    j++;
+                    totalCost += MyReader.GetInt32(2);
+                }
+                MyReader.Close();
+            }
             totalCostLabel.Text = totalCost.ToString();
             connection.Close();
         }

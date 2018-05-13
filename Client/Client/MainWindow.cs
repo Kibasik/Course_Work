@@ -37,17 +37,19 @@ namespace Client
             this.dataTableTableAdapter.Fill(this.goodsQuantity.DataTable);
             connection.Open();
             id = 0;
-            command = new MySqlCommand("SELECT componentslist.BasketID FROM componentslist", connection);
+            command = new MySqlCommand("SELECT basket.BasketID FROM basket", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())
                 {
-                    id = MyReader.GetInt32(0);
+                    int tempID = MyReader.GetInt32(0);
+                    if (tempID > id)
+                    {
+                        id = tempID;
+                    }
                 }
                 MyReader.Close();
             }
-            goodsCategoryCB.Items.Clear();
-            goodsCategoryCB.Items.Clear();
             command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory ON " +
                                        "categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = 'Стационарное'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
@@ -71,7 +73,6 @@ namespace Client
             }
             connection.Close();
         }
-
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -125,14 +126,13 @@ namespace Client
         private void корзинаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Basket basket = new Basket();
+            basket.basketID = (id + 1);
             basket.ShowDialog();
         }
 
         private void basketButton_Click(object sender, EventArgs e)
         {
             connection.Open();
-            Basket basket = new Basket();
-            basket.basketID = (id + 1);
             if (count == 1)
             {
                 command = new MySqlCommand("INSERT INTO basket (basket.BasketID) VALUES " +
@@ -322,6 +322,13 @@ namespace Client
             }
             goodsDGV.DataSource = dataView;
             connection.Close();
+        }
+
+        private void программноеОбеспечениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Software software = new Software();
+            software.basketID = (id + 1);
+            software.ShowDialog();
         }
     }
 }
