@@ -20,7 +20,7 @@ namespace Client
         public int id { get; set; }
         public int count = 1;
         public List<string> goodsCategory = new List<string>();
-        public List<string> goodsType = new List<string>();
+        public List<string> goodsAllType = new List<string>();
 
         public MainWindow()
         {
@@ -29,8 +29,6 @@ namespace Client
 
         private void MainWindow_Load_1(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "goods.DataTable". При необходимости она может быть перемещена или удалена.
-            this.dataTableTableAdapter1.Fill(this.goods.DataTable);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "goods.DataTable". При необходимости она может быть перемещена или удалена.
             this.dataTableTableAdapter1.Fill(this.goods.DataTable);
             //TODO: данная строка кода позволяет загрузить данные в таблицу "goodsQuantity.DataTable".При необходимости она может быть перемещена или удалена.
@@ -50,8 +48,7 @@ namespace Client
                 }
                 MyReader.Close();
             }
-            command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory ON " +
-                                       "categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = 'Стационарное'", connection);
+            command = new MySqlCommand("SELECT DISTINCT categorygoods.CategoryGoodsName FROM categorygoods", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())
@@ -67,7 +64,7 @@ namespace Client
                 while (MyReader.Read())
                 {
                     goodsTypeCB.Items.Add(MyReader.GetString(0));
-                    goodsType.Add(MyReader.GetString(0));
+                    goodsAllType.Add(MyReader.GetString(0));
                 }
                 MyReader.Close();
             }
@@ -88,7 +85,7 @@ namespace Client
         private void descriptionButton_Click(object sender, EventArgs e)
         {
             connection.Open();
-            DescriptionWindow dw = new DescriptionWindow();
+            Description dw = new Description();
             dw.goodsName = goodsDGV.CurrentRow.Cells[3].Value.ToString();
             dw.manufacturer = goodsDGV.CurrentRow.Cells[2].Value.ToString();
             command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName, goodscatalog.GoodsImage FROM goodscatalog INNER JOIN " +
@@ -135,10 +132,16 @@ namespace Client
             connection.Open();
             if (count == 1)
             {
-                command = new MySqlCommand("INSERT INTO basket (basket.BasketID) VALUES " +
+                try
+                {
+                    command = new MySqlCommand("INSERT INTO basket (basket.BasketID) VALUES " +
                                            "('" + (id + 1) + "')", connection);
-                command.ExecuteNonQuery();
-                count++;
+                    command.ExecuteNonQuery();
+                    count++;
+                }
+                catch
+                {
+                }
             }
             command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID) VALUES " +
                                        "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "')", connection);
@@ -188,9 +191,9 @@ namespace Client
             {
                 goodsCategoryCB.Items.Add(goodsCategory[i]);
             }
-            for (int i = 0; i < goodsType.Count; i++)
+            for (int i = 0; i < goodsAllType.Count; i++)
             {
-                goodsTypeCB.Items.Add(goodsType[i]);
+                goodsTypeCB.Items.Add(goodsAllType[i]);
             }
             connection.Open();
             DataView dataView = goods.Tables[0].DefaultView;
@@ -300,6 +303,18 @@ namespace Client
             connection.Open();
             DataView dataView = goods.Tables[0].DefaultView;
             dataView.RowFilter = "TypeCategoryname = '" + goodsTypeCB.SelectedItem.ToString() + "'";
+            goodsCategoryCB.ResetText();
+            goodsCategoryCB.Items.Clear();
+            command = new MySqlCommand("SELECT categorygoods.CategoryGoodsName, typecategory.TypeCategoryName FROM categorygoods INNER JOIN typecategory " +
+                                       "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID WHERE typecategory.TypeCategoryName = '" + goodsTypeCB.SelectedItem.ToString() + "'", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    goodsCategoryCB.Items.Add(MyReader.GetString(0));
+                }
+                MyReader.Close();
+            }
             if (lowPriceTB.Text != "")
             {
                 dataView.RowFilter += "AND GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";

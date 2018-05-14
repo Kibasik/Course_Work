@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class DescriptionWindow
+    partial class Description
     {
         /// <summary>
         /// Required designer variable.
@@ -61,7 +61,7 @@
             this.goodsImagePB.TabIndex = 3;
             this.goodsImagePB.TabStop = false;
             // 
-            // DescriptionWindow
+            // Description
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,9 +72,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(860, 640);
-            this.Name = "DescriptionWindow";
+            this.Name = "Description";
             this.ShowIcon = false;
-            this.Text = "Описание товара";
+            this.Text = "Description";
             this.Load += new System.EventHandler(this.DescriptionWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.goodsImagePB)).EndInit();
             this.ResumeLayout(false);

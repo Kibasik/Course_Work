@@ -11,7 +11,7 @@ using System.IO;
 
 namespace Client
 {
-    public partial class DescriptionWindow : Form
+    public partial class Description : Form
     {
         public string description { get; set; }
         public string goodsName { get; set; }
@@ -19,7 +19,7 @@ namespace Client
         public string goodsID { get; set; }
         public byte[] image { get; set; }
 
-        public DescriptionWindow()
+        public Description()
         {
             InitializeComponent();
         }

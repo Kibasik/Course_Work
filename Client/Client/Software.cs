@@ -26,8 +26,6 @@ namespace Client
 
         private void Software_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "softwareList.DataTable". При необходимости она может быть перемещена или удалена.
-            this.dataTableTableAdapter.Fill(this.softwareList.DataTable);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "softwareQuantity.DataTable". При необходимости она может быть перемещена или удалена.
             this.dataTableTableAdapter1.Fill(this.softwareQuantity.DataTable);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "softwareList.DataTable". При необходимости она может быть перемещена или удалена.
@@ -66,6 +64,14 @@ namespace Client
             connection.Open();
             DataView dataView = softwareList.Tables[0].DefaultView;
             dataView.RowFilter = "SoftwareTypeName = '" + softwareTypeCB.SelectedItem.ToString() + "'";
+            if (lowPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND SoftwareCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
+            }
+            if (highPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND SoftwareCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
             softwareDGV.DataSource = dataView;
             connection.Close();
         }
@@ -73,8 +79,6 @@ namespace Client
         private void basketButton_Click(object sender, EventArgs e)
         {
             connection.Open();
-            Basket basket = new Basket();
-            basket.basketID = basketID;
             if (count == 1)
             {
                 try
@@ -92,6 +96,46 @@ namespace Client
                                        "('" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "', '" + basketID + "')", connection);
             command.ExecuteNonQuery();
             connection.Close();
+        }
+
+        private void costButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = softwareList.Tables[0].DefaultView;
+            if (lowPriceTB.Text != "" && highPriceTB.Text == "")
+            {
+                dataView.RowFilter = "SoftwareCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
+            }
+            if (lowPriceTB.Text == "" && highPriceTB.Text != "")
+            {
+                dataView.RowFilter = "SoftwareCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
+            if (lowPriceTB.Text != "" && highPriceTB.Text != "")
+            {
+                dataView.RowFilter = "SoftwareCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND SoftwareCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
+            if (softwareTypeCB.SelectedItem != null)
+            {
+                dataView.RowFilter += "AND SOftwareTypeName = '" + softwareTypeCB.SelectedItem.ToString() + "'";
+            }
+            softwareDGV.DataSource = dataView;
+            connection.Close();
+        }
+
+        private void lowPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void highPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

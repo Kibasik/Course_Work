@@ -34,6 +34,7 @@
             this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -41,6 +42,11 @@
             this.SoftwareTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoftwareID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteGoodsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteSoftwareButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.basketDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
@@ -57,10 +63,11 @@
             this.CategoryGoodsName,
             this.GoodsName,
             this.GoodsManufacturerName,
-            this.GoodsCost});
-            this.basketDGV.Location = new System.Drawing.Point(12, 12);
+            this.GoodsCost,
+            this.ID});
+            this.basketDGV.Location = new System.Drawing.Point(12, 30);
             this.basketDGV.Name = "basketDGV";
-            this.basketDGV.Size = new System.Drawing.Size(550, 342);
+            this.basketDGV.Size = new System.Drawing.Size(550, 324);
             this.basketDGV.TabIndex = 0;
             // 
             // CategoryGoodsName
@@ -84,6 +91,12 @@
             // 
             this.GoodsCost.HeaderText = "Цена";
             this.GoodsCost.Name = "GoodsCost";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // label1
             // 
@@ -117,11 +130,12 @@
             this.softwareDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SoftwareTypeName,
             this.SoftwareName,
-            this.SoftwareCost});
-            this.softwareDGV.Location = new System.Drawing.Point(12, 370);
+            this.SoftwareCost,
+            this.SoftwareID});
+            this.softwareDGV.Location = new System.Drawing.Point(12, 394);
             this.softwareDGV.Name = "softwareDGV";
             this.softwareDGV.ReadOnly = true;
-            this.softwareDGV.Size = new System.Drawing.Size(550, 347);
+            this.softwareDGV.Size = new System.Drawing.Size(550, 323);
             this.softwareDGV.TabIndex = 3;
             // 
             // SoftwareTypeName
@@ -144,11 +158,60 @@
             this.SoftwareCost.Name = "SoftwareCost";
             this.SoftwareCost.ReadOnly = true;
             // 
+            // SoftwareID
+            // 
+            this.SoftwareID.HeaderText = "ID";
+            this.SoftwareID.Name = "SoftwareID";
+            this.SoftwareID.ReadOnly = true;
+            this.SoftwareID.Visible = false;
+            // 
+            // deleteGoodsButton
+            // 
+            this.deleteGoodsButton.Location = new System.Drawing.Point(579, 30);
+            this.deleteGoodsButton.Name = "deleteGoodsButton";
+            this.deleteGoodsButton.Size = new System.Drawing.Size(102, 48);
+            this.deleteGoodsButton.TabIndex = 4;
+            this.deleteGoodsButton.Text = "Удалить комплектующее";
+            this.deleteGoodsButton.UseVisualStyleBackColor = true;
+            this.deleteGoodsButton.Click += new System.EventHandler(this.deleteGoodsButton_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Список комплектующих:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 368);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Список программного обеспечения:";
+            // 
+            // deleteSoftwareButton
+            // 
+            this.deleteSoftwareButton.Location = new System.Drawing.Point(579, 394);
+            this.deleteSoftwareButton.Name = "deleteSoftwareButton";
+            this.deleteSoftwareButton.Size = new System.Drawing.Size(80, 33);
+            this.deleteSoftwareButton.TabIndex = 7;
+            this.deleteSoftwareButton.Text = "Удалить ПО";
+            this.deleteSoftwareButton.UseVisualStyleBackColor = true;
+            this.deleteSoftwareButton.Click += new System.EventHandler(this.deleteSoftwareButton_Click);
+            // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.deleteSoftwareButton);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.deleteGoodsButton);
             this.Controls.Add(this.softwareDGV);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.label1);
@@ -174,13 +237,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label totalCostLabel;
         private System.Windows.Forms.BindingSource dataTableBindingSource;
+        private System.Windows.Forms.DataGridView softwareDGV;
+        private System.Windows.Forms.Button deleteGoodsButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button deleteSoftwareButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGoodsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsManufacturerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsCost;
-        private System.Windows.Forms.DataGridView softwareDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareID;
     }
 }
