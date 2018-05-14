@@ -1,0 +1,3109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Database Diagram File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DevartDatabaseDiagram>
+  <SchemaVersion>1.2</SchemaVersion>
+  <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+  <Connection>
+    <Name>sakila_sample_local</Name>
+    <ConnectionString>User Id=root;Host=localhost;Database=mysql;Character Set=utf8</ConnectionString>
+  </Connection>
+  <Settings>
+    <DbDiagramOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <CustomProperties>
+        <BackgroundColor>WhiteSmoke</BackgroundColor>
+      </CustomProperties>
+    </DbDiagramOptions>
+    <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="PageOptions">
+      <FooterMargin>39 in/100</FooterMargin>
+      <HeaderMargin>79 in/100</HeaderMargin>
+      <HeaderText>Sakila Database Diagram</HeaderText>
+      <FooterText>Devart dbForge Studio for MySQL, v.5.00</FooterText>
+      <TopLeftMargins>
+        <Width>39 in/100</Width>
+        <Height>79 in/100</Height>
+      </TopLeftMargins>
+      <BottomRightMargins>
+        <Width>39 in/100</Width>
+        <Height>39 in/100</Height>
+      </BottomRightMargins>
+      <PaperSize>
+        <Width>827 in/100</Width>
+        <Height>1169 in/100</Height>
+      </PaperSize>
+      <PaperSourceName>Automatically Select</PaperSourceName>
+      <IsLandscape>true</IsLandscape>
+    </Options>
+    <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="PrintOptions">
+      <FitToPages>true</FitToPages>
+      <CenterImage>true</CenterImage>
+      <PageMarkupMode>PageMargins</PageMarkupMode>
+    </Options>
+    <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="ViewOptions">
+      <ShadowOffset>
+        <X>3 px</X>
+        <Y>3 px</Y>
+      </ShadowOffset>
+      <PrintMarkupEnabled>true</PrintMarkupEnabled>
+      <CustomProperties />
+    </Options>
+  </Settings>
+  <VirtualRelations>
+    <RelationCount>4</RelationCount>
+    <Relation Name="film_text_VR_film_category">
+      <Owner>sakila.film_text</Owner>
+      <Columns>
+        <Column>film_id</Column>
+      </Columns>
+      <ReferencedTableOwner>sakila</ReferencedTableOwner>
+      <ReferencedTableName>film_category</ReferencedTableName>
+      <ReferencedColumns>
+        <Column>film_id</Column>
+      </ReferencedColumns>
+      <UpdateRule>NO ACTION</UpdateRule>
+      <DeleteRule>NO ACTION</DeleteRule>
+    </Relation>
+    <Relation Name="film_text_VR_film_actor">
+      <Owner>sakila.film_text</Owner>
+      <Columns>
+        <Column>film_id</Column>
+      </Columns>
+      <ReferencedTableOwner>sakila</ReferencedTableOwner>
+      <ReferencedTableName>film_actor</ReferencedTableName>
+      <ReferencedColumns>
+        <Column>film_id</Column>
+      </ReferencedColumns>
+      <UpdateRule>NO ACTION</UpdateRule>
+      <DeleteRule>NO ACTION</DeleteRule>
+    </Relation>
+    <Relation Name="film_text_VR_film">
+      <Owner>sakila.film_text</Owner>
+      <Columns>
+        <Column>film_id</Column>
+      </Columns>
+      <ReferencedTableOwner>sakila</ReferencedTableOwner>
+      <ReferencedTableName>film</ReferencedTableName>
+      <ReferencedColumns>
+        <Column>film_id</Column>
+      </ReferencedColumns>
+      <UpdateRule>NO ACTION</UpdateRule>
+      <DeleteRule>NO ACTION</DeleteRule>
+    </Relation>
+    <Relation Name="film_category_VR_film_actor">
+      <Owner>sakila.film_category</Owner>
+      <Columns>
+        <Column>film_id</Column>
+      </Columns>
+      <ReferencedTableOwner>sakila</ReferencedTableOwner>
+      <ReferencedTableName>film_actor</ReferencedTableName>
+      <ReferencedColumns>
+        <Column>film_id</Column>
+      </ReferencedColumns>
+      <UpdateRule>NO ACTION</UpdateRule>
+      <DeleteRule>NO ACTION</DeleteRule>
+    </Relation>
+  </VirtualRelations>
+  <Diagram Version="1.10.0.58">
+    <DiagramModel>
+      <Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="RootModel">
+        <CustomProperties>
+          <OID>0</OID>
+        </CustomProperties>
+        <Children>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>1</OID>
+              <Comment>2</Comment>
+              <OutModel>3</OutModel>
+              <InModel>4</InModel>
+              <OutPort>5</OutPort>
+              <InPort>6</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>71.25 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>5</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>90 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>6</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>111 px</X>
+                <Y>79.6823921203613 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.customer.fk_customer_address</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>2</OID>
+              <HolderModel>1</HolderModel>
+              <Port>7</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>395 px</X>
+                  <Y>3.814697265625E-06 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>7</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>195.390197753906 px</X>
+              <Y>-7.25 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>8</OID>
+              <Comment>9</Comment>
+              <OutModel>10</OutModel>
+              <InModel>11</InModel>
+              <OutPort>12</OutPort>
+              <InPort>13</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>95 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>12</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>105 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>13</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.film_actor.fk_film_actor_film</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>9</OID>
+              <HolderModel>8</HolderModel>
+              <Port>14</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>0 px</X>
+                  <Y>-69.2161979675293 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>14</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>100 px</X>
+              <Y>-116 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>15</OID>
+              <Comment>16</Comment>
+              <OutModel>17</OutModel>
+              <InModel>11</InModel>
+              <OutPort>18</OutPort>
+              <InPort>19</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>70.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>18</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>350.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>19</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>1077 px</X>
+                <Y>398.932403564453 px</Y>
+              </PointD>
+              <PointD>
+                <X>1077 px</X>
+                <Y>388.932392120361 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.inventory.fk_inventory_film</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>16</OID>
+              <HolderModel>15</HolderModel>
+              <Port>20</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-72 px</X>
+                  <Y>10 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>20</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>13 px</X>
+              <Y>11.0676078796387 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>21</OID>
+              <Comment>22</Comment>
+              <OutModel>23</OutModel>
+              <InModel>4</InModel>
+              <OutPort>24</OutPort>
+              <InPort>25</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>95 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>24</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>127.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>25</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>446 px</X>
+                <Y>86 px</Y>
+              </PointD>
+              <PointD>
+                <X>253 px</X>
+                <Y>86 px</Y>
+              </PointD>
+              <PointD>
+                <X>253 px</X>
+                <Y>-146.5 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.staff.fk_staff_address</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>22</OID>
+              <HolderModel>21</HolderModel>
+              <Port>26</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>193 px</X>
+                  <Y>158.682392120361 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>26</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>19.2421894073486 px</X>
+              <Y>-166 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>27</OID>
+              <BackgroundColor>252, 250, 240</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>28</OID>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>450 px</X>
+                  <Y>300 px</Y>
+                </Location>
+                <Size>
+                  <Width>170 px</Width>
+                  <Height>111 px</Height>
+                </Size>
+                <IsCollapsed>true</IsCollapsed>
+                <DbOid>
+                  <Path>sakila.category</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>29</OID>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>440 px</X>
+                  <Y>40 px</Y>
+                </Location>
+                <Size>
+                  <Width>190 px</Width>
+                  <Height>200 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.film_category</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>False</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>30</OID>
+                  <Comment>31</Comment>
+                  <OutModel>29</OutModel>
+                  <InModel>28</InModel>
+                  <OutPort>32</OutPort>
+                  <InPort>33</InPort>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>95 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>32</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>85 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>33</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.film_category.fk_film_category_category</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>31</OID>
+                  <HolderModel>30</HolderModel>
+                  <Port>34</Port>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>-30 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>34</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>20 px</X>
+                  <Y>-75 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>11</OID>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>40 px</Y>
+                </Location>
+                <Size>
+                  <Width>245 px</Width>
+                  <Height>421 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.film</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>False</IndexesCollapsed>
+                  <TriggersCollapsed>False</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>35</OID>
+                  <Comment>36</Comment>
+                  <OutModel>29</OutModel>
+                  <InModel>11</InModel>
+                  <OutPort>37</OutPort>
+                  <InPort>38</InPort>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>150 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>37</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>150 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>38</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.film_category.fk_film_category_film</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>36</OID>
+                  <HolderModel>35</HolderModel>
+                  <Port>39</Port>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>87.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>39</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>16.4344787597656 px</X>
+                  <Y>-24 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>40</OID>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>440 px</X>
+                  <Y>350 px</Y>
+                </Location>
+                <Size>
+                  <Width>193 px</Width>
+                  <Height>130 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.language</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>41</OID>
+                  <Comment>42</Comment>
+                  <OutModel>11</OutModel>
+                  <InModel>40</InModel>
+                  <OutPort>43</OutPort>
+                  <InPort>44</InPort>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>393.25 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>43</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>83.25 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>44</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.film.fk_film_language</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>42</OID>
+                  <HolderModel>41</HolderModel>
+                  <Port>45</Port>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-87.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>45</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>35 px</X>
+                  <Y>6.75 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>46</OID>
+                  <Comment>47</Comment>
+                  <OutModel>11</OutModel>
+                  <InModel>40</InModel>
+                  <OutPort>48</OutPort>
+                  <InPort>49</InPort>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>365.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>48</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>55.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>49</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.film.fk_film_language_original</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>47</OID>
+                  <HolderModel>46</HolderModel>
+                  <Port>50</Port>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-87.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>50</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>5 px</X>
+                  <Y>-25.5 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="NoteModel">
+                <CustomProperties>
+                  <OID>51</OID>
+                  <BackgroundColor>255, 255, 225</BackgroundColor>
+                  <Parent>27</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>270 px</X>
+                  <Y>230 px</Y>
+                </Location>
+                <Size>
+                  <Width>160 px</Width>
+                  <Height>120 px</Height>
+                </Size>
+                <Text>Information about films: category, language, rental rate, rental duration, replacement cost and so on.</Text>
+              </Model>
+            </Children>
+            <Location>
+              <X>1160 px</X>
+              <Y>-37.5676078796387 px</Y>
+            </Location>
+            <Size>
+              <Width>650 px</Width>
+              <Height>550 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Films</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>52</OID>
+              <BackgroundColor>238, 251, 251</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>10</OID>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>350 px</X>
+                  <Y>13 px</Y>
+                </Location>
+                <Size>
+                  <Width>190 px</Width>
+                  <Height>181 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.film_actor</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>53</OID>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>11 px</Y>
+                </Location>
+                <Size>
+                  <Width>190 px</Width>
+                  <Height>183 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.actor</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>False</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>54</OID>
+                  <Comment>55</Comment>
+                  <OutModel>10</OutModel>
+                  <InModel>53</InModel>
+                  <OutPort>56</OutPort>
+                  <InPort>57</InPort>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>36 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>56</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>182 px</X>
+                      <Y>37.9390243902439 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>57</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>330 px</X>
+                    <Y>49 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>330 px</X>
+                    <Y>48.9390243902439 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.film_actor.fk_film_actor_actor</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>55</OID>
+                  <HolderModel>54</HolderModel>
+                  <Port>58</Port>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>80 px</X>
+                      <Y>0.06097412109375 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>58</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>8.5698852539062 px</X>
+                  <Y>-29 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="NoteModel">
+                <CustomProperties>
+                  <OID>59</OID>
+                  <BackgroundColor>218, 246, 218</BackgroundColor>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>220 px</X>
+                  <Y>114 px</Y>
+                </Location>
+                <Size>
+                  <Width>108.108108520508 px</Width>
+                  <Height>80 px</Height>
+                </Size>
+                <Text>Actor information: first name, last name, films.</Text>
+              </Model>
+            </Children>
+            <Location>
+              <X>840 px</X>
+              <Y>-330 px</Y>
+            </Location>
+            <Size>
+              <Width>560 px</Width>
+              <Height>270 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Actors</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>60</OID>
+              <BackgroundColor>237, 237, 252</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="DDContainerModel">
+                <CustomProperties>
+                  <OID>61</OID>
+                  <BackgroundColor>238, 251, 238</BackgroundColor>
+                  <Parent>60</Parent>
+                </CustomProperties>
+                <Children>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>62</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>530 px</X>
+                      <Y>140 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>173 px</Width>
+                      <Height>106 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.actor_info</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>63</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>130 px</X>
+                      <Y>40 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>159 px</Width>
+                      <Height>191 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>sakila.customer_list</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>64</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>310 px</X>
+                      <Y>40 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>175 px</Width>
+                      <Height>174 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>sakila.film_list</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>65</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>130 px</X>
+                      <Y>240 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>200 px</Width>
+                      <Height>174 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.nicer_but_slower_film_list</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>66</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>510 px</X>
+                      <Y>240 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>210 px</Width>
+                      <Height>90 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.sales_by_film_category</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>67</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>520 px</X>
+                      <Y>40 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>190 px</Width>
+                      <Height>89 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>sakila.sales_by_store</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="ViewModel">
+                    <CustomProperties>
+                      <OID>68</OID>
+                      <Parent>61</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>340 px</X>
+                      <Y>240 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>155 px</Width>
+                      <Height>174 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.staff_list</Path>
+                      <TypeName>View</TypeName>
+                    </DbOid>
+                  </Model>
+                </Children>
+                <Location>
+                  <X>110 px</X>
+                  <Y>-80 px</Y>
+                </Location>
+                <Size>
+                  <Width>620 px</Width>
+                  <Height>300 px</Height>
+                </Size>
+                <IsCollapsed>false</IsCollapsed>
+                <Text>Views</Text>
+                <ScrollState>
+                  <ScrollOrigin>
+                    <X>120 px</X>
+                    <Y>30 px</Y>
+                  </ScrollOrigin>
+                  <ScrollPosition>
+                    <X>120 px</X>
+                    <Y>30 px</Y>
+                  </ScrollPosition>
+                </ScrollState>
+              </Model>
+              <Model xsi:type="DDContainerModel">
+                <CustomProperties>
+                  <OID>69</OID>
+                  <BackgroundColor>252, 237, 237</BackgroundColor>
+                  <Parent>60</Parent>
+                </CustomProperties>
+                <Children>
+                  <Model xsi:type="StoredProcModel">
+                    <CustomProperties>
+                      <OID>70</OID>
+                      <Parent>69</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>130 px</X>
+                      <Y>130 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>147 px</Width>
+                      <Height>79 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.film_in_stock</Path>
+                      <TypeName>Procedure</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="StoredProcModel">
+                    <CustomProperties>
+                      <OID>71</OID>
+                      <Parent>69</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>300 px</X>
+                      <Y>130 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>180 px</Width>
+                      <Height>79 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.film_not_in_stock</Path>
+                      <TypeName>Procedure</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="StoredProcModel">
+                    <CustomProperties>
+                      <OID>72</OID>
+                      <Parent>69</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>130 px</X>
+                      <Y>40 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>360 px</Width>
+                      <Height>79 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>sakila.rewards_report</Path>
+                      <TypeName>Procedure</TypeName>
+                    </DbOid>
+                  </Model>
+                </Children>
+                <Location>
+                  <X>760 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>390 px</Width>
+                  <Height>220 px</Height>
+                </Size>
+                <IsCollapsed>false</IsCollapsed>
+                <Text>Procedures</Text>
+                <ScrollState>
+                  <ScrollOrigin>
+                    <X>120 px</X>
+                    <Y>30 px</Y>
+                  </ScrollOrigin>
+                  <ScrollPosition>
+                    <X>120 px</X>
+                    <Y>30 px</Y>
+                  </ScrollPosition>
+                </ScrollState>
+              </Model>
+              <Model xsi:type="NoteModel">
+                <CustomProperties>
+                  <OID>73</OID>
+                  <BackgroundColor>216, 216, 248</BackgroundColor>
+                  <Parent>60</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>760 px</X>
+                  <Y>-80 px</Y>
+                </Location>
+                <Size>
+                  <Width>460 px</Width>
+                  <Height>60 px</Height>
+                </Size>
+                <Text>Information about customers, films, actors, staff and sales by stores. 
+Information about customers' balances, inventory held by customers.
+Rewards report, films in stock and films not in stock.</Text>
+              </Model>
+              <Model xsi:type="DDContainerModel">
+                <CustomProperties>
+                  <OID>74</OID>
+                  <BackgroundColor>237, 237, 252</BackgroundColor>
+                  <Parent>60</Parent>
+                </CustomProperties>
+                <Children>
+                  <Model xsi:type="StoredProcModel">
+                    <CustomProperties>
+                      <OID>75</OID>
+                      <Parent>74</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>120 px</X>
+                      <Y>40 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>190 px</Width>
+                      <Height>79 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>sakila.get_customer_balance</Path>
+                      <TypeName>Function</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="StoredProcModel">
+                    <CustomProperties>
+                      <OID>76</OID>
+                      <Parent>74</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>200 px</X>
+                      <Y>130 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>260 px</Width>
+                      <Height>62 px</Height>
+                    </Size>
+                    <IsCollapsed>true</IsCollapsed>
+                    <DbOid>
+                      <Path>sakila.inventory_held_by_customer</Path>
+                      <TypeName>Function</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="StoredProcModel">
+                    <CustomProperties>
+                      <OID>77</OID>
+                      <Parent>74</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>320 px</X>
+                      <Y>40 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>160 px</Width>
+                      <Height>62 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>sakila.inventory_in_stock</Path>
+                      <TypeName>Function</TypeName>
+                    </DbOid>
+                  </Model>
+                </Children>
+                <Location>
+                  <X>1170 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>390 px</Width>
+                  <Height>220 px</Height>
+                </Size>
+                <IsCollapsed>true</IsCollapsed>
+                <Text>Functions</Text>
+                <ScrollState>
+                  <ScrollOrigin>
+                    <X>110 px</X>
+                    <Y>30 px</Y>
+                  </ScrollOrigin>
+                  <ScrollPosition>
+                    <X>110 px</X>
+                    <Y>30 px</Y>
+                  </ScrollPosition>
+                </ScrollState>
+              </Model>
+            </Children>
+            <Location>
+              <X>0 px</X>
+              <Y>534.785705566406 px</Y>
+            </Location>
+            <Size>
+              <Width>1480 px</Width>
+              <Height>378.214294433594 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Proсedures, Functions and Views</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>100 px</X>
+                <Y>-90 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>100 px</X>
+                <Y>-90 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>78</OID>
+              <BackgroundColor>244, 244, 244</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>4</OID>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>10 px</Y>
+                </Location>
+                <Size>
+                  <Width>180 px</Width>
+                  <Height>170 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.address</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>79</OID>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>320 px</X>
+                  <Y>10 px</Y>
+                </Location>
+                <Size>
+                  <Width>170 px</Width>
+                  <Height>179 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.city</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>False</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>80</OID>
+                  <Comment>81</Comment>
+                  <OutModel>4</OutModel>
+                  <InModel>79</InModel>
+                  <OutPort>82</OutPort>
+                  <InPort>83</InPort>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>85 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>82</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>85 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>83</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.address.fk_address_city</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>81</OID>
+                  <HolderModel>80</HolderModel>
+                  <Port>84</Port>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-60 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>84</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>10 px</X>
+                  <Y>-35 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>85</OID>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>600 px</X>
+                  <Y>60 px</Y>
+                </Location>
+                <Size>
+                  <Width>180 px</Width>
+                  <Height>111 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.country</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>86</OID>
+                  <Comment>87</Comment>
+                  <OutModel>79</OutModel>
+                  <InModel>85</InModel>
+                  <OutPort>88</OutPort>
+                  <InPort>89</InPort>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>105.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>88</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>55.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>89</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.city.fk_city_country</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>87</OID>
+                  <HolderModel>86</HolderModel>
+                  <Port>90</Port>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-55 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>90</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>10 px</X>
+                  <Y>-35 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="NoteModel">
+                <CustomProperties>
+                  <OID>91</OID>
+                  <BackgroundColor>231, 231, 231</BackgroundColor>
+                  <Parent>78</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>510 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>271 px</Width>
+                  <Height>42 px</Height>
+                </Size>
+                <Text>Address information: country, city, district and phone.</Text>
+              </Model>
+            </Children>
+            <Location>
+              <X>0 px</X>
+              <Y>-330 px</Y>
+            </Location>
+            <Size>
+              <Width>810 px</Width>
+              <Height>270 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Address Information</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>0 px</X>
+                <Y>-10 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>0 px</X>
+                <Y>-10 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>92</OID>
+              <BackgroundColor>252, 244, 237</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>93</OID>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>621 px</X>
+                  <Y>280.000011444092 px</Y>
+                </Location>
+                <Size>
+                  <Width>196 px</Width>
+                  <Height>196 px</Height>
+                </Size>
+                <IsCollapsed>true</IsCollapsed>
+                <DbOid>
+                  <Path>sakila.rental</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>94</OID>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>30 px</X>
+                  <Y>270.000011444092 px</Y>
+                </Location>
+                <Size>
+                  <Width>226 px</Width>
+                  <Height>145 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.store</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>3</OID>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>920 px</X>
+                  <Y>-50 px</Y>
+                </Location>
+                <Size>
+                  <Width>194 px</Width>
+                  <Height>285 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.customer</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>False</IndexesCollapsed>
+                  <TriggersCollapsed>False</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>95</OID>
+                  <Comment>96</Comment>
+                  <OutModel>93</OutModel>
+                  <InModel>3</InModel>
+                  <OutPort>97</OutPort>
+                  <InPort>98</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>10.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>97</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>97 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>98</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>856 px</X>
+                    <Y>290.500011444092 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>856 px</X>
+                    <Y>250 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>1017 px</X>
+                    <Y>250 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>true</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.rental.fk_rental_customer</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>96</OID>
+                  <HolderModel>95</HolderModel>
+                  <Port>99</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-119.5 px</X>
+                      <Y>40.5000114440918 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>99</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>-26 px</X>
+                  <Y>-60.5 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>100</OID>
+                  <Comment>101</Comment>
+                  <OutModel>3</OutModel>
+                  <InModel>94</InModel>
+                  <OutPort>102</OutPort>
+                  <InPort>103</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>142.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>102</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>113 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>103</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>900 px</X>
+                    <Y>92.5 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>900 px</X>
+                    <Y>64.5 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>143 px</X>
+                    <Y>64.5 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.customer.fk_customer_store</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>101</OID>
+                  <HolderModel>100</HolderModel>
+                  <Port>104</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>398.5 px</X>
+                      <Y>28 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>104</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>192.717025756836 px</X>
+                  <Y>-32.5 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>105</OID>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>610 px</X>
+                  <Y>169.999996185303 px</Y>
+                </Location>
+                <Size>
+                  <Width>207 px</Width>
+                  <Height>302 px</Height>
+                </Size>
+                <IsCollapsed>true</IsCollapsed>
+                <DbOid>
+                  <Path>sakila.payment</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>False</IndexesCollapsed>
+                  <TriggersCollapsed>False</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>106</OID>
+                  <Comment>107</Comment>
+                  <OutModel>105</OutModel>
+                  <InModel>93</InModel>
+                  <OutPort>108</OutPort>
+                  <InPort>109</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>118.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>108</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>88.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>109</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>728.5 px</X>
+                    <Y>211 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>709.5 px</X>
+                    <Y>211 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.payment.fk_payment_rental</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>107</OID>
+                  <HolderModel>106</HolderModel>
+                  <Port>110</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>19 px</X>
+                      <Y>-54.5000038146973 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>110</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>29.0000038146973 px</X>
+                  <Y>-68.5 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>111</OID>
+                  <Comment>112</Comment>
+                  <OutModel>105</OutModel>
+                  <InModel>3</InModel>
+                  <OutPort>113</OutPort>
+                  <InPort>114</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>10.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>113</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>200.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>114</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>837 px</X>
+                    <Y>180.499996185303 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>837 px</X>
+                    <Y>150.5 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.payment.fk_payment_customer</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>112</OID>
+                  <HolderModel>111</HolderModel>
+                  <Port>115</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-61.5 px</X>
+                      <Y>29.9999961853027 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>115</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>-37 px</X>
+                  <Y>-50.5 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>17</OID>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>880 px</X>
+                  <Y>270.000011444092 px</Y>
+                </Location>
+                <Size>
+                  <Width>196 px</Width>
+                  <Height>145 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.inventory</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>116</OID>
+                  <Comment>117</Comment>
+                  <OutModel>93</OutModel>
+                  <InModel>17</InModel>
+                  <OutPort>118</OutPort>
+                  <InPort>119</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>98 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>118</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>72.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>119</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>719 px</X>
+                    <Y>342.500011444092 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.rental.fk_rental_inventory</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>117</OID>
+                  <HolderModel>116</HolderModel>
+                  <Port>120</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-80.5 px</X>
+                      <Y>-41.4999885559082 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>120</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>29 px</X>
+                  <Y>-18 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>121</OID>
+                  <Comment>122</Comment>
+                  <OutModel>17</OutModel>
+                  <InModel>94</InModel>
+                  <OutPort>123</OutPort>
+                  <InPort>124</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>2 px</X>
+                      <Y>113.567596435547 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>123</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>113.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>124</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>860 px</X>
+                    <Y>383.567607879639 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>860 px</X>
+                    <Y>383.750011444092 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.inventory.fk_inventory_store</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>122</OID>
+                  <HolderModel>121</HolderModel>
+                  <Port>125</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>322 px</X>
+                      <Y>-0.182392120361328 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>125</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>303.387596130371 px</X>
+                  <Y>-11.25 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>23</OID>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>370 px</X>
+                  <Y>70 px</Y>
+                </Location>
+                <Size>
+                  <Width>190 px</Width>
+                  <Height>264 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.staff</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>126</OID>
+                  <Comment>127</Comment>
+                  <OutModel>93</OutModel>
+                  <InModel>23</InModel>
+                  <OutPort>128</OutPort>
+                  <InPort>129</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>15.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>128</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>225.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>129</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.rental.fk_rental_staff</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>127</OID>
+                  <HolderModel>126</HolderModel>
+                  <Port>130</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>30.5 px</X>
+                      <Y>1.1444091796875E-05 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>130</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>-31.1137084960938 px</X>
+                  <Y>-45.7500114440918 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>131</OID>
+                  <Comment>132</Comment>
+                  <OutModel>94</OutModel>
+                  <InModel>23</InModel>
+                  <OutPort>133</OutPort>
+                  <InPort>134</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>31.9999847412109 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>133</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>232 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>134</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.store.fk_store_staff</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>132</OID>
+                  <HolderModel>131</HolderModel>
+                  <Port>135</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-57 px</X>
+                      <Y>-3.814697265625E-06 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>135</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>14 px</X>
+                  <Y>-21.9999961853027 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>136</OID>
+                  <Comment>137</Comment>
+                  <OutModel>23</OutModel>
+                  <InModel>94</InModel>
+                  <OutPort>138</OutPort>
+                  <InPort>139</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>247.999992370605 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>138</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>47.9999771118164 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>139</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.staff.fk_staff_store</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>137</OID>
+                  <HolderModel>136</HolderModel>
+                  <Port>140</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>57 px</X>
+                      <Y>-7.62939453125E-06 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>140</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>12.3068618774414 px</X>
+                  <Y>2.00000762939453 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>141</OID>
+                  <Comment>142</Comment>
+                  <OutModel>105</OutModel>
+                  <InModel>23</InModel>
+                  <OutPort>143</OutPort>
+                  <InPort>144</InPort>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>15.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>143</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>95.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>144</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>590 px</X>
+                    <Y>185.749996185303 px</Y>
+                  </PointD>
+                  <PointD>
+                    <X>590 px</X>
+                    <Y>165.75 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>sakila.payment.fk_payment_staff</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>142</OID>
+                  <HolderModel>141</HolderModel>
+                  <Port>145</Port>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>20 px</X>
+                      <Y>9.99999618530273 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>145</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>-68.9040756225586 px</X>
+                  <Y>-45.75 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="NoteModel">
+                <CustomProperties>
+                  <OID>146</OID>
+                  <BackgroundColor>248, 231, 216</BackgroundColor>
+                  <Parent>92</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>410 px</X>
+                  <Y>-50 px</Y>
+                </Location>
+                <Size>
+                  <Width>370 px</Width>
+                  <Height>30 px</Height>
+                </Size>
+                <Text>Store information: staff, customers, inventory and so on.</Text>
+              </Model>
+            </Children>
+            <Location>
+              <X>0 px</X>
+              <Y>-37.5676078796387 px</Y>
+            </Location>
+            <Size>
+              <Width>1110 px</Width>
+              <Height>550 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Store Statistics</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>20 px</X>
+                <Y>-60 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>20 px</X>
+                <Y>-60 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>147</OID>
+              <Comment>148</Comment>
+              <OutModel>94</OutModel>
+              <InModel>4</InModel>
+              <OutPort>149</OutPort>
+              <InPort>150</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>61 px</X>
+                  <Y>-2.43239212036133 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>149</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>50 px</X>
+                  <Y>162 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>150</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>72 px</X>
+                <Y>278.432403564453 px</Y>
+              </PointD>
+              <PointD>
+                <X>71 px</X>
+                <Y>278.432403564453 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.store.fk_store_address</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>148</OID>
+              <HolderModel>147</HolderModel>
+              <Port>151</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>1 px</X>
+                  <Y>241.216201782227 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>151</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>190.671976089478 px</X>
+              <Y>-62 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>152</OID>
+              <BackgroundColor>237, 243, 252</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>153</OID>
+                  <Parent>152</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>210 px</X>
+                  <Y>80 px</Y>
+                </Location>
+                <Size>
+                  <Width>180 px</Width>
+                  <Height>147 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>sakila.film_text</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>False</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="NoteModel">
+                <CustomProperties>
+                  <OID>154</OID>
+                  <BackgroundColor>216, 229, 248</BackgroundColor>
+                  <Parent>152</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>180 px</X>
+                  <Y>40 px</Y>
+                </Location>
+                <Size>
+                  <Width>210 px</Width>
+                  <Height>26 px</Height>
+                </Size>
+                <Text>Other information about film.</Text>
+              </Model>
+            </Children>
+            <Location>
+              <X>1430 px</X>
+              <Y>-330 px</Y>
+            </Location>
+            <Size>
+              <Width>380 px</Width>
+              <Height>270 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Other Tables</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>30 px</X>
+                <Y>30 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>30 px</X>
+                <Y>30 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+          </Model>
+          <Model xsi:type="ImageModel">
+            <CustomProperties>
+              <OID>155</OID>
+              <Image>
+                <Length>11712</Length>
+                <Data>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</Data>
+              </Image>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>590 px</X>
+              <Y>920 px</Y>
+            </Location>
+            <Size>
+              <Width>50 px</Width>
+              <Height>46 px</Height>
+            </Size>
+            <MinSize>
+              <Width>32 px</Width>
+              <Height>32 px</Height>
+            </MinSize>
+          </Model>
+          <Model xsi:type="NoteModel">
+            <CustomProperties>
+              <OID>156</OID>
+              <BackgroundColor>255, 255, 225</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>1516 px</X>
+              <Y>-400 px</Y>
+            </Location>
+            <Size>
+              <Width>294 px</Width>
+              <Height>54 px</Height>
+            </Size>
+            <Hyperlink>http://www.devart.com/blogs/dbforge/index.php/getting-started-with-database-designer.html</Hyperlink>
+            <HyperlinkText>http://www.devart.com/blogs/dbforge/index.php/getting-started-with-database-designer.html</HyperlinkText>
+            <Text>Getting Started with Database Designer</Text>
+          </Model>
+          <Model xsi:type="StampModel">
+            <CustomProperties>
+              <OID>157</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>1510 px</X>
+              <Y>780 px</Y>
+            </Location>
+            <Size>
+              <Width>300 px</Width>
+              <Height>133 px</Height>
+            </Size>
+            <CompanyName>Devart</CompanyName>
+            <ProjectName>dbForge Studio for MySQL</ProjectName>
+            <Version>5.00</Version>
+            <Author>Devart Company</Author>
+            <Date>Tuesday, January 11, 2010</Date>
+            <Copyrights>© Devart. All rights reserved.</Copyrights>
+            <Text>Devart dbForge Studio for MySQL</Text>
+          </Model>
+          <Model xsi:type="VirtualRelationLinkModel">
+            <CustomProperties>
+              <OID>158</OID>
+              <Comment>159</Comment>
+              <OutModel>153</OutModel>
+              <InModel>29</InModel>
+              <OutPort>160</OutPort>
+              <InPort>161</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>90 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>160</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>100 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>161</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.film_text.film_text_vr_film_category</Path>
+              <TypeName>VirtualRelation</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>159</OID>
+              <HolderModel>158</HolderModel>
+              <Port>162</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>0 px</X>
+                  <Y>-67.7161979675293 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>162</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>97 px</X>
+              <Y>-91 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="VirtualRelationLinkModel">
+            <CustomProperties>
+              <OID>163</OID>
+              <Comment>164</Comment>
+              <OutModel>153</OutModel>
+              <InModel>10</InModel>
+              <OutPort>165</OutPort>
+              <InPort>166</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>53.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>165</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>115.125850340136 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>166</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>1591 px</X>
+                <Y>-190.5 px</Y>
+              </PointD>
+              <PointD>
+                <X>1591 px</X>
+                <Y>-165.874149659864 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.film_text.film_text_vr_film_actor</Path>
+              <TypeName>VirtualRelation</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>164</OID>
+              <HolderModel>163</HolderModel>
+              <Port>167</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>125 px</X>
+                  <Y>-24.6258544921875 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>167</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>21.7053070068359 px</X>
+              <Y>-24.5 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="VirtualRelationLinkModel">
+            <CustomProperties>
+              <OID>168</OID>
+              <Comment>169</Comment>
+              <OutModel>153</OutModel>
+              <InModel>11</InModel>
+              <OutPort>170</OutPort>
+              <InPort>171</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>73.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>170</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>241 px</X>
+                  <Y>55.5676078796387 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>171</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>1560 px</X>
+                <Y>-170.5 px</Y>
+              </PointD>
+              <PointD>
+                <X>1560 px</X>
+                <Y>94 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>true</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.film_text.film_text_vr_film</Path>
+              <TypeName>VirtualRelation</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>169</OID>
+              <HolderModel>168</HolderModel>
+              <Port>172</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>51 px</X>
+                  <Y>-132.25 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>172</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>59.7456665039063 px</X>
+              <Y>40.5 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="VirtualRelationLinkModel">
+            <CustomProperties>
+              <OID>173</OID>
+              <Comment>174</Comment>
+              <OutModel>29</OutModel>
+              <InModel>10</InModel>
+              <OutPort>175</OutPort>
+              <InPort>176</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>50 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>175</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>142.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>176</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>1581 px</X>
+                <Y>88.4323921203613 px</Y>
+              </PointD>
+              <PointD>
+                <X>1581 px</X>
+                <Y>30 px</Y>
+              </PointD>
+              <PointD>
+                <X>1333.5 px</X>
+                <Y>30 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>sakila.film_category.film_category_vr_film_actor</Path>
+              <TypeName>VirtualRelation</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>174</OID>
+              <HolderModel>173</HolderModel>
+              <Port>177</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>143.75 px</X>
+                  <Y>58.4323921203613 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>177</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>52.7209320068359 px</X>
+              <Y>-88.4323921203613 px</Y>
+            </CommentOffset>
+          </Model>
+        </Children>
+        <ViewPort>
+          <ScaleMode>Free</ScaleMode>
+          <Scale>1</Scale>
+          <Location>
+            <X>411 px</X>
+            <Y>79 px</Y>
+          </Location>
+        </ViewPort>
+      </Model>
+    </DiagramModel>
+  </Diagram>
+</DevartDatabaseDiagram>

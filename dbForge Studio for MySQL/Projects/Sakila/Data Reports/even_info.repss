@@ -1,0 +1,80 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v9.1, Version=9.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>D:\WINDOWS\assembly\GAC_MSIL\DevExpress.XtraReports.v9.1\9.1.2.0__b88d1754d700e49a\DevExpress.XtraReports.v9.1.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>en-US</Localization>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class XtraReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.XRControlStyle EvenContactName;
+        private DevExpress.XtraReports.UI.XRControlStyle OddContactName;
+        private DevExpress.XtraReports.UI.XRControlStyle OddInfo;
+        private DevExpress.XtraReports.UI.XRControlStyle EvenInfo;
+        private System.Resources.ResourceManager _resources;
+        public XtraReport() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = @"zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.EvenContactName = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.OddContactName = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.OddInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.EvenInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // EvenContactName
+            // 
+            this.EvenContactName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(153)))), ((int)(((byte)(201)))));
+            this.EvenContactName.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.EvenContactName.BorderWidth = 1;
+            this.EvenContactName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.EvenContactName.ForeColor = System.Drawing.Color.White;
+            this.EvenContactName.Name = "EvenContactName";
+            // 
+            // OddContactName
+            // 
+            this.OddContactName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(138)))), ((int)(((byte)(146)))));
+            this.OddContactName.BorderColor = System.Drawing.Color.Empty;
+            this.OddContactName.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.OddContactName.BorderWidth = 1;
+            this.OddContactName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.OddContactName.ForeColor = System.Drawing.Color.White;
+            this.OddContactName.Name = "OddContactName";
+            // 
+            // OddInfo
+            // 
+            this.OddInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(226)))), ((int)(((byte)(228)))));
+            this.OddInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(138)))), ((int)(((byte)(146)))));
+            this.OddInfo.BorderWidth = 1;
+            this.OddInfo.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.OddInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OddInfo.Name = "OddInfo";
+            // 
+            // EvenInfo
+            // 
+            this.EvenInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(234)))), ((int)(((byte)(251)))));
+            this.EvenInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(153)))), ((int)(((byte)(201)))));
+            this.EvenInfo.BorderWidth = 1;
+            this.EvenInfo.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.EvenInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.EvenInfo.Name = "EvenInfo";
+            // 
+            // XtraReport
+            // 
+            this.Name = "XtraReport";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.Version = "9.1";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}

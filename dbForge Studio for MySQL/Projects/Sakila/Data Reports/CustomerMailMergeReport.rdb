@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Report File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DevartDataReport>
+  <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+  <Connection>
+    <Name>sakila_sample_local</Name>
+    <ConnectionString>User Id=root;Host=localhost;Database=mysql;Character Set=utf8</ConnectionString>
+  </Connection>
+  <NativeReport>
+    <Report>/// &lt;XRTypeInfo&gt;
+///   &lt;AssemblyFullName&gt;Devart.XReports, Version=9.2.9.0, Culture=neutral, PublicKeyToken=09af7300eec23701&lt;/AssemblyFullName&gt;
+///   &lt;AssemblyLocation&gt;D:\Program Files\Devart\dbForge Studio for MySQL\Devart.XReports.dll&lt;/AssemblyLocation&gt;
+///   &lt;TypeName&gt;DevExpress.XtraReports.UI.XtraReport&lt;/TypeName&gt;
+///   &lt;Localization&gt;en-US&lt;/Localization&gt;
+///   &lt;References&gt;
+///     &lt;Reference Path="D:\Program Files\Devart\dbForge Studio for MySQL\Devart.DbForge.Data.MySql.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Data.SqlXml\2.0.0.0__b77a5c561934e089\System.Data.SqlXml.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Security\2.0.0.0__b03f5f7f11d50a3a\System.Security.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\Microsoft.VisualC\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualC.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Transactions\2.0.0.0__b77a5c561934e089\System.Transactions.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\Accessibility\2.0.0.0__b03f5f7f11d50a3a\Accessibility.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization.Formatters.Soap\2.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatters.Soap.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Deployment\2.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Drawing.Design\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.Design.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Web.RegularExpressions\2.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices.Protocols\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.Protocols.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.ServiceProcess\2.0.0.0__b03f5f7f11d50a3a\System.ServiceProcess.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.Install.dll" /&gt;
+///     &lt;Reference Path="D:\Program Files\Devart\dbForge Studio for MySQL\Devart.DbForge.Data.Interfaces.dll" /&gt;
+///   &lt;/References&gt;
+/// &lt;/XRTypeInfo&gt;
+namespace XtraReportSerialization {
+    
+    public class CustomerMailMerge : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRRichText richText2;
+        private Devart.Data.MySql.MySqlDataAdapter CustomerInfoQueryTableAdapter;
+        private Devart.Data.MySql.MySqlCommand mySqlCommand1;
+        private System.Resources.ResourceManager _resources;
+        public CustomerMailMerge() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = "zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJza" +
+                        "W9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
+                        "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAACAAAAAAAAAFBBRFBBRFC9HWAKG" +
+                        "EZjdgAAAAA3AAAAPgEAADJtAHkAUwBxAGwAQwBvAG0AbQBhAG4AZAAxAC4AQwBvAG0AbQBhAG4AZABUA" +
+                        "GUAeAB0AAAAAAA+cgBpAGMAaABUAGUAeAB0ADIALgBTAGUAcgBpAGEAbABpAHoAYQBiAGwAZQBSAHQAZ" +
+                        "gBTAHQAcgBpAG4AZwDpAgAAAeYFU0VMRUNUDQogIGN1c3RvbWVyLmZpcnN0X25hbWUsIGN1c3RvbWVyL" +
+                        "mxhc3RfbmFtZSwgY3VzdG9tZXIuZW1haWwsIHJlbnRhbC5yZW50YWxfZGF0ZSwgR1JPVVBfQ09OQ0FUK" +
+                        "GZpbG0udGl0bGUgT1JERVIgQlkgZmlsbS50aXRsZSBBU0MgU0VQQVJBVE9SICciLCAiJykgQVMgZmlsb" +
+                        "XMsIGFkZHJlc3MuYWRkcmVzcw0KRlJPTQ0KICBzYWtpbGEuY3VzdG9tZXINCiAgSU5ORVIgSk9JTiBzY" +
+                        "WtpbGEucmVudGFsIE9OIHJlbnRhbC5jdXN0b21lcl9pZCA9IGN1c3RvbWVyLmN1c3RvbWVyX2lkDQogI" +
+                        "ElOTkVSIEpPSU4gc2FraWxhLmludmVudG9yeSBPTiByZW50YWwuaW52ZW50b3J5X2lkID0gaW52ZW50b" +
+                        "3J5LmludmVudG9yeV9pZA0KICBJTk5FUiBKT0lOIHNha2lsYS5maWxtIE9OIGludmVudG9yeS5maWxtX" +
+                        "2lkID0gZmlsbS5maWxtX2lkDQogIElOTkVSIEpPSU4gc2FraWxhLnN0b3JlIE9OIGN1c3RvbWVyLnN0b" +
+                        "3JlX2lkID0gc3RvcmUuc3RvcmVfaWQgQU5EIGludmVudG9yeS5zdG9yZV9pZCA9IHN0b3JlLnN0b3JlX" +
+                        "2lkDQogIElOTkVSIEpPSU4gc2FraWxhLmFkZHJlc3MgT04gc3RvcmUuYWRkcmVzc19pZCA9IGFkZHJlc" +
+                        "3MuYWRkcmVzc19pZA0KV0hFUkUNCiAgcmVudGFsLnJldHVybl9kYXRlIElTIE5VTEwNCkdST1VQIEJZD" +
+                        "QogIHJlbnRhbC5yZW50YWxfZGF0ZSwgY3VzdG9tZXIuZW1haWwsIGFkZHJlc3MuYWRkcmVzcw0KT1JER" +
+                        "VIgQlkNCiAgcmVudGFsLnJlbnRhbF9kYXRlLCBjdXN0b21lci5lbWFpbAGcEWV3QmNBSElBZEFCbUFER" +
+                        "UFYQUJoQUc0QWN3QnBBRndBWVFCdUFITUFhUUJqQUhBQVp3QXhBRElBTlFBeEFGd0FaQUJsQUdZQVpnQ" +
+                        "XdBRndBWkFCbEFHWUFiQUJoQUc0QVp3QXhBREFBTkFBNUFIc0FYQUJtQUc4QWJnQjBBSFFBWWdCc0FIc" +
+                        "0FYQUJtQURBQVhBQm1BRzRBYVFCc0FGd0FaZ0JqQUdnQVlRQnlBSE1BWlFCMEFEQUFJQUJVQUdrQWJRQ" +
+                        "mxBSE1BSUFCT0FHVUFkd0FnQUZJQWJ3QnRBR0VBYmdBN0FIMEFld0JjQUdZQU1RQmNBR1lBYmdCcEFHd" +
+                        "0FYQUJtQUdNQWFBQmhBSElBY3dCbEFIUUFNZ0F3QURRQWV3QmNBQ29BWEFCbUFHNEFZUUJ0QUdVQUlBQ" +
+                        "lVBR2tBYlFCbEFITUFJQUJPQUdVQWR3QWdBRklBYndCdEFHRUFiZ0E3QUgwQVZBQnBBRzBBWlFCekFDQ" +
+                        "UFUZ0JsQUhjQUlBQlNBRzhBYlFCaEFHNEFJQUJEQUZrQVVnQTdBSDBBZXdCY0FHWUFNZ0JjQUdZQWJnQ" +
+                        "nBBR3dBSUFCVUFHa0FiUUJsQUhNQUlBQk9BR1VBZHdBZ0FGSUFid0J0QUdFQWJnQTdBSDBBZXdCY0FHW" +
+                        "UFNd0JjQUdZQWJnQnBBR3dBWEFCbUFHTUFhQUJoQUhJQWN3QmxBSFFBTWdBd0FEUUFJQUJVQUdFQWFBQ" +
+                        "nZBRzBBWVFBN0FIMEFmUUFOQUFvQWV3QmNBR01BYndCc0FHOEFjZ0IwQUdJQWJBQWdBRHNBWEFCeUFHV" +
+                        "UFaQUF3QUZ3QVp3QnlBR1VBWlFCdUFEQUFYQUJpQUd3QWRRQmxBRElBTlFBMUFEc0FYQUJ5QUdVQVpBQ" +
+                        "XdBRndBWndCeUFHVUFaUUJ1QURBQVhBQmlBR3dBZFFCbEFEQUFPd0I5QUEwQUNnQmNBSFlBYVFCbEFIY" +
+                        "0Fhd0JwQUc0QVpBQTBBRndBZFFCakFERUFYQUJ3QUdFQWNnQmtBRndBWXdCbUFERUFYQUJzQUdFQWJnQ" +
+                        "m5BREVBTUFBekFETUFYQUIxQUd3QVhBQm1BREFBWEFCbUFITUFNZ0EyQUNBQWJRQmhBR2tBYkFCMEFHO" +
+                        "EFPZ0JjQUd3QVlRQnVBR2NBTVFBd0FEUUFPUUJjQUdZQU1RQWdBRnNBWlFCdEFHRUFhUUJzQUYwQVhBQ" +
+                        "mpBR1lBTWdCY0FIQUFZUUJ5QUEwQUNnQmNBSFVBYkFCdUFHOEFiZ0JsQUZ3QVlnQmNBR1lBY3dBeUFEU" +
+                        "UFYQUJ3QUdFQWNnQU5BQW9BUkFCbEFHRUFjZ0FnQUZzQVpnQnBBSElBY3dCMEFGOEFiZ0JoQUcwQVpRQ" +
+                        "mRBRndBYkFCaEFHNEFad0F4QURBQU13QXpBRndBWmdBd0FDQUFJQUJjQUd3QVlRQnVBR2NBTVFBd0FEU" +
+                        "UFPUUJjQUdZQU1RQWdBRnNBYkFCaEFITUFkQUJmQUc0QVlRQnRBR1VBWFFBc0FGd0FZd0JtQURBQVhBQ" +
+                        "mlBREFBWEFCbUFESUFYQUJtQUhNQU1nQXlBRndBY0FCaEFISUFEUUFLQUZ3QWNBQmhBSElBRFFBS0FGd" +
+                        "0FZd0JtQURJQUlBQlpBRzhBZFFBZ0FHZ0FZUUIyQUdVQUlBQndBSFVBY2dCakFHZ0FZUUJ6QUdVQVpBQ" +
+                        "WdBRndBYkFCaEFHNEFad0F4QURBQU13QXpBRndBWmdBd0FDQUFJZ0JjQUd3QVlRQnVBR2NBTVFBd0FEU" +
+                        "UFPUUJjQUdZQU1nQWdBRnNBWmdCcEFHd0FiUUJ6QUYwQVhBQnNBR0VBYmdCbkFERUFNQUF6QURNQVhBQ" +
+                        "m1BREFBSUFBaUFGd0FiQUJoQUc0QVp3QXhBREFBTkFBNUFGd0FaZ0F5QUNBQUlBQnZBRzRBSUFCMEFHZ" +
+                        "0FaUUFnQUZzQWNnQmxBRzRBZEFCaEFHd0FYd0JrQUdFQWRBQmxBRjBBTEFBZ0FHRUFiZ0JrQUNBQWVRQ" +
+                        "nZBSFVBSUFCb0FHRUFkZ0JsQUNBQWR3QnZBRzRBSUFCaEFDQUFOUUF3QUNVQUxRQmtBR2tBY3dCakFHO" +
+                        "EFkUUJ1QUhRQUlBQm1BRzhBY2dBZ0FIa0Fid0IxQUhJQUlBQnVBR1VBZUFCMEFDQUFjQUIxQUhJQVl3Q" +
+                        "m9BR0VBY3dCbEFDNEFYQUJqQUdZQU1BQmNBSEFBWVFCeUFBMEFDZ0JjQUhBQVlRQnlBQTBBQ2dCY0FHT" +
+                        "UFaZ0F5QUNBQVdRQnZBSFVBSUFCaEFISUFaUUFnQUhjQVpRQnNBR01BYndCdEFHVUFJQUIwQUc4QUlBQ" +
+                        "mhBR01BWXdCdkFHMEFjQUJzQUdrQWN3Qm9BQ0FBZVFCdkFIVUFjZ0FnQUc4QWNnQmtBR1VBY2dBZ0FHR" +
+                        "UFkQUFnQUdFQWJnQjVBQ0FBY3dCb0FHOEFjQUFnQUc4QVpnQWdBRzhBZFFCeUFDQUFZd0J2QUhJQWNBQ" +
+                        "nZBSElBWVFCMEFHVUFJQUJqQUdnQVlRQnBBRzRBTGdBZ0FGUUFhQUJsQUNBQVl3QnNBRzhBY3dCbEFIT" +
+                        "UFkQUFnQUhNQWFBQnZBSEFBSUFCcEFITUFJQUJoQUhRQUlBQmJBR0VBWkFCa0FISUFaUUJ6QUhNQVhRQ" +
+                        "XVBRndBWXdCbUFEQUFYQUJ3QUdFQWNnQU5BQW9BWEFCd0FHRUFjZ0FOQUFvQVhBQmpBR1lBTWdBZ0FGU" +
+                        "UFhQUJoQUc0QWF3QWdBSGtBYndCMUFDQUFaZ0J2QUhJQUlBQmpBR2dBYndCdkFITUFhUUJ1QUdjQUlBQ" +
+                        "nZBSFVBY2dBZ0FHTUFid0J0QUhBQVlRQnVBSGtBSVFCY0FHTUFaZ0F3QUZ3QVpnQXpBRndBWmdCekFES" +
+                        "UFNQUJjQUhBQVlRQnlBQTBBQ2dCOUFBMEFDZ0E9";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.richText2 = new DevExpress.XtraReports.UI.XRRichText();
+            this.CustomerInfoQueryTableAdapter = new Devart.Data.MySql.MySqlDataAdapter();
+            this.mySqlCommand1 = new Devart.Data.MySql.MySqlCommand();
+            ((System.ComponentModel.ISupportInitialize)(this.richText2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.richText2});
+            this.Detail.Height = 254;
+            this.Detail.Name = "Detail";
+            // 
+            // richText2
+            // 
+            this.richText2.BackColor = System.Drawing.Color.Transparent;
+            this.richText2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.richText2.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.richText2.KeepTogether = true;
+            this.richText2.Location = new System.Drawing.Point(8, 8);
+            this.richText2.Name = "richText2";
+            this.richText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.richText2.SerializableRtfString = resources.GetString("richText2.SerializableRtfString");
+            this.richText2.Size = new System.Drawing.Size(634, 217);
+            this.richText2.StylePriority.UseBorders = false;
+            this.richText2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // CustomerInfoQueryTableAdapter
+            // 
+            this.CustomerInfoQueryTableAdapter.SelectCommand = this.mySqlCommand1;
+            this.CustomerInfoQueryTableAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+                        new System.Data.Common.DataTableMapping("Table", "CustomerInfoQuery", new System.Data.Common.DataColumnMapping[0])});
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CommandText = resources.GetString("mySqlCommand1.CommandText");
+            this.mySqlCommand1.CommandTimeout = 0;
+            this.mySqlCommand1.Name = "mySqlCommand1";
+            this.mySqlCommand1.ParameterCheck = true;
+            // 
+            // CustomerMailMerge
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail});
+            this.DataMember = "CustomerInfoQuery";
+            this.Name = "CustomerMailMerge";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.Version = "9.1";
+            ((System.ComponentModel.ISupportInitialize)(this.richText2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
+</Report>
+  </NativeReport>
+  <DataSourceInfo>
+    <Count>1</Count>
+    <Name>CustomerInfoQuery</Name>
+    <DataObjectPath />
+    <Type>2</Type>
+  </DataSourceInfo>
+  <DataSource>
+    <xs:schema id="CustomerMailMergeData" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="CustomerMailMergeData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Name="CustomerMailMergeReportData">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="CustomerInfoQuery">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="first_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="last_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="email" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="rental_date" type="xs:dateTime" />
+                  <xs:element name="films" msdata:ReadOnly="true" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="341" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="address">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <ActiveDataMember>CustomerInfoQuery</ActiveDataMember>
+  </DataSource>
+</DevartDataReport>

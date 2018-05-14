@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Report File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DevartDataReport>
+  <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+  <Connection>
+    <Name>sakila_sample_local</Name>
+    <ConnectionString>User Id=root;Host=localhost;Database=mysql;Character Set=utf8</ConnectionString>
+  </Connection>
+  <NativeReport>
+    <Report>/// &lt;XRTypeInfo&gt;
+///   &lt;AssemblyFullName&gt;Devart.XReports, Version=9.2.5.0, Culture=neutral, PublicKeyToken=09af7300eec23701&lt;/AssemblyFullName&gt;
+///   &lt;AssemblyLocation&gt;D:\Program Files\Devart\dbForge Studio for MySQL\Devart.XReports.dll&lt;/AssemblyLocation&gt;
+///   &lt;TypeName&gt;DevExpress.XtraReports.UI.XtraReport&lt;/TypeName&gt;
+///   &lt;Localization&gt;en-US&lt;/Localization&gt;
+///   &lt;References&gt;
+///     &lt;Reference Path="D:\Program Files\Devart\dbForge Studio for MySQL\Devart.DbForge.Data.MySql.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Data.SqlXml\2.0.0.0__b77a5c561934e089\System.Data.SqlXml.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Security\2.0.0.0__b03f5f7f11d50a3a\System.Security.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\Microsoft.VisualC\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualC.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Transactions\2.0.0.0__b77a5c561934e089\System.Transactions.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\Accessibility\2.0.0.0__b03f5f7f11d50a3a\Accessibility.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization.Formatters.Soap\2.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatters.Soap.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Deployment\2.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Drawing.Design\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.Design.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Web.RegularExpressions\2.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices.Protocols\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.Protocols.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.ServiceProcess\2.0.0.0__b03f5f7f11d50a3a\System.ServiceProcess.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.Install.dll" /&gt;
+///     &lt;Reference Path="D:\Program Files\Devart\dbForge Studio for MySQL\Devart.DbForge.Data.Interfaces.dll" /&gt;
+///   &lt;/References&gt;
+/// &lt;/XRTypeInfo&gt;
+namespace XtraReportSerialization {
+    
+    public class CustomerPaymentPivotGridReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRPivotGrid pivotGrid1;
+        private Devart.Data.MySql.MySqlDataAdapter paymentTableAdapter;
+        private Devart.Data.MySql.MySqlCommand mySqlCommand1;
+        private Devart.Data.MySql.MySqlDataSet CustomerPaymentPivotGridReportData;
+        private DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField fieldcustomerid;
+        private DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField fieldamount;
+        private DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField fieldpaymentdate;
+        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
+        private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
+        private DevExpress.XtraReports.UI.FormattingRule formattingRule1;
+        private System.Resources.ResourceManager _resources;
+        public CustomerPaymentPivotGridReport() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = @"zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            DevExpress.XtraPivotGrid.PivotGridCustomTotal pivotGridCustomTotal1 = new DevExpress.XtraPivotGrid.PivotGridCustomTotal();
+            DevExpress.XtraPivotGrid.PivotGridCustomTotal pivotGridCustomTotal2 = new DevExpress.XtraPivotGrid.PivotGridCustomTotal();
+            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pivotGrid1 = new DevExpress.XtraReports.UI.XRPivotGrid();
+            this.CustomerPaymentPivotGridReportData = new Devart.Data.MySql.MySqlDataSet();
+            this.paymentTableAdapter = new Devart.Data.MySql.MySqlDataAdapter();
+            this.mySqlCommand1 = new Devart.Data.MySql.MySqlCommand();
+            this.fieldcustomerid = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
+            this.fieldamount = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
+            this.fieldpaymentdate = new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField();
+            this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.formattingRule1 = new DevExpress.XtraReports.UI.FormattingRule();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerPaymentPivotGridReportData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // PageHeader
+            // 
+            this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label1});
+            this.PageHeader.Height = 33;
+            this.PageHeader.Name = "PageHeader";
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.pivotGrid1});
+            this.Detail.Height = 58;
+            this.Detail.Name = "Detail";
+            // 
+            // PageFooter
+            // 
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.pageInfo1});
+            this.PageFooter.Height = 17;
+            this.PageFooter.Name = "PageFooter";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label1.Size = new System.Drawing.Size(650, 33);
+            this.label1.StylePriority.UseFont = false;
+            this.label1.StylePriority.UseForeColor = false;
+            this.label1.StylePriority.UseTextAlignment = false;
+            this.label1.Text = "Customer Payment";
+            this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // pivotGrid1
+            // 
+            this.pivotGrid1.Appearance.Cell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pivotGrid1.Appearance.Cell.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.Cell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.Cell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.CustomTotalCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pivotGrid1.Appearance.CustomTotalCell.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.CustomTotalCell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.CustomTotalCell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.FieldHeader.BackColor = System.Drawing.Color.White;
+            this.pivotGrid1.Appearance.FieldHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.FieldHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.FieldValue.BackColor = System.Drawing.Color.White;
+            this.pivotGrid1.Appearance.FieldValue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldValue.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.FieldValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.FieldValueGrandTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pivotGrid1.Appearance.FieldValueGrandTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.FieldValueGrandTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldValueGrandTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.FieldValueTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pivotGrid1.Appearance.FieldValueTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.FieldValueTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FieldValueTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.FilterSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pivotGrid1.Appearance.FilterSeparator.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FilterSeparator.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.FilterSeparator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.FilterSeparator.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.GrandTotalCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pivotGrid1.Appearance.GrandTotalCell.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.GrandTotalCell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.GrandTotalCell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.HeaderGroupLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pivotGrid1.Appearance.HeaderGroupLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.HeaderGroupLine.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.HeaderGroupLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.HeaderGroupLine.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.Lines.BackColor = System.Drawing.Color.White;
+            this.pivotGrid1.Appearance.Lines.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.Lines.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.Lines.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.Lines.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.Appearance.TotalCell.BackColor = System.Drawing.Color.White;
+            this.pivotGrid1.Appearance.TotalCell.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pivotGrid1.Appearance.TotalCell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pivotGrid1.Appearance.TotalCell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.pivotGrid1.DataAdapter = this.paymentTableAdapter;
+            this.pivotGrid1.DataMember = "payment";
+            this.pivotGrid1.DataSource = this.CustomerPaymentPivotGridReportData;
+            this.pivotGrid1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
+                        this.fieldcustomerid,
+                        this.fieldamount,
+                        this.fieldpaymentdate});
+            this.pivotGrid1.Location = new System.Drawing.Point(0, 0);
+            this.pivotGrid1.Name = "pivotGrid1";
+            this.pivotGrid1.OptionsView.ShowColumnHeaders = false;
+            this.pivotGrid1.OptionsView.ShowDataHeaders = false;
+            this.pivotGrid1.Size = new System.Drawing.Size(650, 58);
+            // 
+            // CustomerPaymentPivotGridReportData
+            // 
+            this.CustomerPaymentPivotGridReportData.DataSetName = "CustomerPaymentPivotGridReportData";
+            this.CustomerPaymentPivotGridReportData.Name = "CustomerPaymentPivotGridReportData";
+            // 
+            // paymentTableAdapter
+            // 
+            this.paymentTableAdapter.SelectCommand = this.mySqlCommand1;
+            this.paymentTableAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+                        new System.Data.Common.DataTableMapping("Table", "payment", new System.Data.Common.DataColumnMapping[0])});
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CommandText = "SELECT * FROM sakila.payment";
+            this.mySqlCommand1.CommandTimeout = 0;
+            this.mySqlCommand1.Name = "mySqlCommand1";
+            this.mySqlCommand1.ParameterCheck = true;
+            // 
+            // fieldcustomerid
+            // 
+            this.fieldcustomerid.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldcustomerid.AreaIndex = 0;
+            this.fieldcustomerid.Caption = "Customer ID";
+            pivotGridCustomTotal1.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
+            this.fieldcustomerid.CustomTotals.AddRange(new DevExpress.XtraPivotGrid.PivotGridCustomTotal[] {
+                        pivotGridCustomTotal1,
+                        pivotGridCustomTotal2});
+            this.fieldcustomerid.FieldName = "customer_id";
+            this.fieldcustomerid.Name = "fieldcustomerid";
+            this.fieldcustomerid.UnboundFieldName = "fieldcustomerid";
+            // 
+            // fieldamount
+            // 
+            this.fieldamount.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldamount.AreaIndex = 0;
+            this.fieldamount.Caption = "Amount";
+            this.fieldamount.FieldName = "amount";
+            this.fieldamount.Name = "fieldamount";
+            // 
+            // fieldpaymentdate
+            // 
+            this.fieldpaymentdate.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldpaymentdate.AreaIndex = 0;
+            this.fieldpaymentdate.Caption = "Month";
+            this.fieldpaymentdate.ExpandedInFieldsGroup = false;
+            this.fieldpaymentdate.FieldName = "payment_date";
+            this.fieldpaymentdate.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
+            this.fieldpaymentdate.Name = "fieldpaymentdate";
+            this.fieldpaymentdate.SortOrder = DevExpress.XtraPivotGrid.PivotSortOrder.Descending;
+            this.fieldpaymentdate.UnboundFieldName = "fieldpaymentdate";
+            this.fieldpaymentdate.Width = 75;
+            // 
+            // pageInfo1
+            // 
+            this.pageInfo1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.pageInfo1.Location = new System.Drawing.Point(550, 0);
+            this.pageInfo1.Name = "pageInfo1";
+            this.pageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pageInfo1.Size = new System.Drawing.Size(100, 17);
+            this.pageInfo1.StylePriority.UseFont = false;
+            this.pageInfo1.StylePriority.UseTextAlignment = false;
+            this.pageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // formattingRule1
+            // 
+            this.formattingRule1.Name = "formattingRule1";
+            // 
+            // CustomerPaymentPivotGridReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.PageHeader,
+                        this.Detail,
+                        this.PageFooter});
+            this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {
+                        this.formattingRule1});
+            this.Name = "CustomerPaymentPivotGridReport";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.Version = "9.2";
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerPaymentPivotGridReportData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
+</Report>
+  </NativeReport>
+  <DataSourceInfo>
+    <Count>1</Count>
+    <Name>payment</Name>
+    <DataObjectPath>sakila.payment</DataObjectPath>
+    <Type>0</Type>
+  </DataSourceInfo>
+  <DataSource>
+    <xs:schema id="CustomerPaymentPivotGridReportData" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="CustomerPaymentPivotGridReportData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Name="CustomerPaymentPivotGridReportData">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="payment">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="payment_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="16050" type="xs:int" />
+                  <xs:element name="customer_id" type="xs:int" />
+                  <xs:element name="staff_id" type="xs:unsignedByte" />
+                  <xs:element name="rental_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="amount" type="xs:decimal" />
+                  <xs:element name="payment_date" type="xs:dateTime" />
+                  <xs:element name="last_update" type="xs:dateTime" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//payment" />
+          <xs:field xpath="payment_id" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <ActiveDataMember />
+  </DataSource>
+</DevartDataReport>

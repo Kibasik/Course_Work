@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Project File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DatabaseProject Version="1.0.1" Guid="6c1339e4-dec5-40cb-a171-8d1ff8d6c61a">
+  <Provider Guid="59f90733-4d68-4fdf-82a7-f0fcbf5460aa" />
+  <Include>
+    <File RelPath="Data Reports" Link=".\Data Reports\ActorFilmLabelReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\CrossTabCustomerPaymentReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\CustomerMailMergeReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\CustomerMasterDetailReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\FilmTableReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\MultiColumnReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\SakilaChartsReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\SakilaFilmsCatalogReport.rdb" />
+    <File RelPath="Data Reports" Link=".\Data Reports\StaticReport.rdb" />
+    <File RelPath="Database Diagram" Link=".\Database Diagram\SakilaDiagram.dbd" />
+    <File RelPath="Functions" Link=".\Functions\get_customer_balance.sql" />
+    <File RelPath="Functions" Link=".\Functions\inventory_held_by_customer.sql" />
+    <File RelPath="Functions" Link=".\Functions\inventory_in_stock.sql" />
+    <File RelPath="Pivot Grid" Link=".\Pivot Grid\Select_data_for_PivotGrid.sql" />
+    <File RelPath="Procedures" Link=".\Procedures\film_in_stock.sql" />
+    <File RelPath="Procedures" Link=".\Procedures\film_not_in_stock.sql" />
+    <File RelPath="Procedures" Link=".\Procedures\rewards_report.sql" />
+    <File RelPath="Queries" Link=".\Queries\Actor_Info.sql" />
+    <File RelPath="Queries" Link=".\Queries\Customer_List.sql" />
+    <File RelPath="Queries" Link=".\Queries\Film_List.sql" />
+    <File RelPath="Queries" Link=".\Queries\Nicer_But_Slower_Film_List.sql" />
+    <File RelPath="Queries" Link=".\Queries\Sales_By_Film_Category.sql" />
+    <File RelPath="Queries" Link=".\Queries\Sales_By_Store.sql" />
+    <File RelPath="Queries" Link=".\Queries\Staff_List.sql" />
+    <File RelPath="Tables" Link=".\Tables\actor.sql" />
+    <File RelPath="Tables" Link=".\Tables\address.sql" />
+    <File RelPath="Tables" Link=".\Tables\category.sql" />
+    <File RelPath="Tables" Link=".\Tables\city.sql" />
+    <File RelPath="Tables" Link=".\Tables\country.sql" />
+    <File RelPath="Tables" Link=".\Tables\customer.constraints.sql" />
+    <File RelPath="Tables" Link=".\Tables\customer.sql" />
+    <File RelPath="Tables" Link=".\Tables\film.sql" />
+    <File RelPath="Tables" Link=".\Tables\film_actor.sql" />
+    <File RelPath="Tables" Link=".\Tables\film_category.sql" />
+    <File RelPath="Tables" Link=".\Tables\film_text.sql" />
+    <File RelPath="Tables" Link=".\Tables\inventory.constraints.sql" />
+    <File RelPath="Tables" Link=".\Tables\inventory.sql" />
+    <File RelPath="Tables" Link=".\Tables\language.sql" />
+    <File RelPath="Tables" Link=".\Tables\payment.constraints.sql" />
+    <File RelPath="Tables" Link=".\Tables\payment.sql" />
+    <File RelPath="Tables" Link=".\Tables\rental.constraints.sql" />
+    <File RelPath="Tables" Link=".\Tables\rental.sql" />
+    <File RelPath="Tables" Link=".\Tables\staff.constraints.sql" />
+    <File RelPath="Tables" Link=".\Tables\staff.sql" />
+    <File RelPath="Tables" Link=".\Tables\store.constraints.sql" />
+    <File RelPath="Tables" Link=".\Tables\store.sql" />
+    <File RelPath="Triggers" Link=".\Triggers\customer_create_date.sql" />
+    <File RelPath="Triggers" Link=".\Triggers\del_film.sql" />
+    <File RelPath="Triggers" Link=".\Triggers\ins_film.sql" />
+    <File RelPath="Triggers" Link=".\Triggers\payment_date.sql" />
+    <File RelPath="Triggers" Link=".\Triggers\upd_film.sql" />
+    <File RelPath="Views" Link=".\Views\actor_info.sql" />
+    <File RelPath="Views" Link=".\Views\customer_list.sql" />
+    <File RelPath="Views" Link=".\Views\film_list.sql" />
+    <File RelPath="Views" Link=".\Views\nicer_but_slower_film_list.sql" />
+    <File RelPath="Views" Link=".\Views\sales_by_film_category.sql" />
+    <File RelPath="Views" Link=".\Views\sales_by_store.sql" />
+    <File RelPath="Views" Link=".\Views\staff_list.sql" />
+    <File RelPath="" Link=".\PostDeployment.sql" />
+    <File RelPath="" Link=".\PreDeployment.sql" />
+    <File RelPath="" Link=".\sakila-data.sql" />
+  </Include>
+  <Configurations Active="Local">
+    <Configuration Name="Local" CheckReferences="True" IgnoreErrors="False" OutputPath=".\Local" Target="Sakila" OutputType="SingleFile" KeepOriginalObjects="True" RecreateDatabase="False" RecreateObjects="False" ServerVersion="5.1.42" Database="sakila" UseRegions="False" FullPaths="False" Definer="CURRENT_USER" ScriptDelimiter="$$" StorageEngine="INNODB" Collation="utf8_general_ci" ConvertToLowercase="True" DefinerEffect="Keep">
+      <Connection Name="sakila_sample_local" ConnectionString="User Id=root;Host=localhost;Database=mysql;Character Set=utf8;" />
+      <Build>
+        <File RelPath="" Name="PreDeployment.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="actor.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="category.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="country.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film_text.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="language.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="city.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="address.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film_actor.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film_category.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="customer.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="inventory.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="payment.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="rental.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="staff.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="store.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="customer.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="inventory.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="payment.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="rental.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="staff.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="store.constraints.sql" BuildAction="Build" />
+        <File RelPath="Procedures" Name="film_in_stock.sql" BuildAction="Build" />
+        <File RelPath="Procedures" Name="film_not_in_stock.sql" BuildAction="Build" />
+        <File RelPath="Procedures" Name="rewards_report.sql" BuildAction="Build" />
+        <File RelPath="Functions" Name="get_customer_balance.sql" BuildAction="Build" />
+        <File RelPath="Functions" Name="inventory_held_by_customer.sql" BuildAction="Build" />
+        <File RelPath="Functions" Name="inventory_in_stock.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="del_film.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="ins_film.sql" BuildAction="Build" />
+        <File RelPath="" Name="sakila-data.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="customer_create_date.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="upd_film.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="payment_date.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="actor_info.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="customer_list.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="film_list.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="nicer_but_slower_film_list.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="sales_by_film_category.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="sales_by_store.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="staff_list.sql" BuildAction="Build" />
+        <File RelPath="" Name="PostDeployment.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Actor_Info.sql" BuildAction="None" />
+        <File RelPath="Queries" Name="Customer_List.sql" BuildAction="None" />
+        <File RelPath="Queries" Name="Film_List.sql" BuildAction="None" />
+        <File RelPath="Queries" Name="Nicer_But_Slower_Film_List.sql" BuildAction="None" />
+        <File RelPath="Queries" Name="Sales_By_Film_Category.sql" BuildAction="None" />
+        <File RelPath="Queries" Name="Sales_By_Store.sql" BuildAction="None" />
+        <File RelPath="Queries" Name="Staff_List.sql" BuildAction="None" />
+        <File RelPath="Pivot Grid" Name="Select_data_for_PivotGrid.sql" BuildAction="None" />
+      </Build>
+    </Configuration>
+    <Configuration Name="Production" CheckReferences="True" IgnoreErrors="False" OutputPath=".\Production" Target="Sakila" OutputType="SingleFile" KeepOriginalObjects="True" RecreateDatabase="False" RecreateObjects="False" ServerVersion="5.1.42" Database="sakila" UseRegions="False" FullPaths="False" Definer="CURRENT_USER" ScriptDelimiter="$$" StorageEngine="INNODB" Collation="latin1_swedish_ci" ConvertToLowercase="True" DefinerEffect="Keep">
+      <Connection Name="my-website.com" ConnectionString="User Id=admin;Host=my-website.com;Character Set=latin1" />
+      <Build>
+        <File RelPath="" Name="PreDeployment.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="actor.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="category.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="country.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film_text.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="language.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="city.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="address.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film_actor.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="film_category.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="customer.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="inventory.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="payment.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="rental.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="staff.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="store.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="customer.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="inventory.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="payment.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="rental.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="staff.constraints.sql" BuildAction="Build" />
+        <File RelPath="Tables" Name="store.constraints.sql" BuildAction="Build" />
+        <File RelPath="Procedures" Name="film_in_stock.sql" BuildAction="Build" />
+        <File RelPath="Procedures" Name="film_not_in_stock.sql" BuildAction="Build" />
+        <File RelPath="Procedures" Name="rewards_report.sql" BuildAction="Build" />
+        <File RelPath="Functions" Name="get_customer_balance.sql" BuildAction="Build" />
+        <File RelPath="Functions" Name="inventory_held_by_customer.sql" BuildAction="Build" />
+        <File RelPath="Functions" Name="inventory_in_stock.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="customer_create_date.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="del_film.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="ins_film.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="upd_film.sql" BuildAction="Build" />
+        <File RelPath="Triggers" Name="payment_date.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="actor_info.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="customer_list.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="film_list.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="nicer_but_slower_film_list.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="sales_by_film_category.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="sales_by_store.sql" BuildAction="Build" />
+        <File RelPath="Views" Name="staff_list.sql" BuildAction="Build" />
+        <File RelPath="" Name="PostDeployment.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Actor_Info.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Customer_List.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Film_List.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Nicer_But_Slower_Film_List.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Sales_By_Film_Category.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Sales_By_Store.sql" BuildAction="Build" />
+        <File RelPath="Queries" Name="Staff_List.sql" BuildAction="Build" />
+        <File RelPath="Pivot Grid" Name="Select_data_for_PivotGrid.sql" BuildAction="Build" />
+        <File RelPath="" Name="sakila-data.sql" BuildAction="Build" />
+      </Build>
+    </Configuration>
+  </Configurations>
+</DatabaseProject>

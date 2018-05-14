@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), SQL document design file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Document>
+  <Properties>
+    <Type>SQL Document Design</Type>
+    <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+    <ProviderVersion>4.0.380.0</ProviderVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </Properties>
+  <Connection Name="sakila_sample_local">
+    <ConnectionString>User Id=root;Host=localhost;Database=mysql;Character Set=utf8</ConnectionString>
+    <Database />
+  </Connection>
+  <Views>
+    <View Name="Design" Active="True" Visible="True">
+      <Data>
+        <ActiveQuery>0</ActiveQuery>
+        <SubQuery Id="0" Open="0" LocationX="0" LocationY="0" Scale="1">
+          <Tables>
+            <Table Name="cu" Left="40" Top="40" Width="148.7941" Height="228" Collapsed="False" />
+            <Table Name="a" Left="232" Top="40" Width="148.7941" Height="210" Collapsed="False" />
+            <Table Name="city" Left="40" Top="312" Width="148.7941" Height="138" Collapsed="False" />
+            <Table Name="country" Left="232" Top="296" Width="148.7941" Height="120" Collapsed="False" />
+          </Tables>
+        </SubQuery>
+      </Data>
+    </View>
+    <View Name="Code" Visible="True">
+      <Data />
+    </View>
+    <View Name="Data" Visible="False" />
+    <View Name="Plan" Visible="False" />
+    <View Name="PivotGrid" Visible="False" />
+  </Views>
+</Document>

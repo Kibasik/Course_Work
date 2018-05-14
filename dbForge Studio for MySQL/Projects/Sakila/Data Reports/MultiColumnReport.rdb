@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Report File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DevartDataReport>
+  <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+  <Connection>
+    <Name>sakila_sample_local</Name>
+    <ConnectionString>User Id=root;Host=localhost;Database=mysql;Character Set=utf8</ConnectionString>
+  </Connection>
+  <NativeReport>
+    <Report>/// &lt;XRTypeInfo&gt;
+///   &lt;AssemblyFullName&gt;Devart.XReports, Version=9.1.4.0, Culture=neutral, PublicKeyToken=09af7300eec23701&lt;/AssemblyFullName&gt;
+///   &lt;AssemblyLocation&gt;D:\Program Files\Devart\dbForge Studio for MySQL\Devart.XReports.dll&lt;/AssemblyLocation&gt;
+///   &lt;TypeName&gt;DevExpress.XtraReports.UI.XtraReport&lt;/TypeName&gt;
+///   &lt;Localization&gt;en-US&lt;/Localization&gt;
+///   &lt;References&gt;
+///     &lt;Reference Path="D:\Program Files\Devart\dbForge Studio for MySQL\Devart.DbForge.Data.MySql.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Data.SqlXml\2.0.0.0__b77a5c561934e089\System.Data.SqlXml.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Security\2.0.0.0__b03f5f7f11d50a3a\System.Security.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\Microsoft.VisualC\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualC.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Transactions\2.0.0.0__b77a5c561934e089\System.Transactions.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\Accessibility\2.0.0.0__b03f5f7f11d50a3a\Accessibility.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization.Formatters.Soap\2.0.0.0__b03f5f7f11d50a3a\System.Runtime.Serialization.Formatters.Soap.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Deployment\2.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Drawing.Design\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.Design.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Web.RegularExpressions\2.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices.Protocols\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.Protocols.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.ServiceProcess\2.0.0.0__b03f5f7f11d50a3a\System.ServiceProcess.dll" /&gt;
+///     &lt;Reference Path="D:\WINDOWS\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.Install.dll" /&gt;
+///     &lt;Reference Path="D:\Program Files\Devart\dbForge Studio for MySQL\Devart.DbForge.Data.Interfaces.dll" /&gt;
+///   &lt;/References&gt;
+/// &lt;/XRTypeInfo&gt;
+namespace XtraReportSerialization {
+    
+    public class MultiColumnReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRTable table1;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell1;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow2;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell2;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell3;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow3;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell4;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow4;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell5;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow5;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell6;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow6;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell7;
+        private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
+        private Devart.Data.MySql.MySqlDataAdapter QueryTableAdapter;
+        private Devart.Data.MySql.MySqlCommand mySqlCommand1;
+        private Devart.Data.MySql.MySqlDataSet MultiColumnReportData;
+        private DevExpress.XtraReports.UI.XRControlStyle EvenContactName;
+        private DevExpress.XtraReports.UI.XRControlStyle OddContactName;
+        private DevExpress.XtraReports.UI.XRControlStyle OddInfo;
+        private DevExpress.XtraReports.UI.XRControlStyle EvenInfo;
+        private System.Resources.ResourceManager _resources;
+        public MultiColumnReport() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = @"zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAABAAAAAAAAAFBBRFBBRFC9HWAKAAAAAPMAAAAybQB5AFMAcQBsAEMAbwBtAG0AYQBuAGQAMQAuAEMAbwBtAG0AYQBuAGQAVABlAHgAdAAAAAAAAeACU0VMRUNUDQogIGFkZHJlc3MuYWRkcmVzcywgYWRkcmVzcy5waG9uZSwgYWRkcmVzcy5wb3N0YWxfY29kZSwgY291bnRyeS5jb3VudHJ5LCBjaXR5LmNpdHksIGN1c3RvbWVyLmxhc3RfbmFtZSwgY3VzdG9tZXIuZW1haWwNCkZST00NCiAgc2FraWxhLmN1c3RvbWVyDQogIElOTkVSIEpPSU4gc2FraWxhLmFkZHJlc3MgT04gY3VzdG9tZXIuYWRkcmVzc19pZCA9IGFkZHJlc3MuYWRkcmVzc19pZA0KICBJTk5FUiBKT0lOIHNha2lsYS5jaXR5IE9OIGFkZHJlc3MuY2l0eV9pZCA9IGNpdHkuY2l0eV9pZA0KICBJTk5FUiBKT0lOIHNha2lsYS5jb3VudHJ5IE9OIGNpdHkuY291bnRyeV9pZCA9IGNvdW50cnkuY291bnRyeV9pZA==";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.table1 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.QueryTableAdapter = new Devart.Data.MySql.MySqlDataAdapter();
+            this.mySqlCommand1 = new Devart.Data.MySql.MySqlCommand();
+            this.MultiColumnReportData = new Devart.Data.MySql.MySqlDataSet();
+            this.EvenContactName = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.OddContactName = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.OddInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.EvenInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MultiColumnReportData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.table1});
+            this.Detail.Height = 124;
+            this.Detail.MultiColumn.ColumnCount = 3;
+            this.Detail.MultiColumn.Direction = DevExpress.XtraReports.UI.ColumnDirection.AcrossThenDown;
+            this.Detail.MultiColumn.Mode = DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount;
+            this.Detail.Name = "Detail";
+            // 
+            // ReportHeader
+            // 
+            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label1});
+            this.ReportHeader.Height = 42;
+            this.ReportHeader.Name = "ReportHeader";
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.pageInfo1});
+            this.BottomMargin.Height = 18;
+            this.BottomMargin.Name = "BottomMargin";
+            // 
+            // table1
+            // 
+            this.table1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+                        | DevExpress.XtraPrinting.BorderSide.Right) 
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.table1.KeepTogether = true;
+            this.table1.Location = new System.Drawing.Point(0, 0);
+            this.table1.Name = "table1";
+            this.table1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.table1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+                        this.tableRow1,
+                        this.tableRow2,
+                        this.tableRow3,
+                        this.tableRow4,
+                        this.tableRow5,
+                        this.tableRow6});
+            this.table1.Size = new System.Drawing.Size(200, 110);
+            this.table1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // tableRow1
+            // 
+            this.tableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell1});
+            this.tableRow1.Name = "tableRow1";
+            this.tableRow1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.tableRow1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableRow1.Weight = 0.22727272727272727;
+            // 
+            // tableRow2
+            // 
+            this.tableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell2,
+                        this.tableCell3});
+            this.tableRow2.Name = "tableRow2";
+            this.tableRow2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.tableRow2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableRow2.Weight = 0.15454545454545454;
+            // 
+            // tableRow3
+            // 
+            this.tableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell4});
+            this.tableRow3.Name = "tableRow3";
+            this.tableRow3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.tableRow3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableRow3.Weight = 0.15454545454545454;
+            // 
+            // tableRow4
+            // 
+            this.tableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell5});
+            this.tableRow4.Name = "tableRow4";
+            this.tableRow4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.tableRow4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableRow4.Weight = 0.15454545454545454;
+            // 
+            // tableRow5
+            // 
+            this.tableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell6});
+            this.tableRow5.Name = "tableRow5";
+            this.tableRow5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.tableRow5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableRow5.Weight = 0.15454545454545454;
+            // 
+            // tableRow6
+            // 
+            this.tableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell7});
+            this.tableRow6.Name = "tableRow6";
+            this.tableRow6.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.tableRow6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableRow6.Weight = 0.15454545454545454;
+            // 
+            // tableCell1
+            // 
+            this.tableCell1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.tableCell1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.last_name", "")});
+            this.tableCell1.EvenStyleName = "EvenContactName";
+            this.tableCell1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tableCell1.Name = "tableCell1";
+            this.tableCell1.OddStyleName = "OddContactName";
+            this.tableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell1.Text = "tableCell1";
+            this.tableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.tableCell1.Weight = 1;
+            // 
+            // tableCell2
+            // 
+            this.tableCell2.Borders = DevExpress.XtraPrinting.BorderSide.Left;
+            this.tableCell2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.country", "")});
+            this.tableCell2.EvenStyleName = "EvenInfo";
+            this.tableCell2.Name = "tableCell2";
+            this.tableCell2.OddStyleName = "OddInfo";
+            this.tableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell2.Text = "tableCell2";
+            this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.tableCell2.Weight = 0.335;
+            // 
+            // tableCell3
+            // 
+            this.tableCell3.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.tableCell3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.city", "")});
+            this.tableCell3.EvenStyleName = "EvenInfo";
+            this.tableCell3.Name = "tableCell3";
+            this.tableCell3.OddStyleName = "OddInfo";
+            this.tableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell3.Text = "tableCell3";
+            this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.tableCell3.Weight = 0.665;
+            // 
+            // tableCell4
+            // 
+            this.tableCell4.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.tableCell4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.address", "")});
+            this.tableCell4.EvenStyleName = "EvenInfo";
+            this.tableCell4.Name = "tableCell4";
+            this.tableCell4.OddStyleName = "OddInfo";
+            this.tableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell4.Text = "tableCell4";
+            this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleJustify;
+            this.tableCell4.Weight = 1;
+            // 
+            // tableCell5
+            // 
+            this.tableCell5.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.tableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.email", "")});
+            this.tableCell5.EvenStyleName = "EvenInfo";
+            this.tableCell5.Name = "tableCell5";
+            this.tableCell5.OddStyleName = "OddInfo";
+            this.tableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell5.Text = "tableCell5";
+            this.tableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.tableCell5.Weight = 1;
+            // 
+            // tableCell6
+            // 
+            this.tableCell6.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.tableCell6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.postal_code", "")});
+            this.tableCell6.EvenStyleName = "EvenInfo";
+            this.tableCell6.Name = "tableCell6";
+            this.tableCell6.OddStyleName = "OddInfo";
+            this.tableCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell6.Text = "tableCell6";
+            this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.tableCell6.Weight = 1;
+            // 
+            // tableCell7
+            // 
+            this.tableCell7.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.tableCell7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.phone", "")});
+            this.tableCell7.EvenStyleName = "EvenInfo";
+            this.tableCell7.Name = "tableCell7";
+            this.tableCell7.OddStyleName = "OddInfo";
+            this.tableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell7.Text = "tableCell7";
+            this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.tableCell7.Weight = 1;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(8, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label1.Size = new System.Drawing.Size(633, 42);
+            this.label1.Text = "Customer List";
+            this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // pageInfo1
+            // 
+            this.pageInfo1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic);
+            this.pageInfo1.Format = "Page : {0 } / {1}";
+            this.pageInfo1.Location = new System.Drawing.Point(550, 0);
+            this.pageInfo1.Name = "pageInfo1";
+            this.pageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.pageInfo1.Size = new System.Drawing.Size(98, 17);
+            this.pageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // QueryTableAdapter
+            // 
+            this.QueryTableAdapter.SelectCommand = this.mySqlCommand1;
+            this.QueryTableAdapter.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+                        new System.Data.Common.DataTableMapping("Table", "Query", new System.Data.Common.DataColumnMapping[0])});
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CommandText = resources.GetString("mySqlCommand1.CommandText");
+            this.mySqlCommand1.CommandTimeout = 0;
+            this.mySqlCommand1.Name = "mySqlCommand1";
+            this.mySqlCommand1.ParameterCheck = true;
+            // 
+            // MultiColumnReportData
+            // 
+            this.MultiColumnReportData.DataSetName = "MultiColumnReportData";
+            this.MultiColumnReportData.Name = "MultiColumnReportData";
+            // 
+            // EvenContactName
+            // 
+            this.EvenContactName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(153)))), ((int)(((byte)(201)))));
+            this.EvenContactName.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.EvenContactName.BorderWidth = 1;
+            this.EvenContactName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.EvenContactName.ForeColor = System.Drawing.Color.White;
+            this.EvenContactName.Name = "EvenContactName";
+            // 
+            // OddContactName
+            // 
+            this.OddContactName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(138)))), ((int)(((byte)(146)))));
+            this.OddContactName.BorderColor = System.Drawing.Color.Empty;
+            this.OddContactName.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.OddContactName.BorderWidth = 1;
+            this.OddContactName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.OddContactName.ForeColor = System.Drawing.Color.White;
+            this.OddContactName.Name = "OddContactName";
+            // 
+            // OddInfo
+            // 
+            this.OddInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(226)))), ((int)(((byte)(228)))));
+            this.OddInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(138)))), ((int)(((byte)(146)))));
+            this.OddInfo.BorderWidth = 1;
+            this.OddInfo.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.OddInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OddInfo.Name = "OddInfo";
+            // 
+            // EvenInfo
+            // 
+            this.EvenInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(234)))), ((int)(((byte)(251)))));
+            this.EvenInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(153)))), ((int)(((byte)(201)))));
+            this.EvenInfo.BorderWidth = 1;
+            this.EvenInfo.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.EvenInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.EvenInfo.Name = "EvenInfo";
+            // 
+            // MultiColumnReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail,
+                        this.ReportHeader,
+                        this.BottomMargin});
+            this.DataAdapter = this.QueryTableAdapter;
+            this.DataMember = "Query";
+            this.DataSource = this.MultiColumnReportData;
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 18);
+            this.Name = "MultiColumnReport";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+                        this.EvenContactName,
+                        this.OddContactName,
+                        this.OddInfo,
+                        this.EvenInfo});
+            this.Version = "9.1";
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MultiColumnReportData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
+</Report>
+  </NativeReport>
+  <DataSourceInfo>
+    <Count>1</Count>
+    <Name>Query</Name>
+    <DataObjectPath />
+    <Type>2</Type>
+  </DataSourceInfo>
+  <DataSource>
+    <xs:schema id="MultiColumnReportData" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="MultiColumnReportData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Name="MultiColumnReportData">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Query">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="address">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="phone">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="postal_code" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="city">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="last_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="email" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <ActiveDataMember>Query</ActiveDataMember>
+  </DataSource>
+</DevartDataReport>

@@ -1,0 +1,12 @@
+--
+-- Definition for table country
+--
+CREATE TABLE country(
+  country_id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  country VARCHAR(50) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (country_id)
+)
+ENGINE = INNODB
+CHARACTER SET utf8
+COLLATE utf8_general_ci;

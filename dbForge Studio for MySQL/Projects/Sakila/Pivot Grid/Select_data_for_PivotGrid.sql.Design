@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), SQL document design file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Document>
+  <Properties>
+    <Type>SQL Document Design</Type>
+    <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+    <ProviderVersion>4.0.214.0</ProviderVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </Properties>
+  <Connection Name="sakila_sample_local">
+    <ConnectionString>User Id=root;Host=localhost;Database=mysql;Character Set=utf8</ConnectionString>
+    <Database />
+  </Connection>
+  <Views>
+    <View Name="Design" Visible="False" />
+    <View Name="Code" Visible="True">
+      <Data />
+    </View>
+    <View Name="Data" Visible="True" />
+    <View Name="Plan" Visible="False" />
+    <View Name="PivotGrid" Active="True" Visible="True">
+      <Data>
+        <NativePivotGrid>
+          <XtraSerializer version="1.0" application="PivotGrid">
+  <property name="#LayoutVersion" />
+  <property name="OptionsPrint" isnull="true" iskey="true">
+    <property name="RowFieldValueSeparator">0</property>
+    <property name="ColumnFieldValueSeparator">0</property>
+    <property name="UsePrintAppearance">false</property>
+    <property name="MergeColumnFieldValues">true</property>
+    <property name="PageSettings" isnull="true" iskey="true">
+      <property name="Landscape">false</property>
+      <property name="Margins">100, 100, 100, 100</property>
+      <property name="PaperHeight">0</property>
+      <property name="PaperKind">Letter</property>
+      <property name="PaperWidth">0</property>
+    </property>
+    <property name="PrintUnusedFilterFields">true</property>
+    <property name="MergeRowFieldValues">true</property>
+    <property name="PrintHeadersOnEveryPage">false</property>
+    <property name="PrintVertLines">True</property>
+    <property name="PrintHorzLines">True</property>
+    <property name="VerticalContentSplitting">Smart</property>
+    <property name="PrintDataHeaders">True</property>
+    <property name="PrintRowHeaders">True</property>
+    <property name="PrintColumnHeaders">Default</property>
+    <property name="PrintFilterHeaders">Default</property>
+  </property>
+  <property name="OptionsCustomization" isnull="true" iskey="true">
+    <property name="AllowHideFields">Always</property>
+  </property>
+  <property name="BorderStyle">Default</property>
+  <property name="Fields" iskey="true" value="9">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">0</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="Caption">category name</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">category name;System.String,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="FieldName">category name</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="CustomTotals" iskey="true" value="3">
+        <property name="Item1" isnull="true" iskey="true" />
+        <property name="Item2" isnull="true" iskey="true">
+          <property name="SummaryType">Count</property>
+        </property>
+        <property name="Item3" isnull="true" iskey="true">
+          <property name="SummaryType">Min</property>
+        </property>
+      </property>
+      <property name="Name">Xcategory name</property>
+      <property name="AreaIndex">0</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">109</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">1</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="Caption">payment date</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">payment date;System.DateTime,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xpayment date</property>
+      <property name="AreaIndex">0</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">144</property>
+      <property name="Visible">false</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">2</property>
+      <property name="TotalsVisibility">None</property>
+      <property name="UnboundFieldName">Xpayment date (Year)</property>
+      <property name="Caption">payment date (Year)</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">payment date;System.DateTime,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="FieldName">payment date</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="GroupInterval">DateYear</property>
+      <property name="Area">ColumnArea</property>
+      <property name="CustomTotals" iskey="true" value="0" />
+      <property name="Name">Xpayment date (Year)</property>
+      <property name="AreaIndex">0</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">48</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">3</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="UnboundFieldName">Xpayment date (Month)</property>
+      <property name="Caption">payment date (Month)</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">payment date;System.DateTime,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="FieldName">payment date</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="GroupInterval">DateMonth</property>
+      <property name="Area">ColumnArea</property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xpayment date (Month)</property>
+      <property name="AreaIndex">1</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">70</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">4</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="UnboundFieldName">Xpayment date (Day)</property>
+      <property name="Caption">payment date (Day)</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">payment date;System.DateTime,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="GroupInterval">Date</property>
+      <property name="Area">ColumnArea</property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xpayment date (Day)</property>
+      <property name="AreaIndex">1</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Visible">false</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">5</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="Caption">film title</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">film title;System.String,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="FieldName">film title</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="Area">RowArea</property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xfilm title</property>
+      <property name="AreaIndex">1</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">136</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">6</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="Caption">payment amount</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">payment amount;Devart.Data.MySql.MySqlDecimal,Devart.DbForge.Data.MySql, Version=5.0.59.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="FieldName">payment amount</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="Area">DataArea</property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xpayment amount</property>
+      <property name="AreaIndex">0</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">147</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">7</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="Caption">film rating</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">film rating;System.String,mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="FieldName">film rating</property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xfilm rating</property>
+      <property name="AreaIndex">0</property>
+      <property name="SummaryVariation">None</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="SortBySummaryInfo" isnull="true" iskey="true">
+        <property name="FieldComponentName" />
+        <property name="Conditions" iskey="true" value="0" />
+      </property>
+      <property name="Index">8</property>
+      <property name="TotalsVisibility">CustomTotals</property>
+      <property name="UnboundFieldName">Xpayment amount (10)</property>
+      <property name="Caption">payment amount (10)</property>
+      <property name="Tag" type="Devart.DbForge.PivotGrid.ColumnDescription">payment amount;Devart.Data.MySql.MySqlDecimal,Devart.DbForge.Data.MySql, Version=5.0.59.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+      <property name="FilterValues" isnull="true" iskey="true">
+        <property name="Values">~Xtra#Array0, </property>
+        <property name="ShowBlanks">true</property>
+        <property name="FilterType">Excluded</property>
+      </property>
+      <property name="ToolTips" isnull="true" iskey="true">
+        <property name="ValueText" />
+        <property name="HeaderText" />
+      </property>
+      <property name="GroupInterval">Numeric</property>
+      <property name="Area">DataArea</property>
+      <property name="CustomTotals" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true" />
+      </property>
+      <property name="Name">Xpayment amount (10)</property>
+      <property name="AreaIndex">1</property>
+      <property name="SummaryVariation">None</property>
+      <property name="Width">123</property>
+      <property name="Visible">false</property>
+    </property>
+  </property>
+  <property name="DataField" isnull="true" iskey="true">
+    <property name="SortBySummaryInfo" isnull="true" iskey="true">
+      <property name="FieldComponentName" />
+      <property name="Conditions" iskey="true" value="0" />
+    </property>
+    <property name="SummaryType">Sum</property>
+    <property name="Index">-1</property>
+    <property name="TopValueCount">0</property>
+    <property name="TotalsVisibility">AutomaticTotals</property>
+    <property name="TopValueShowOthers">false</property>
+    <property name="TopValueType">Absolute</property>
+    <property name="UnboundExpression" />
+    <property name="UnboundType">Integer</property>
+    <property name="UnboundFieldName">pivot$dataField$</property>
+    <property name="Caption">Data</property>
+    <property name="GrandTotalText" />
+    <property name="EmptyValueText" />
+    <property name="EmptyCellText" />
+    <property name="Tag" isnull="true" />
+    <property name="KPIGraphic">ServerDefined</property>
+    <property name="ExpandedInFieldsGroup">true</property>
+    <property name="UseNativeFormat">Default</property>
+    <property name="SortMode">Default</property>
+    <property name="SortOrder">Ascending</property>
+    <property name="FilterValues" isnull="true" iskey="true">
+      <property name="Values">~Xtra#Array0, </property>
+      <property name="ShowBlanks">true</property>
+      <property name="FilterType">Excluded</property>
+    </property>
+    <property name="ColumnValueLineCount">1</property>
+    <property name="RowValueLineCount">1</property>
+    <property name="FieldName" />
+    <property name="ToolTips" isnull="true" iskey="true">
+      <property name="ValueText" />
+      <property name="HeaderText" />
+    </property>
+    <property name="ImageIndex">-1</property>
+    <property name="GroupInterval">Default</property>
+    <property name="AllowedAreas">All</property>
+    <property name="RunningTotal">false</property>
+    <property name="Area">ColumnArea</property>
+    <property name="CustomTotals" iskey="true" value="0" />
+    <property name="Name" />
+    <property name="GroupIntervalNumericRange">10</property>
+    <property name="Options" isnull="true" iskey="true">
+      <property name="AllowSort">False</property>
+      <property name="AllowExpand">False</property>
+      <property name="AllowFilter">False</property>
+    </property>
+    <property name="MinWidth">20</property>
+    <property name="SummaryVariation">None</property>
+    <property name="SummaryDisplayType">Default</property>
+    <property name="Width">100</property>
+    <property name="Visible">false</property>
+  </property>
+  <property name="Prefilter" isnull="true" iskey="true">
+    <property name="Enabled">true</property>
+    <property name="Criteria" isnull="true" />
+  </property>
+  <property name="OptionsBehavior" isnull="true" iskey="true">
+    <property name="HorizontalScrolling">Control</property>
+  </property>
+  <property name="OptionsDataField" isnull="true" iskey="true">
+    <property name="RowHeaderWidth">100</property>
+    <property name="RowValueLineCount">1</property>
+    <property name="Caption" />
+    <property name="ColumnValueLineCount">1</property>
+    <property name="FieldNaming">FieldName</property>
+    <property name="Area">None</property>
+    <property name="AreaIndex">-1</property>
+  </property>
+  <property name="Groups" iskey="true" value="0" />
+  <property name="FormatConditions" iskey="true" value="2">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Value2" type="System.Decimal">20</property>
+      <property name="Appearance" isnull="true" iskey="true">
+        <property name="BackColor">Lavender</property>
+        <property name="BorderColor">Black</property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="VAlignment">Bottom</property>
+          <property name="Trimming">Word</property>
+          <property name="HAlignment">Near</property>
+        </property>
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseBackColor">true</property>
+          <property name="UseImage">true</property>
+          <property name="UseFont">true</property>
+          <property name="UseBorderColor">true</property>
+          <property name="HighPriority">true</property>
+          <property name="UseForeColor">true</property>
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="ForeColor">Navy</property>
+      </property>
+      <property name="Value1" type="System.Decimal">10</property>
+      <property name="Condition">Between</property>
+      <property name="FieldName">Xpayment amount</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Appearance" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseImage">true</property>
+          <property name="UseForeColor">true</property>
+        </property>
+        <property name="ForeColor">ForestGreen</property>
+      </property>
+      <property name="Value1" type="System.Decimal">10</property>
+      <property name="Condition">Less</property>
+      <property name="FieldName">Xpayment amount</property>
+    </property>
+  </property>
+</XtraSerializer>
+        </NativePivotGrid>
+      </Data>
+    </View>
+    <View Name="Tree" Visible="False" />
+  </Views>
+</Document>

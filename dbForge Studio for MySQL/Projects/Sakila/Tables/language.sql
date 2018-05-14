@@ -1,0 +1,12 @@
+--
+-- Definition for table language
+--
+CREATE TABLE language(
+  language_id TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+  name CHAR(20) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (language_id)
+)
+ENGINE = INNODB
+CHARACTER SET utf8
+COLLATE utf8_general_ci;
