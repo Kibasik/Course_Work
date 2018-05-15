@@ -164,6 +164,10 @@ namespace Client
             {
                 dataView.RowFilter += "AND SOftwareTypeName = '" + softwareTypeCB.SelectedItem.ToString() + "'";
             }
+            if (softwareNameTB.Text != "")
+            {
+                dataView.RowFilter += "AND SoftwareName LIKE '" + softwareNameTB.Text + "%'";
+            }
             softwareDGV.DataSource = dataView;
             connection.Close();
         }
@@ -190,6 +194,27 @@ namespace Client
             {
                 e.Handled = true;
             }
+        }
+
+        private void softwareNameTB_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = softwareList.Tables[0].DefaultView;
+            dataView.RowFilter = "SoftwareName LIKE '" + softwareNameTB.Text + "%'";
+            if (lowPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND GoodsCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
+            }
+            if (highPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND GoodsCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
+            if (softwareTypeCB.SelectedItem != null)
+            {
+                dataView.RowFilter += "AND SOftwareTypeName = '" + softwareTypeCB.SelectedItem.ToString() + "'";
+            }
+            softwareDGV.DataSource = dataView;
+            connection.Close();
         }
     }
 }

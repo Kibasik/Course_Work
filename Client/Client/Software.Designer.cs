@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.softwareTypeCB = new System.Windows.Forms.ComboBox();
             this.softwareDGV = new System.Windows.Forms.DataGridView();
@@ -55,6 +55,9 @@
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.softwareQuantityTB = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.softwareNameTB = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareList)).BeginInit();
@@ -155,18 +158,18 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.AxisX.Title = "Тип программного обеспечения";
-            chartArea3.AxisY.Title = "Количество";
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea2.AxisX.Title = "Тип программного обеспечения";
+            chartArea2.AxisY.Title = "Количество";
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.DataSource = this.dataTableBindingSource1;
             this.chart1.Location = new System.Drawing.Point(15, 349);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Name = "Series1";
-            series3.XValueMember = "SoftwareTypeName";
-            series3.YValueMembers = "Quantity";
-            this.chart1.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            series2.XValueMember = "SoftwareTypeName";
+            series2.YValueMembers = "Quantity";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(552, 368);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -268,11 +271,35 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // softwareNameTB
+            // 
+            this.softwareNameTB.Location = new System.Drawing.Point(633, 219);
+            this.softwareNameTB.Name = "softwareNameTB";
+            this.softwareNameTB.Size = new System.Drawing.Size(100, 20);
+            this.softwareNameTB.TabIndex = 25;
+            this.softwareNameTB.TextChanged += new System.EventHandler(this.softwareNameTB_TextChanged);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(630, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Введите наименование ПО:";
+            // 
             // Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 729);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.softwareNameTB);
             this.Controls.Add(this.softwareQuantityTB);
             this.Controls.Add(this.costButton);
             this.Controls.Add(this.label4);
@@ -330,5 +357,8 @@
         private System.Windows.Forms.TextBox lowPriceTB;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox softwareQuantityTB;
+        private System.Windows.Forms.TextBox softwareNameTB;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Label label2;
     }
 }
