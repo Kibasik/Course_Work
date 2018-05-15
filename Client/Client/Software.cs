@@ -79,12 +79,30 @@ namespace Client
         private void basketButton_Click(object sender, EventArgs e)
         {
             connection.Open();
+            int softwareQuantity = 0;
+            try
+            {
+                command = new MySqlCommand("SELECT chosensoftware.BasketID, chosensoftware.SoftwareID, chosensoftware.SoftwareQuantity FROM " +
+                                           "chosensoftware WHERE chosensoftware.BasketID = '" + basketID + "' " +
+                                           "AND chosensoftware.SoftwareID = '" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "'", connection);
+                using (MySqlDataReader MyReader = command.ExecuteReader())
+                {
+                    while (MyReader.Read())
+                    {
+                        softwareQuantity = MyReader.GetInt32(2);
+                    }
+                    MyReader.Close();
+                }
+            }
+            catch
+            {
+            }
             if (count == 1)
             {
                 try
                 {
                     command = new MySqlCommand("INSERT INTO basket (basket.BasketID) VALUES " +
-                                                               "('" + basketID + "')", connection);
+                                               "('" + basketID + "')", connection);
                     command.ExecuteNonQuery();
                     count++;
                 }
@@ -92,9 +110,37 @@ namespace Client
                 {
                 }
             }
-            command = new MySqlCommand("INSERT INTO chosensoftware (chosensoftware.SoftwareID, chosensoftware.BasketID) VALUES " +
-                                       "('" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "', '" + basketID + "')", connection);
-            command.ExecuteNonQuery();
+            if (softwareQuantityTB.Text == "" || Convert.ToInt32(softwareQuantityTB.Text) <= 1)
+            {
+                if (softwareQuantity == 0)
+                {
+                    command = new MySqlCommand("INSERT INTO chosensoftware (chosensoftware.SoftwareID, chosensoftware.BasketID, chosensoftware.SoftwareQuantity) VALUES " +
+                                               "('" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "', '" + basketID + "', '" + 1 + "')", connection);
+                    command.ExecuteNonQuery();
+                }
+                else
+                {
+                    command = new MySqlCommand("UPDATE chosensoftware SET chosensoftware.SoftwareQuantity = '" + (softwareQuantity + 1) + "' " +
+                                               "WHERE chosensoftware.BasketID = '" + basketID + "' AND chosensoftware.SoftwareID = '" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "'", connection);
+                    command.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+                if (softwareQuantity == 0)
+                {
+                    command = new MySqlCommand("INSERT INTO chosensoftware (chosensoftware.SoftwareID, chosensoftware.BasketID, chosensoftware.SoftwareQuantity) VALUES " +
+                                               "('" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "', '" + basketID + "', '" + Convert.ToInt32(softwareQuantityTB.Text) + "')", connection);
+                    command.ExecuteNonQuery();
+                }
+                else
+                {
+                    command = new MySqlCommand("UPDATE chosensoftware SET chosensoftware.SoftwareQuantity = '" + (softwareQuantity + Convert.ToInt32(softwareQuantityTB.Text)) + "' " +
+                                               "WHERE chosensoftware.BasketID = '" + basketID + "' AND chosensoftware.SoftwareID = '" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "'", connection);
+                    command.ExecuteNonQuery();
+                }
+            }
+            softwareQuantityTB.Clear();
             connection.Close();
         }
 
@@ -131,6 +177,14 @@ namespace Client
         }
 
         private void highPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void softwareQuantityTB_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
             {

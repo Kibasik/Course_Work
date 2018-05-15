@@ -30,18 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.basketDGV = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.totalCostLabel = new System.Windows.Forms.Label();
-            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.softwareDGV = new System.Windows.Forms.DataGridView();
-            this.SoftwareTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoftwareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoftwareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoftwareID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deleteGoodsButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.deleteSoftwareButton = new System.Windows.Forms.Button();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +37,19 @@
             this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.totalCostLabel = new System.Windows.Forms.Label();
+            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.softwareDGV = new System.Windows.Forms.DataGridView();
+            this.deleteGoodsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteSoftwareButton = new System.Windows.Forms.Button();
+            this.SoftwareTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoftwareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoftwareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoftwareQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoftwareID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.basketDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
@@ -73,6 +74,44 @@
             this.basketDGV.Name = "basketDGV";
             this.basketDGV.Size = new System.Drawing.Size(550, 324);
             this.basketDGV.TabIndex = 0;
+            // 
+            // TypeCategoryName
+            // 
+            this.TypeCategoryName.HeaderText = "Тип";
+            this.TypeCategoryName.Name = "TypeCategoryName";
+            // 
+            // CategoryGoodsName
+            // 
+            this.CategoryGoodsName.HeaderText = "Категория";
+            this.CategoryGoodsName.Name = "CategoryGoodsName";
+            this.CategoryGoodsName.Width = 120;
+            // 
+            // GoodsName
+            // 
+            this.GoodsName.HeaderText = "Наименование";
+            this.GoodsName.Name = "GoodsName";
+            this.GoodsName.Width = 180;
+            // 
+            // GoodsManufacturerName
+            // 
+            this.GoodsManufacturerName.HeaderText = "Производитель";
+            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
+            // 
+            // GoodsCost
+            // 
+            this.GoodsCost.HeaderText = "Цена";
+            this.GoodsCost.Name = "GoodsCost";
+            // 
+            // GoodsQuantity
+            // 
+            this.GoodsQuantity.HeaderText = "Количество";
+            this.GoodsQuantity.Name = "GoodsQuantity";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // label1
             // 
@@ -107,39 +146,13 @@
             this.SoftwareTypeName,
             this.SoftwareName,
             this.SoftwareCost,
+            this.SoftwareQuantity,
             this.SoftwareID});
             this.softwareDGV.Location = new System.Drawing.Point(12, 394);
             this.softwareDGV.Name = "softwareDGV";
             this.softwareDGV.ReadOnly = true;
             this.softwareDGV.Size = new System.Drawing.Size(550, 323);
             this.softwareDGV.TabIndex = 3;
-            // 
-            // SoftwareTypeName
-            // 
-            this.SoftwareTypeName.HeaderText = "Тип";
-            this.SoftwareTypeName.Name = "SoftwareTypeName";
-            this.SoftwareTypeName.ReadOnly = true;
-            this.SoftwareTypeName.Width = 200;
-            // 
-            // SoftwareName
-            // 
-            this.SoftwareName.HeaderText = "Наименование";
-            this.SoftwareName.Name = "SoftwareName";
-            this.SoftwareName.ReadOnly = true;
-            this.SoftwareName.Width = 200;
-            // 
-            // SoftwareCost
-            // 
-            this.SoftwareCost.HeaderText = "Цена";
-            this.SoftwareCost.Name = "SoftwareCost";
-            this.SoftwareCost.ReadOnly = true;
-            // 
-            // SoftwareID
-            // 
-            this.SoftwareID.HeaderText = "ID";
-            this.SoftwareID.Name = "SoftwareID";
-            this.SoftwareID.ReadOnly = true;
-            this.SoftwareID.Visible = false;
             // 
             // deleteGoodsButton
             // 
@@ -179,43 +192,38 @@
             this.deleteSoftwareButton.UseVisualStyleBackColor = true;
             this.deleteSoftwareButton.Click += new System.EventHandler(this.deleteSoftwareButton_Click);
             // 
-            // TypeCategoryName
+            // SoftwareTypeName
             // 
-            this.TypeCategoryName.HeaderText = "Тип";
-            this.TypeCategoryName.Name = "TypeCategoryName";
+            this.SoftwareTypeName.HeaderText = "Тип";
+            this.SoftwareTypeName.Name = "SoftwareTypeName";
+            this.SoftwareTypeName.ReadOnly = true;
+            this.SoftwareTypeName.Width = 200;
             // 
-            // CategoryGoodsName
+            // SoftwareName
             // 
-            this.CategoryGoodsName.HeaderText = "Категория";
-            this.CategoryGoodsName.Name = "CategoryGoodsName";
-            this.CategoryGoodsName.Width = 120;
+            this.SoftwareName.HeaderText = "Наименование";
+            this.SoftwareName.Name = "SoftwareName";
+            this.SoftwareName.ReadOnly = true;
+            this.SoftwareName.Width = 200;
             // 
-            // GoodsName
+            // SoftwareCost
             // 
-            this.GoodsName.HeaderText = "Наименование";
-            this.GoodsName.Name = "GoodsName";
-            this.GoodsName.Width = 180;
+            this.SoftwareCost.HeaderText = "Цена";
+            this.SoftwareCost.Name = "SoftwareCost";
+            this.SoftwareCost.ReadOnly = true;
             // 
-            // GoodsManufacturerName
+            // SoftwareQuantity
             // 
-            this.GoodsManufacturerName.HeaderText = "Производитель";
-            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
+            this.SoftwareQuantity.HeaderText = "Количество";
+            this.SoftwareQuantity.Name = "SoftwareQuantity";
+            this.SoftwareQuantity.ReadOnly = true;
             // 
-            // GoodsCost
+            // SoftwareID
             // 
-            this.GoodsCost.HeaderText = "Цена";
-            this.GoodsCost.Name = "GoodsCost";
-            // 
-            // GoodsQuantity
-            // 
-            this.GoodsQuantity.HeaderText = "Количество";
-            this.GoodsQuantity.Name = "GoodsQuantity";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
+            this.SoftwareID.HeaderText = "ID";
+            this.SoftwareID.Name = "SoftwareID";
+            this.SoftwareID.ReadOnly = true;
+            this.SoftwareID.Visible = false;
             // 
             // Basket
             // 
@@ -256,10 +264,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button deleteSoftwareButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeCategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGoodsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
@@ -267,5 +271,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareTypeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareID;
     }
 }

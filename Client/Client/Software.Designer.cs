@@ -53,6 +53,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.highPriceTB = new System.Windows.Forms.TextBox();
             this.lowPriceTB = new System.Windows.Forms.TextBox();
+            this.softwareQuantityTB = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareList)).BeginInit();
@@ -252,11 +254,26 @@
             this.lowPriceTB.TabIndex = 18;
             this.lowPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lowPriceTB_KeyPress);
             // 
+            // softwareQuantityTB
+            // 
+            this.softwareQuantityTB.Location = new System.Drawing.Point(231, 25);
+            this.softwareQuantityTB.MaxLength = 3;
+            this.softwareQuantityTB.Name = "softwareQuantityTB";
+            this.softwareQuantityTB.Size = new System.Drawing.Size(100, 20);
+            this.softwareQuantityTB.TabIndex = 24;
+            this.softwareQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.softwareQuantityTB_KeyPress);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 729);
+            this.Controls.Add(this.softwareQuantityTB);
             this.Controls.Add(this.costButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -311,5 +328,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox highPriceTB;
         private System.Windows.Forms.TextBox lowPriceTB;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox softwareQuantityTB;
     }
 }
