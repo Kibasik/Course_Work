@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.basketDGV = new System.Windows.Forms.DataGridView();
-            this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,6 +42,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.deleteSoftwareButton = new System.Windows.Forms.Button();
+            this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.basketDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
@@ -60,43 +62,17 @@
             this.basketDGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.basketDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.basketDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TypeCategoryName,
             this.CategoryGoodsName,
             this.GoodsName,
             this.GoodsManufacturerName,
             this.GoodsCost,
+            this.GoodsQuantity,
             this.ID});
             this.basketDGV.Location = new System.Drawing.Point(12, 30);
             this.basketDGV.Name = "basketDGV";
             this.basketDGV.Size = new System.Drawing.Size(550, 324);
             this.basketDGV.TabIndex = 0;
-            // 
-            // CategoryGoodsName
-            // 
-            this.CategoryGoodsName.HeaderText = "Категория";
-            this.CategoryGoodsName.Name = "CategoryGoodsName";
-            this.CategoryGoodsName.Width = 120;
-            // 
-            // GoodsName
-            // 
-            this.GoodsName.HeaderText = "Наименование";
-            this.GoodsName.Name = "GoodsName";
-            this.GoodsName.Width = 180;
-            // 
-            // GoodsManufacturerName
-            // 
-            this.GoodsManufacturerName.HeaderText = "Производитель";
-            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
-            // 
-            // GoodsCost
-            // 
-            this.GoodsCost.HeaderText = "Цена";
-            this.GoodsCost.Name = "GoodsCost";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // label1
             // 
@@ -203,6 +179,44 @@
             this.deleteSoftwareButton.UseVisualStyleBackColor = true;
             this.deleteSoftwareButton.Click += new System.EventHandler(this.deleteSoftwareButton_Click);
             // 
+            // TypeCategoryName
+            // 
+            this.TypeCategoryName.HeaderText = "Тип";
+            this.TypeCategoryName.Name = "TypeCategoryName";
+            // 
+            // CategoryGoodsName
+            // 
+            this.CategoryGoodsName.HeaderText = "Категория";
+            this.CategoryGoodsName.Name = "CategoryGoodsName";
+            this.CategoryGoodsName.Width = 120;
+            // 
+            // GoodsName
+            // 
+            this.GoodsName.HeaderText = "Наименование";
+            this.GoodsName.Name = "GoodsName";
+            this.GoodsName.Width = 180;
+            // 
+            // GoodsManufacturerName
+            // 
+            this.GoodsManufacturerName.HeaderText = "Производитель";
+            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
+            // 
+            // GoodsCost
+            // 
+            this.GoodsCost.HeaderText = "Цена";
+            this.GoodsCost.Name = "GoodsCost";
+            // 
+            // GoodsQuantity
+            // 
+            this.GoodsQuantity.HeaderText = "Количество";
+            this.GoodsQuantity.Name = "GoodsQuantity";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +232,7 @@
             this.Controls.Add(this.basketDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1024, 768);
+            this.MinimumSize = new System.Drawing.Size(1024, 736);
             this.Name = "Basket";
             this.ShowIcon = false;
             this.Text = "Basket";
@@ -242,14 +256,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button deleteSoftwareButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGoodsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsManufacturerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeCategoryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGoodsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsManufacturerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,8 @@
             this.опрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.корзинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.программноеОбеспечениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.доставкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дополнительныеУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionButton = new System.Windows.Forms.Button();
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.highPriceTB = new System.Windows.Forms.TextBox();
@@ -70,6 +72,8 @@
             this.dataTableTableAdapter1 = new Client.GoodsTableAdapters.DataTableTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.goodsTypeCB = new System.Windows.Forms.ComboBox();
+            this.дополнительнвеУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goodsQuantityTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
@@ -188,7 +192,9 @@
             this.файлToolStripMenuItem,
             this.справкаToolStripMenuItem,
             this.корзинаToolStripMenuItem,
-            this.программноеОбеспечениеToolStripMenuItem});
+            this.программноеОбеспечениеToolStripMenuItem,
+            this.доставкаToolStripMenuItem,
+            this.дополнительныеУслугиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -238,6 +244,20 @@
             this.программноеОбеспечениеToolStripMenuItem.Size = new System.Drawing.Size(173, 20);
             this.программноеОбеспечениеToolStripMenuItem.Text = "&Программное обеспечение";
             this.программноеОбеспечениеToolStripMenuItem.Click += new System.EventHandler(this.программноеОбеспечениеToolStripMenuItem_Click);
+            // 
+            // доставкаToolStripMenuItem
+            // 
+            this.доставкаToolStripMenuItem.Name = "доставкаToolStripMenuItem";
+            this.доставкаToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.доставкаToolStripMenuItem.Text = "&Доставка";
+            this.доставкаToolStripMenuItem.Click += new System.EventHandler(this.доставкаToolStripMenuItem_Click);
+            // 
+            // дополнительныеУслугиToolStripMenuItem
+            // 
+            this.дополнительныеУслугиToolStripMenuItem.Name = "дополнительныеУслугиToolStripMenuItem";
+            this.дополнительныеУслугиToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.дополнительныеУслугиToolStripMenuItem.Text = "&Дополнительные услуги";
+            this.дополнительныеУслугиToolStripMenuItem.Click += new System.EventHandler(this.дополнительныеУслугиToolStripMenuItem_Click);
             // 
             // descriptionButton
             // 
@@ -360,19 +380,19 @@
             // goodsQuantityChart
             // 
             this.goodsQuantityChart.BackColor = System.Drawing.SystemColors.Control;
-            chartArea2.AxisX.Title = "Категория комплектующего";
-            chartArea2.AxisY.Title = "Количество";
-            chartArea2.Name = "ChartArea1";
-            this.goodsQuantityChart.ChartAreas.Add(chartArea2);
+            chartArea3.AxisX.Title = "Категория комплектующего";
+            chartArea3.AxisY.Title = "Количество";
+            chartArea3.Name = "ChartArea1";
+            this.goodsQuantityChart.ChartAreas.Add(chartArea3);
             this.goodsQuantityChart.DataSource = this.dataTableBindingSource;
             this.goodsQuantityChart.Location = new System.Drawing.Point(21, 386);
             this.goodsQuantityChart.Name = "goodsQuantityChart";
-            series2.ChartArea = "ChartArea1";
-            series2.IsVisibleInLegend = false;
-            series2.Name = "Series1";
-            series2.XValueMember = "CategoryGoodsName";
-            series2.YValueMembers = "Quantity";
-            this.goodsQuantityChart.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Name = "Series1";
+            series3.XValueMember = "CategoryGoodsName";
+            series3.YValueMembers = "Quantity";
+            this.goodsQuantityChart.Series.Add(series3);
             this.goodsQuantityChart.Size = new System.Drawing.Size(586, 322);
             this.goodsQuantityChart.TabIndex = 24;
             this.goodsQuantityChart.Text = "Количество товаров";
@@ -413,12 +433,28 @@
             this.goodsTypeCB.TabIndex = 26;
             this.goodsTypeCB.SelectedIndexChanged += new System.EventHandler(this.goodsTypeCB_SelectedIndexChanged);
             // 
+            // дополнительнвеУслугиToolStripMenuItem
+            // 
+            this.дополнительнвеУслугиToolStripMenuItem.Name = "дополнительнвеУслугиToolStripMenuItem";
+            this.дополнительнвеУслугиToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            this.дополнительнвеУслугиToolStripMenuItem.Text = "Дополнительные услуги";
+            // 
+            // goodsQuantityTB
+            // 
+            this.goodsQuantityTB.Location = new System.Drawing.Point(102, 360);
+            this.goodsQuantityTB.MaxLength = 3;
+            this.goodsQuantityTB.Name = "goodsQuantityTB";
+            this.goodsQuantityTB.Size = new System.Drawing.Size(100, 20);
+            this.goodsQuantityTB.TabIndex = 27;
+            this.goodsQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsQuantityTB_KeyPress);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.goodsQuantityTB);
             this.Controls.Add(this.goodsTypeCB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.goodsQuantityChart);
@@ -443,7 +479,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1024, 768);
+            this.MinimumSize = new System.Drawing.Size(1024, 736);
             this.Name = "MainWindow";
             this.ShowIcon = false;
             this.Text = "MainWIndow";
@@ -506,6 +542,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox goodsTypeCB;
         private System.Windows.Forms.ToolStripMenuItem программноеОбеспечениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem доставкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem дополнительнвеУслугиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem дополнительныеУслугиToolStripMenuItem;
+        private System.Windows.Forms.TextBox goodsQuantityTB;
     }
 }
 

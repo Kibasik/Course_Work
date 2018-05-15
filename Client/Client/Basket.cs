@@ -26,13 +26,13 @@ namespace Client
         private void Basket_Load(object sender, EventArgs e)
         {
             connection.Open();
-            command = new MySqlCommand("SELECT categorygoods.CategoryGoodsName, goodscatalog.GoodsName, goodsmanufacturer.GoodsManufacturerName, goodscatalog.GoodsCost, " +
-                           "goodscatalog.GoodsID, typecategory.TypeCategoryName, basket.BasketID FROM goodscatalog INNER JOIN categorygoods ON " +
-                           "goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID INNER JOIN typecategory ON " +
-                           "categorygoods.TypeCategoryID = typecategory.TypeCategoryID INNER JOIN componentslist ON " +
-                           "componentslist.GoodsID = goodscatalog.GoodsID INNER JOIN basket ON componentslist.BasketID = basket.BasketID " +
-                           "INNER JOIN goodsmanufacturer ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID " +
-                           "WHERE basket.BasketID = '" + basketID + "'", connection);
+            basketDGV.Rows.Clear();
+            command = new MySqlCommand("SELECT typecategory.TypeCategoryName, categorygoods.CategoryGoodsName, goodscatalog.GoodsName, " +
+                                       "goodsmanufacturer.GoodsManufacturerName, goodscatalog.GoodsCost, componentslist.GoodsQuantity, " +
+                                       "goodscatalog.GoodsID, componentslist.BasketID FROM categorygoods INNER JOIN typecategory ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID " +
+                                       "INNER JOIN goodscatalog ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID INNER JOIN componentslist " +
+                                       "ON componentslist.GoodsID = goodscatalog.GoodsID INNER JOIN goodsmanufacturer ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID " +
+                                       "WHERE componentslist.BasketID = '" + basketID + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 int j = 0;
@@ -43,30 +43,32 @@ namespace Client
                     basketDGV[1, j].Value = MyReader.GetString(1);
                     basketDGV[2, j].Value = MyReader.GetString(2);
                     basketDGV[3, j].Value = MyReader.GetString(3);
-                    basketDGV[4, j].Value = MyReader.GetString(4);
+                    basketDGV[4, j].Value = MyReader.GetDouble(4);
+                    basketDGV[5, j].Value = MyReader.GetInt32(5);
+                    basketDGV[6, j].Value = MyReader.GetInt32(6);
                     j++;
-                    totalCost += MyReader.GetInt32(3);
+                    totalCost += (MyReader.GetDouble(4) * MyReader.GetInt32(5));
                 }
                 MyReader.Close();
             }
-            command = new MySqlCommand("SELECT softwaretype.SoftwareTypeName, software.SoftwareName, software.SoftwareCost, " +
-                                       "chosensoftware.SoftwareID, chosensoftware.BasketID FROM chosensoftware INNER JOIN software ON chosensoftware.SoftwareID = software.SoftwareID " +
-                                       "INNER JOIN softwaretype ON software.SoftwareTypeID = softwaretype.SoftwareTypeID WHERE chosensoftware.BasketID = '" + basketID + "'", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
-            {
-                int j = 0;
-                while (MyReader.Read())
-                {
-                    softwareDGV.Rows.Add();
-                    softwareDGV[0, j].Value = MyReader.GetString(0);
-                    softwareDGV[1, j].Value = MyReader.GetString(1);
-                    softwareDGV[2, j].Value = MyReader.GetString(2);
-                    softwareDGV[3, j].Value = MyReader.GetString(3);
-                    j++;
-                    totalCost += MyReader.GetInt32(2);
-                }
-                MyReader.Close();
-            }
+            //command = new MySqlCommand("SELECT softwaretype.SoftwareTypeName, software.SoftwareName, software.SoftwareCost, " +
+            //                           "chosensoftware.SoftwareID, chosensoftware.BasketID FROM chosensoftware INNER JOIN software ON chosensoftware.SoftwareID = software.SoftwareID " +
+            //                           "INNER JOIN softwaretype ON software.SoftwareTypeID = softwaretype.SoftwareTypeID WHERE chosensoftware.BasketID = '" + basketID + "'", connection);
+            //using (MySqlDataReader MyReader = command.ExecuteReader())
+            //{
+            //    int j = 0;
+            //    while (MyReader.Read())
+            //    {
+            //        softwareDGV.Rows.Add();
+            //        softwareDGV[0, j].Value = MyReader.GetString(0);
+            //        softwareDGV[1, j].Value = MyReader.GetString(1);
+            //        softwareDGV[2, j].Value = MyReader.GetDouble(2);
+            //        softwareDGV[3, j].Value = MyReader.GetString(3);
+            //        j++;
+            //        totalCost += MyReader.GetDouble(2);
+            //    }
+            //    MyReader.Close();
+            //}
             totalCostLabel.Text = totalCost.ToString();
             connection.Close();
         }
@@ -80,7 +82,6 @@ namespace Client
                 command = new MySqlCommand("DELETE FROM chosensoftware WHERE chosensoftware.BasketID = '" + basketID + "' AND chosensoftware.SoftwareID = '" + Convert.ToInt32(softwareDGV.CurrentRow.Cells[3].Value) + "'", connection);
                 command.ExecuteNonQuery();
                 softwareDGV.Rows.RemoveAt(softwareDGV.CurrentRow.Index);
-                MessageBox.Show("Удалено!");
             }
             else
             {
@@ -96,11 +97,10 @@ namespace Client
             connection.Open();
             if (basketDGV.SelectedRows.Count == 1 || basketDGV.GetCellCount(DataGridViewElementStates.Selected) == 1)
             {
-                totalCost -= Convert.ToDouble(basketDGV.CurrentRow.Cells[3].Value);
-                command = new MySqlCommand("DELETE FROM componentslist WHERE componentslist.BasketID = '" + basketID + "' AND componentslist.GoodsID = '" + Convert.ToInt32(basketDGV.CurrentRow.Cells[4].Value) + "'", connection);
+                totalCost -= (Convert.ToDouble(basketDGV.CurrentRow.Cells[4].Value) * Convert.ToInt32(basketDGV.CurrentRow.Cells[5].Value));
+                command = new MySqlCommand("DELETE FROM componentslist WHERE componentslist.BasketID = '" + basketID + "' AND componentslist.GoodsID = '" + Convert.ToInt32(basketDGV.CurrentRow.Cells[6].Value) + "'", connection);
                 command.ExecuteNonQuery();
                 basketDGV.Rows.RemoveAt(basketDGV.CurrentRow.Index);
-                MessageBox.Show("Удалено!");
             }
             else
             {

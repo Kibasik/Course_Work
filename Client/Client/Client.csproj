@@ -78,11 +78,23 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdditionalServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalServices.Designer.cs">
+      <DependentUpon>AdditionalServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Basket.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Basket.Designer.cs">
       <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery.Designer.cs">
+      <DependentUpon>Delivery.cs</DependentUpon>
     </Compile>
     <Compile Include="Goods.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -127,8 +139,14 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalServices.resx">
+      <DependentUpon>AdditionalServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Basket.resx">
       <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery.resx">
+      <DependentUpon>Delivery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Description.resx">
       <DependentUpon>Description.cs</DependentUpon>
