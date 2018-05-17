@@ -25,22 +25,8 @@ namespace Client
 
         private void AdditionalServices_Load(object sender, EventArgs e)
         {
-            connection.Open();
-            int j = 0;
-            command = new MySqlCommand("SELECT additionalservices.* FROM additionalservices", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
-            {
-                while (MyReader.Read())
-                {
-                    additionalServicesDGV.Rows.Add();
-                    additionalServicesDGV[0, j].Value = MyReader.GetString(0);
-                    additionalServicesDGV[1, j].Value = MyReader.GetString(1);
-                    additionalServicesDGV[2, j].Value = MyReader.GetDouble(2);
-                    j++;
-                }
-                MyReader.Close();
-            }
-            connection.Close();
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "additionalServicesList.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter.Fill(this.additionalServicesList.DataTable);
         }
 
         private void basketButton_Click(object sender, EventArgs e)
@@ -62,6 +48,60 @@ namespace Client
             command = new MySqlCommand("INSERT INTO chosenadditionalservices (chosenadditionalservices.BasketID, chosenadditionalservices.AdditionalServiceID) VALUES " +
                                        "('" + basketID + "', '" + additionalServicesDGV.CurrentRow.Cells[0].Value.ToString() + "')", connection);
             command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        private void additionalServiceNameTB_TextChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = additionalServicesList.Tables[0].DefaultView;
+            dataView.RowFilter = "AdditionalServiceName LIKE '" + additionalServiceNameTB.Text + "%'";
+            if (lowPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND AdditionalServiceCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
+            }
+            if (highPriceTB.Text != "")
+            {
+                dataView.RowFilter += "AND AdditionalServiceCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
+            additionalServicesDGV.DataSource = dataView;
+            connection.Close();
+        }
+
+        private void costButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataView dataView = additionalServicesList.Tables[0].DefaultView;
+            if (lowPriceTB.Text != "" && highPriceTB.Text == "")
+            {
+                dataView.RowFilter = "AdditionalServiceCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "'";
+            }
+            if (lowPriceTB.Text == "" && highPriceTB.Text != "")
+            {
+                dataView.RowFilter = "AdditionalServiceCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
+            if (lowPriceTB.Text != "" && highPriceTB.Text != "")
+            {
+                dataView.RowFilter = "AdditionalServiceCost >= '" + Convert.ToInt32(lowPriceTB.Text) + "' AND AdditionalServiceCost <= '" + Convert.ToInt32(highPriceTB.Text) + "'";
+            }
+            if (additionalServiceNameTB.Text != "")
+            {
+                dataView.RowFilter += "AND AdditionalServiceName LIKE '" + additionalServiceNameTB.Text + "%'";
+            }
+            additionalServicesDGV.DataSource = dataView;
+            connection.Close();
+        }
+
+        private void showAllAdditionalServicesButton_Click(object sender, EventArgs e)
+        {
+            lowPriceTB.Clear();
+            highPriceTB.Clear();
+            additionalServiceNameTB.Clear();
+            connection.Open();
+            DataView dataView = additionalServicesList.Tables[0].DefaultView;
+            dataView.RowFilter = "";
+            additionalServicesDGV.DataSource = dataView;
+            dataTableBindingSource.Filter = "";
             connection.Close();
         }
     }

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdditionalServicesList" targetNamespace="http://tempuri.org/AdditionalServicesList.xsd" xmlns:mstns="http://tempuri.org/AdditionalServicesList.xsd" xmlns="http://tempuri.org/AdditionalServicesList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="courseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="courseConnectionString (Settings)" PropertyReference="ApplicationSettings.Client.Properties.Settings.GlobalReference.Default.courseConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapter" GeneratorDataComponentClassName="DataTableTableAdapter" Name="DataTable" UserDataComponentName="DataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="courseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `additionalserviceslist`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AdditionalServiceID" DataSetColumn="AdditionalServiceID" />
+              <Mapping SourceColumn="AdditionalServiceName" DataSetColumn="AdditionalServiceName" />
+              <Mapping SourceColumn="AdditionalServiceCost" DataSetColumn="AdditionalServiceCost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdditionalServicesList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AdditionalServicesList" msprop:Generator_UserDSName="AdditionalServicesList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AdditionalServiceID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAdditionalServiceID" msprop:Generator_ColumnPropNameInRow="AdditionalServiceID" msprop:Generator_ColumnPropNameInTable="AdditionalServiceIDColumn" msprop:Generator_UserColumnName="AdditionalServiceID" type="xs:int" minOccurs="0" />
+              <xs:element name="AdditionalServiceName" msprop:Generator_ColumnVarNameInTable="columnAdditionalServiceName" msprop:Generator_ColumnPropNameInRow="AdditionalServiceName" msprop:Generator_ColumnPropNameInTable="AdditionalServiceNameColumn" msprop:Generator_UserColumnName="AdditionalServiceName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdditionalServiceCost" msprop:Generator_ColumnVarNameInTable="columnAdditionalServiceCost" msprop:Generator_ColumnPropNameInRow="AdditionalServiceCost" msprop:Generator_ColumnPropNameInTable="AdditionalServiceCostColumn" msprop:Generator_UserColumnName="AdditionalServiceCost" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable" />
+      <xs:field xpath="mstns:AdditionalServiceID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -26,8 +26,10 @@ namespace Client
         private void Basket_Load(object sender, EventArgs e)
         {
             connection.Open();
-            basketDGV.Rows.Clear();
+            goodsDGV.Rows.Clear();
             softwareDGV.Rows.Clear();
+            additionalServicesDGV.Rows.Clear();
+            serviceMaintenanceDGV.Rows.Clear();
             command = new MySqlCommand("SELECT typecategory.TypeCategoryName, categorygoods.CategoryGoodsName, goodscatalog.GoodsName, " +
                                        "goodsmanufacturer.GoodsManufacturerName, goodscatalog.GoodsCost, componentslist.GoodsQuantity, " +
                                        "goodscatalog.GoodsID, componentslist.BasketID FROM categorygoods INNER JOIN typecategory " +
@@ -41,14 +43,14 @@ namespace Client
                 int j = 0;
                 while (MyReader.Read())
                 {
-                    basketDGV.Rows.Add();
-                    basketDGV[0, j].Value = MyReader.GetString(0);
-                    basketDGV[1, j].Value = MyReader.GetString(1);
-                    basketDGV[2, j].Value = MyReader.GetString(2);
-                    basketDGV[3, j].Value = MyReader.GetString(3);
-                    basketDGV[4, j].Value = MyReader.GetDouble(4);
-                    basketDGV[5, j].Value = MyReader.GetInt32(5);
-                    basketDGV[6, j].Value = MyReader.GetInt32(6);
+                    goodsDGV.Rows.Add();
+                    goodsDGV[0, j].Value = MyReader.GetString(0);
+                    goodsDGV[1, j].Value = MyReader.GetString(1);
+                    goodsDGV[2, j].Value = MyReader.GetString(2);
+                    goodsDGV[3, j].Value = MyReader.GetString(3);
+                    goodsDGV[4, j].Value = MyReader.GetDouble(4);
+                    goodsDGV[5, j].Value = MyReader.GetInt32(5);
+                    goodsDGV[6, j].Value = MyReader.GetInt32(6);
                     j++;
                     totalCost += (MyReader.GetDouble(4) * MyReader.GetInt32(5));
                 }
@@ -74,7 +76,51 @@ namespace Client
                 }
                 MyReader.Close();
             }
+            command = new MySqlCommand("SELECT additionalservices.AdditionalServiceName, additionalservices.AdditionalServiceCost, " +
+                                       "chosenadditionalservices.AdditionalServiceID FROM chosenadditionalservices INNER JOIN additionalservices " +
+                                       "ON chosenadditionalservices.AdditionalServiceID = additionalservices.AdditionalServiceID " +
+                                       "WHERE chosenadditionalservices.BasketID = '" + basketID + "'", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                int j = 0;
+                while (MyReader.Read())
+                {
+                    additionalServicesDGV.Rows.Add();
+                    additionalServicesDGV[0, j].Value = MyReader.GetString(0);
+                    additionalServicesDGV[1, j].Value = MyReader.GetDouble(1);
+                    additionalServicesDGV[2, j].Value = MyReader.GetInt32(2);
+                    j++;
+                    totalCost += MyReader.GetDouble(1);
+                }
+                MyReader.Close();
+            }
             totalCostLabel.Text = totalCost.ToString();
+
+            command = new MySqlCommand("SELECT servicemaintenance.ServiceMaintenanceName, servicemaintenance.ServiceMaintenanceCost, " +
+                                       "servicemaintenance.ServiceMaintenancePeriod, chosenservicemaintenance.ServiceMaintenanceID FROM " +
+                                       "chosenservicemaintenance INNER JOIN servicemaintenance ON " +
+                                       "chosenservicemaintenance.ServiceMaintenanceID = servicemaintenance.ServiceMaintenanceID " +
+                                       "WHERE chosenservicemaintenance.BasketID = '" + basketID + "'", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                int j = 0;
+                while (MyReader.Read())
+                {
+                    serviceMaintenanceDGV.Rows.Add();
+                    serviceMaintenanceDGV[0, j].Value = MyReader.GetString(0);
+                    serviceMaintenanceDGV[1, j].Value = MyReader.GetDouble(1);
+                    serviceMaintenanceDGV[2, j].Value = MyReader.GetInt32(2);
+                    serviceMaintenanceDGV[3, j].Value = MyReader.GetInt32(3);
+                    j++;
+                    totalCost += MyReader.GetDouble(1);
+                }
+                MyReader.Close();
+            }
+            totalCostLabel.Text = totalCost.ToString();
+            goodsDGV.ClearSelection();
+            softwareDGV.ClearSelection();
+            additionalServicesDGV.ClearSelection();
+            serviceMaintenanceDGV.ClearSelection();
             connection.Close();
         }
 
@@ -101,20 +147,60 @@ namespace Client
         private void deleteGoodsButton_Click_1(object sender, EventArgs e)
         {
             connection.Open();
-            if (basketDGV.SelectedRows.Count == 1 || basketDGV.GetCellCount(DataGridViewElementStates.Selected) == 1)
+            if (goodsDGV.SelectedRows.Count == 1 || goodsDGV.GetCellCount(DataGridViewElementStates.Selected) == 1)
             {
-                totalCost -= (Convert.ToDouble(basketDGV.CurrentRow.Cells[4].Value) * Convert.ToInt32(basketDGV.CurrentRow.Cells[5].Value));
+                totalCost -= (Convert.ToDouble(goodsDGV.CurrentRow.Cells[4].Value) * Convert.ToInt32(goodsDGV.CurrentRow.Cells[5].Value));
                 command = new MySqlCommand("DELETE FROM componentslist WHERE componentslist.BasketID = '" + basketID + "' " +
-                                           "AND componentslist.GoodsID = '" + Convert.ToInt32(basketDGV.CurrentRow.Cells[6].Value) + "'", connection);
+                                           "AND componentslist.GoodsID = '" + Convert.ToInt32(goodsDGV.CurrentRow.Cells[6].Value) + "'", connection);
                 command.ExecuteNonQuery();
-                basketDGV.Rows.RemoveAt(basketDGV.CurrentRow.Index);
+                goodsDGV.Rows.RemoveAt(goodsDGV.CurrentRow.Index);
             }
             else
             {
                 MessageBox.Show("Выберите комплектующее!");
             }
             totalCostLabel.Text = totalCost.ToString();
-            basketDGV.ClearSelection();
+            goodsDGV.ClearSelection();
+            connection.Close();
+        }
+
+        private void deleteAdditionalServiceButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            if (additionalServicesDGV.SelectedRows.Count == 1 || additionalServicesDGV.GetCellCount(DataGridViewElementStates.Selected) == 1)
+            {
+                totalCost -= Convert.ToDouble(additionalServicesDGV.CurrentRow.Cells[1].Value);
+                command = new MySqlCommand("DELETE FROM chosenadditionalservices WHERE chosenadditionalservices.BasketID = '" + basketID + "' " +
+                                           "AND chosenadditionalservices.AdditionalServiceID = '" + Convert.ToInt32(additionalServicesDGV.CurrentRow.Cells[2].Value) + "'", connection);
+                command.ExecuteNonQuery();
+                additionalServicesDGV.Rows.RemoveAt(additionalServicesDGV.CurrentRow.Index);
+            }
+            else
+            {
+                MessageBox.Show("Выберите доп. услугу!");
+            }
+            totalCostLabel.Text = totalCost.ToString();
+            additionalServicesDGV.ClearSelection();
+            connection.Close();
+        }
+
+        private void deleteServiceMaintenanceButton_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            if (serviceMaintenanceDGV.SelectedRows.Count == 1 || serviceMaintenanceDGV.GetCellCount(DataGridViewElementStates.Selected) == 1)
+            {
+                totalCost -= Convert.ToDouble(serviceMaintenanceDGV.CurrentRow.Cells[1].Value);
+                command = new MySqlCommand("DELETE FROM chosenservicemaintenance WHERE chosenservicemaintenance.BasketID = '" + basketID + "' " +
+                                           "AND chosenservicemaintenance.ServiceMaintenanceID = '" + Convert.ToInt32(serviceMaintenanceDGV.CurrentRow.Cells[3].Value) + "'", connection);
+                command.ExecuteNonQuery();
+                serviceMaintenanceDGV.Rows.RemoveAt(serviceMaintenanceDGV.CurrentRow.Index);
+            }
+            else
+            {
+                MessageBox.Show("Выберите сервисное обслуживание!");
+            }
+            totalCostLabel.Text = totalCost.ToString();
+            serviceMaintenanceDGV.ClearSelection();
             connection.Close();
         }
     }

@@ -44,21 +44,6 @@ namespace Client
             connection.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            softwareTypeCB.ResetText();
-            softwareTypeCB.Items.Clear();
-            for (int i = 0; i < softwareType.Count; i++)
-            {
-                softwareTypeCB.Items.Add(softwareType[i]);
-            }
-            connection.Open();
-            DataView dataView = softwareList.Tables[0].DefaultView;
-            dataView.RowFilter = "";
-            softwareDGV.DataSource = dataView;
-            connection.Close();
-        }
-
         private void softwareTypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             connection.Open();
@@ -213,6 +198,21 @@ namespace Client
             {
                 dataView.RowFilter += "AND SOftwareTypeName = '" + softwareTypeCB.SelectedItem.ToString() + "'";
             }
+            softwareDGV.DataSource = dataView;
+            connection.Close();
+        }
+
+        private void showAllSoftwareButton_Click(object sender, EventArgs e)
+        {
+            softwareTypeCB.ResetText();
+            softwareTypeCB.Items.Clear();
+            for (int i = 0; i < softwareType.Count; i++)
+            {
+                softwareTypeCB.Items.Add(softwareType[i]);
+            }
+            connection.Open();
+            DataView dataView = softwareList.Tables[0].DefaultView;
+            dataView.RowFilter = "";
             softwareDGV.DataSource = dataView;
             connection.Close();
         }

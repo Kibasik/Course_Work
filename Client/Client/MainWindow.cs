@@ -385,24 +385,10 @@ namespace Client
             connection.Close();
         }
 
-        private void программноеОбеспечениеToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Software software = new Software();
-            software.basketID = (id + 1);
-            software.ShowDialog();
-        }
-
         private void доставкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Delivery delivery = new Delivery();
             delivery.ShowDialog();
-        }
-
-        private void дополнительныеУслугиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AdditionalServices additionalServices = new AdditionalServices();
-            additionalServices.basketID = (id + 1);
-            additionalServices.ShowDialog();
         }
 
         private void goodsQuantityTB_KeyPress(object sender, KeyPressEventArgs e)
@@ -411,6 +397,27 @@ namespace Client
             {
                 e.Handled = true;
             }
+        }
+
+        private void программноеОбеспечениеToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Software software = new Software();
+            software.basketID = (id + 1);
+            software.ShowDialog();
+        }
+
+        private void дополнительныеУслугиToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AdditionalServices additionalServices = new AdditionalServices();
+            additionalServices.basketID = (id + 1);
+            additionalServices.ShowDialog();
+        }
+
+        private void сервисноеОбслуживаниеToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ServiceMaintenance serviceMaintenance = new ServiceMaintenance();
+            serviceMaintenance.basketID = (id + 1);
+            serviceMaintenance.ShowDialog();
         }
     }
 }

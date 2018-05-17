@@ -84,6 +84,11 @@
     <Compile Include="AdditionalServices.Designer.cs">
       <DependentUpon>AdditionalServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdditionalServicesList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdditionalServicesList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Basket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +125,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceMaintenance.Designer.cs">
+      <DependentUpon>ServiceMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceMaintenanceList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceMaintenanceList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Software.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,9 +175,23 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServiceMaintenance.resx">
+      <DependentUpon>ServiceMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Software.resx">
       <DependentUpon>Software.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AdditionalServicesList.xsc">
+      <DependentUpon>AdditionalServicesList.xsd</DependentUpon>
+    </None>
+    <None Include="AdditionalServicesList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdditionalServicesList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AdditionalServicesList.xss">
+      <DependentUpon>AdditionalServicesList.xsd</DependentUpon>
+    </None>
     <None Include="Goods.xsc">
       <DependentUpon>Goods.xsd</DependentUpon>
     </None>
@@ -199,6 +229,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ServiceMaintenanceList.xsc">
+      <DependentUpon>ServiceMaintenanceList.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceMaintenanceList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceMaintenanceList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServiceMaintenanceList.xss">
+      <DependentUpon>ServiceMaintenanceList.xsd</DependentUpon>
+    </None>
     <None Include="SoftwareList.xsc">
       <DependentUpon>SoftwareList.xsd</DependentUpon>
     </None>

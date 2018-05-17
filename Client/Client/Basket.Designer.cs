@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.basketDGV = new System.Windows.Forms.DataGridView();
+            this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,28 +41,43 @@
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.softwareDGV = new System.Windows.Forms.DataGridView();
-            this.deleteGoodsButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.deleteSoftwareButton = new System.Windows.Forms.Button();
             this.SoftwareTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.basketDGV)).BeginInit();
+            this.deleteGoodsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteSoftwareButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.additionalServicesDGV = new System.Windows.Forms.DataGridView();
+            this.AdditionalServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdditionalServiceCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdditionalServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteAdditionalServiceButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.serviceMaintenanceDGV = new System.Windows.Forms.DataGridView();
+            this.ServiceMaintenanceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceMaintenanceCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceMaintenancePeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceMaintenanceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteServiceMaintenanceButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // basketDGV
+            // goodsDGV
             // 
-            this.basketDGV.AllowUserToAddRows = false;
-            this.basketDGV.AllowUserToResizeColumns = false;
-            this.basketDGV.AllowUserToResizeRows = false;
-            this.basketDGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.basketDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.basketDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.goodsDGV.AllowUserToAddRows = false;
+            this.goodsDGV.AllowUserToResizeColumns = false;
+            this.goodsDGV.AllowUserToResizeRows = false;
+            this.goodsDGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.goodsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.goodsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TypeCategoryName,
             this.CategoryGoodsName,
             this.GoodsName,
@@ -70,10 +85,10 @@
             this.GoodsCost,
             this.GoodsQuantity,
             this.ID});
-            this.basketDGV.Location = new System.Drawing.Point(12, 30);
-            this.basketDGV.Name = "basketDGV";
-            this.basketDGV.Size = new System.Drawing.Size(550, 324);
-            this.basketDGV.TabIndex = 0;
+            this.goodsDGV.Location = new System.Drawing.Point(15, 25);
+            this.goodsDGV.Name = "goodsDGV";
+            this.goodsDGV.Size = new System.Drawing.Size(485, 180);
+            this.goodsDGV.TabIndex = 0;
             // 
             // TypeCategoryName
             // 
@@ -99,7 +114,7 @@
             // 
             // GoodsCost
             // 
-            this.GoodsCost.HeaderText = "Цена";
+            this.GoodsCost.HeaderText = "Цена, руб.";
             this.GoodsCost.Name = "GoodsCost";
             // 
             // GoodsQuantity
@@ -148,15 +163,48 @@
             this.SoftwareCost,
             this.SoftwareQuantity,
             this.SoftwareID});
-            this.softwareDGV.Location = new System.Drawing.Point(12, 394);
+            this.softwareDGV.Location = new System.Drawing.Point(12, 301);
             this.softwareDGV.Name = "softwareDGV";
             this.softwareDGV.ReadOnly = true;
-            this.softwareDGV.Size = new System.Drawing.Size(550, 323);
+            this.softwareDGV.Size = new System.Drawing.Size(488, 193);
             this.softwareDGV.TabIndex = 3;
+            // 
+            // SoftwareTypeName
+            // 
+            this.SoftwareTypeName.HeaderText = "Тип";
+            this.SoftwareTypeName.Name = "SoftwareTypeName";
+            this.SoftwareTypeName.ReadOnly = true;
+            this.SoftwareTypeName.Width = 200;
+            // 
+            // SoftwareName
+            // 
+            this.SoftwareName.HeaderText = "Наименование";
+            this.SoftwareName.Name = "SoftwareName";
+            this.SoftwareName.ReadOnly = true;
+            this.SoftwareName.Width = 200;
+            // 
+            // SoftwareCost
+            // 
+            this.SoftwareCost.HeaderText = "Цена, руб.";
+            this.SoftwareCost.Name = "SoftwareCost";
+            this.SoftwareCost.ReadOnly = true;
+            // 
+            // SoftwareQuantity
+            // 
+            this.SoftwareQuantity.HeaderText = "Количество";
+            this.SoftwareQuantity.Name = "SoftwareQuantity";
+            this.SoftwareQuantity.ReadOnly = true;
+            // 
+            // SoftwareID
+            // 
+            this.SoftwareID.HeaderText = "ID";
+            this.SoftwareID.Name = "SoftwareID";
+            this.SoftwareID.ReadOnly = true;
+            this.SoftwareID.Visible = false;
             // 
             // deleteGoodsButton
             // 
-            this.deleteGoodsButton.Location = new System.Drawing.Point(579, 30);
+            this.deleteGoodsButton.Location = new System.Drawing.Point(15, 211);
             this.deleteGoodsButton.Name = "deleteGoodsButton";
             this.deleteGoodsButton.Size = new System.Drawing.Size(102, 48);
             this.deleteGoodsButton.TabIndex = 4;
@@ -176,7 +224,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 368);
+            this.label3.Location = new System.Drawing.Point(9, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 13);
             this.label3.TabIndex = 6;
@@ -184,7 +232,7 @@
             // 
             // deleteSoftwareButton
             // 
-            this.deleteSoftwareButton.Location = new System.Drawing.Point(579, 394);
+            this.deleteSoftwareButton.Location = new System.Drawing.Point(12, 500);
             this.deleteSoftwareButton.Name = "deleteSoftwareButton";
             this.deleteSoftwareButton.Size = new System.Drawing.Size(80, 33);
             this.deleteSoftwareButton.TabIndex = 7;
@@ -192,44 +240,136 @@
             this.deleteSoftwareButton.UseVisualStyleBackColor = true;
             this.deleteSoftwareButton.Click += new System.EventHandler(this.deleteSoftwareButton_Click);
             // 
-            // SoftwareTypeName
+            // label4
             // 
-            this.SoftwareTypeName.HeaderText = "Тип";
-            this.SoftwareTypeName.Name = "SoftwareTypeName";
-            this.SoftwareTypeName.ReadOnly = true;
-            this.SoftwareTypeName.Width = 200;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(584, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Список дополнительных услгуг:";
             // 
-            // SoftwareName
+            // additionalServicesDGV
             // 
-            this.SoftwareName.HeaderText = "Наименование";
-            this.SoftwareName.Name = "SoftwareName";
-            this.SoftwareName.ReadOnly = true;
-            this.SoftwareName.Width = 200;
+            this.additionalServicesDGV.AllowUserToAddRows = false;
+            this.additionalServicesDGV.AllowUserToDeleteRows = false;
+            this.additionalServicesDGV.AllowUserToResizeRows = false;
+            this.additionalServicesDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.additionalServicesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.additionalServicesDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AdditionalServiceName,
+            this.AdditionalServiceCost,
+            this.AdditionalServiceID});
+            this.additionalServicesDGV.Location = new System.Drawing.Point(587, 25);
+            this.additionalServicesDGV.Name = "additionalServicesDGV";
+            this.additionalServicesDGV.ReadOnly = true;
+            this.additionalServicesDGV.Size = new System.Drawing.Size(294, 180);
+            this.additionalServicesDGV.TabIndex = 9;
             // 
-            // SoftwareCost
+            // AdditionalServiceName
             // 
-            this.SoftwareCost.HeaderText = "Цена";
-            this.SoftwareCost.Name = "SoftwareCost";
-            this.SoftwareCost.ReadOnly = true;
+            this.AdditionalServiceName.HeaderText = "Наименование";
+            this.AdditionalServiceName.Name = "AdditionalServiceName";
+            this.AdditionalServiceName.ReadOnly = true;
+            this.AdditionalServiceName.Width = 135;
             // 
-            // SoftwareQuantity
+            // AdditionalServiceCost
             // 
-            this.SoftwareQuantity.HeaderText = "Количество";
-            this.SoftwareQuantity.Name = "SoftwareQuantity";
-            this.SoftwareQuantity.ReadOnly = true;
+            this.AdditionalServiceCost.HeaderText = "Цена, руб.";
+            this.AdditionalServiceCost.Name = "AdditionalServiceCost";
+            this.AdditionalServiceCost.ReadOnly = true;
             // 
-            // SoftwareID
+            // AdditionalServiceID
             // 
-            this.SoftwareID.HeaderText = "ID";
-            this.SoftwareID.Name = "SoftwareID";
-            this.SoftwareID.ReadOnly = true;
-            this.SoftwareID.Visible = false;
+            this.AdditionalServiceID.HeaderText = "ID";
+            this.AdditionalServiceID.Name = "AdditionalServiceID";
+            this.AdditionalServiceID.ReadOnly = true;
+            this.AdditionalServiceID.Visible = false;
+            // 
+            // deleteAdditionalServiceButton
+            // 
+            this.deleteAdditionalServiceButton.Location = new System.Drawing.Point(587, 211);
+            this.deleteAdditionalServiceButton.Name = "deleteAdditionalServiceButton";
+            this.deleteAdditionalServiceButton.Size = new System.Drawing.Size(75, 48);
+            this.deleteAdditionalServiceButton.TabIndex = 10;
+            this.deleteAdditionalServiceButton.Text = "Удалить доп. услугу";
+            this.deleteAdditionalServiceButton.UseVisualStyleBackColor = true;
+            this.deleteAdditionalServiceButton.Click += new System.EventHandler(this.deleteAdditionalServiceButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(584, 285);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(185, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Список сервисного обслуживания:";
+            // 
+            // serviceMaintenanceDGV
+            // 
+            this.serviceMaintenanceDGV.AllowUserToAddRows = false;
+            this.serviceMaintenanceDGV.AllowUserToDeleteRows = false;
+            this.serviceMaintenanceDGV.AllowUserToResizeRows = false;
+            this.serviceMaintenanceDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.serviceMaintenanceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.serviceMaintenanceDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ServiceMaintenanceName,
+            this.ServiceMaintenanceCost,
+            this.ServiceMaintenancePeriod,
+            this.ServiceMaintenanceID});
+            this.serviceMaintenanceDGV.Location = new System.Drawing.Point(587, 301);
+            this.serviceMaintenanceDGV.Name = "serviceMaintenanceDGV";
+            this.serviceMaintenanceDGV.ReadOnly = true;
+            this.serviceMaintenanceDGV.Size = new System.Drawing.Size(390, 193);
+            this.serviceMaintenanceDGV.TabIndex = 12;
+            // 
+            // ServiceMaintenanceName
+            // 
+            this.ServiceMaintenanceName.HeaderText = "Наименование";
+            this.ServiceMaintenanceName.Name = "ServiceMaintenanceName";
+            this.ServiceMaintenanceName.ReadOnly = true;
+            this.ServiceMaintenanceName.Width = 150;
+            // 
+            // ServiceMaintenanceCost
+            // 
+            this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
+            this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
+            this.ServiceMaintenanceCost.ReadOnly = true;
+            // 
+            // ServiceMaintenancePeriod
+            // 
+            this.ServiceMaintenancePeriod.HeaderText = "Срок, дней";
+            this.ServiceMaintenancePeriod.Name = "ServiceMaintenancePeriod";
+            this.ServiceMaintenancePeriod.ReadOnly = true;
+            // 
+            // ServiceMaintenanceID
+            // 
+            this.ServiceMaintenanceID.HeaderText = "ID";
+            this.ServiceMaintenanceID.Name = "ServiceMaintenanceID";
+            this.ServiceMaintenanceID.ReadOnly = true;
+            this.ServiceMaintenanceID.Visible = false;
+            // 
+            // deleteServiceMaintenanceButton
+            // 
+            this.deleteServiceMaintenanceButton.Location = new System.Drawing.Point(587, 505);
+            this.deleteServiceMaintenanceButton.Name = "deleteServiceMaintenanceButton";
+            this.deleteServiceMaintenanceButton.Size = new System.Drawing.Size(121, 40);
+            this.deleteServiceMaintenanceButton.TabIndex = 13;
+            this.deleteServiceMaintenanceButton.Text = "Удалить сервисное обслуживание";
+            this.deleteServiceMaintenanceButton.UseVisualStyleBackColor = true;
+            this.deleteServiceMaintenanceButton.Click += new System.EventHandler(this.deleteServiceMaintenanceButton_Click);
             // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.deleteServiceMaintenanceButton);
+            this.Controls.Add(this.serviceMaintenanceDGV);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.deleteAdditionalServiceButton);
+            this.Controls.Add(this.additionalServicesDGV);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.deleteSoftwareButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -237,7 +377,7 @@
             this.Controls.Add(this.softwareDGV);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.basketDGV);
+            this.Controls.Add(this.goodsDGV);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1024, 736);
@@ -245,9 +385,11 @@
             this.ShowIcon = false;
             this.Text = "Basket";
             this.Load += new System.EventHandler(this.Basket_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.basketDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,7 +397,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView basketDGV;
+        private System.Windows.Forms.DataGridView goodsDGV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label totalCostLabel;
         private System.Windows.Forms.BindingSource dataTableBindingSource;
@@ -264,6 +406,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button deleteSoftwareButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView additionalServicesDGV;
+        private System.Windows.Forms.Button deleteAdditionalServiceButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeCategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGoodsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
@@ -276,5 +421,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoftwareID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalServiceName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalServiceCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalServiceID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView serviceMaintenanceDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenancePeriod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceID;
+        private System.Windows.Forms.Button deleteServiceMaintenanceButton;
     }
 }
