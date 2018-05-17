@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdditionalServices));
             this.label1 = new System.Windows.Forms.Label();
             this.additionalServicesDGV = new System.Windows.Forms.DataGridView();
             this.additionalServiceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +49,12 @@
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.dataTableTableAdapter = new Client.AdditionalServicesListTableAdapters.DataTableTableAdapter();
             this.showAllAdditionalServicesButton = new System.Windows.Forms.Button();
+            this.additionalServicesPriceListButton = new System.Windows.Forms.Button();
+            this.additionalServicesPriceListReport = new FastReport.Report();
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalServicesPriceListReport)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -213,11 +217,28 @@
             this.showAllAdditionalServicesButton.UseVisualStyleBackColor = true;
             this.showAllAdditionalServicesButton.Click += new System.EventHandler(this.showAllAdditionalServicesButton_Click);
             // 
+            // additionalServicesPriceListButton
+            // 
+            this.additionalServicesPriceListButton.Location = new System.Drawing.Point(328, 207);
+            this.additionalServicesPriceListButton.Name = "additionalServicesPriceListButton";
+            this.additionalServicesPriceListButton.Size = new System.Drawing.Size(84, 36);
+            this.additionalServicesPriceListButton.TabIndex = 25;
+            this.additionalServicesPriceListButton.Text = "Показать прайс-лист";
+            this.additionalServicesPriceListButton.UseVisualStyleBackColor = true;
+            this.additionalServicesPriceListButton.Click += new System.EventHandler(this.additionalServicesPriceListButton_Click);
+            // 
+            // additionalServicesPriceListReport
+            // 
+            this.additionalServicesPriceListReport.NeedRefresh = false;
+            this.additionalServicesPriceListReport.ReportResourceString = resources.GetString("additionalServicesPriceListReport.ReportResourceString");
+            this.additionalServicesPriceListReport.RegisterData(this.additionalServicesList, "additionalServicesList");
+            // 
             // AdditionalServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 281);
+            this.Controls.Add(this.additionalServicesPriceListButton);
             this.Controls.Add(this.showAllAdditionalServicesButton);
             this.Controls.Add(this.costButton);
             this.Controls.Add(this.label4);
@@ -240,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalServicesPriceListReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +288,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn additionalServiceNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn additionalServiceCostDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button showAllAdditionalServicesButton;
+        private System.Windows.Forms.Button additionalServicesPriceListButton;
+        private FastReport.Report additionalServicesPriceListReport;
     }
 }

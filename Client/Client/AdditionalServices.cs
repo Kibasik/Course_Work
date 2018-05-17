@@ -104,5 +104,10 @@ namespace Client
             dataTableBindingSource.Filter = "";
             connection.Close();
         }
+
+        private void additionalServicesPriceListButton_Click(object sender, EventArgs e)
+        {
+            additionalServicesPriceListReport.Show();
+        }
     }
 }

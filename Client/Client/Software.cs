@@ -216,5 +216,10 @@ namespace Client
             softwareDGV.DataSource = dataView;
             connection.Close();
         }
+
+        private void softwarePriceListButton_Click(object sender, EventArgs e)
+        {
+            softwarePriceListReport.Show();
+        }
     }
 }

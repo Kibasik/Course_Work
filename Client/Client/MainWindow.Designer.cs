@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +77,8 @@
             this.goodsTypeCB = new System.Windows.Forms.ComboBox();
             this.дополнительнвеУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goodsQuantityTB = new System.Windows.Forms.TextBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.goodsPriceListButton = new System.Windows.Forms.Button();
+            this.goodsPriceListReport = new FastReport.Report();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
@@ -84,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsPriceListReport)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsDGV
@@ -155,6 +158,7 @@
             // 
             this.dataTableBindingSource1.DataMember = "DataTable";
             this.dataTableBindingSource1.DataSource = this.goods;
+            this.dataTableBindingSource1.Position = 0;
             // 
             // goods
             // 
@@ -399,19 +403,19 @@
             // goodsQuantityChart
             // 
             this.goodsQuantityChart.BackColor = System.Drawing.SystemColors.Control;
-            chartArea5.AxisX.Title = "Категория комплектующего";
-            chartArea5.AxisY.Title = "Количество";
-            chartArea5.Name = "ChartArea1";
-            this.goodsQuantityChart.ChartAreas.Add(chartArea5);
+            chartArea1.AxisX.Title = "Категория комплектующего";
+            chartArea1.AxisY.Title = "Количество";
+            chartArea1.Name = "ChartArea1";
+            this.goodsQuantityChart.ChartAreas.Add(chartArea1);
             this.goodsQuantityChart.DataSource = this.dataTableBindingSource;
             this.goodsQuantityChart.Location = new System.Drawing.Point(21, 386);
             this.goodsQuantityChart.Name = "goodsQuantityChart";
-            series5.ChartArea = "ChartArea1";
-            series5.IsVisibleInLegend = false;
-            series5.Name = "Series1";
-            series5.XValueMember = "CategoryGoodsName";
-            series5.YValueMembers = "Quantity";
-            this.goodsQuantityChart.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Name = "Series1";
+            series1.XValueMember = "CategoryGoodsName";
+            series1.YValueMembers = "Quantity";
+            this.goodsQuantityChart.Series.Add(series1);
             this.goodsQuantityChart.Size = new System.Drawing.Size(586, 322);
             this.goodsQuantityChart.TabIndex = 24;
             this.goodsQuantityChart.Text = "Количество товаров";
@@ -467,12 +471,29 @@
             this.goodsQuantityTB.TabIndex = 27;
             this.goodsQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsQuantityTB_KeyPress);
             // 
+            // goodsPriceListButton
+            // 
+            this.goodsPriceListButton.Location = new System.Drawing.Point(907, 27);
+            this.goodsPriceListButton.Name = "goodsPriceListButton";
+            this.goodsPriceListButton.Size = new System.Drawing.Size(89, 34);
+            this.goodsPriceListButton.TabIndex = 28;
+            this.goodsPriceListButton.Text = "Показать прайс-лист";
+            this.goodsPriceListButton.UseVisualStyleBackColor = true;
+            this.goodsPriceListButton.Click += new System.EventHandler(this.goodsPriceListButton_Click);
+            // 
+            // goodsPriceListReport
+            // 
+            this.goodsPriceListReport.NeedRefresh = false;
+            this.goodsPriceListReport.ReportResourceString = resources.GetString("goodsPriceListReport.ReportResourceString");
+            this.goodsPriceListReport.RegisterData(this.goods, "goods");
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.goodsPriceListButton);
             this.Controls.Add(this.goodsQuantityTB);
             this.Controls.Add(this.goodsTypeCB);
             this.Controls.Add(this.label1);
@@ -511,6 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsPriceListReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,7 +589,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button goodsPriceListButton;
+        private FastReport.Report goodsPriceListReport;
     }
 }
 

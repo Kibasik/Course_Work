@@ -283,9 +283,9 @@ namespace Client {
             
             private global::System.Data.DataColumn columnServiceMaintenanceName;
             
-            private global::System.Data.DataColumn columnServiceMaintenanceCost;
-            
             private global::System.Data.DataColumn columnServiceMaintenancePeriod;
+            
+            private global::System.Data.DataColumn columnServiceMaintenanceCost;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -338,17 +338,17 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ServiceMaintenanceCostColumn {
+            public global::System.Data.DataColumn ServiceMaintenancePeriodColumn {
                 get {
-                    return this.columnServiceMaintenanceCost;
+                    return this.columnServiceMaintenancePeriod;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ServiceMaintenancePeriodColumn {
+            public global::System.Data.DataColumn ServiceMaintenanceCostColumn {
                 get {
-                    return this.columnServiceMaintenancePeriod;
+                    return this.columnServiceMaintenanceCost;
                 }
             }
             
@@ -389,13 +389,13 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTableRow AddDataTableRow(string ServiceMaintenanceName, decimal ServiceMaintenanceCost, int ServiceMaintenancePeriod) {
+            public DataTableRow AddDataTableRow(string ServiceMaintenanceName, int ServiceMaintenancePeriod, decimal ServiceMaintenanceCost) {
                 DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ServiceMaintenanceName,
-                        ServiceMaintenanceCost,
-                        ServiceMaintenancePeriod};
+                        ServiceMaintenancePeriod,
+                        ServiceMaintenanceCost};
                 rowDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableRow);
                 return rowDataTableRow;
@@ -420,8 +420,8 @@ namespace Client {
             internal void InitVars() {
                 this.columnServiceMaintenanceID = base.Columns["ServiceMaintenanceID"];
                 this.columnServiceMaintenanceName = base.Columns["ServiceMaintenanceName"];
-                this.columnServiceMaintenanceCost = base.Columns["ServiceMaintenanceCost"];
                 this.columnServiceMaintenancePeriod = base.Columns["ServiceMaintenancePeriod"];
+                this.columnServiceMaintenanceCost = base.Columns["ServiceMaintenanceCost"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -431,10 +431,10 @@ namespace Client {
                 base.Columns.Add(this.columnServiceMaintenanceID);
                 this.columnServiceMaintenanceName = new global::System.Data.DataColumn("ServiceMaintenanceName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnServiceMaintenanceName);
-                this.columnServiceMaintenanceCost = new global::System.Data.DataColumn("ServiceMaintenanceCost", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnServiceMaintenanceCost);
                 this.columnServiceMaintenancePeriod = new global::System.Data.DataColumn("ServiceMaintenancePeriod", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnServiceMaintenancePeriod);
+                this.columnServiceMaintenanceCost = new global::System.Data.DataColumn("ServiceMaintenanceCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServiceMaintenanceCost);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnServiceMaintenanceID}, false));
                 this.columnServiceMaintenanceID.AutoIncrement = true;
@@ -617,23 +617,6 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal ServiceMaintenanceCost {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataTable.ServiceMaintenanceCostColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ServiceMaintenanceCost\' в таблице \'DataTable\' равно DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.ServiceMaintenanceCostColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ServiceMaintenancePeriod {
                 get {
                     try {
@@ -646,6 +629,23 @@ namespace Client {
                 }
                 set {
                     this[this.tableDataTable.ServiceMaintenancePeriodColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal ServiceMaintenanceCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableDataTable.ServiceMaintenanceCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ServiceMaintenanceCost\' в таблице \'DataTable\' равно DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.ServiceMaintenanceCostColumn] = value;
                 }
             }
             
@@ -675,18 +675,6 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsServiceMaintenanceCostNull() {
-                return this.IsNull(this.tableDataTable.ServiceMaintenanceCostColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetServiceMaintenanceCostNull() {
-                this[this.tableDataTable.ServiceMaintenanceCostColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsServiceMaintenancePeriodNull() {
                 return this.IsNull(this.tableDataTable.ServiceMaintenancePeriodColumn);
             }
@@ -695,6 +683,18 @@ namespace Client {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetServiceMaintenancePeriodNull() {
                 this[this.tableDataTable.ServiceMaintenancePeriodColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsServiceMaintenanceCostNull() {
+                return this.IsNull(this.tableDataTable.ServiceMaintenanceCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetServiceMaintenanceCostNull() {
+                this[this.tableDataTable.ServiceMaintenanceCostColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -859,8 +859,8 @@ namespace Client.ServiceMaintenanceListTableAdapters {
             tableMapping.DataSetTable = "DataTable";
             tableMapping.ColumnMappings.Add("ServiceMaintenanceID", "ServiceMaintenanceID");
             tableMapping.ColumnMappings.Add("ServiceMaintenanceName", "ServiceMaintenanceName");
-            tableMapping.ColumnMappings.Add("ServiceMaintenanceCost", "ServiceMaintenanceCost");
             tableMapping.ColumnMappings.Add("ServiceMaintenancePeriod", "ServiceMaintenancePeriod");
+            tableMapping.ColumnMappings.Add("ServiceMaintenanceCost", "ServiceMaintenanceCost");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

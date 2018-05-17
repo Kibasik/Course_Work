@@ -419,5 +419,10 @@ namespace Client
             serviceMaintenance.basketID = (id + 1);
             serviceMaintenance.ShowDialog();
         }
+
+        private void goodsPriceListButton_Click(object sender, EventArgs e)
+        {
+            goodsPriceListReport.Show();
+        }
     }
 }

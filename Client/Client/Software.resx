@@ -135,4 +135,41 @@
   <metadata name="dataTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1316, 17</value>
   </metadata>
+  <metadata name="softwarePriceListReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 18</value>
+  </metadata>
+  <data name="softwarePriceListReport.ReportResourceString" xml:space="preserve">
+    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/17/2018 19:21:39" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+  &lt;Dictionary&gt;
+    &lt;TableDataSource Name="DataTable" ReferenceName="softwareList.DataTable" DataType="System.Int32" Enabled="true"&gt;
+      &lt;Column Name="SoftwareTypeName" DataType="System.String"/&gt;
+      &lt;Column Name="SoftwareName" DataType="System.String"/&gt;
+      &lt;Column Name="SoftwareCost" DataType="System.Decimal"/&gt;
+      &lt;Column Name="SoftwareID" DataType="System.Int32"/&gt;
+    &lt;/TableDataSource&gt;
+  &lt;/Dictionary&gt;
+  &lt;ReportPage Name="Page1"&gt;
+    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text1" Left="141.75" Top="9.45" Width="453.6" Height="28.35" Text="Прайс-лист программного обеспечения" HorzAlign="Center" Font="Arial, 16pt, style=Bold"/&gt;
+    &lt;/ReportTitleBand&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="37.8"&gt;
+      &lt;TextObject Name="Text4" Top="9.45" Width="718.2" Height="18.9" Fill.Color="DarkGray" Font="Arial, 16pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text2" Left="652.05" Top="9.45" Width="66.15" Height="18.9" Text="ЦЕНА" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text3" Top="9.45" Width="652.05" Height="18.9" Text="НАИМЕНОВАНИЕ" Font="Arial, 12pt, style=Bold"/&gt;
+    &lt;/PageHeaderBand&gt;
+    &lt;GroupHeaderBand Name="GroupHeader1" Top="89.62" Width="718.2" Height="37.8" Condition="[DataTable.SoftwareTypeName]"&gt;
+      &lt;TextObject Name="Text6" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text5" Top="9.45" Width="481.95" Height="18.9" Text="[[DataTable.SoftwareTypeName]]" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;DataBand Name="Data1" Top="129.71" Width="718.2" Height="37.8" DataSource="DataTable"&gt;
+        &lt;TextObject Name="Text7" Top="9.45" Width="623.7" Height="18.9" Text="[DataTable.SoftwareName]" Font="Arial, 12pt"/&gt;
+        &lt;TextObject Name="Text8" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/&gt;
+      &lt;/DataBand&gt;
+      &lt;GroupFooterBand Name="GroupFooter1" Top="169.79" Width="718.2" Height="9.45"/&gt;
+    &lt;/GroupHeaderBand&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="181.53" Width="718.2" Height="9.45"/&gt;
+  &lt;/ReportPage&gt;
+&lt;/Report&gt;
+</value>
+  </data>
 </root>

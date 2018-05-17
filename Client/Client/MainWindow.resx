@@ -120,12 +120,6 @@
   <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>704, 37</value>
   </metadata>
-  <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>704, 37</value>
-  </metadata>
-  <metadata name="goods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>618, 37</value>
-  </metadata>
   <metadata name="goods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>618, 37</value>
   </metadata>
@@ -138,16 +132,50 @@
   <metadata name="goodsQuantity.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>123, 37</value>
   </metadata>
-  <metadata name="goodsQuantity.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>123, 37</value>
-  </metadata>
   <metadata name="dataTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>440, 37</value>
   </metadata>
   <metadata name="dataTableTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>895, 37</value>
   </metadata>
-  <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="goodsPriceListReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1080, 37</value>
   </metadata>
+  <data name="goodsPriceListReport.ReportResourceString" xml:space="preserve">
+    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:51:47" ReportInfo.Modified="05/17/2018 19:21:29" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+  &lt;Dictionary&gt;
+    &lt;TableDataSource Name="DataTable" ReferenceName="goods.DataTable" DataType="System.Int32" Enabled="true"&gt;
+      &lt;Column Name="TypeCategoryName" DataType="System.String"/&gt;
+      &lt;Column Name="CategoryGoodsName" DataType="System.String"/&gt;
+      &lt;Column Name="GoodsManufacturerName" DataType="System.String"/&gt;
+      &lt;Column Name="GoodsName" DataType="System.String"/&gt;
+      &lt;Column Name="GoodsCost" DataType="System.Decimal"/&gt;
+      &lt;Column Name="GoodsID" DataType="System.Int32"/&gt;
+    &lt;/TableDataSource&gt;
+  &lt;/Dictionary&gt;
+  &lt;ReportPage Name="Page1"&gt;
+    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text1" Left="94.5" Top="9.45" Width="510.3" Height="28.35" Text="Прайс-лист компьютерных комплектующих" HorzAlign="Center" Font="Arial, 16pt, style=Bold"/&gt;
+    &lt;/ReportTitleBand&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="37.8"&gt;
+      &lt;TextObject Name="Text2" Top="9.45" Width="718.2" Height="18.9" Fill.Color="DarkGray" HorzAlign="Center" Font="Arial, 16pt"/&gt;
+      &lt;TextObject Name="Text3" Top="9.45" Width="652.05" Height="18.9" Text="НАИМЕНОВАНИЕ" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text4" Left="652.05" Top="9.45" Width="66.15" Height="18.9" Text="ЦЕНА" Font="Arial, 12pt, style=Bold"/&gt;
+    &lt;/PageHeaderBand&gt;
+    &lt;GroupHeaderBand Name="GroupHeader1" Top="89.62" Width="718.2" Height="37.8" Condition="[DataTable.CategoryGoodsName]"&gt;
+      &lt;TextObject Name="Text6" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Font="Arial, 12pt"/&gt;
+      &lt;TextObject Name="Text5" Top="9.45" Width="538.65" Height="18.9" Text="[[DataTable.CategoryGoodsName]]" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;DataBand Name="Data1" Top="129.71" Width="718.2" Height="37.8" DataSource="DataTable"&gt;
+        &lt;TextObject Name="Text7" Top="9.45" Width="207.9" Height="18.9" Text="[DataTable.GoodsManufacturerName]" Font="Arial, 12pt"/&gt;
+        &lt;TextObject Name="Text8" Left="207.9" Top="9.45" Width="415.8" Height="18.9" Text="[DataTable.GoodsName]" Font="Arial, 12pt"/&gt;
+        &lt;TextObject Name="Text9" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/&gt;
+      &lt;/DataBand&gt;
+      &lt;GroupFooterBand Name="GroupFooter1" Top="169.79" Width="718.2" Height="9.45"/&gt;
+    &lt;/GroupHeaderBand&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="181.53" Width="718.2" Height="9.45"/&gt;
+  &lt;/ReportPage&gt;
+&lt;/Report&gt;
+</value>
+  </data>
 </root>

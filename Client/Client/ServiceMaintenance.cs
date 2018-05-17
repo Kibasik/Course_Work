@@ -105,5 +105,10 @@ namespace Client
             dataTableBindingSource.Filter = "";
             connection.Close();
         }
+
+        private void serviceMaintenancePriceListButton_Click_1(object sender, EventArgs e)
+        {
+            serviceMaintenancePriceListReport.Show();
+        }
     }
 }

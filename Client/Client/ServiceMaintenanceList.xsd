@@ -21,8 +21,8 @@
             <Mappings>
               <Mapping SourceColumn="ServiceMaintenanceID" DataSetColumn="ServiceMaintenanceID" />
               <Mapping SourceColumn="ServiceMaintenanceName" DataSetColumn="ServiceMaintenanceName" />
-              <Mapping SourceColumn="ServiceMaintenanceCost" DataSetColumn="ServiceMaintenanceCost" />
               <Mapping SourceColumn="ServiceMaintenancePeriod" DataSetColumn="ServiceMaintenancePeriod" />
+              <Mapping SourceColumn="ServiceMaintenanceCost" DataSetColumn="ServiceMaintenanceCost" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -45,8 +45,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ServiceMaintenanceCost" msprop:Generator_ColumnVarNameInTable="columnServiceMaintenanceCost" msprop:Generator_ColumnPropNameInRow="ServiceMaintenanceCost" msprop:Generator_ColumnPropNameInTable="ServiceMaintenanceCostColumn" msprop:Generator_UserColumnName="ServiceMaintenanceCost" type="xs:decimal" minOccurs="0" />
               <xs:element name="ServiceMaintenancePeriod" msprop:Generator_ColumnVarNameInTable="columnServiceMaintenancePeriod" msprop:Generator_ColumnPropNameInRow="ServiceMaintenancePeriod" msprop:Generator_ColumnPropNameInTable="ServiceMaintenancePeriodColumn" msprop:Generator_UserColumnName="ServiceMaintenancePeriod" type="xs:int" minOccurs="0" />
+              <xs:element name="ServiceMaintenanceCost" msprop:Generator_ColumnVarNameInTable="columnServiceMaintenanceCost" msprop:Generator_ColumnPropNameInRow="ServiceMaintenanceCost" msprop:Generator_ColumnPropNameInTable="ServiceMaintenanceCostColumn" msprop:Generator_UserColumnName="ServiceMaintenanceCost" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/17/2018 19:12:46" ReportInfo.CreatorVersion="2018.3.1.0">
+  <Dictionary>
+    <TableDataSource Name="DataTable" ReferenceName="softwareList.DataTable" DataType="System.Int32" Enabled="true">
+      <Column Name="SoftwareTypeName" DataType="System.String"/>
+      <Column Name="SoftwareName" DataType="System.String"/>
+      <Column Name="SoftwareCost" DataType="System.Decimal"/>
+      <Column Name="SoftwareID" DataType="System.Int32"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
+      <TextObject Name="Text1" Left="141.75" Top="9.45" Width="453.6" Height="28.35" Text="Прайс-лист программного обеспечения" HorzAlign="Center" Font="Arial, 16pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="37.8">
+      <TextObject Name="Text4" Top="9.45" Width="718.2" Height="18.9" Fill.Color="DarkGray" Font="Arial, 16pt, style=Bold"/>
+      <TextObject Name="Text2" Left="652.05" Top="9.45" Width="66.15" Height="18.9" Text="ЦЕНА" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text3" Top="9.45" Width="652.05" Height="18.9" Text="НАИМЕНОВАНИЕ" Font="Arial, 12pt, style=Bold"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="89.62" Width="718.2" Height="37.8" Condition="[DataTable.SoftwareTypeName]">
+      <TextObject Name="Text6" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text5" Top="9.45" Width="481.95" Height="18.9" Text="[[DataTable.SoftwareTypeName]]" Font="Arial, 12pt, style=Bold"/>
+      <DataBand Name="Data1" Top="129.71" Width="718.2" Height="37.8" DataSource="DataTable">
+        <TextObject Name="Text7" Top="9.45" Width="623.7" Height="18.9" Text="[DataTable.SoftwareName]" Font="Arial, 12pt"/>
+        <TextObject Name="Text8" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="169.79" Width="718.2" Height="9.45"/>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="181.53" Width="718.2" Height="9.45"/>
+  </ReportPage>
+</Report>
