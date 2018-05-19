@@ -237,8 +237,13 @@ namespace Client
             command = new MySqlCommand("INSERT INTO sale (sale.BasketID, sale.DeliveryID, sale.PaymentMethodID, sale.ClientID, sale.WorkerID, sale.SaleDate) VALUES " +
                                        "('" + basketID + "', '" + deliveryID + "', '" + paymentMethodID + "', '" + clientID + "', '" + workerID + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "')", connection);
             command.ExecuteNonQuery();
-            saleReport.SetParameterValue("basketID", basketID);
             connection.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saleReport.SetParameterValue("basketID", basketID);
+            saleReport.Show();
         }
     }
 }

@@ -117,4 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="saleReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="saleReport.ReportResourceString" xml:space="preserve">
+    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/19/2018 17:44:52" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+  &lt;Dictionary&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wGW2d2jgt4yQS+2pyDKr3g"&gt;
+      &lt;TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  chosensoftware.BasketID,&amp;#13;&amp;#10;  chosensoftware.SoftwareQuantity,&amp;#13;&amp;#10;  software.SoftwareName,&amp;#13;&amp;#10;  software.SoftwareCost&amp;#13;&amp;#10;FROM chosensoftware&amp;#13;&amp;#10;  INNER JOIN software&amp;#13;&amp;#10;    ON chosensoftware.SoftwareID = software.SoftwareID"&gt;
+        &lt;Column Name="SoftwareQuantity" DataType="System.Int32"/&gt;
+        &lt;Column Name="SoftwareName" DataType="System.String"/&gt;
+        &lt;Column Name="SoftwareCost" DataType="System.Decimal"/&gt;
+        &lt;Column Name="BasketID" DataType="System.Int32"/&gt;
+      &lt;/TableDataSource&gt;
+      &lt;TableDataSource Name="Table1" Alias="AdditionalServices" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  chosenadditionalservices.BasketID,&amp;#13;&amp;#10;  additionalservices.AdditionalServiceName,&amp;#13;&amp;#10;  additionalservices.AdditionalServiceCost&amp;#13;&amp;#10;FROM chosenadditionalservices&amp;#13;&amp;#10;  INNER JOIN additionalservices&amp;#13;&amp;#10;    ON chosenadditionalservices.AdditionalServiceID = additionalservices.AdditionalServiceID"&gt;
+        &lt;Column Name="BasketID" DataType="System.Int32"/&gt;
+        &lt;Column Name="AdditionalServiceName" DataType="System.String"/&gt;
+        &lt;Column Name="AdditionalServiceCost" DataType="System.Decimal"/&gt;
+      &lt;/TableDataSource&gt;
+      &lt;TableDataSource Name="Table2" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  componentslist.BasketID,&amp;#13;&amp;#10;  componentslist.GoodsQuantity,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodscatalog.GoodsCost&amp;#13;&amp;#10;FROM componentslist&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON componentslist.GoodsID = goodscatalog.GoodsID"&gt;
+        &lt;Column Name="BasketID" DataType="System.Int32"/&gt;
+        &lt;Column Name="GoodsQuantity" DataType="System.Int32"/&gt;
+        &lt;Column Name="GoodsName" DataType="System.String"/&gt;
+        &lt;Column Name="GoodsCost" DataType="System.Decimal"/&gt;
+      &lt;/TableDataSource&gt;
+      &lt;TableDataSource Name="Table3" Alias="ServiceMaintenance" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  chosenservicemaintenance.BasketID,&amp;#13;&amp;#10;  servicemaintenance.ServiceMaintenanceName,&amp;#13;&amp;#10;  servicemaintenance.ServiceMaintenanceCost&amp;#13;&amp;#10;FROM chosenservicemaintenance&amp;#13;&amp;#10;  INNER JOIN servicemaintenance&amp;#13;&amp;#10;    ON chosenservicemaintenance.ServiceMaintenanceID = servicemaintenance.ServiceMaintenanceID"&gt;
+        &lt;Column Name="BasketID" DataType="System.Int32"/&gt;
+        &lt;Column Name="ServiceMaintenanceName" DataType="System.String"/&gt;
+        &lt;Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/&gt;
+      &lt;/TableDataSource&gt;
+    &lt;/OdbcDataConnection&gt;
+    &lt;Parameter Name="basketID" DataType="System.Int32" Expression="5"/&gt;
+    &lt;Parameter Name="TotalCost" DataType="FastReport.Variant" Expression="[TotalSoftware] + [TotalAdditionalServices] + [TotalComponents] + [TotalServiceMaintenance]"/&gt;
+    &lt;Parameter Name="SoftwareTotalCost" DataType="System.Decimal" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]"/&gt;
+    &lt;Parameter Name="ComponentsTotalCost" DataType="System.Decimal" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]"/&gt;
+    &lt;Parameter Name="Number" DataType="System.Int32"/&gt;
+    &lt;Total Name="TotalSoftware" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]" Evaluator="Data1"/&gt;
+    &lt;Total Name="TotalAdditionalServices" Expression="[AdditionalServices.AdditionalServiceCost]" Evaluator="Data2"/&gt;
+    &lt;Total Name="TotalComponents" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]" Evaluator="Data3"/&gt;
+    &lt;Total Name="TotalServiceMaintenance" Expression="[ServiceMaintenance.ServiceMaintenanceCost]" Evaluator="Data4"/&gt;
+  &lt;/Dictionary&gt;
+  &lt;ReportPage Name="Page1"&gt;
+    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text5" Left="236.25" Top="9.45" Width="245.7" Height="28.35" Text="Товарный чек" HorzAlign="Center" VertAlign="Center" Font="Arial, 16pt, style=Bold"/&gt;
+    &lt;/ReportTitleBand&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text17" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray"/&gt;
+      &lt;TextObject Name="Text7" Left="37.8" Top="9.45" Width="444.15" Height="28.35" Text="Наименование" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text6" Top="9.45" Width="37.8" Height="28.35" Text="№" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text9" Left="481.95" Top="9.45" Width="75.6" Height="28.35" Text="Цена" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text8" Left="557.55" Top="9.45" Width="85.05" Height="28.35" Text="Кол-во" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text14" Left="642.6" Top="9.45" Width="75.6" Height="28.35" Text="Сумма" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+    &lt;/PageHeaderBand&gt;
+    &lt;DataBand Name="Data1" Top="99.07" Width="718.2" Height="37.8" DataSource="Table" Filter="[Software.BasketID] = [basketID]"&gt;
+      &lt;TextObject Name="Text1" Left="37.8" Top="9.45" Width="444.15" Height="18.9" Text="[Software.SoftwareName]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text2" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Software.SoftwareQuantity]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text15" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[Software.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+      &lt;TextObject Name="Text3" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[SoftwareTotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/&gt;
+    &lt;/DataBand&gt;
+    &lt;DataBand Name="Data2" Top="139.16" Width="718.2" Height="37.8" DataSource="Table1" Filter="[AdditionalServices.BasketID] = [basketID]"&gt;
+      &lt;TextObject Name="Text11" Left="37.8" Top="9.45" Width="444.15" Height="18.9" Text="[AdditionalServices.AdditionalServiceName]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text16" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+      &lt;TextObject Name="Text12" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="1" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text13" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+    &lt;/DataBand&gt;
+    &lt;DataBand Name="Data3" Top="179.24" Width="718.2" Height="37.8" DataSource="Table2" Filter="[Components.BasketID] = [basketID]"&gt;
+      &lt;TextObject Name="Text19" Left="37.8" Top="9.45" Width="444.15" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text20" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[Components.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+      &lt;TextObject Name="Text21" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Components.GoodsQuantity]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text22" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ComponentsTotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text4" Top="9.45" Width="37.8" Height="18.9" Text="[Row#]"/&gt;
+    &lt;/DataBand&gt;
+    &lt;DataBand Name="Data4" Top="219.33" Width="718.2" Height="37.8" DataSource="Table3" Filter="[ServiceMaintenance.BasketID] = [basketID]"&gt;
+      &lt;TextObject Name="Text24" Left="37.8" Top="9.45" Width="444.15" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceName]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text25" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+      &lt;TextObject Name="Text27" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+      &lt;TextObject Name="Text26" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="1" VertAlign="Center"/&gt;
+    &lt;/DataBand&gt;
+    &lt;ReportSummaryBand Name="ReportSummary1" Top="259.41" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text28" Top="9.45" Width="567" Height="28.35" Text="Итого:" HorzAlign="Right" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text29" Left="567" Top="9.45" Width="151.2" Height="28.35" Text="[TotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" Font="Arial, 14pt, style=Bold"/&gt;
+    &lt;/ReportSummaryBand&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="308.95" Width="718.2" Height="9.45"/&gt;
+  &lt;/ReportPage&gt;
+&lt;/Report&gt;
+</value>
+  </data>
 </root>
