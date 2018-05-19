@@ -18,6 +18,7 @@ namespace Client
         public double deliveryCost = 0;
         public string deliveryMethod { get; set; }
         public int basketID { get; set; }
+        public string clientName;
 
         public DeliveryAndSale()
         {
@@ -158,7 +159,7 @@ namespace Client
         {
             connection.Open();
             int deliveryMethodID = 0;
-            string clientName = clientSurnameTB.Text + " " + clientNameTB.Text + " " + clientPatronymicTB.Text;
+            clientName = clientSurnameTB.Text + " " + clientNameTB.Text + " " + clientPatronymicTB.Text;
             string deliveryAddress = "г. " + deliveryCityTB.Text + ", ул. " + deliveryStreetTB.Text + ", д. " + deliveryHouseTB.Text + ", кв. " + deliveryFlatTB.Text;
             command = new MySqlCommand("INSERT INTO client (client.ClientName, client.ClientEmail, client.ClientPhone) VALUES " +
                                        "('" + clientName + "', '" + clientEmailTB.Text + "', '" + clientPhoneMTB.Text + "')", connection);
@@ -237,13 +238,13 @@ namespace Client
             command = new MySqlCommand("INSERT INTO sale (sale.BasketID, sale.DeliveryID, sale.PaymentMethodID, sale.ClientID, sale.WorkerID, sale.SaleDate) VALUES " +
                                        "('" + basketID + "', '" + deliveryID + "', '" + paymentMethodID + "', '" + clientID + "', '" + workerID + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "')", connection);
             command.ExecuteNonQuery();
-            connection.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             saleReport.SetParameterValue("basketID", basketID);
+            saleReport.SetParameterValue("clientName", clientName);
+            saleReport.SetParameterValue("workerName", workerNameCB.SelectedItem.ToString());
+            saleReport.SetParameterValue("paymentMethod", paymentMethodCB.SelectedItem.ToString());
             saleReport.Show();
+            connection.Close();
+            Close();
         }
     }
 }

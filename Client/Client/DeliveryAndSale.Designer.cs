@@ -60,7 +60,6 @@
             this.workerNameCB = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.paymentMethodCB = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.saleReport = new FastReport.Report();
             ((System.ComponentModel.ISupportInitialize)(this.saleReport)).BeginInit();
             this.SuspendLayout();
@@ -342,16 +341,6 @@
             this.paymentMethodCB.Size = new System.Drawing.Size(137, 21);
             this.paymentMethodCB.TabIndex = 30;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(483, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // saleReport
             // 
             this.saleReport.NeedRefresh = false;
@@ -362,7 +351,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.paymentMethodCB);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.workerNameCB);
@@ -440,7 +428,6 @@
         private System.Windows.Forms.ComboBox workerNameCB;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox paymentMethodCB;
-        private System.Windows.Forms.Button button1;
         private FastReport.Report saleReport;
     }
 }
