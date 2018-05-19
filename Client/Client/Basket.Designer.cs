@@ -29,7 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.totalCostLabel = new System.Windows.Forms.Label();
+            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.softwareDGV = new System.Windows.Forms.DataGridView();
+            this.deleteGoodsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteSoftwareButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.additionalServicesDGV = new System.Windows.Forms.DataGridView();
+            this.deleteAdditionalServiceButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.serviceMaintenanceDGV = new System.Windows.Forms.DataGridView();
+            this.deleteServiceMaintenanceButton = new System.Windows.Forms.Button();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,32 +55,18 @@
             this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodsQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.totalCostLabel = new System.Windows.Forms.Label();
-            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.softwareDGV = new System.Windows.Forms.DataGridView();
             this.SoftwareTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deleteGoodsButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.deleteSoftwareButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.additionalServicesDGV = new System.Windows.Forms.DataGridView();
             this.AdditionalServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdditionalServiceCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdditionalServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deleteAdditionalServiceButton = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.serviceMaintenanceDGV = new System.Windows.Forms.DataGridView();
             this.ServiceMaintenanceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ServiceMaintenanceCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ServiceMaintenancePeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ServiceMaintenanceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deleteServiceMaintenanceButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
@@ -89,44 +93,6 @@
             this.goodsDGV.Name = "goodsDGV";
             this.goodsDGV.Size = new System.Drawing.Size(485, 180);
             this.goodsDGV.TabIndex = 0;
-            // 
-            // TypeCategoryName
-            // 
-            this.TypeCategoryName.HeaderText = "Тип";
-            this.TypeCategoryName.Name = "TypeCategoryName";
-            // 
-            // CategoryGoodsName
-            // 
-            this.CategoryGoodsName.HeaderText = "Категория";
-            this.CategoryGoodsName.Name = "CategoryGoodsName";
-            this.CategoryGoodsName.Width = 120;
-            // 
-            // GoodsName
-            // 
-            this.GoodsName.HeaderText = "Наименование";
-            this.GoodsName.Name = "GoodsName";
-            this.GoodsName.Width = 180;
-            // 
-            // GoodsManufacturerName
-            // 
-            this.GoodsManufacturerName.HeaderText = "Производитель";
-            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
-            // 
-            // GoodsCost
-            // 
-            this.GoodsCost.HeaderText = "Цена, руб.";
-            this.GoodsCost.Name = "GoodsCost";
-            // 
-            // GoodsQuantity
-            // 
-            this.GoodsQuantity.HeaderText = "Количество";
-            this.GoodsQuantity.Name = "GoodsQuantity";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // label1
             // 
@@ -168,39 +134,6 @@
             this.softwareDGV.ReadOnly = true;
             this.softwareDGV.Size = new System.Drawing.Size(488, 193);
             this.softwareDGV.TabIndex = 3;
-            // 
-            // SoftwareTypeName
-            // 
-            this.SoftwareTypeName.HeaderText = "Тип";
-            this.SoftwareTypeName.Name = "SoftwareTypeName";
-            this.SoftwareTypeName.ReadOnly = true;
-            this.SoftwareTypeName.Width = 200;
-            // 
-            // SoftwareName
-            // 
-            this.SoftwareName.HeaderText = "Наименование";
-            this.SoftwareName.Name = "SoftwareName";
-            this.SoftwareName.ReadOnly = true;
-            this.SoftwareName.Width = 200;
-            // 
-            // SoftwareCost
-            // 
-            this.SoftwareCost.HeaderText = "Цена, руб.";
-            this.SoftwareCost.Name = "SoftwareCost";
-            this.SoftwareCost.ReadOnly = true;
-            // 
-            // SoftwareQuantity
-            // 
-            this.SoftwareQuantity.HeaderText = "Количество";
-            this.SoftwareQuantity.Name = "SoftwareQuantity";
-            this.SoftwareQuantity.ReadOnly = true;
-            // 
-            // SoftwareID
-            // 
-            this.SoftwareID.HeaderText = "ID";
-            this.SoftwareID.Name = "SoftwareID";
-            this.SoftwareID.ReadOnly = true;
-            this.SoftwareID.Visible = false;
             // 
             // deleteGoodsButton
             // 
@@ -266,26 +199,6 @@
             this.additionalServicesDGV.Size = new System.Drawing.Size(294, 180);
             this.additionalServicesDGV.TabIndex = 9;
             // 
-            // AdditionalServiceName
-            // 
-            this.AdditionalServiceName.HeaderText = "Наименование";
-            this.AdditionalServiceName.Name = "AdditionalServiceName";
-            this.AdditionalServiceName.ReadOnly = true;
-            this.AdditionalServiceName.Width = 135;
-            // 
-            // AdditionalServiceCost
-            // 
-            this.AdditionalServiceCost.HeaderText = "Цена, руб.";
-            this.AdditionalServiceCost.Name = "AdditionalServiceCost";
-            this.AdditionalServiceCost.ReadOnly = true;
-            // 
-            // AdditionalServiceID
-            // 
-            this.AdditionalServiceID.HeaderText = "ID";
-            this.AdditionalServiceID.Name = "AdditionalServiceID";
-            this.AdditionalServiceID.ReadOnly = true;
-            this.AdditionalServiceID.Visible = false;
-            // 
             // deleteAdditionalServiceButton
             // 
             this.deleteAdditionalServiceButton.Location = new System.Drawing.Point(587, 211);
@@ -323,6 +236,116 @@
             this.serviceMaintenanceDGV.Size = new System.Drawing.Size(390, 193);
             this.serviceMaintenanceDGV.TabIndex = 12;
             // 
+            // deleteServiceMaintenanceButton
+            // 
+            this.deleteServiceMaintenanceButton.Location = new System.Drawing.Point(587, 505);
+            this.deleteServiceMaintenanceButton.Name = "deleteServiceMaintenanceButton";
+            this.deleteServiceMaintenanceButton.Size = new System.Drawing.Size(121, 40);
+            this.deleteServiceMaintenanceButton.TabIndex = 13;
+            this.deleteServiceMaintenanceButton.Text = "Удалить сервисное обслуживание";
+            this.deleteServiceMaintenanceButton.UseVisualStyleBackColor = true;
+            this.deleteServiceMaintenanceButton.Click += new System.EventHandler(this.deleteServiceMaintenanceButton_Click);
+            // 
+            // TypeCategoryName
+            // 
+            this.TypeCategoryName.HeaderText = "Тип";
+            this.TypeCategoryName.Name = "TypeCategoryName";
+            // 
+            // CategoryGoodsName
+            // 
+            this.CategoryGoodsName.HeaderText = "Категория";
+            this.CategoryGoodsName.Name = "CategoryGoodsName";
+            this.CategoryGoodsName.Width = 120;
+            // 
+            // GoodsName
+            // 
+            this.GoodsName.HeaderText = "Наименование";
+            this.GoodsName.Name = "GoodsName";
+            this.GoodsName.Width = 180;
+            // 
+            // GoodsManufacturerName
+            // 
+            this.GoodsManufacturerName.HeaderText = "Производитель";
+            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
+            // 
+            // GoodsCost
+            // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle1;
+            this.GoodsCost.HeaderText = "Цена, руб.";
+            this.GoodsCost.Name = "GoodsCost";
+            // 
+            // GoodsQuantity
+            // 
+            this.GoodsQuantity.HeaderText = "Количество";
+            this.GoodsQuantity.Name = "GoodsQuantity";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // SoftwareTypeName
+            // 
+            this.SoftwareTypeName.HeaderText = "Тип";
+            this.SoftwareTypeName.Name = "SoftwareTypeName";
+            this.SoftwareTypeName.ReadOnly = true;
+            this.SoftwareTypeName.Width = 200;
+            // 
+            // SoftwareName
+            // 
+            this.SoftwareName.HeaderText = "Наименование";
+            this.SoftwareName.Name = "SoftwareName";
+            this.SoftwareName.ReadOnly = true;
+            this.SoftwareName.Width = 200;
+            // 
+            // SoftwareCost
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SoftwareCost.HeaderText = "Цена, руб.";
+            this.SoftwareCost.Name = "SoftwareCost";
+            this.SoftwareCost.ReadOnly = true;
+            // 
+            // SoftwareQuantity
+            // 
+            this.SoftwareQuantity.HeaderText = "Количество";
+            this.SoftwareQuantity.Name = "SoftwareQuantity";
+            this.SoftwareQuantity.ReadOnly = true;
+            // 
+            // SoftwareID
+            // 
+            this.SoftwareID.HeaderText = "ID";
+            this.SoftwareID.Name = "SoftwareID";
+            this.SoftwareID.ReadOnly = true;
+            this.SoftwareID.Visible = false;
+            // 
+            // AdditionalServiceName
+            // 
+            this.AdditionalServiceName.HeaderText = "Наименование";
+            this.AdditionalServiceName.Name = "AdditionalServiceName";
+            this.AdditionalServiceName.ReadOnly = true;
+            this.AdditionalServiceName.Width = 135;
+            // 
+            // AdditionalServiceCost
+            // 
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle3;
+            this.AdditionalServiceCost.HeaderText = "Цена, руб.";
+            this.AdditionalServiceCost.Name = "AdditionalServiceCost";
+            this.AdditionalServiceCost.ReadOnly = true;
+            // 
+            // AdditionalServiceID
+            // 
+            this.AdditionalServiceID.HeaderText = "ID";
+            this.AdditionalServiceID.Name = "AdditionalServiceID";
+            this.AdditionalServiceID.ReadOnly = true;
+            this.AdditionalServiceID.Visible = false;
+            // 
             // ServiceMaintenanceName
             // 
             this.ServiceMaintenanceName.HeaderText = "Наименование";
@@ -332,6 +355,9 @@
             // 
             // ServiceMaintenanceCost
             // 
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle4;
             this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
             this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
             this.ServiceMaintenanceCost.ReadOnly = true;
@@ -348,16 +374,6 @@
             this.ServiceMaintenanceID.Name = "ServiceMaintenanceID";
             this.ServiceMaintenanceID.ReadOnly = true;
             this.ServiceMaintenanceID.Visible = false;
-            // 
-            // deleteServiceMaintenanceButton
-            // 
-            this.deleteServiceMaintenanceButton.Location = new System.Drawing.Point(587, 505);
-            this.deleteServiceMaintenanceButton.Name = "deleteServiceMaintenanceButton";
-            this.deleteServiceMaintenanceButton.Size = new System.Drawing.Size(121, 40);
-            this.deleteServiceMaintenanceButton.TabIndex = 13;
-            this.deleteServiceMaintenanceButton.Text = "Удалить сервисное обслуживание";
-            this.deleteServiceMaintenanceButton.UseVisualStyleBackColor = true;
-            this.deleteServiceMaintenanceButton.Click += new System.EventHandler(this.deleteServiceMaintenanceButton_Click);
             // 
             // Basket
             // 
@@ -409,6 +425,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView additionalServicesDGV;
         private System.Windows.Forms.Button deleteAdditionalServiceButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView serviceMaintenanceDGV;
+        private System.Windows.Forms.Button deleteServiceMaintenanceButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeCategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGoodsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
@@ -424,12 +443,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalServiceName;
         private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalServiceCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn AdditionalServiceID;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView serviceMaintenanceDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenancePeriod;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceID;
-        private System.Windows.Forms.Button deleteServiceMaintenanceButton;
     }
 }

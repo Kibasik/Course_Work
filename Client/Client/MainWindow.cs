@@ -71,11 +71,6 @@ namespace Client
             connection.Close();
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void опрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox aboutBox = new AboutBox();
@@ -385,12 +380,6 @@ namespace Client
             connection.Close();
         }
 
-        private void доставкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Delivery delivery = new Delivery();
-            delivery.ShowDialog();
-        }
-
         private void goodsQuantityTB_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
@@ -423,6 +412,20 @@ namespace Client
         private void goodsPriceListButton_Click(object sender, EventArgs e)
         {
             goodsPriceListReport.Show();
+        }
+
+        private void сборкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Assembly assembly = new Assembly();
+            assembly.basketID = (id + 1);
+            assembly.ShowDialog();
+        }
+
+        private void продажаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeliveryAndSale deliveryAndSale = new DeliveryAndSale();
+            deliveryAndSale.basketID = (id + 1);
+            deliveryAndSale.ShowDialog();
         }
     }
 }

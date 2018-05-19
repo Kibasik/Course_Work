@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class Delivery
+    partial class DeliveryAndSale
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,11 @@
             this.clientPatronymicTB = new System.Windows.Forms.TextBox();
             this.clientPhoneMTB = new System.Windows.Forms.MaskedTextBox();
             this.clientEmailTB = new System.Windows.Forms.TextBox();
-            this.deliveryAcceptButton = new System.Windows.Forms.Button();
+            this.buyButton = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.workerNameCB = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.paymentMethodCB = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +72,7 @@
             // 
             // deliveryMethodCB
             // 
+            this.deliveryMethodCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.deliveryMethodCB.FormattingEnabled = true;
             this.deliveryMethodCB.Location = new System.Drawing.Point(15, 25);
             this.deliveryMethodCB.Name = "deliveryMethodCB";
@@ -150,7 +155,7 @@
             // deliveryHouseTB
             // 
             this.deliveryHouseTB.Location = new System.Drawing.Point(15, 212);
-            this.deliveryHouseTB.MaxLength = 4;
+            this.deliveryHouseTB.MaxLength = 3;
             this.deliveryHouseTB.Name = "deliveryHouseTB";
             this.deliveryHouseTB.Size = new System.Drawing.Size(146, 20);
             this.deliveryHouseTB.TabIndex = 10;
@@ -193,7 +198,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(306, 68);
+            this.label9.Location = new System.Drawing.Point(223, 68);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(156, 13);
             this.label9.TabIndex = 15;
@@ -202,7 +207,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(306, 142);
+            this.label10.Location = new System.Drawing.Point(223, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 16;
@@ -211,7 +216,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(306, 92);
+            this.label11.Location = new System.Drawing.Point(223, 92);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 13);
             this.label11.TabIndex = 17;
@@ -220,7 +225,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(306, 196);
+            this.label12.Location = new System.Drawing.Point(223, 196);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 13);
             this.label12.TabIndex = 18;
@@ -229,7 +234,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(306, 248);
+            this.label13.Location = new System.Drawing.Point(223, 248);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 19;
@@ -238,7 +243,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(306, 300);
+            this.label14.Location = new System.Drawing.Point(223, 300);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(107, 13);
             this.label14.TabIndex = 20;
@@ -246,7 +251,7 @@
             // 
             // clientNameTB
             // 
-            this.clientNameTB.Location = new System.Drawing.Point(309, 158);
+            this.clientNameTB.Location = new System.Drawing.Point(226, 158);
             this.clientNameTB.MaxLength = 20;
             this.clientNameTB.Name = "clientNameTB";
             this.clientNameTB.Size = new System.Drawing.Size(153, 20);
@@ -255,7 +260,7 @@
             // 
             // clientSurnameTB
             // 
-            this.clientSurnameTB.Location = new System.Drawing.Point(309, 108);
+            this.clientSurnameTB.Location = new System.Drawing.Point(226, 108);
             this.clientSurnameTB.MaxLength = 20;
             this.clientSurnameTB.Name = "clientSurnameTB";
             this.clientSurnameTB.Size = new System.Drawing.Size(153, 20);
@@ -264,7 +269,7 @@
             // 
             // clientPatronymicTB
             // 
-            this.clientPatronymicTB.Location = new System.Drawing.Point(309, 212);
+            this.clientPatronymicTB.Location = new System.Drawing.Point(226, 212);
             this.clientPatronymicTB.MaxLength = 20;
             this.clientPatronymicTB.Name = "clientPatronymicTB";
             this.clientPatronymicTB.Size = new System.Drawing.Size(153, 20);
@@ -273,7 +278,7 @@
             // 
             // clientPhoneMTB
             // 
-            this.clientPhoneMTB.Location = new System.Drawing.Point(309, 264);
+            this.clientPhoneMTB.Location = new System.Drawing.Point(226, 264);
             this.clientPhoneMTB.Mask = "(999) 000-0000";
             this.clientPhoneMTB.Name = "clientPhoneMTB";
             this.clientPhoneMTB.Size = new System.Drawing.Size(153, 20);
@@ -281,28 +286,68 @@
             // 
             // clientEmailTB
             // 
-            this.clientEmailTB.Location = new System.Drawing.Point(309, 316);
+            this.clientEmailTB.Location = new System.Drawing.Point(226, 316);
             this.clientEmailTB.MaxLength = 25;
             this.clientEmailTB.Name = "clientEmailTB";
             this.clientEmailTB.Size = new System.Drawing.Size(153, 20);
             this.clientEmailTB.TabIndex = 25;
             // 
-            // deliveryAcceptButton
+            // buyButton
             // 
-            this.deliveryAcceptButton.Location = new System.Drawing.Point(248, 406);
-            this.deliveryAcceptButton.Name = "deliveryAcceptButton";
-            this.deliveryAcceptButton.Size = new System.Drawing.Size(75, 23);
-            this.deliveryAcceptButton.TabIndex = 26;
-            this.deliveryAcceptButton.Text = "OK";
-            this.deliveryAcceptButton.UseVisualStyleBackColor = true;
-            this.deliveryAcceptButton.Click += new System.EventHandler(this.deliveryAcceptButton_Click);
+            this.buyButton.Location = new System.Drawing.Point(235, 402);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(75, 27);
+            this.buyButton.TabIndex = 26;
+            this.buyButton.Text = "Оплатить";
+            this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
-            // Delivery
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(437, 92);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(121, 13);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Выберите сотрдуника:";
+            // 
+            // workerNameCB
+            // 
+            this.workerNameCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.workerNameCB.FormattingEnabled = true;
+            this.workerNameCB.Location = new System.Drawing.Point(437, 108);
+            this.workerNameCB.Name = "workerNameCB";
+            this.workerNameCB.Size = new System.Drawing.Size(137, 21);
+            this.workerNameCB.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(437, 142);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(139, 13);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Выберите способ оплаты:";
+            // 
+            // paymentMethodCB
+            // 
+            this.paymentMethodCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.paymentMethodCB.FormattingEnabled = true;
+            this.paymentMethodCB.Location = new System.Drawing.Point(437, 158);
+            this.paymentMethodCB.Name = "paymentMethodCB";
+            this.paymentMethodCB.Size = new System.Drawing.Size(137, 21);
+            this.paymentMethodCB.TabIndex = 30;
+            // 
+            // DeliveryAndSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
-            this.Controls.Add(this.deliveryAcceptButton);
+            this.Controls.Add(this.paymentMethodCB);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.workerNameCB);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.clientEmailTB);
             this.Controls.Add(this.clientPhoneMTB);
             this.Controls.Add(this.clientPatronymicTB);
@@ -332,7 +377,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(640, 480);
-            this.Name = "Delivery";
+            this.Name = "DeliveryAndSale";
             this.ShowIcon = false;
             this.Text = "Delivery";
             this.Load += new System.EventHandler(this.Delivery_Load);
@@ -369,6 +414,10 @@
         private System.Windows.Forms.TextBox clientPatronymicTB;
         private System.Windows.Forms.MaskedTextBox clientPhoneMTB;
         private System.Windows.Forms.TextBox clientEmailTB;
-        private System.Windows.Forms.Button deliveryAcceptButton;
+        private System.Windows.Forms.Button buyButton;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox workerNameCB;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox paymentMethodCB;
     }
 }

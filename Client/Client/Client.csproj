@@ -89,17 +89,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdditionalServicesList.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Assembly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assembly.Designer.cs">
+      <DependentUpon>Assembly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Basket.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Basket.Designer.cs">
       <DependentUpon>Basket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Delivery.cs">
+    <Compile Include="DeliveryAndSale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delivery.Designer.cs">
-      <DependentUpon>Delivery.cs</DependentUpon>
+    <Compile Include="DeliveryAndSale.Designer.cs">
+      <DependentUpon>DeliveryAndSale.cs</DependentUpon>
     </Compile>
     <Compile Include="Goods.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -158,11 +164,14 @@
     <EmbeddedResource Include="AdditionalServices.resx">
       <DependentUpon>AdditionalServices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Assembly.resx">
+      <DependentUpon>Assembly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Basket.resx">
       <DependentUpon>Basket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delivery.resx">
-      <DependentUpon>Delivery.cs</DependentUpon>
+    <EmbeddedResource Include="DeliveryAndSale.resx">
+      <DependentUpon>DeliveryAndSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Description.resx">
       <DependentUpon>Description.cs</DependentUpon>

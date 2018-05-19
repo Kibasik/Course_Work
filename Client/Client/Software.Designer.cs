@@ -79,6 +79,7 @@
             // 
             // softwareTypeCB
             // 
+            this.softwareTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.softwareTypeCB.FormattingEnabled = true;
             this.softwareTypeCB.Location = new System.Drawing.Point(15, 25);
             this.softwareTypeCB.Name = "softwareTypeCB";
@@ -141,7 +142,6 @@
             // 
             this.dataTableBindingSource.DataMember = "DataTable";
             this.dataTableBindingSource.DataSource = this.softwareList;
-            this.dataTableBindingSource.Position = 0;
             // 
             // softwareList
             // 
