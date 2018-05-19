@@ -122,9 +122,9 @@
   </metadata>
   <data name="saleReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/19/2018 19:06:38" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/19/2018 20:25:33" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yJ4GZVtTNf6rOvB5renHxf"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yejIKwtErReotS5Q6U+JKD"&gt;
       &lt;TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  chosensoftware.BasketID,&amp;#13;&amp;#10;  chosensoftware.SoftwareQuantity,&amp;#13;&amp;#10;  software.SoftwareName,&amp;#13;&amp;#10;  software.SoftwareCost&amp;#13;&amp;#10;FROM chosensoftware&amp;#13;&amp;#10;  INNER JOIN software&amp;#13;&amp;#10;    ON chosensoftware.SoftwareID = software.SoftwareID"&gt;
         &lt;Column Name="SoftwareQuantity" DataType="System.Int32"/&gt;
         &lt;Column Name="SoftwareName" DataType="System.String"/&gt;
@@ -136,11 +136,12 @@
         &lt;Column Name="AdditionalServiceName" DataType="System.String"/&gt;
         &lt;Column Name="AdditionalServiceCost" DataType="System.Decimal"/&gt;
       &lt;/TableDataSource&gt;
-      &lt;TableDataSource Name="Table2" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  componentslist.BasketID,&amp;#13;&amp;#10;  componentslist.GoodsQuantity,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodscatalog.GoodsCost&amp;#13;&amp;#10;FROM componentslist&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON componentslist.GoodsID = goodscatalog.GoodsID"&gt;
+      &lt;TableDataSource Name="Table2" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodscatalog.GoodsCost,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  componentslist.BasketID,&amp;#13;&amp;#10;  componentslist.GoodsQuantity&amp;#13;&amp;#10;FROM goodscatalog&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&amp;#13;&amp;#10;  INNER JOIN componentslist&amp;#13;&amp;#10;    ON componentslist.GoodsID = goodscatalog.GoodsID"&gt;
         &lt;Column Name="BasketID" DataType="System.Int32"/&gt;
         &lt;Column Name="GoodsQuantity" DataType="System.Int32"/&gt;
         &lt;Column Name="GoodsName" DataType="System.String"/&gt;
         &lt;Column Name="GoodsCost" DataType="System.Decimal"/&gt;
+        &lt;Column Name="GoodsManufacturerName" DataType="System.String"/&gt;
       &lt;/TableDataSource&gt;
       &lt;TableDataSource Name="Table3" Alias="ServiceMaintenance" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  chosenservicemaintenance.BasketID,&amp;#13;&amp;#10;  servicemaintenance.ServiceMaintenanceName,&amp;#13;&amp;#10;  servicemaintenance.ServiceMaintenanceCost&amp;#13;&amp;#10;FROM chosenservicemaintenance&amp;#13;&amp;#10;  INNER JOIN servicemaintenance&amp;#13;&amp;#10;    ON chosenservicemaintenance.ServiceMaintenanceID = servicemaintenance.ServiceMaintenanceID"&gt;
         &lt;Column Name="BasketID" DataType="System.Int32"/&gt;
@@ -148,14 +149,14 @@
         &lt;Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/&gt;
       &lt;/TableDataSource&gt;
     &lt;/OdbcDataConnection&gt;
-    &lt;Parameter Name="basketID" DataType="System.Int32"/&gt;
+    &lt;Parameter Name="basketID" DataType="System.Int32" Expression="3"/&gt;
     &lt;Parameter Name="TotalCost" DataType="FastReport.Variant" Expression="[TotalSoftware] + [TotalAdditionalServices] + [TotalComponents] + [TotalServiceMaintenance]"/&gt;
     &lt;Parameter Name="SoftwareTotalCost" DataType="System.Decimal" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]"/&gt;
     &lt;Parameter Name="ComponentsTotalCost" DataType="System.Decimal" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]"/&gt;
     &lt;Parameter Name="clientName" DataType="System.String"/&gt;
     &lt;Parameter Name="workerName" DataType="System.String"/&gt;
     &lt;Parameter Name="paymentMethod" DataType="System.String"/&gt;
-    &lt;Parameter Name="totalCount" DataType="System.Int32" Expression="[SoftwareCount] + [AdditionalServicesCount] + [ComponentsCount] + [ServiceMaintenanceCount]"/&gt;
+    &lt;Parameter Name="totalCount" DataType="FastReport.Variant" Expression="[SoftwareCount] + [AdditionalServicesCount] + [ComponentsCount] + [ServiceMaintenanceCount]"/&gt;
     &lt;Total Name="TotalSoftware" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]" Evaluator="Data1"/&gt;
     &lt;Total Name="TotalAdditionalServices" Expression="[AdditionalServices.AdditionalServiceCost]" Evaluator="Data2"/&gt;
     &lt;Total Name="TotalComponents" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]" Evaluator="Data3"/&gt;
@@ -197,10 +198,11 @@
       &lt;TextObject Name="Text13" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
     &lt;/DataBand&gt;
     &lt;DataBand Name="Data3" Top="311.54" Width="718.2" Height="37.8" DataSource="Table2" Filter="[Components.BasketID] = [basketID]"&gt;
-      &lt;TextObject Name="Text19" Top="9.45" Width="481.95" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text19" Left="151.2" Top="9.45" Width="330.75" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/&gt;
       &lt;TextObject Name="Text20" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[Components.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
       &lt;TextObject Name="Text21" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Components.GoodsQuantity]" VertAlign="Center"/&gt;
       &lt;TextObject Name="Text22" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ComponentsTotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/&gt;
+      &lt;TextObject Name="Text33" Top="9.45" Width="151.2" Height="18.9" Text="[Components.GoodsManufacturerName]"/&gt;
     &lt;/DataBand&gt;
     &lt;DataBand Name="Data4" Top="351.63" Width="718.2" Height="37.8" DataSource="Table3" Filter="[ServiceMaintenance.BasketID] = [basketID]"&gt;
       &lt;TextObject Name="Text24" Top="9.45" Width="481.95" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceName]" VertAlign="Center"/&gt;

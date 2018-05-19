@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 19:54:02" ReportInfo.Modified="05/19/2018 20:34:04" ReportInfo.CreatorVersion="2018.3.1.0">
+  <Dictionary>
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3zc5v8Uw4+c32F+u2/HdeXe">
+      <TableDataSource Name="Table" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  goodscatalog.GoodsName,&#13;&#10;  goodscatalog.GoodsCost,&#13;&#10;  goodsmanufacturer.GoodsManufacturerName,&#13;&#10;  categorygoods.CategoryGoodsName&#13;&#10;FROM goodscatalog&#13;&#10;  INNER JOIN goodsmanufacturer&#13;&#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&#13;&#10;  INNER JOIN categorygoods&#13;&#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID">
+        <Column Name="GoodsName" DataType="System.String"/>
+        <Column Name="GoodsCost" DataType="System.Decimal"/>
+        <Column Name="GoodsManufacturerName" DataType="System.String"/>
+        <Column Name="CategoryGoodsName" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  softwaretype.SoftwareTypeName,&#13;&#10;  software.SoftwareName,&#13;&#10;  software.SoftwareCost&#13;&#10;FROM software&#13;&#10;  INNER JOIN softwaretype&#13;&#10;    ON software.SoftwareTypeID = softwaretype.SoftwareTypeID">
+        <Column Name="SoftwareTypeName" DataType="System.String"/>
+        <Column Name="SoftwareName" DataType="System.String"/>
+        <Column Name="SoftwareCost" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Table2" Alias="AdditionalServices" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  additionalservices.AdditionalServiceName,&#13;&#10;  additionalservices.AdditionalServiceCost&#13;&#10;FROM additionalservices">
+        <Column Name="AdditionalServiceName" DataType="System.String"/>
+        <Column Name="AdditionalServiceCost" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Table3" Alias="ServiceMaintenance" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  servicemaintenance.ServiceMaintenanceName,&#13;&#10;  servicemaintenance.ServiceMaintenanceCost&#13;&#10;FROM servicemaintenance">
+        <Column Name="ServiceMaintenanceName" DataType="System.String"/>
+        <Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/>
+      </TableDataSource>
+    </OdbcDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
+      <TextObject Name="Text1" Left="264.6" Top="9.45" Width="170.1" Height="28.35" Text="Прайс-лист" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="47.25">
+      <TextObject Name="Text5" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray" VertAlign="Center"/>
+      <TextObject Name="Text3" Top="9.45" Width="642.6" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text4" Left="642.6" Top="9.45" Width="75.6" Height="28.35" Text="ЦЕНА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="99.07" Width="718.2" Height="37.8" Condition="[Components.CategoryGoodsName]">
+      <TextObject Name="Text2" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[Components.CategoryGoodsName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <DataBand Name="Data1" Top="139.16" Width="718.2" Height="37.8" DataSource="Table">
+        <TextObject Name="Text7" Top="9.45" Width="170.1" Height="18.9" Text="[Components.GoodsManufacturerName]" VertAlign="Center"/>
+        <TextObject Name="Text9" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[Components.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text8" Left="170.1" Top="9.45" Width="472.5" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="179.24" Width="718.2"/>
+    </GroupHeaderBand>
+    <GroupHeaderBand Name="GroupHeader2" Top="181.53" Width="718.2" Height="37.8" Condition="[Software.SoftwareTypeName]">
+      <TextObject Name="Text10" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[Software.SoftwareTypeName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <DataBand Name="Data2" Top="221.61" Width="718.2" Height="37.8" DataSource="Table1">
+        <TextObject Name="Text12" Top="9.45" Width="642.6" Height="18.9" Text="[Software.SoftwareName]" VertAlign="Center"/>
+        <TextObject Name="Text13" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[Software.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter2" Top="261.7" Width="718.2"/>
+    </GroupHeaderBand>
+    <DataBand Name="Data3" Top="304.07" Width="718.2" Height="37.8" DataSource="Table2">
+      <TextObject Name="Text11" Top="9.45" Width="642.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceName]" VertAlign="Center"/>
+      <TextObject Name="Text14" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+      <DataHeaderBand Name="DataHeader2" Top="263.99" Width="718.2" Height="37.8">
+        <TextObject Name="Text6" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="Дополнительные услуги" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      </DataHeaderBand>
+    </DataBand>
+    <DataBand Name="Data4" Top="384.24" Width="718.2" Height="37.8" DataSource="Table3">
+      <TextObject Name="Text16" Top="9.45" Width="642.6" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceName]" VertAlign="Center"/>
+      <TextObject Name="Text17" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+      <DataHeaderBand Name="DataHeader1" Top="344.16" Width="718.2" Height="37.8">
+        <TextObject Name="Text15" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="Сервисное обслуживание" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      </DataHeaderBand>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="424.33" Width="718.2" Height="9.45"/>
+  </ReportPage>
+</Report>

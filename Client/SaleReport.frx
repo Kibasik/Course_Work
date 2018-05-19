@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/19/2018 19:04:40" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/19/2018 20:08:10" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
-    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yCiy2FggeNcPdBwalfcEXy">
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yPg8Im6zbFqXZCtfngpQsu">
       <TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  chosensoftware.BasketID,&#13;&#10;  chosensoftware.SoftwareQuantity,&#13;&#10;  software.SoftwareName,&#13;&#10;  software.SoftwareCost&#13;&#10;FROM chosensoftware&#13;&#10;  INNER JOIN software&#13;&#10;    ON chosensoftware.SoftwareID = software.SoftwareID">
         <Column Name="SoftwareQuantity" DataType="System.Int32"/>
         <Column Name="SoftwareName" DataType="System.String"/>
@@ -13,11 +13,12 @@
         <Column Name="AdditionalServiceName" DataType="System.String"/>
         <Column Name="AdditionalServiceCost" DataType="System.Decimal"/>
       </TableDataSource>
-      <TableDataSource Name="Table2" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  componentslist.BasketID,&#13;&#10;  componentslist.GoodsQuantity,&#13;&#10;  goodscatalog.GoodsName,&#13;&#10;  goodscatalog.GoodsCost&#13;&#10;FROM componentslist&#13;&#10;  INNER JOIN goodscatalog&#13;&#10;    ON componentslist.GoodsID = goodscatalog.GoodsID">
+      <TableDataSource Name="Table2" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  goodscatalog.GoodsName,&#13;&#10;  goodscatalog.GoodsCost,&#13;&#10;  goodsmanufacturer.GoodsManufacturerName,&#13;&#10;  componentslist.BasketID,&#13;&#10;  componentslist.GoodsQuantity&#13;&#10;FROM goodscatalog&#13;&#10;  INNER JOIN goodsmanufacturer&#13;&#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&#13;&#10;  INNER JOIN componentslist&#13;&#10;    ON componentslist.GoodsID = goodscatalog.GoodsID">
         <Column Name="BasketID" DataType="System.Int32"/>
         <Column Name="GoodsQuantity" DataType="System.Int32"/>
         <Column Name="GoodsName" DataType="System.String"/>
         <Column Name="GoodsCost" DataType="System.Decimal"/>
+        <Column Name="GoodsManufacturerName" DataType="System.String"/>
       </TableDataSource>
       <TableDataSource Name="Table3" Alias="ServiceMaintenance" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  chosenservicemaintenance.BasketID,&#13;&#10;  servicemaintenance.ServiceMaintenanceName,&#13;&#10;  servicemaintenance.ServiceMaintenanceCost&#13;&#10;FROM chosenservicemaintenance&#13;&#10;  INNER JOIN servicemaintenance&#13;&#10;    ON chosenservicemaintenance.ServiceMaintenanceID = servicemaintenance.ServiceMaintenanceID">
         <Column Name="BasketID" DataType="System.Int32"/>
@@ -25,14 +26,14 @@
         <Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/>
       </TableDataSource>
     </OdbcDataConnection>
-    <Parameter Name="basketID" DataType="System.Int32"/>
+    <Parameter Name="basketID" DataType="System.Int32" Expression="3"/>
     <Parameter Name="TotalCost" DataType="FastReport.Variant" Expression="[TotalSoftware] + [TotalAdditionalServices] + [TotalComponents] + [TotalServiceMaintenance]"/>
     <Parameter Name="SoftwareTotalCost" DataType="System.Decimal" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]"/>
     <Parameter Name="ComponentsTotalCost" DataType="System.Decimal" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]"/>
     <Parameter Name="clientName" DataType="System.String"/>
     <Parameter Name="workerName" DataType="System.String"/>
     <Parameter Name="paymentMethod" DataType="System.String"/>
-    <Parameter Name="totalCount" DataType="System.Int32" Expression="[SoftwareCount] + [AdditionalServicesCount] + [ComponentsCount] + [ServiceMaintenanceCount]"/>
+    <Parameter Name="totalCount" DataType="FastReport.Variant" Expression="[SoftwareCount] + [AdditionalServicesCount] + [ComponentsCount] + [ServiceMaintenanceCount]"/>
     <Total Name="TotalSoftware" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]" Evaluator="Data1"/>
     <Total Name="TotalAdditionalServices" Expression="[AdditionalServices.AdditionalServiceCost]" Evaluator="Data2"/>
     <Total Name="TotalComponents" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]" Evaluator="Data3"/>
@@ -74,10 +75,11 @@
       <TextObject Name="Text13" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
     </DataBand>
     <DataBand Name="Data3" Top="311.54" Width="718.2" Height="37.8" DataSource="Table2" Filter="[Components.BasketID] = [basketID]">
-      <TextObject Name="Text19" Top="9.45" Width="481.95" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/>
+      <TextObject Name="Text19" Left="151.2" Top="9.45" Width="330.75" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/>
       <TextObject Name="Text20" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[Components.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text21" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Components.GoodsQuantity]" VertAlign="Center"/>
       <TextObject Name="Text22" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ComponentsTotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/>
+      <TextObject Name="Text33" Top="9.45" Width="151.2" Height="18.9" Text="[Components.GoodsManufacturerName]"/>
     </DataBand>
     <DataBand Name="Data4" Top="351.63" Width="718.2" Height="37.8" DataSource="Table3" Filter="[ServiceMaintenance.BasketID] = [basketID]">
       <TextObject Name="Text24" Top="9.45" Width="481.95" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceName]" VertAlign="Center"/>

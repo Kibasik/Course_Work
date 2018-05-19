@@ -53,6 +53,7 @@
             this.дополнительныеУслугиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сервисноеОбслуживаниеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сборкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.продажаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionButton = new System.Windows.Forms.Button();
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.highPriceTB = new System.Windows.Forms.TextBox();
@@ -76,8 +77,9 @@
             this.дополнительнвеУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goodsQuantityTB = new System.Windows.Forms.TextBox();
             this.goodsPriceListButton = new System.Windows.Forms.Button();
-            this.goodsPriceListReport = new FastReport.Report();
-            this.продажаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.componentsPriceListReport = new FastReport.Report();
+            this.fullPriceListButton = new System.Windows.Forms.Button();
+            this.fullPriceListReport = new FastReport.Report();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
@@ -85,7 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsPriceListReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.componentsPriceListReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullPriceListReport)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsDGV
@@ -157,6 +160,7 @@
             // 
             this.dataTableBindingSource1.DataMember = "DataTable";
             this.dataTableBindingSource1.DataSource = this.goods;
+            this.dataTableBindingSource1.Position = 0;
             // 
             // goods
             // 
@@ -265,6 +269,13 @@
             this.сборкаToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.сборкаToolStripMenuItem.Text = "&Сборка";
             this.сборкаToolStripMenuItem.Click += new System.EventHandler(this.сборкаToolStripMenuItem_Click);
+            // 
+            // продажаToolStripMenuItem
+            // 
+            this.продажаToolStripMenuItem.Name = "продажаToolStripMenuItem";
+            this.продажаToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.продажаToolStripMenuItem.Text = "&Продажа";
+            this.продажаToolStripMenuItem.Click += new System.EventHandler(this.продажаToolStripMenuItem_Click);
             // 
             // descriptionButton
             // 
@@ -466,18 +477,25 @@
             this.goodsPriceListButton.UseVisualStyleBackColor = true;
             this.goodsPriceListButton.Click += new System.EventHandler(this.goodsPriceListButton_Click);
             // 
-            // goodsPriceListReport
+            // componentsPriceListReport
             // 
-            this.goodsPriceListReport.NeedRefresh = false;
-            this.goodsPriceListReport.ReportResourceString = resources.GetString("goodsPriceListReport.ReportResourceString");
-            this.goodsPriceListReport.RegisterData(this.goods, "goods");
+            this.componentsPriceListReport.NeedRefresh = false;
+            this.componentsPriceListReport.ReportResourceString = resources.GetString("componentsPriceListReport.ReportResourceString");
+            this.componentsPriceListReport.RegisterData(this.goods, "goods");
             // 
-            // продажаToolStripMenuItem
+            // fullPriceListButton
             // 
-            this.продажаToolStripMenuItem.Name = "продажаToolStripMenuItem";
-            this.продажаToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.продажаToolStripMenuItem.Text = "&Продажа";
-            this.продажаToolStripMenuItem.Click += new System.EventHandler(this.продажаToolStripMenuItem_Click);
+            this.fullPriceListButton.Location = new System.Drawing.Point(744, 28);
+            this.fullPriceListButton.Name = "fullPriceListButton";
+            this.fullPriceListButton.Size = new System.Drawing.Size(108, 39);
+            this.fullPriceListButton.TabIndex = 29;
+            this.fullPriceListButton.Text = "Показать полный прайс-лист";
+            this.fullPriceListButton.UseVisualStyleBackColor = true;
+            // 
+            // fullPriceListReport
+            // 
+            this.fullPriceListReport.NeedRefresh = false;
+            this.fullPriceListReport.ReportResourceString = resources.GetString("fullPriceListReport.ReportResourceString");
             // 
             // MainWindow
             // 
@@ -485,6 +503,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.fullPriceListButton);
             this.Controls.Add(this.goodsPriceListButton);
             this.Controls.Add(this.goodsQuantityTB);
             this.Controls.Add(this.goodsTypeCB);
@@ -524,7 +543,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsPriceListReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.componentsPriceListReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullPriceListReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,9 +599,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button goodsPriceListButton;
-        private FastReport.Report goodsPriceListReport;
+        private FastReport.Report componentsPriceListReport;
         private System.Windows.Forms.ToolStripMenuItem сборкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem продажаToolStripMenuItem;
+        private System.Windows.Forms.Button fullPriceListButton;
+        private FastReport.Report fullPriceListReport;
     }
 }
 

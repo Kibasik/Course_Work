@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceMaintenance));
             this.label1 = new System.Windows.Forms.Label();
             this.serviceMaintenanceDGV = new System.Windows.Forms.DataGridView();
+            this.serviceMaintenanceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceMaintenanceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceMaintenancePeriodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceMaintenanceCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serviceMaintenanceList = new Client.ServiceMaintenanceList();
             this.basketButton = new System.Windows.Forms.Button();
             this.costButton = new System.Windows.Forms.Button();
@@ -45,16 +50,11 @@
             this.showAllServiceMaintenanceButton = new System.Windows.Forms.Button();
             this.serviceMaintenancePriceListReport = new FastReport.Report();
             this.serviceMaintenancePriceListButton = new System.Windows.Forms.Button();
-            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTableTableAdapter = new Client.ServiceMaintenanceListTableAdapters.DataTableTableAdapter();
-            this.serviceMaintenanceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceMaintenanceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceMaintenancePeriodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceMaintenanceCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenancePriceListReport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +85,41 @@
             this.serviceMaintenanceDGV.ReadOnly = true;
             this.serviceMaintenanceDGV.Size = new System.Drawing.Size(435, 216);
             this.serviceMaintenanceDGV.TabIndex = 1;
+            // 
+            // serviceMaintenanceIDDataGridViewTextBoxColumn
+            // 
+            this.serviceMaintenanceIDDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenanceID";
+            this.serviceMaintenanceIDDataGridViewTextBoxColumn.HeaderText = "ServiceMaintenanceID";
+            this.serviceMaintenanceIDDataGridViewTextBoxColumn.Name = "serviceMaintenanceIDDataGridViewTextBoxColumn";
+            this.serviceMaintenanceIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceMaintenanceIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // serviceMaintenanceNameDataGridViewTextBoxColumn
+            // 
+            this.serviceMaintenanceNameDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenanceName";
+            this.serviceMaintenanceNameDataGridViewTextBoxColumn.HeaderText = "Наименование";
+            this.serviceMaintenanceNameDataGridViewTextBoxColumn.Name = "serviceMaintenanceNameDataGridViewTextBoxColumn";
+            this.serviceMaintenanceNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviceMaintenanceNameDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // serviceMaintenancePeriodDataGridViewTextBoxColumn
+            // 
+            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenancePeriod";
+            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.HeaderText = "Срок, дней";
+            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.Name = "serviceMaintenancePeriodDataGridViewTextBoxColumn";
+            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serviceMaintenanceCostDataGridViewTextBoxColumn
+            // 
+            this.serviceMaintenanceCostDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenanceCost";
+            this.serviceMaintenanceCostDataGridViewTextBoxColumn.HeaderText = "Цена, руб.";
+            this.serviceMaintenanceCostDataGridViewTextBoxColumn.Name = "serviceMaintenanceCostDataGridViewTextBoxColumn";
+            this.serviceMaintenanceCostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataTableBindingSource
+            // 
+            this.dataTableBindingSource.DataMember = "DataTable";
+            this.dataTableBindingSource.DataSource = this.serviceMaintenanceList;
             // 
             // serviceMaintenanceList
             // 
@@ -197,44 +232,9 @@
             this.serviceMaintenancePriceListButton.UseVisualStyleBackColor = true;
             this.serviceMaintenancePriceListButton.Click += new System.EventHandler(this.serviceMaintenancePriceListButton_Click_1);
             // 
-            // dataTableBindingSource
-            // 
-            this.dataTableBindingSource.DataMember = "DataTable";
-            this.dataTableBindingSource.DataSource = this.serviceMaintenanceList;
-            // 
             // dataTableTableAdapter
             // 
             this.dataTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // serviceMaintenanceIDDataGridViewTextBoxColumn
-            // 
-            this.serviceMaintenanceIDDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenanceID";
-            this.serviceMaintenanceIDDataGridViewTextBoxColumn.HeaderText = "ServiceMaintenanceID";
-            this.serviceMaintenanceIDDataGridViewTextBoxColumn.Name = "serviceMaintenanceIDDataGridViewTextBoxColumn";
-            this.serviceMaintenanceIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.serviceMaintenanceIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // serviceMaintenanceNameDataGridViewTextBoxColumn
-            // 
-            this.serviceMaintenanceNameDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenanceName";
-            this.serviceMaintenanceNameDataGridViewTextBoxColumn.HeaderText = "Наименование";
-            this.serviceMaintenanceNameDataGridViewTextBoxColumn.Name = "serviceMaintenanceNameDataGridViewTextBoxColumn";
-            this.serviceMaintenanceNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.serviceMaintenanceNameDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // serviceMaintenancePeriodDataGridViewTextBoxColumn
-            // 
-            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenancePeriod";
-            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.HeaderText = "Срок, дней";
-            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.Name = "serviceMaintenancePeriodDataGridViewTextBoxColumn";
-            this.serviceMaintenancePeriodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // serviceMaintenanceCostDataGridViewTextBoxColumn
-            // 
-            this.serviceMaintenanceCostDataGridViewTextBoxColumn.DataPropertyName = "ServiceMaintenanceCost";
-            this.serviceMaintenanceCostDataGridViewTextBoxColumn.HeaderText = "Цена, руб.";
-            this.serviceMaintenanceCostDataGridViewTextBoxColumn.Name = "serviceMaintenanceCostDataGridViewTextBoxColumn";
-            this.serviceMaintenanceCostDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ServiceMaintenance
             // 
@@ -262,9 +262,9 @@
             this.Text = "ServiceMaintenance";
             this.Load += new System.EventHandler(this.ServiceMaintenance_Load);
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenancePriceListReport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

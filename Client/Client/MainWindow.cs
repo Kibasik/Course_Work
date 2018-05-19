@@ -411,7 +411,7 @@ namespace Client
 
         private void goodsPriceListButton_Click(object sender, EventArgs e)
         {
-            goodsPriceListReport.Show();
+            componentsPriceListReport.Show();
         }
 
         private void сборкаToolStripMenuItem_Click(object sender, EventArgs e)
