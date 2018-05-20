@@ -291,6 +291,8 @@ namespace Client {
             
             private global::System.Data.DataColumn columnGoodsID;
             
+            private global::System.Data.DataColumn columnGoodsAmount;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DataTableDataTable() {
@@ -374,6 +376,14 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn GoodsAmountColumn {
+                get {
+                    return this.columnGoodsAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTableRow AddDataTableRow(string TypeCategoryName, string CategoryGoodsName, string GoodsManufacturerName, string GoodsName, decimal GoodsCost) {
+            public DataTableRow AddDataTableRow(string TypeCategoryName, string CategoryGoodsName, string GoodsManufacturerName, string GoodsName, decimal GoodsCost, int GoodsAmount) {
                 DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TypeCategoryName,
@@ -417,7 +427,8 @@ namespace Client {
                         GoodsManufacturerName,
                         GoodsName,
                         GoodsCost,
-                        null};
+                        null,
+                        GoodsAmount};
                 rowDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableRow);
                 return rowDataTableRow;
@@ -446,6 +457,7 @@ namespace Client {
                 this.columnGoodsName = base.Columns["GoodsName"];
                 this.columnGoodsCost = base.Columns["GoodsCost"];
                 this.columnGoodsID = base.Columns["GoodsID"];
+                this.columnGoodsAmount = base.Columns["GoodsAmount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +475,8 @@ namespace Client {
                 base.Columns.Add(this.columnGoodsCost);
                 this.columnGoodsID = new global::System.Data.DataColumn("GoodsID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGoodsID);
+                this.columnGoodsAmount = new global::System.Data.DataColumn("GoodsAmount", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGoodsAmount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnGoodsID}, false));
                 this.columnTypeCategoryName.MaxLength = 32767;
@@ -711,6 +725,22 @@ namespace Client {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int GoodsAmount {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable.GoodsAmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'GoodsAmount\' в таблице \'DataTable\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.GoodsAmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTypeCategoryNameNull() {
                 return this.IsNull(this.tableDataTable.TypeCategoryNameColumn);
             }
@@ -779,6 +809,18 @@ namespace Client {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetGoodsIDNull() {
                 this[this.tableDataTable.GoodsIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsGoodsAmountNull() {
+                return this.IsNull(this.tableDataTable.GoodsAmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetGoodsAmountNull() {
+                this[this.tableDataTable.GoodsAmountColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -947,6 +989,7 @@ namespace Client.GoodsTableAdapters {
             tableMapping.ColumnMappings.Add("GoodsName", "GoodsName");
             tableMapping.ColumnMappings.Add("GoodsCost", "GoodsCost");
             tableMapping.ColumnMappings.Add("GoodsID", "GoodsID");
+            tableMapping.ColumnMappings.Add("GoodsAmount", "GoodsAmount");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

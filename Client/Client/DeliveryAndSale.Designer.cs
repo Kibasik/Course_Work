@@ -61,7 +61,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.paymentMethodCB = new System.Windows.Forms.ComboBox();
             this.saleReport = new FastReport.Report();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.saleReport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,9 +97,9 @@
             this.deliveryCostLabel.AutoSize = true;
             this.deliveryCostLabel.Location = new System.Drawing.Point(344, 33);
             this.deliveryCostLabel.Name = "deliveryCostLabel";
-            this.deliveryCostLabel.Size = new System.Drawing.Size(28, 13);
+            this.deliveryCostLabel.Size = new System.Drawing.Size(61, 13);
             this.deliveryCostLabel.TabIndex = 3;
-            this.deliveryCostLabel.Text = "Cost";
+            this.deliveryCostLabel.Text = "Бесплатно";
             // 
             // label3
             // 
@@ -347,21 +346,11 @@
             this.saleReport.NeedRefresh = false;
             this.saleReport.ReportResourceString = resources.GetString("saleReport.ReportResourceString");
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(424, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // DeliveryAndSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 401);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.paymentMethodCB);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.workerNameCB);
@@ -440,6 +429,5 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox paymentMethodCB;
         private FastReport.Report saleReport;
-        private System.Windows.Forms.Button button1;
     }
 }

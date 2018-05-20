@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/20/2018 14:48:21" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/20/2018 18:38:17" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
-    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yTTUEp4FTqrAXeY93WOT5K">
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3y2cRSzrcj0FNL0mIIdxWjm">
       <TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  chosensoftware.BasketID,&#13;&#10;  chosensoftware.SoftwareQuantity,&#13;&#10;  software.SoftwareName,&#13;&#10;  software.SoftwareCost&#13;&#10;FROM chosensoftware&#13;&#10;  INNER JOIN software&#13;&#10;    ON chosensoftware.SoftwareID = software.SoftwareID">
         <Column Name="SoftwareQuantity" DataType="System.Int32"/>
         <Column Name="SoftwareName" DataType="System.String"/>
@@ -26,8 +26,8 @@
         <Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/>
       </TableDataSource>
     </OdbcDataConnection>
-    <Parameter Name="basketID" DataType="System.Int32" Expression="3"/>
-    <Parameter Name="TotalCost" DataType="FastReport.Variant" Expression="[TotalSoftware] + [TotalAdditionalServices] + [TotalComponents] + [TotalServiceMaintenance]"/>
+    <Parameter Name="basketID" DataType="System.Int32"/>
+    <Parameter Name="TotalCost" DataType="FastReport.Variant" Expression="[TotalSoftware] + [TotalAdditionalServices] + [TotalComponents] + [TotalServiceMaintenance] + [deliveryCost]"/>
     <Parameter Name="SoftwareTotalCost" DataType="System.Decimal" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]"/>
     <Parameter Name="ComponentsTotalCost" DataType="System.Decimal" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]"/>
     <Parameter Name="clientName" DataType="System.String"/>
@@ -35,6 +35,7 @@
     <Parameter Name="paymentMethod" DataType="System.String"/>
     <Parameter Name="totalCount" DataType="FastReport.Variant" Expression="[SoftwareCount] + [AdditionalServicesCount] + [ComponentsCount] + [ServiceMaintenanceCount]"/>
     <Parameter Name="saleDate" DataType="System.DateTime"/>
+    <Parameter Name="deliveryCost" DataType="System.Decimal"/>
     <Total Name="TotalSoftware" Expression="[Software.SoftwareQuantity] * [Software.SoftwareCost]" Evaluator="Data1"/>
     <Total Name="TotalAdditionalServices" Expression="[AdditionalServices.AdditionalServiceCost]" Evaluator="Data2"/>
     <Total Name="TotalComponents" Expression="[Components.GoodsQuantity] * [Components.GoodsCost]" Evaluator="Data3"/>
@@ -48,54 +49,56 @@
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
       <TextObject Name="Text5" Left="236.25" Top="9.45" Width="245.7" Height="28.35" Text="Товарный чек" HorzAlign="Center" VertAlign="Center" Font="Arial, 16pt, style=Bold"/>
     </ReportTitleBand>
-    <PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="207.9">
-      <TextObject Name="Text17" Top="170.1" Width="718.2" Height="28.35" Fill.Color="DarkGray"/>
-      <TextObject Name="Text7" Top="170.1" Width="481.95" Height="28.35" Text="Наименование" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text9" Left="481.95" Top="170.1" Width="75.6" Height="28.35" Text="Цена" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text8" Left="557.55" Top="170.1" Width="85.05" Height="28.35" Text="Кол-во" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text14" Left="642.6" Top="170.1" Width="75.6" Height="28.35" Text="Сумма" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+    <PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="245.7">
+      <TextObject Name="Text17" Top="207.9" Width="718.2" Height="28.35" Fill.Color="DarkGray"/>
+      <TextObject Name="Text7" Top="207.9" Width="481.95" Height="28.35" Text="Наименование" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text9" Left="481.95" Top="207.9" Width="75.6" Height="28.35" Text="Цена" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text8" Left="557.55" Top="207.9" Width="85.05" Height="28.35" Text="Кол-во" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text14" Left="642.6" Top="207.9" Width="75.6" Height="28.35" Text="Сумма" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
       <BarcodeObject Name="Barcode2" Left="604.8" Width="115.31" Height="56.7" Text="" AllowExpressions="true" Barcode="2/5 Matrix" Barcode.WideBarRatio="2.25"/>
       <BarcodeObject Name="Barcode3" Left="567" Top="18.9" Width="143.75" Height="75.6" Barcode="MSI"/>
-      <TextObject Name="Text10" Top="18.9" Width="170.1" Height="28.35" Text="Покупатель:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text18" Top="56.7" Width="170.1" Height="28.35" Text="Продавец:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text23" Left="170.1" Top="18.9" Width="321.3" Height="28.35" Text="[clientName]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text30" Left="170.1" Top="56.7" Width="321.3" Height="28.35" Text="[workerName]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text31" Top="94.5" Width="170.1" Height="28.35" Text="Способ оплаты:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text32" Left="170.1" Top="94.5" Width="321.3" Height="28.35" Text="[paymentMethod]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text34" Top="132.3" Width="170.1" Height="28.35" Text="Дата покупки:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
-      <TextObject Name="Text35" Left="170.1" Top="132.3" Width="321.3" Height="28.35" Text="[saleDate]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text10" Top="18.9" Width="217.35" Height="28.35" Text="Покупатель:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text18" Top="56.7" Width="217.35" Height="28.35" Text="Продавец:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text23" Left="217.35" Top="18.9" Width="274.05" Height="28.35" Text="[clientName]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text30" Left="217.35" Top="56.7" Width="274.05" Height="28.35" Text="[workerName]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text31" Top="94.5" Width="217.35" Height="28.35" Text="Способ оплаты:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text32" Left="217.35" Top="94.5" Width="274.05" Height="28.35" Text="[paymentMethod]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text34" Top="132.3" Width="217.35" Height="28.35" Text="Дата покупки:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text35" Left="217.35" Top="132.3" Width="274.05" Height="28.35" Text="[saleDate]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text36" Top="170.1" Width="217.35" Height="28.35" Text="Стоимость доставки:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text37" Left="217.35" Top="170.1" Width="274.05" Height="28.35" Text="[deliveryCost]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
     </PageHeaderBand>
-    <DataBand Name="Data1" Top="259.72" Width="718.2" Height="37.8" DataSource="Table" Filter="[Software.BasketID] = [basketID]">
+    <DataBand Name="Data1" Top="297.52" Width="718.2" Height="37.8" DataSource="Table" Filter="[Software.BasketID] = [basketID]">
       <TextObject Name="Text1" Top="9.45" Width="481.95" Height="18.9" Text="[Software.SoftwareName]" VertAlign="Center"/>
       <TextObject Name="Text2" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Software.SoftwareQuantity]" VertAlign="Center"/>
       <TextObject Name="Text15" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[Software.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text3" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[SoftwareTotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/>
     </DataBand>
-    <DataBand Name="Data2" Top="299.81" Width="718.2" Height="37.8" DataSource="Table1" Filter="[AdditionalServices.BasketID] = [basketID]">
+    <DataBand Name="Data2" Top="337.61" Width="718.2" Height="37.8" DataSource="Table1" Filter="[AdditionalServices.BasketID] = [basketID]">
       <TextObject Name="Text11" Top="9.45" Width="481.95" Height="18.9" Text="[AdditionalServices.AdditionalServiceName]" VertAlign="Center"/>
       <TextObject Name="Text16" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text12" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="1" VertAlign="Center"/>
       <TextObject Name="Text13" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
     </DataBand>
-    <DataBand Name="Data3" Top="339.89" Width="718.2" Height="37.8" DataSource="Table2" Filter="[Components.BasketID] = [basketID]">
+    <DataBand Name="Data3" Top="377.69" Width="718.2" Height="37.8" DataSource="Table2" Filter="[Components.BasketID] = [basketID]">
       <TextObject Name="Text19" Left="151.2" Top="9.45" Width="330.75" Height="18.9" Text="[Components.GoodsName]" VertAlign="Center"/>
       <TextObject Name="Text20" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[Components.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text21" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Components.GoodsQuantity]" VertAlign="Center"/>
       <TextObject Name="Text22" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ComponentsTotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/>
       <TextObject Name="Text33" Top="9.45" Width="151.2" Height="18.9" Text="[Components.GoodsManufacturerName]"/>
     </DataBand>
-    <DataBand Name="Data4" Top="379.98" Width="718.2" Height="37.8" DataSource="Table3" Filter="[ServiceMaintenance.BasketID] = [basketID]">
+    <DataBand Name="Data4" Top="417.78" Width="718.2" Height="37.8" DataSource="Table3" Filter="[ServiceMaintenance.BasketID] = [basketID]">
       <TextObject Name="Text24" Top="9.45" Width="481.95" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceName]" VertAlign="Center"/>
       <TextObject Name="Text25" Left="481.95" Top="9.45" Width="75.6" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text27" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text26" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="1" VertAlign="Center"/>
     </DataBand>
-    <ReportSummaryBand Name="ReportSummary1" Top="420.06" Width="718.2" Height="47.25">
+    <ReportSummaryBand Name="ReportSummary1" Top="457.86" Width="718.2" Height="47.25">
       <TextObject Name="Text28" Left="481.95" Top="9.45" Width="75.6" Height="28.35" Text="Итого:" HorzAlign="Right" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
       <TextObject Name="Text29" Left="557.55" Top="9.45" Width="160.65" Height="28.35" Text="[TotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" Font="Arial, 14pt, style=Bold"/>
       <TextObject Name="Text4" Top="9.45" Width="321.3" Height="28.35" Text="Кол-во наименований:" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
       <TextObject Name="Text6" Left="321.3" Top="9.45" Width="160.65" Height="28.35" Text="[totalCount]" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
     </ReportSummaryBand>
-    <PageFooterBand Name="PageFooter1" Top="469.6" Width="718.2" Height="9.45"/>
+    <PageFooterBand Name="PageFooter1" Top="507.4" Width="718.2" Height="9.45"/>
   </ReportPage>
 </Report>

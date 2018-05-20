@@ -25,6 +25,7 @@
               <Mapping SourceColumn="GoodsName" DataSetColumn="GoodsName" />
               <Mapping SourceColumn="GoodsCost" DataSetColumn="GoodsCost" />
               <Mapping SourceColumn="GoodsID" DataSetColumn="GoodsID" />
+              <Mapping SourceColumn="GoodsAmount" DataSetColumn="GoodsAmount" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -69,6 +70,7 @@
               </xs:element>
               <xs:element name="GoodsCost" msprop:Generator_ColumnVarNameInTable="columnGoodsCost" msprop:Generator_ColumnPropNameInRow="GoodsCost" msprop:Generator_ColumnPropNameInTable="GoodsCostColumn" msprop:Generator_UserColumnName="GoodsCost" type="xs:decimal" minOccurs="0" />
               <xs:element name="GoodsID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnGoodsID" msprop:Generator_ColumnPropNameInRow="GoodsID" msprop:Generator_ColumnPropNameInTable="GoodsIDColumn" msprop:Generator_UserColumnName="GoodsID" type="xs:int" minOccurs="0" />
+              <xs:element name="GoodsAmount" msprop:Generator_ColumnVarNameInTable="columnGoodsAmount" msprop:Generator_ColumnPropNameInRow="GoodsAmount" msprop:Generator_ColumnPropNameInTable="GoodsAmountColumn" msprop:Generator_UserColumnName="GoodsAmount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
