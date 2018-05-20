@@ -61,6 +61,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.paymentMethodCB = new System.Windows.Forms.ComboBox();
             this.saleReport = new FastReport.Report();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.saleReport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 28);
+            this.label2.Location = new System.Drawing.Point(223, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 2;
@@ -95,11 +96,11 @@
             // deliveryCostLabel
             // 
             this.deliveryCostLabel.AutoSize = true;
-            this.deliveryCostLabel.Location = new System.Drawing.Point(316, 28);
+            this.deliveryCostLabel.Location = new System.Drawing.Point(344, 33);
             this.deliveryCostLabel.Name = "deliveryCostLabel";
-            this.deliveryCostLabel.Size = new System.Drawing.Size(162, 13);
+            this.deliveryCostLabel.Size = new System.Drawing.Size(28, 13);
             this.deliveryCostLabel.TabIndex = 3;
-            this.deliveryCostLabel.Text = "Тут будет стоимость доставки";
+            this.deliveryCostLabel.Text = "Cost";
             // 
             // label3
             // 
@@ -113,7 +114,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 300);
+            this.label4.Location = new System.Drawing.Point(12, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 13);
             this.label4.TabIndex = 5;
@@ -157,7 +158,7 @@
             // 
             // deliveryHouseTB
             // 
-            this.deliveryHouseTB.Location = new System.Drawing.Point(15, 212);
+            this.deliveryHouseTB.Location = new System.Drawing.Point(15, 207);
             this.deliveryHouseTB.MaxLength = 3;
             this.deliveryHouseTB.Name = "deliveryHouseTB";
             this.deliveryHouseTB.Size = new System.Drawing.Size(146, 20);
@@ -166,7 +167,7 @@
             // 
             // deliveryFlatTB
             // 
-            this.deliveryFlatTB.Location = new System.Drawing.Point(15, 264);
+            this.deliveryFlatTB.Location = new System.Drawing.Point(15, 259);
             this.deliveryFlatTB.MaxLength = 3;
             this.deliveryFlatTB.Name = "deliveryFlatTB";
             this.deliveryFlatTB.Size = new System.Drawing.Size(146, 20);
@@ -176,7 +177,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 196);
+            this.label7.Location = new System.Drawing.Point(12, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 12;
@@ -185,7 +186,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 248);
+            this.label8.Location = new System.Drawing.Point(12, 243);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 13;
@@ -193,9 +194,9 @@
             // 
             // deliveryDateDTP
             // 
-            this.deliveryDateDTP.Location = new System.Drawing.Point(15, 316);
+            this.deliveryDateDTP.Location = new System.Drawing.Point(15, 312);
             this.deliveryDateDTP.Name = "deliveryDateDTP";
-            this.deliveryDateDTP.Size = new System.Drawing.Size(178, 20);
+            this.deliveryDateDTP.Size = new System.Drawing.Size(146, 20);
             this.deliveryDateDTP.TabIndex = 14;
             // 
             // label9
@@ -210,7 +211,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(223, 142);
+            this.label10.Location = new System.Drawing.Point(216, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 16;
@@ -219,7 +220,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(223, 92);
+            this.label11.Location = new System.Drawing.Point(216, 92);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 13);
             this.label11.TabIndex = 17;
@@ -228,7 +229,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(223, 196);
+            this.label12.Location = new System.Drawing.Point(216, 191);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 13);
             this.label12.TabIndex = 18;
@@ -237,7 +238,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(223, 248);
+            this.label13.Location = new System.Drawing.Point(216, 243);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 19;
@@ -246,7 +247,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(223, 300);
+            this.label14.Location = new System.Drawing.Point(216, 296);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(107, 13);
             this.label14.TabIndex = 20;
@@ -254,7 +255,7 @@
             // 
             // clientNameTB
             // 
-            this.clientNameTB.Location = new System.Drawing.Point(226, 158);
+            this.clientNameTB.Location = new System.Drawing.Point(219, 158);
             this.clientNameTB.MaxLength = 20;
             this.clientNameTB.Name = "clientNameTB";
             this.clientNameTB.Size = new System.Drawing.Size(153, 20);
@@ -263,7 +264,7 @@
             // 
             // clientSurnameTB
             // 
-            this.clientSurnameTB.Location = new System.Drawing.Point(226, 108);
+            this.clientSurnameTB.Location = new System.Drawing.Point(219, 108);
             this.clientSurnameTB.MaxLength = 20;
             this.clientSurnameTB.Name = "clientSurnameTB";
             this.clientSurnameTB.Size = new System.Drawing.Size(153, 20);
@@ -272,7 +273,7 @@
             // 
             // clientPatronymicTB
             // 
-            this.clientPatronymicTB.Location = new System.Drawing.Point(226, 212);
+            this.clientPatronymicTB.Location = new System.Drawing.Point(219, 207);
             this.clientPatronymicTB.MaxLength = 20;
             this.clientPatronymicTB.Name = "clientPatronymicTB";
             this.clientPatronymicTB.Size = new System.Drawing.Size(153, 20);
@@ -281,7 +282,7 @@
             // 
             // clientPhoneMTB
             // 
-            this.clientPhoneMTB.Location = new System.Drawing.Point(226, 264);
+            this.clientPhoneMTB.Location = new System.Drawing.Point(219, 259);
             this.clientPhoneMTB.Mask = "(999) 000-0000";
             this.clientPhoneMTB.Name = "clientPhoneMTB";
             this.clientPhoneMTB.Size = new System.Drawing.Size(153, 20);
@@ -289,7 +290,7 @@
             // 
             // clientEmailTB
             // 
-            this.clientEmailTB.Location = new System.Drawing.Point(226, 316);
+            this.clientEmailTB.Location = new System.Drawing.Point(219, 312);
             this.clientEmailTB.MaxLength = 25;
             this.clientEmailTB.Name = "clientEmailTB";
             this.clientEmailTB.Size = new System.Drawing.Size(153, 20);
@@ -297,7 +298,7 @@
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(235, 402);
+            this.buyButton.Location = new System.Drawing.Point(237, 362);
             this.buyButton.Name = "buyButton";
             this.buyButton.Size = new System.Drawing.Size(75, 27);
             this.buyButton.TabIndex = 26;
@@ -308,7 +309,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(437, 92);
+            this.label15.Location = new System.Drawing.Point(409, 91);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(121, 13);
             this.label15.TabIndex = 27;
@@ -318,7 +319,7 @@
             // 
             this.workerNameCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.workerNameCB.FormattingEnabled = true;
-            this.workerNameCB.Location = new System.Drawing.Point(437, 108);
+            this.workerNameCB.Location = new System.Drawing.Point(409, 107);
             this.workerNameCB.Name = "workerNameCB";
             this.workerNameCB.Size = new System.Drawing.Size(137, 21);
             this.workerNameCB.TabIndex = 28;
@@ -326,7 +327,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(437, 142);
+            this.label16.Location = new System.Drawing.Point(409, 142);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(139, 13);
             this.label16.TabIndex = 29;
@@ -336,7 +337,7 @@
             // 
             this.paymentMethodCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.paymentMethodCB.FormattingEnabled = true;
-            this.paymentMethodCB.Location = new System.Drawing.Point(437, 158);
+            this.paymentMethodCB.Location = new System.Drawing.Point(409, 158);
             this.paymentMethodCB.Name = "paymentMethodCB";
             this.paymentMethodCB.Size = new System.Drawing.Size(137, 21);
             this.paymentMethodCB.TabIndex = 30;
@@ -346,11 +347,21 @@
             this.saleReport.NeedRefresh = false;
             this.saleReport.ReportResourceString = resources.GetString("saleReport.ReportResourceString");
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(424, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // DeliveryAndSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 441);
+            this.ClientSize = new System.Drawing.Size(564, 401);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.paymentMethodCB);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.workerNameCB);
@@ -384,7 +395,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(640, 480);
+            this.MinimumSize = new System.Drawing.Size(580, 440);
             this.Name = "DeliveryAndSale";
             this.ShowIcon = false;
             this.Text = "Delivery";
@@ -429,5 +440,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox paymentMethodCB;
         private FastReport.Report saleReport;
+        private System.Windows.Forms.Button button1;
     }
 }

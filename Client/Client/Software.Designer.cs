@@ -35,10 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.softwareTypeCB = new System.Windows.Forms.ComboBox();
             this.softwareDGV = new System.Windows.Forms.DataGridView();
-            this.softwareTypeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.softwareIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.softwareList = new Client.SoftwareList();
             this.showAllSoftwareButton = new System.Windows.Forms.Button();
@@ -59,6 +55,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.softwarePriceListReport = new FastReport.Report();
             this.softwarePriceListButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.softwareTypeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.softwareIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareList)).BeginInit();
@@ -71,17 +73,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(481, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Тип программного боеспечения:";
+            this.label1.Text = "Тип программного обеспечения:";
             // 
             // softwareTypeCB
             // 
             this.softwareTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.softwareTypeCB.FormattingEnabled = true;
-            this.softwareTypeCB.Location = new System.Drawing.Point(15, 25);
+            this.softwareTypeCB.Location = new System.Drawing.Point(484, 41);
             this.softwareTypeCB.Name = "softwareTypeCB";
             this.softwareTypeCB.Size = new System.Drawing.Size(157, 21);
             this.softwareTypeCB.TabIndex = 1;
@@ -101,42 +103,11 @@
             this.softwareCostDataGridViewTextBoxColumn,
             this.softwareIDDataGridViewTextBoxColumn});
             this.softwareDGV.DataSource = this.dataTableBindingSource;
-            this.softwareDGV.Location = new System.Drawing.Point(12, 64);
+            this.softwareDGV.Location = new System.Drawing.Point(12, 25);
             this.softwareDGV.Name = "softwareDGV";
             this.softwareDGV.ReadOnly = true;
-            this.softwareDGV.Size = new System.Drawing.Size(600, 247);
+            this.softwareDGV.Size = new System.Drawing.Size(453, 191);
             this.softwareDGV.TabIndex = 2;
-            // 
-            // softwareTypeNameDataGridViewTextBoxColumn
-            // 
-            this.softwareTypeNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareTypeName";
-            this.softwareTypeNameDataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.softwareTypeNameDataGridViewTextBoxColumn.Name = "softwareTypeNameDataGridViewTextBoxColumn";
-            this.softwareTypeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.softwareTypeNameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // softwareNameDataGridViewTextBoxColumn
-            // 
-            this.softwareNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareName";
-            this.softwareNameDataGridViewTextBoxColumn.HeaderText = "Наименование";
-            this.softwareNameDataGridViewTextBoxColumn.Name = "softwareNameDataGridViewTextBoxColumn";
-            this.softwareNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.softwareNameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // softwareCostDataGridViewTextBoxColumn
-            // 
-            this.softwareCostDataGridViewTextBoxColumn.DataPropertyName = "SoftwareCost";
-            this.softwareCostDataGridViewTextBoxColumn.HeaderText = "Цена, руб.";
-            this.softwareCostDataGridViewTextBoxColumn.Name = "softwareCostDataGridViewTextBoxColumn";
-            this.softwareCostDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // softwareIDDataGridViewTextBoxColumn
-            // 
-            this.softwareIDDataGridViewTextBoxColumn.DataPropertyName = "SoftwareID";
-            this.softwareIDDataGridViewTextBoxColumn.HeaderText = "SoftwareID";
-            this.softwareIDDataGridViewTextBoxColumn.Name = "softwareIDDataGridViewTextBoxColumn";
-            this.softwareIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.softwareIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // dataTableBindingSource
             // 
@@ -150,7 +121,7 @@
             // 
             // showAllSoftwareButton
             // 
-            this.showAllSoftwareButton.Location = new System.Drawing.Point(526, 17);
+            this.showAllSoftwareButton.Location = new System.Drawing.Point(191, 223);
             this.showAllSoftwareButton.Name = "showAllSoftwareButton";
             this.showAllSoftwareButton.Size = new System.Drawing.Size(86, 35);
             this.showAllSoftwareButton.TabIndex = 3;
@@ -166,14 +137,14 @@
             chartArea1.Name = "ChartArea1";
             this.softwareQuantityChart.ChartAreas.Add(chartArea1);
             this.softwareQuantityChart.DataSource = this.dataTableBindingSource1;
-            this.softwareQuantityChart.Location = new System.Drawing.Point(15, 349);
+            this.softwareQuantityChart.Location = new System.Drawing.Point(12, 306);
             this.softwareQuantityChart.Name = "softwareQuantityChart";
             series1.ChartArea = "ChartArea1";
             series1.Name = "Series0";
             series1.XValueMember = "SoftwareTypeName";
             series1.YValueMembers = "Quantity";
             this.softwareQuantityChart.Series.Add(series1);
-            this.softwareQuantityChart.Size = new System.Drawing.Size(552, 368);
+            this.softwareQuantityChart.Size = new System.Drawing.Size(517, 301);
             this.softwareQuantityChart.TabIndex = 4;
             this.softwareQuantityChart.Text = "chart1";
             // 
@@ -193,7 +164,7 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(370, 17);
+            this.basketButton.Location = new System.Drawing.Point(12, 265);
             this.basketButton.Name = "basketButton";
             this.basketButton.Size = new System.Drawing.Size(81, 35);
             this.basketButton.TabIndex = 5;
@@ -207,7 +178,7 @@
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(633, 142);
+            this.costButton.Location = new System.Drawing.Point(484, 146);
             this.costButton.Name = "costButton";
             this.costButton.Size = new System.Drawing.Size(75, 23);
             this.costButton.TabIndex = 23;
@@ -218,7 +189,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(630, 116);
+            this.label4.Location = new System.Drawing.Point(481, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 22;
@@ -227,7 +198,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(630, 90);
+            this.label3.Location = new System.Drawing.Point(481, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 21;
@@ -236,15 +207,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(630, 64);
+            this.label5.Location = new System.Drawing.Point(481, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Введите стоимость:";
+            this.label5.Text = "Стоимость:";
             // 
             // highPriceTB
             // 
-            this.highPriceTB.Location = new System.Drawing.Point(659, 116);
+            this.highPriceTB.Location = new System.Drawing.Point(510, 120);
             this.highPriceTB.MaxLength = 10;
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -253,7 +224,7 @@
             // 
             // lowPriceTB
             // 
-            this.lowPriceTB.Location = new System.Drawing.Point(659, 90);
+            this.lowPriceTB.Location = new System.Drawing.Point(510, 94);
             this.lowPriceTB.MaxLength = 10;
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -262,7 +233,7 @@
             // 
             // softwareQuantityTB
             // 
-            this.softwareQuantityTB.Location = new System.Drawing.Point(231, 25);
+            this.softwareQuantityTB.Location = new System.Drawing.Point(12, 239);
             this.softwareQuantityTB.MaxLength = 3;
             this.softwareQuantityTB.Name = "softwareQuantityTB";
             this.softwareQuantityTB.Size = new System.Drawing.Size(100, 20);
@@ -271,7 +242,7 @@
             // 
             // softwareNameTB
             // 
-            this.softwareNameTB.Location = new System.Drawing.Point(633, 219);
+            this.softwareNameTB.Location = new System.Drawing.Point(484, 197);
             this.softwareNameTB.Name = "softwareNameTB";
             this.softwareNameTB.Size = new System.Drawing.Size(100, 20);
             this.softwareNameTB.TabIndex = 25;
@@ -280,11 +251,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(630, 203);
+            this.label2.Location = new System.Drawing.Point(481, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 13);
+            this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 27;
-            this.label2.Text = "Введите наименование ПО:";
+            this.label2.Text = "Наименование ПО:";
             // 
             // softwarePriceListReport
             // 
@@ -294,7 +265,7 @@
             // 
             // softwarePriceListButton
             // 
-            this.softwarePriceListButton.Location = new System.Drawing.Point(997, 17);
+            this.softwarePriceListButton.Location = new System.Drawing.Point(383, 222);
             this.softwarePriceListButton.Name = "softwarePriceListButton";
             this.softwarePriceListButton.Size = new System.Drawing.Size(82, 36);
             this.softwarePriceListButton.TabIndex = 28;
@@ -302,11 +273,62 @@
             this.softwarePriceListButton.UseVisualStyleBackColor = true;
             this.softwarePriceListButton.Click += new System.EventHandler(this.softwarePriceListButton_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(192, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Список программного обеспечения:";
+            // 
+            // softwareTypeNameDataGridViewTextBoxColumn
+            // 
+            this.softwareTypeNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareTypeName";
+            this.softwareTypeNameDataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.softwareTypeNameDataGridViewTextBoxColumn.Name = "softwareTypeNameDataGridViewTextBoxColumn";
+            this.softwareTypeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.softwareTypeNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // softwareNameDataGridViewTextBoxColumn
+            // 
+            this.softwareNameDataGridViewTextBoxColumn.DataPropertyName = "SoftwareName";
+            this.softwareNameDataGridViewTextBoxColumn.HeaderText = "Наименование";
+            this.softwareNameDataGridViewTextBoxColumn.Name = "softwareNameDataGridViewTextBoxColumn";
+            this.softwareNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.softwareNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // softwareCostDataGridViewTextBoxColumn
+            // 
+            this.softwareCostDataGridViewTextBoxColumn.DataPropertyName = "SoftwareCost";
+            this.softwareCostDataGridViewTextBoxColumn.HeaderText = "Цена, руб.";
+            this.softwareCostDataGridViewTextBoxColumn.Name = "softwareCostDataGridViewTextBoxColumn";
+            this.softwareCostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // softwareIDDataGridViewTextBoxColumn
+            // 
+            this.softwareIDDataGridViewTextBoxColumn.DataPropertyName = "SoftwareID";
+            this.softwareIDDataGridViewTextBoxColumn.HeaderText = "SoftwareID";
+            this.softwareIDDataGridViewTextBoxColumn.Name = "softwareIDDataGridViewTextBoxColumn";
+            this.softwareIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.softwareIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 223);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Количество ПО:";
+            // 
             // Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 729);
+            this.ClientSize = new System.Drawing.Size(684, 611);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.softwarePriceListButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.softwareNameTB);
@@ -325,7 +347,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1024, 768);
+            this.MinimumSize = new System.Drawing.Size(700, 650);
             this.Name = "Software";
             this.ShowIcon = false;
             this.Text = "Software";
@@ -365,11 +387,13 @@
         private System.Windows.Forms.TextBox softwareQuantityTB;
         private System.Windows.Forms.TextBox softwareNameTB;
         private System.Windows.Forms.Label label2;
+        private FastReport.Report softwarePriceListReport;
+        private System.Windows.Forms.Button softwarePriceListButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareTypeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareCostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareIDDataGridViewTextBoxColumn;
-        private FastReport.Report softwarePriceListReport;
-        private System.Windows.Forms.Button softwarePriceListButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

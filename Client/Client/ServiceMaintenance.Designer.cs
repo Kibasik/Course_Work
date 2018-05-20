@@ -62,9 +62,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 13);
+            this.label1.Size = new System.Drawing.Size(185, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Выберите сервисное обслуживание:";
+            this.label1.Text = "Список сервисного обслуживания:\r\n";
             // 
             // serviceMaintenanceDGV
             // 
@@ -128,7 +128,7 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(15, 247);
+            this.basketButton.Location = new System.Drawing.Point(12, 247);
             this.basketButton.Name = "basketButton";
             this.basketButton.Size = new System.Drawing.Size(75, 37);
             this.basketButton.TabIndex = 2;
@@ -138,7 +138,7 @@
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(459, 186);
+            this.costButton.Location = new System.Drawing.Point(461, 159);
             this.costButton.Name = "costButton";
             this.costButton.Size = new System.Drawing.Size(75, 23);
             this.costButton.TabIndex = 29;
@@ -149,7 +149,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(456, 160);
+            this.label4.Location = new System.Drawing.Point(458, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 28;
@@ -158,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(456, 134);
+            this.label3.Location = new System.Drawing.Point(458, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 27;
@@ -167,15 +167,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(456, 108);
+            this.label5.Location = new System.Drawing.Point(458, 86);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Введите стоимость:";
+            this.label5.Text = "Стоимость:";
             // 
             // highPriceTB
             // 
-            this.highPriceTB.Location = new System.Drawing.Point(485, 160);
+            this.highPriceTB.Location = new System.Drawing.Point(487, 133);
             this.highPriceTB.MaxLength = 10;
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -183,7 +183,7 @@
             // 
             // lowPriceTB
             // 
-            this.lowPriceTB.Location = new System.Drawing.Point(485, 134);
+            this.lowPriceTB.Location = new System.Drawing.Point(487, 107);
             this.lowPriceTB.MaxLength = 10;
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -194,9 +194,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(456, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 26);
+            this.label2.Size = new System.Drawing.Size(148, 26);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Введите наименование\r\nсервисного обслуживания:";
+            this.label2.Text = "Наименование сервисного \r\nобслуживания:";
             // 
             // serviceMaintenanceNameTB
             // 
@@ -208,7 +208,7 @@
             // 
             // showAllServiceMaintenanceButton
             // 
-            this.showAllServiceMaintenanceButton.Location = new System.Drawing.Point(363, 247);
+            this.showAllServiceMaintenanceButton.Location = new System.Drawing.Point(162, 247);
             this.showAllServiceMaintenanceButton.Name = "showAllServiceMaintenanceButton";
             this.showAllServiceMaintenanceButton.Size = new System.Drawing.Size(87, 37);
             this.showAllServiceMaintenanceButton.TabIndex = 32;
@@ -224,11 +224,11 @@
             // 
             // serviceMaintenancePriceListButton
             // 
-            this.serviceMaintenancePriceListButton.Location = new System.Drawing.Point(537, 247);
+            this.serviceMaintenancePriceListButton.Location = new System.Drawing.Point(311, 247);
             this.serviceMaintenancePriceListButton.Name = "serviceMaintenancePriceListButton";
-            this.serviceMaintenancePriceListButton.Size = new System.Drawing.Size(75, 37);
+            this.serviceMaintenancePriceListButton.Size = new System.Drawing.Size(139, 37);
             this.serviceMaintenancePriceListButton.TabIndex = 33;
-            this.serviceMaintenancePriceListButton.Text = "Показать прайс-лист";
+            this.serviceMaintenancePriceListButton.Text = "Прайс-лист сервисного обслуживания";
             this.serviceMaintenancePriceListButton.UseVisualStyleBackColor = true;
             this.serviceMaintenancePriceListButton.Click += new System.EventHandler(this.serviceMaintenancePriceListButton_Click_1);
             // 

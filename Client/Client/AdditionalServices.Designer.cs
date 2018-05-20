@@ -62,9 +62,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 13);
+            this.label1.Size = new System.Drawing.Size(134, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Выберите дополнительную услугу:";
+            this.label1.Text = "Дополнительные услуги:\r\n";
             // 
             // additionalServicesDGV
             // 
@@ -79,7 +79,7 @@
             this.additionalServiceNameDataGridViewTextBoxColumn,
             this.additionalServiceCostDataGridViewTextBoxColumn});
             this.additionalServicesDGV.DataSource = this.dataTableBindingSource;
-            this.additionalServicesDGV.Location = new System.Drawing.Point(12, 25);
+            this.additionalServicesDGV.Location = new System.Drawing.Point(15, 25);
             this.additionalServicesDGV.Name = "additionalServicesDGV";
             this.additionalServicesDGV.ReadOnly = true;
             this.additionalServicesDGV.Size = new System.Drawing.Size(301, 176);
@@ -130,7 +130,7 @@
             // 
             // additionalServiceNameTB
             // 
-            this.additionalServiceNameTB.Location = new System.Drawing.Point(328, 54);
+            this.additionalServiceNameTB.Location = new System.Drawing.Point(334, 54);
             this.additionalServiceNameTB.Name = "additionalServiceNameTB";
             this.additionalServiceNameTB.Size = new System.Drawing.Size(118, 20);
             this.additionalServiceNameTB.TabIndex = 3;
@@ -144,15 +144,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(325, 25);
+            this.label2.Location = new System.Drawing.Point(331, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 26);
+            this.label2.Size = new System.Drawing.Size(110, 26);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Введите наименование \r\nдоп. услуги:";
+            this.label2.Text = "Наименование доп. \r\nуслуги:";
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(328, 177);
+            this.costButton.Location = new System.Drawing.Point(335, 158);
             this.costButton.Name = "costButton";
             this.costButton.Size = new System.Drawing.Size(75, 23);
             this.costButton.TabIndex = 23;
@@ -163,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(325, 151);
+            this.label4.Location = new System.Drawing.Point(332, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 22;
@@ -172,7 +172,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(325, 125);
+            this.label3.Location = new System.Drawing.Point(332, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 21;
@@ -181,15 +181,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(325, 99);
+            this.label5.Location = new System.Drawing.Point(331, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Введите стоимость:";
+            this.label5.Text = "Cтоимость:";
             // 
             // highPriceTB
             // 
-            this.highPriceTB.Location = new System.Drawing.Point(354, 151);
+            this.highPriceTB.Location = new System.Drawing.Point(361, 132);
             this.highPriceTB.MaxLength = 10;
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -197,7 +197,7 @@
             // 
             // lowPriceTB
             // 
-            this.lowPriceTB.Location = new System.Drawing.Point(354, 125);
+            this.lowPriceTB.Location = new System.Drawing.Point(361, 106);
             this.lowPriceTB.MaxLength = 10;
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -209,7 +209,7 @@
             // 
             // showAllAdditionalServicesButton
             // 
-            this.showAllAdditionalServicesButton.Location = new System.Drawing.Point(228, 207);
+            this.showAllAdditionalServicesButton.Location = new System.Drawing.Point(231, 207);
             this.showAllAdditionalServicesButton.Name = "showAllAdditionalServicesButton";
             this.showAllAdditionalServicesButton.Size = new System.Drawing.Size(85, 36);
             this.showAllAdditionalServicesButton.TabIndex = 24;
@@ -219,11 +219,11 @@
             // 
             // additionalServicesPriceListButton
             // 
-            this.additionalServicesPriceListButton.Location = new System.Drawing.Point(328, 207);
+            this.additionalServicesPriceListButton.Location = new System.Drawing.Point(116, 207);
             this.additionalServicesPriceListButton.Name = "additionalServicesPriceListButton";
             this.additionalServicesPriceListButton.Size = new System.Drawing.Size(84, 36);
             this.additionalServicesPriceListButton.TabIndex = 25;
-            this.additionalServicesPriceListButton.Text = "Показать прайс-лист";
+            this.additionalServicesPriceListButton.Text = "Прайс-лист доп. услуг";
             this.additionalServicesPriceListButton.UseVisualStyleBackColor = true;
             this.additionalServicesPriceListButton.Click += new System.EventHandler(this.additionalServicesPriceListButton_Click);
             // 

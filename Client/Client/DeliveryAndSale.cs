@@ -242,6 +242,7 @@ namespace Client
             saleReport.SetParameterValue("clientName", clientName);
             saleReport.SetParameterValue("workerName", workerNameCB.SelectedItem.ToString());
             saleReport.SetParameterValue("paymentMethod", paymentMethodCB.SelectedItem.ToString());
+            saleReport.SetParameterValue("saleDate", DateTime.Now.ToString("yyyy-MM-dd"));
             saleReport.Show();
             connection.Close();
             Close();

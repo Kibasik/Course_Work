@@ -44,23 +44,24 @@
             this.GoodsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.assemblyDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(516, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Выберите сборку:";
+            this.label1.Text = "Название сборки:";
             // 
             // assemblyNameCB
             // 
             this.assemblyNameCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.assemblyNameCB.FormattingEnabled = true;
-            this.assemblyNameCB.Location = new System.Drawing.Point(15, 25);
+            this.assemblyNameCB.Location = new System.Drawing.Point(519, 41);
             this.assemblyNameCB.Name = "assemblyNameCB";
             this.assemblyNameCB.Size = new System.Drawing.Size(121, 21);
             this.assemblyNameCB.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(12, 270);
+            this.basketButton.Location = new System.Drawing.Point(15, 221);
             this.basketButton.Name = "basketButton";
             this.basketButton.Size = new System.Drawing.Size(75, 39);
             this.basketButton.TabIndex = 2;
@@ -92,7 +93,7 @@
             this.GoodsQauntity,
             this.AssemblyID,
             this.GoodsID});
-            this.assemblyDGV.Location = new System.Drawing.Point(12, 74);
+            this.assemblyDGV.Location = new System.Drawing.Point(15, 25);
             this.assemblyDGV.Name = "assemblyDGV";
             this.assemblyDGV.ReadOnly = true;
             this.assemblyDGV.Size = new System.Drawing.Size(480, 190);
@@ -157,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(332, 299);
+            this.label2.Location = new System.Drawing.Point(312, 247);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 4;
@@ -166,17 +167,27 @@
             // totalCostLabel
             // 
             this.totalCostLabel.AutoSize = true;
-            this.totalCostLabel.Location = new System.Drawing.Point(440, 299);
+            this.totalCostLabel.Location = new System.Drawing.Point(420, 247);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(52, 13);
             this.totalCostLabel.TabIndex = 5;
             this.totalCostLabel.Text = "TotalCost";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Список комплектующих:";
+            // 
             // Assembly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 321);
+            this.ClientSize = new System.Drawing.Size(654, 281);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.assemblyDGV);
@@ -185,7 +196,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(520, 360);
+            this.MinimumSize = new System.Drawing.Size(670, 320);
             this.Name = "Assembly";
             this.ShowIcon = false;
             this.Text = "Assembly";
@@ -212,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsQauntity;
         private System.Windows.Forms.DataGridViewTextBoxColumn AssemblyID;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsID;
+        private System.Windows.Forms.Label label3;
     }
 }
