@@ -122,9 +122,9 @@
   </metadata>
   <data name="saleReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/20/2018 18:38:21" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 16:18:52" ReportInfo.Modified="05/21/2018 19:09:52" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3zUSnS5BfN6ypBrcn6lxHk1"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wsh2l2XP+OGa8nIipZE0Z5"&gt;
       &lt;TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  chosensoftware.BasketID,&amp;#13;&amp;#10;  chosensoftware.SoftwareQuantity,&amp;#13;&amp;#10;  software.SoftwareName,&amp;#13;&amp;#10;  software.SoftwareCost&amp;#13;&amp;#10;FROM chosensoftware&amp;#13;&amp;#10;  INNER JOIN software&amp;#13;&amp;#10;    ON chosensoftware.SoftwareID = software.SoftwareID"&gt;
         &lt;Column Name="SoftwareQuantity" DataType="System.Int32"/&gt;
         &lt;Column Name="SoftwareName" DataType="System.String"/&gt;

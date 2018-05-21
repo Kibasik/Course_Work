@@ -128,9 +128,9 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(12, 247);
+            this.basketButton.Location = new System.Drawing.Point(15, 247);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(75, 37);
+            this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 2;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             // 
             this.costButton.Location = new System.Drawing.Point(461, 159);
             this.costButton.Name = "costButton";
-            this.costButton.Size = new System.Drawing.Size(75, 23);
+            this.costButton.Size = new System.Drawing.Size(80, 40);
             this.costButton.TabIndex = 29;
             this.costButton.Text = "Применить";
             this.costButton.UseVisualStyleBackColor = true;
@@ -208,9 +208,9 @@
             // 
             // showAllServiceMaintenanceButton
             // 
-            this.showAllServiceMaintenanceButton.Location = new System.Drawing.Point(162, 247);
+            this.showAllServiceMaintenanceButton.Location = new System.Drawing.Point(161, 247);
             this.showAllServiceMaintenanceButton.Name = "showAllServiceMaintenanceButton";
-            this.showAllServiceMaintenanceButton.Size = new System.Drawing.Size(87, 37);
+            this.showAllServiceMaintenanceButton.Size = new System.Drawing.Size(90, 40);
             this.showAllServiceMaintenanceButton.TabIndex = 32;
             this.showAllServiceMaintenanceButton.Text = "Показать весь список";
             this.showAllServiceMaintenanceButton.UseVisualStyleBackColor = true;
@@ -224,9 +224,9 @@
             // 
             // serviceMaintenancePriceListButton
             // 
-            this.serviceMaintenancePriceListButton.Location = new System.Drawing.Point(311, 247);
+            this.serviceMaintenancePriceListButton.Location = new System.Drawing.Point(310, 247);
             this.serviceMaintenancePriceListButton.Name = "serviceMaintenancePriceListButton";
-            this.serviceMaintenancePriceListButton.Size = new System.Drawing.Size(139, 37);
+            this.serviceMaintenancePriceListButton.Size = new System.Drawing.Size(140, 40);
             this.serviceMaintenancePriceListButton.TabIndex = 33;
             this.serviceMaintenancePriceListButton.Text = "Прайс-лист сервисного обслуживания";
             this.serviceMaintenancePriceListButton.UseVisualStyleBackColor = true;

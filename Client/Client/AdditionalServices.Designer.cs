@@ -120,9 +120,9 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(12, 207);
+            this.basketButton.Location = new System.Drawing.Point(15, 207);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(75, 36);
+            this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 2;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // 
             this.costButton.Location = new System.Drawing.Point(335, 158);
             this.costButton.Name = "costButton";
-            this.costButton.Size = new System.Drawing.Size(75, 23);
+            this.costButton.Size = new System.Drawing.Size(80, 40);
             this.costButton.TabIndex = 23;
             this.costButton.Text = "Применить";
             this.costButton.UseVisualStyleBackColor = true;
@@ -211,7 +211,7 @@
             // 
             this.showAllAdditionalServicesButton.Location = new System.Drawing.Point(231, 207);
             this.showAllAdditionalServicesButton.Name = "showAllAdditionalServicesButton";
-            this.showAllAdditionalServicesButton.Size = new System.Drawing.Size(85, 36);
+            this.showAllAdditionalServicesButton.Size = new System.Drawing.Size(80, 40);
             this.showAllAdditionalServicesButton.TabIndex = 24;
             this.showAllAdditionalServicesButton.Text = "Показать весь список";
             this.showAllAdditionalServicesButton.UseVisualStyleBackColor = true;
@@ -219,9 +219,9 @@
             // 
             // additionalServicesPriceListButton
             // 
-            this.additionalServicesPriceListButton.Location = new System.Drawing.Point(116, 207);
+            this.additionalServicesPriceListButton.Location = new System.Drawing.Point(123, 207);
             this.additionalServicesPriceListButton.Name = "additionalServicesPriceListButton";
-            this.additionalServicesPriceListButton.Size = new System.Drawing.Size(84, 36);
+            this.additionalServicesPriceListButton.Size = new System.Drawing.Size(80, 40);
             this.additionalServicesPriceListButton.TabIndex = 25;
             this.additionalServicesPriceListButton.Text = "Прайс-лист доп. услуг";
             this.additionalServicesPriceListButton.UseVisualStyleBackColor = true;

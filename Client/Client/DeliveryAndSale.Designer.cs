@@ -297,9 +297,9 @@
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(237, 362);
+            this.buyButton.Location = new System.Drawing.Point(243, 349);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(75, 27);
+            this.buyButton.Size = new System.Drawing.Size(80, 40);
             this.buyButton.TabIndex = 26;
             this.buyButton.Text = "Оплатить";
             this.buyButton.UseVisualStyleBackColor = true;

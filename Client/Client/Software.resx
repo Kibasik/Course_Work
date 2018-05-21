@@ -120,6 +120,12 @@
   <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>133, 17</value>
   </metadata>
+  <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
+  <metadata name="softwareList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="softwareList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -131,7 +137,7 @@
   </metadata>
   <data name="softwarePriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/21/2018 17:03:16" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/21/2018 19:13:32" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
   &lt;Dictionary&gt;
     &lt;TableDataSource Name="DataTable" ReferenceName="softwareList.DataTable" DataType="System.Int32" Enabled="true"&gt;
       &lt;Column Name="SoftwareTypeName" DataType="System.String"/&gt;

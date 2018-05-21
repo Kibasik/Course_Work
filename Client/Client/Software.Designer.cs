@@ -143,9 +143,9 @@
             // 
             // showAllSoftwareButton
             // 
-            this.showAllSoftwareButton.Location = new System.Drawing.Point(191, 223);
+            this.showAllSoftwareButton.Location = new System.Drawing.Point(196, 222);
             this.showAllSoftwareButton.Name = "showAllSoftwareButton";
-            this.showAllSoftwareButton.Size = new System.Drawing.Size(86, 35);
+            this.showAllSoftwareButton.Size = new System.Drawing.Size(90, 40);
             this.showAllSoftwareButton.TabIndex = 3;
             this.showAllSoftwareButton.Text = "Показать весь список";
             this.showAllSoftwareButton.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             // 
             this.basketButton.Location = new System.Drawing.Point(12, 265);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(81, 35);
+            this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 5;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
@@ -169,7 +169,7 @@
             // 
             this.costButton.Location = new System.Drawing.Point(484, 146);
             this.costButton.Name = "costButton";
-            this.costButton.Size = new System.Drawing.Size(75, 23);
+            this.costButton.Size = new System.Drawing.Size(80, 40);
             this.costButton.TabIndex = 23;
             this.costButton.Text = "Применить";
             this.costButton.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@
             // 
             // softwareNameTB
             // 
-            this.softwareNameTB.Location = new System.Drawing.Point(484, 197);
+            this.softwareNameTB.Location = new System.Drawing.Point(484, 213);
             this.softwareNameTB.Name = "softwareNameTB";
             this.softwareNameTB.Size = new System.Drawing.Size(100, 20);
             this.softwareNameTB.TabIndex = 25;
@@ -240,7 +240,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 181);
+            this.label2.Location = new System.Drawing.Point(481, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 27;
@@ -254,9 +254,9 @@
             // 
             // softwarePriceListButton
             // 
-            this.softwarePriceListButton.Location = new System.Drawing.Point(383, 222);
+            this.softwarePriceListButton.Location = new System.Drawing.Point(385, 222);
             this.softwarePriceListButton.Name = "softwarePriceListButton";
-            this.softwarePriceListButton.Size = new System.Drawing.Size(82, 36);
+            this.softwarePriceListButton.Size = new System.Drawing.Size(80, 40);
             this.softwarePriceListButton.TabIndex = 28;
             this.softwarePriceListButton.Text = "Показать прайс-лист";
             this.softwarePriceListButton.UseVisualStyleBackColor = true;

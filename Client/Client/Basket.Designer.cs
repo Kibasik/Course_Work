@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,9 +116,9 @@
             // 
             // GoodsCost
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle45.Format = "N2";
+            dataGridViewCellStyle45.NullValue = null;
+            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle45;
             this.GoodsCost.HeaderText = "Цена, руб.";
             this.GoodsCost.Name = "GoodsCost";
             // 
@@ -186,9 +186,9 @@
             // 
             // SoftwareCost
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle46.Format = "N2";
+            dataGridViewCellStyle46.NullValue = null;
+            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle46;
             this.SoftwareCost.HeaderText = "Цена, руб.";
             this.SoftwareCost.Name = "SoftwareCost";
             this.SoftwareCost.ReadOnly = true;
@@ -210,7 +210,7 @@
             // 
             this.deleteGoodsButton.Location = new System.Drawing.Point(15, 211);
             this.deleteGoodsButton.Name = "deleteGoodsButton";
-            this.deleteGoodsButton.Size = new System.Drawing.Size(102, 48);
+            this.deleteGoodsButton.Size = new System.Drawing.Size(100, 40);
             this.deleteGoodsButton.TabIndex = 4;
             this.deleteGoodsButton.Text = "Удалить комплектующее";
             this.deleteGoodsButton.UseVisualStyleBackColor = true;
@@ -238,7 +238,7 @@
             // 
             this.deleteSoftwareButton.Location = new System.Drawing.Point(15, 497);
             this.deleteSoftwareButton.Name = "deleteSoftwareButton";
-            this.deleteSoftwareButton.Size = new System.Drawing.Size(80, 33);
+            this.deleteSoftwareButton.Size = new System.Drawing.Size(80, 40);
             this.deleteSoftwareButton.TabIndex = 7;
             this.deleteSoftwareButton.Text = "Удалить ПО";
             this.deleteSoftwareButton.UseVisualStyleBackColor = true;
@@ -279,9 +279,9 @@
             // 
             // AdditionalServiceCost
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle47.Format = "N2";
+            dataGridViewCellStyle47.NullValue = null;
+            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle47;
             this.AdditionalServiceCost.HeaderText = "Цена, руб.";
             this.AdditionalServiceCost.Name = "AdditionalServiceCost";
             this.AdditionalServiceCost.ReadOnly = true;
@@ -297,7 +297,7 @@
             // 
             this.deleteAdditionalServiceButton.Location = new System.Drawing.Point(575, 211);
             this.deleteAdditionalServiceButton.Name = "deleteAdditionalServiceButton";
-            this.deleteAdditionalServiceButton.Size = new System.Drawing.Size(75, 48);
+            this.deleteAdditionalServiceButton.Size = new System.Drawing.Size(100, 40);
             this.deleteAdditionalServiceButton.TabIndex = 10;
             this.deleteAdditionalServiceButton.Text = "Удалить доп. услугу";
             this.deleteAdditionalServiceButton.UseVisualStyleBackColor = true;
@@ -339,9 +339,9 @@
             // 
             // ServiceMaintenanceCost
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle48.Format = "N2";
+            dataGridViewCellStyle48.NullValue = null;
+            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle48;
             this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
             this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
             this.ServiceMaintenanceCost.ReadOnly = true;
@@ -363,7 +363,7 @@
             // 
             this.deleteServiceMaintenanceButton.Location = new System.Drawing.Point(575, 497);
             this.deleteServiceMaintenanceButton.Name = "deleteServiceMaintenanceButton";
-            this.deleteServiceMaintenanceButton.Size = new System.Drawing.Size(121, 40);
+            this.deleteServiceMaintenanceButton.Size = new System.Drawing.Size(115, 40);
             this.deleteServiceMaintenanceButton.TabIndex = 13;
             this.deleteServiceMaintenanceButton.Text = "Удалить сервисное обслуживание";
             this.deleteServiceMaintenanceButton.UseVisualStyleBackColor = true;
@@ -371,9 +371,9 @@
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(444, 549);
+            this.buyButton.Location = new System.Drawing.Point(446, 532);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(75, 23);
+            this.buyButton.Size = new System.Drawing.Size(80, 40);
             this.buyButton.TabIndex = 14;
             this.buyButton.Text = "Оплатить";
             this.buyButton.UseVisualStyleBackColor = true;

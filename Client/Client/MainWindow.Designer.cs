@@ -180,9 +180,9 @@
             // 
             // showAllGoodsButton
             // 
-            this.showAllGoodsButton.Location = new System.Drawing.Point(182, 302);
+            this.showAllGoodsButton.Location = new System.Drawing.Point(193, 302);
             this.showAllGoodsButton.Name = "showAllGoodsButton";
-            this.showAllGoodsButton.Size = new System.Drawing.Size(98, 34);
+            this.showAllGoodsButton.Size = new System.Drawing.Size(90, 40);
             this.showAllGoodsButton.TabIndex = 9;
             this.showAllGoodsButton.Text = "Показать весь список";
             this.showAllGoodsButton.UseVisualStyleBackColor = true;
@@ -271,9 +271,9 @@
             // 
             // descriptionButton
             // 
-            this.descriptionButton.Location = new System.Drawing.Point(182, 363);
+            this.descriptionButton.Location = new System.Drawing.Point(193, 359);
             this.descriptionButton.Name = "descriptionButton";
-            this.descriptionButton.Size = new System.Drawing.Size(75, 23);
+            this.descriptionButton.Size = new System.Drawing.Size(80, 40);
             this.descriptionButton.TabIndex = 11;
             this.descriptionButton.Text = "Описание";
             this.descriptionButton.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@
             // 
             // lowPriceTB
             // 
-            this.lowPriceTB.Location = new System.Drawing.Point(603, 259);
+            this.lowPriceTB.Location = new System.Drawing.Point(603, 272);
             this.lowPriceTB.MaxLength = 10;
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -290,7 +290,7 @@
             // 
             // highPriceTB
             // 
-            this.highPriceTB.Location = new System.Drawing.Point(603, 285);
+            this.highPriceTB.Location = new System.Drawing.Point(603, 298);
             this.highPriceTB.MaxLength = 10;
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -300,7 +300,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(574, 237);
+            this.label5.Location = new System.Drawing.Point(574, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 14;
@@ -309,7 +309,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(574, 259);
+            this.label3.Location = new System.Drawing.Point(574, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 15;
@@ -318,7 +318,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(574, 285);
+            this.label4.Location = new System.Drawing.Point(574, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 16;
@@ -326,9 +326,9 @@
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(577, 311);
+            this.costButton.Location = new System.Drawing.Point(577, 324);
             this.costButton.Name = "costButton";
-            this.costButton.Size = new System.Drawing.Size(75, 23);
+            this.costButton.Size = new System.Drawing.Size(80, 40);
             this.costButton.TabIndex = 17;
             this.costButton.Text = "Применить";
             this.costButton.UseVisualStyleBackColor = true;
@@ -338,7 +338,7 @@
             // 
             this.manufacturerButton.Location = new System.Drawing.Point(577, 201);
             this.manufacturerButton.Name = "manufacturerButton";
-            this.manufacturerButton.Size = new System.Drawing.Size(100, 23);
+            this.manufacturerButton.Size = new System.Drawing.Size(100, 40);
             this.manufacturerButton.TabIndex = 18;
             this.manufacturerButton.Text = "Отфильтровать";
             this.manufacturerButton.UseVisualStyleBackColor = true;
@@ -364,7 +364,7 @@
             // 
             this.basketButton.Location = new System.Drawing.Point(12, 349);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(75, 37);
+            this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 21;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
@@ -373,7 +373,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(577, 349);
+            this.label7.Location = new System.Drawing.Point(577, 375);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 13);
             this.label7.TabIndex = 22;
@@ -381,7 +381,7 @@
             // 
             // goodsNameTB
             // 
-            this.goodsNameTB.Location = new System.Drawing.Point(580, 369);
+            this.goodsNameTB.Location = new System.Drawing.Point(580, 395);
             this.goodsNameTB.Name = "goodsNameTB";
             this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
             this.goodsNameTB.TabIndex = 23;
@@ -427,9 +427,9 @@
             // 
             // goodsPriceListButton
             // 
-            this.goodsPriceListButton.Location = new System.Drawing.Point(400, 302);
+            this.goodsPriceListButton.Location = new System.Drawing.Point(403, 302);
             this.goodsPriceListButton.Name = "goodsPriceListButton";
-            this.goodsPriceListButton.Size = new System.Drawing.Size(101, 34);
+            this.goodsPriceListButton.Size = new System.Drawing.Size(100, 40);
             this.goodsPriceListButton.TabIndex = 28;
             this.goodsPriceListButton.Text = "Прайс-лист комплектующих";
             this.goodsPriceListButton.UseVisualStyleBackColor = true;
@@ -443,9 +443,9 @@
             // 
             // fullPriceListButton
             // 
-            this.fullPriceListButton.Location = new System.Drawing.Point(286, 302);
+            this.fullPriceListButton.Location = new System.Drawing.Point(301, 302);
             this.fullPriceListButton.Name = "fullPriceListButton";
-            this.fullPriceListButton.Size = new System.Drawing.Size(108, 39);
+            this.fullPriceListButton.Size = new System.Drawing.Size(80, 40);
             this.fullPriceListButton.TabIndex = 29;
             this.fullPriceListButton.Text = "Полный прайс-лист";
             this.fullPriceListButton.UseVisualStyleBackColor = true;
@@ -479,7 +479,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(784, 431);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.fullPriceListButton);
@@ -508,7 +508,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 450);
+            this.MinimumSize = new System.Drawing.Size(800, 470);
             this.Name = "MainWindow";
             this.ShowIcon = false;
             this.Text = "MainWIndow";

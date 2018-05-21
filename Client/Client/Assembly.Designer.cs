@@ -71,7 +71,7 @@
             // 
             this.basketButton.Location = new System.Drawing.Point(15, 221);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(75, 39);
+            this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 2;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
