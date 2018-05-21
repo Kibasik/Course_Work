@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +42,6 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
-            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.softwareDGV = new System.Windows.Forms.DataGridView();
             this.SoftwareTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoftwareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +67,6 @@
             this.deleteServiceMaintenanceButton = new System.Windows.Forms.Button();
             this.buyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).BeginInit();
@@ -119,9 +116,9 @@
             // 
             // GoodsCost
             // 
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle1;
             this.GoodsCost.HeaderText = "Цена, руб.";
             this.GoodsCost.Name = "GoodsCost";
             // 
@@ -153,10 +150,6 @@
             this.totalCostLabel.Size = new System.Drawing.Size(52, 13);
             this.totalCostLabel.TabIndex = 2;
             this.totalCostLabel.Text = "TotalCost";
-            // 
-            // dataTableBindingSource
-            // 
-            this.dataTableBindingSource.DataMember = "DataTable";
             // 
             // softwareDGV
             // 
@@ -193,9 +186,9 @@
             // 
             // SoftwareCost
             // 
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle2;
             this.SoftwareCost.HeaderText = "Цена, руб.";
             this.SoftwareCost.Name = "SoftwareCost";
             this.SoftwareCost.ReadOnly = true;
@@ -286,9 +279,9 @@
             // 
             // AdditionalServiceCost
             // 
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = null;
-            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle3;
             this.AdditionalServiceCost.HeaderText = "Цена, руб.";
             this.AdditionalServiceCost.Name = "AdditionalServiceCost";
             this.AdditionalServiceCost.ReadOnly = true;
@@ -346,9 +339,9 @@
             // 
             // ServiceMaintenanceCost
             // 
-            dataGridViewCellStyle12.Format = "N2";
-            dataGridViewCellStyle12.NullValue = null;
-            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle4;
             this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
             this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
             this.ServiceMaintenanceCost.ReadOnly = true;
@@ -414,7 +407,6 @@
             this.Text = "Basket";
             this.Load += new System.EventHandler(this.Basket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).EndInit();
@@ -428,7 +420,6 @@
         private System.Windows.Forms.DataGridView goodsDGV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label totalCostLabel;
-        private System.Windows.Forms.BindingSource dataTableBindingSource;
         private System.Windows.Forms.DataGridView softwareDGV;
         private System.Windows.Forms.Button deleteGoodsButton;
         private System.Windows.Forms.Label label2;

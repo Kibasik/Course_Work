@@ -169,9 +169,9 @@
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Location = new System.Drawing.Point(420, 247);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(52, 13);
+            this.totalCostLabel.Size = new System.Drawing.Size(13, 13);
             this.totalCostLabel.TabIndex = 5;
-            this.totalCostLabel.Text = "TotalCost";
+            this.totalCostLabel.Text = "0";
             // 
             // label3
             // 

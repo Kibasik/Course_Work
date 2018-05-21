@@ -99,6 +99,12 @@
     <Compile Include="Basket.Designer.cs">
       <DependentUpon>Basket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Charts.Designer.cs">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeliveryAndSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Basket.resx">
       <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Charts.resx">
+      <DependentUpon>Charts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeliveryAndSale.resx">
       <DependentUpon>DeliveryAndSale.cs</DependentUpon>

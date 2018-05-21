@@ -31,8 +31,6 @@ namespace Client
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "goods.DataTable". При необходимости она может быть перемещена или удалена.
             this.dataTableTableAdapter1.Fill(this.goods.DataTable);
-            //TODO: данная строка кода позволяет загрузить данные в таблицу "goodsQuantity.DataTable".При необходимости она может быть перемещена или удалена.
-            this.dataTableTableAdapter.Fill(this.goodsQuantity.DataTable);
             connection.Open();
             id = 0;
             command = new MySqlCommand("SELECT basket.BasketID FROM basket", connection);
@@ -241,7 +239,6 @@ namespace Client
             dataView.RowFilter = "";
             goodsDGV.DataSource = dataView;
             dataTableBindingSource1.Filter = "";
-            goodsQuantityChart.DataBind();
             connection.Close();
         }
 
@@ -419,6 +416,17 @@ namespace Client
             Assembly assembly = new Assembly();
             assembly.basketID = (id + 1);
             assembly.ShowDialog();
+        }
+
+        private void графикиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Charts charts = new Charts();
+            charts.ShowDialog();
+        }
+
+        private void fullPriceListButton_Click(object sender, EventArgs e)
+        {
+            fullPriceListReport.Show();
         }
     }
 }
