@@ -53,7 +53,6 @@
             this.дополнительныеУслугиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сервисноеОбслуживаниеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сборкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.продажаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionButton = new System.Windows.Forms.Button();
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.highPriceTB = new System.Windows.Forms.TextBox();
@@ -203,8 +202,7 @@
             this.справкаToolStripMenuItem,
             this.корзинаToolStripMenuItem,
             this.дополнительноToolStripMenuItem,
-            this.сборкаToolStripMenuItem,
-            this.продажаToolStripMenuItem});
+            this.сборкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -222,7 +220,7 @@
             // опрограммеToolStripMenuItem
             // 
             this.опрограммеToolStripMenuItem.Name = "опрограммеToolStripMenuItem";
-            this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.опрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.опрограммеToolStripMenuItem.Text = "&О программе...";
             this.опрограммеToolStripMenuItem.Click += new System.EventHandler(this.опрограммеToolStripMenuItem_Click);
             // 
@@ -270,13 +268,6 @@
             this.сборкаToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.сборкаToolStripMenuItem.Text = "&Сборка";
             this.сборкаToolStripMenuItem.Click += new System.EventHandler(this.сборкаToolStripMenuItem_Click);
-            // 
-            // продажаToolStripMenuItem
-            // 
-            this.продажаToolStripMenuItem.Name = "продажаToolStripMenuItem";
-            this.продажаToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.продажаToolStripMenuItem.Text = "&Продажа";
-            this.продажаToolStripMenuItem.Click += new System.EventHandler(this.продажаToolStripMenuItem_Click);
             // 
             // descriptionButton
             // 
@@ -622,7 +613,6 @@
         private System.Windows.Forms.Button goodsPriceListButton;
         private FastReport.Report componentsPriceListReport;
         private System.Windows.Forms.ToolStripMenuItem сборкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem продажаToolStripMenuItem;
         private System.Windows.Forms.Button fullPriceListButton;
         private FastReport.Report fullPriceListReport;
         private System.Windows.Forms.Label label8;

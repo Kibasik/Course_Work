@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +67,7 @@
             this.ServiceMaintenancePeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ServiceMaintenanceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deleteServiceMaintenanceButton = new System.Windows.Forms.Button();
+            this.buyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
@@ -118,9 +119,9 @@
             // 
             // GoodsCost
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle9;
             this.GoodsCost.HeaderText = "Цена, руб.";
             this.GoodsCost.Name = "GoodsCost";
             // 
@@ -192,9 +193,9 @@
             // 
             // SoftwareCost
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle10;
             this.SoftwareCost.HeaderText = "Цена, руб.";
             this.SoftwareCost.Name = "SoftwareCost";
             this.SoftwareCost.ReadOnly = true;
@@ -285,9 +286,9 @@
             // 
             // AdditionalServiceCost
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Format = "N2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle11;
             this.AdditionalServiceCost.HeaderText = "Цена, руб.";
             this.AdditionalServiceCost.Name = "AdditionalServiceCost";
             this.AdditionalServiceCost.ReadOnly = true;
@@ -345,9 +346,9 @@
             // 
             // ServiceMaintenanceCost
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Format = "N2";
+            dataGridViewCellStyle12.NullValue = null;
+            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle12;
             this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
             this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
             this.ServiceMaintenanceCost.ReadOnly = true;
@@ -375,11 +376,22 @@
             this.deleteServiceMaintenanceButton.UseVisualStyleBackColor = true;
             this.deleteServiceMaintenanceButton.Click += new System.EventHandler(this.deleteServiceMaintenanceButton_Click);
             // 
+            // buyButton
+            // 
+            this.buyButton.Location = new System.Drawing.Point(444, 549);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(75, 23);
+            this.buyButton.TabIndex = 14;
+            this.buyButton.Text = "Оплатить";
+            this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 581);
+            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.deleteServiceMaintenanceButton);
             this.Controls.Add(this.serviceMaintenanceDGV);
             this.Controls.Add(this.label5);
@@ -447,5 +459,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenancePeriod;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceMaintenanceID;
+        private System.Windows.Forms.Button buyButton;
     }
 }

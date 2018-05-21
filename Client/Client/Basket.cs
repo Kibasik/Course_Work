@@ -203,5 +203,19 @@ namespace Client
             serviceMaintenanceDGV.ClearSelection();
             connection.Close();
         }
+
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            if (goodsDGV.Rows.Count == 0 && additionalServicesDGV.Rows.Count == 0 && softwareDGV.Rows.Count == 0 && serviceMaintenanceDGV.Rows.Count == 0)
+            {
+                MessageBox.Show("В корзине нет товаров!");
+            }
+            else
+            {
+                DeliveryAndSale deliveryAndSale = new DeliveryAndSale();
+                deliveryAndSale.basketID = basketID;
+                deliveryAndSale.ShowDialog();
+            }
+        }
     }
 }

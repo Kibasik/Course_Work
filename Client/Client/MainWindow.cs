@@ -420,12 +420,5 @@ namespace Client
             assembly.basketID = (id + 1);
             assembly.ShowDialog();
         }
-
-        private void продажаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DeliveryAndSale deliveryAndSale = new DeliveryAndSale();
-            deliveryAndSale.basketID = (id + 1);
-            deliveryAndSale.ShowDialog();
-        }
     }
 }
