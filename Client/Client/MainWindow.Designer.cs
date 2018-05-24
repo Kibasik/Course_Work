@@ -37,7 +37,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.goods = new Client.Goods();
             this.goodsCategoryCB = new System.Windows.Forms.ComboBox();
@@ -53,8 +52,6 @@
             this.сервисноеОбслуживаниеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сборкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.графикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.складToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поставкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionButton = new System.Windows.Forms.Button();
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.highPriceTB = new System.Windows.Forms.TextBox();
@@ -79,15 +76,12 @@
             this.fullPriceListReport = new FastReport.Report();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.goodsQuantityReportButton = new System.Windows.Forms.Button();
-            this.goodsQuantityReport = new FastReport.Report();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.componentsPriceListReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullPriceListReport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityReport)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsDGV
@@ -104,8 +98,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.goodsIDDataGridViewTextBoxColumn,
-            this.GoodsAmount});
+            this.goodsIDDataGridViewTextBoxColumn});
             this.goodsDGV.DataSource = this.dataTableBindingSource1;
             this.goodsDGV.Location = new System.Drawing.Point(12, 50);
             this.goodsDGV.Name = "goodsDGV";
@@ -156,13 +149,6 @@
             this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.goodsIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // GoodsAmount
-            // 
-            this.GoodsAmount.DataPropertyName = "GoodsAmount";
-            this.GoodsAmount.HeaderText = "Количество";
-            this.GoodsAmount.Name = "GoodsAmount";
-            this.GoodsAmount.ReadOnly = true;
-            // 
             // dataTableBindingSource1
             // 
             this.dataTableBindingSource1.DataMember = "DataTable";
@@ -209,9 +195,7 @@
             this.корзинаToolStripMenuItem,
             this.дополнительноToolStripMenuItem,
             this.сборкаToolStripMenuItem,
-            this.графикиToolStripMenuItem,
-            this.складToolStripMenuItem,
-            this.поставкаToolStripMenuItem});
+            this.графикиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -284,19 +268,6 @@
             this.графикиToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.графикиToolStripMenuItem.Text = "&Графики";
             this.графикиToolStripMenuItem.Click += new System.EventHandler(this.графикиToolStripMenuItem_Click);
-            // 
-            // складToolStripMenuItem
-            // 
-            this.складToolStripMenuItem.Name = "складToolStripMenuItem";
-            this.складToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.складToolStripMenuItem.Text = "&Склад";
-            this.складToolStripMenuItem.Click += new System.EventHandler(this.складToolStripMenuItem_Click);
-            // 
-            // поставкаToolStripMenuItem
-            // 
-            this.поставкаToolStripMenuItem.Name = "поставкаToolStripMenuItem";
-            this.поставкаToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.поставкаToolStripMenuItem.Text = "&Поставка";
             // 
             // descriptionButton
             // 
@@ -503,28 +474,12 @@
             this.label9.TabIndex = 31;
             this.label9.Text = "Количество комплектующих:";
             // 
-            // goodsQuantityReportButton
-            // 
-            this.goodsQuantityReportButton.Location = new System.Drawing.Point(301, 358);
-            this.goodsQuantityReportButton.Name = "goodsQuantityReportButton";
-            this.goodsQuantityReportButton.Size = new System.Drawing.Size(125, 40);
-            this.goodsQuantityReportButton.TabIndex = 32;
-            this.goodsQuantityReportButton.Text = "Количество товаров в магазине";
-            this.goodsQuantityReportButton.UseVisualStyleBackColor = true;
-            this.goodsQuantityReportButton.Click += new System.EventHandler(this.goodsQuantityReportButton_Click);
-            // 
-            // goodsQuantityReport
-            // 
-            this.goodsQuantityReport.NeedRefresh = false;
-            this.goodsQuantityReport.ReportResourceString = resources.GetString("goodsQuantityReport.ReportResourceString");
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(784, 431);
-            this.Controls.Add(this.goodsQuantityReportButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.fullPriceListButton);
@@ -565,7 +520,6 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.componentsPriceListReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullPriceListReport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,6 +558,12 @@
         private System.Windows.Forms.ToolStripMenuItem программноеОбеспечениеToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem дополнительныеУслугиToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem сервисноеОбслуживаниеToolStripMenuItem1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button goodsPriceListButton;
         private FastReport.Report componentsPriceListReport;
         private System.Windows.Forms.ToolStripMenuItem сборкаToolStripMenuItem;
@@ -612,17 +572,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem графикиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поставкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem складToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GoodsAmount;
-        private System.Windows.Forms.Button goodsQuantityReportButton;
-        private FastReport.Report goodsQuantityReport;
     }
 }
 

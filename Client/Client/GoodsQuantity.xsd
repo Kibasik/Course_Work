@@ -19,8 +19,9 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
               <Mapping SourceColumn="CategoryGoodsName" DataSetColumn="CategoryGoodsName" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="TypeCategoryName" DataSetColumn="TypeCategoryName" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -35,8 +36,15 @@
         <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:long" />
               <xs:element name="CategoryGoodsName" msprop:Generator_ColumnVarNameInTable="columnCategoryGoodsName" msprop:Generator_ColumnPropNameInRow="CategoryGoodsName" msprop:Generator_ColumnPropNameInTable="CategoryGoodsNameColumn" msprop:Generator_UserColumnName="CategoryGoodsName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:long" />
+              <xs:element name="TypeCategoryName" msprop:Generator_ColumnVarNameInTable="columnTypeCategoryName" msprop:Generator_ColumnPropNameInRow="TypeCategoryName" msprop:Generator_ColumnPropNameInTable="TypeCategoryNameColumn" msprop:Generator_UserColumnName="TypeCategoryName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="32767" />

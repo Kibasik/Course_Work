@@ -80,7 +80,7 @@ namespace Client
             connection.Open();
             Description description = new Description();
             description.goodsName = goodsDGV.CurrentRow.Cells[3].Value.ToString();
-            description.goodsManufacturer = goodsDGV.CurrentRow.Cells[2].Value.ToString();
+            description.manufacturer = goodsDGV.CurrentRow.Cells[2].Value.ToString();
             command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName, goodscatalog.GoodsImage FROM goodscatalog INNER JOIN " +
                                        "goodsdescription ON goodscatalog.GoodsDescriptionID = goodsdescription.GoodsDescriptionID WHERE " +
                                        "goodscatalog.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
@@ -90,17 +90,6 @@ namespace Client
                 {
                     description.image = (byte[])(MyReader[2]);
                     description.description = MyReader.GetString(0);
-                }
-                MyReader.Close();
-            }
-            command = new MySqlCommand("SELECT warranty.WarrantyPeriod, goodscatalog.GoodsID FROM goodscatalog " +
-                                       "INNER JOIN warranty ON goodscatalog.WarrantyID = warranty.WarrantyID WHERE " +
-                                       "goodscatalog.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
-            {
-                while (MyReader.Read())
-                {
-                    description.warrantyPeriod = MyReader.GetInt32(0);
                 }
                 MyReader.Close();
             }
@@ -448,18 +437,6 @@ namespace Client
         private void fullPriceListButton_Click(object sender, EventArgs e)
         {
             fullPriceListReport.Show();
-        }
-
-        private void складToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Warehouse warehouse = new Warehouse();
-            warehouse.ShowDialog();
-            MainWindow_Load_1(null, null);
-        }
-
-        private void goodsQuantityReportButton_Click(object sender, EventArgs e)
-        {
-            goodsQuantityReport.Show();
         }
     }
 }

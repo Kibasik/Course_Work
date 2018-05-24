@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:51:47" ReportInfo.Modified="05/22/2018 17:12:33" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:51:47" ReportInfo.Modified="05/19/2018 20:23:59" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
     <TableDataSource Name="DataTable" ReferenceName="goods.DataTable" DataType="System.Int32" Enabled="true">
       <Column Name="TypeCategoryName" DataType="System.String"/>
