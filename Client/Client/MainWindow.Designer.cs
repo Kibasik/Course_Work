@@ -81,6 +81,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.goodsQuantityReportButton = new System.Windows.Forms.Button();
             this.goodsQuantityReport = new FastReport.Report();
+            this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
@@ -96,7 +97,7 @@
             this.goodsDGV.AllowUserToDeleteRows = false;
             this.goodsDGV.AllowUserToResizeRows = false;
             this.goodsDGV.AutoGenerateColumns = false;
-            this.goodsDGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.goodsDGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.goodsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.goodsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -211,7 +212,8 @@
             this.сборкаToolStripMenuItem,
             this.графикиToolStripMenuItem,
             this.складToolStripMenuItem,
-            this.поставкаToolStripMenuItem});
+            this.поставкаToolStripMenuItem,
+            this.сотрудникиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -297,6 +299,7 @@
             this.поставкаToolStripMenuItem.Name = "поставкаToolStripMenuItem";
             this.поставкаToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.поставкаToolStripMenuItem.Text = "&Поставка";
+            this.поставкаToolStripMenuItem.Click += new System.EventHandler(this.поставкаToolStripMenuItem_Click);
             // 
             // descriptionButton
             // 
@@ -518,6 +521,13 @@
             this.goodsQuantityReport.NeedRefresh = false;
             this.goodsQuantityReport.ReportResourceString = resources.GetString("goodsQuantityReport.ReportResourceString");
             // 
+            // сотрудникиToolStripMenuItem
+            // 
+            this.сотрудникиToolStripMenuItem.Name = "сотрудникиToolStripMenuItem";
+            this.сотрудникиToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.сотрудникиToolStripMenuItem.Text = "&Сотрудники";
+            this.сотрудникиToolStripMenuItem.Click += new System.EventHandler(this.сотрудникиToolStripMenuItem_Click_1);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,6 +633,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsAmount;
         private System.Windows.Forms.Button goodsQuantityReportButton;
         private FastReport.Report goodsQuantityReport;
+        private System.Windows.Forms.ToolStripMenuItem сотрудникиToolStripMenuItem;
     }
 }
 

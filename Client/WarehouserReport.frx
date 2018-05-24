@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 17:17:22" ReportInfo.Modified="05/22/2018 19:10:42" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 17:17:22" ReportInfo.Modified="05/22/2018 19:19:23" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
-    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wmyC+c8RURGhgJYZe20cgi">
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wjHcCUXSfcpXSE3gRkyynI">
       <TableDataSource Name="Table" Alias="Warehouse" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  categorygoods.CategoryGoodsName,&#13;&#10;  goodsmanufacturer.GoodsManufacturerName,&#13;&#10;  goodscatalog.GoodsName,&#13;&#10;  warehouse.WarehouseGoodsAmount,&#13;&#10;  goodscatalog.GoodsID&#13;&#10;FROM warehouse&#13;&#10;  INNER JOIN goodscatalog&#13;&#10;    ON warehouse.GoodsID = goodscatalog.GoodsID&#13;&#10;  INNER JOIN goodsmanufacturer&#13;&#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&#13;&#10;  INNER JOIN categorygoods&#13;&#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID">
         <Column Name="CategoryGoodsName" DataType="System.String"/>
         <Column Name="GoodsManufacturerName" DataType="System.String"/>

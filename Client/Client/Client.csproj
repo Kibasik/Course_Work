@@ -178,6 +178,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WarehouseTable.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers.Designer.cs">
+      <DependentUpon>Workers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkersList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkersList.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Warehouse.resx">
       <DependentUpon>Warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers.resx">
+      <DependentUpon>Workers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AdditionalServicesList.xsc">
       <DependentUpon>AdditionalServicesList.xsd</DependentUpon>
@@ -318,6 +332,17 @@
     </None>
     <None Include="WarehouseTable.xss">
       <DependentUpon>WarehouseTable.xsd</DependentUpon>
+    </None>
+    <None Include="WorkersList.xsc">
+      <DependentUpon>WorkersList.xsd</DependentUpon>
+    </None>
+    <None Include="WorkersList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkersList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WorkersList.xss">
+      <DependentUpon>WorkersList.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -72,7 +72,7 @@
             this.additionalServicesDGV.AllowUserToDeleteRows = false;
             this.additionalServicesDGV.AllowUserToResizeRows = false;
             this.additionalServicesDGV.AutoGenerateColumns = false;
-            this.additionalServicesDGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.additionalServicesDGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.additionalServicesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.additionalServicesDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.additionalServiceIDDataGridViewTextBoxColumn,

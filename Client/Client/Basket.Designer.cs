@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
             this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +77,7 @@
             this.goodsDGV.AllowUserToAddRows = false;
             this.goodsDGV.AllowUserToResizeColumns = false;
             this.goodsDGV.AllowUserToResizeRows = false;
-            this.goodsDGV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.goodsDGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.goodsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.goodsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TypeCategoryName,
@@ -116,9 +116,9 @@
             // 
             // GoodsCost
             // 
-            dataGridViewCellStyle45.Format = "N2";
-            dataGridViewCellStyle45.NullValue = null;
-            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle1;
             this.GoodsCost.HeaderText = "Цена, руб.";
             this.GoodsCost.Name = "GoodsCost";
             // 
@@ -186,9 +186,9 @@
             // 
             // SoftwareCost
             // 
-            dataGridViewCellStyle46.Format = "N2";
-            dataGridViewCellStyle46.NullValue = null;
-            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle2;
             this.SoftwareCost.HeaderText = "Цена, руб.";
             this.SoftwareCost.Name = "SoftwareCost";
             this.SoftwareCost.ReadOnly = true;
@@ -279,9 +279,9 @@
             // 
             // AdditionalServiceCost
             // 
-            dataGridViewCellStyle47.Format = "N2";
-            dataGridViewCellStyle47.NullValue = null;
-            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle3;
             this.AdditionalServiceCost.HeaderText = "Цена, руб.";
             this.AdditionalServiceCost.Name = "AdditionalServiceCost";
             this.AdditionalServiceCost.ReadOnly = true;
@@ -339,9 +339,9 @@
             // 
             // ServiceMaintenanceCost
             // 
-            dataGridViewCellStyle48.Format = "N2";
-            dataGridViewCellStyle48.NullValue = null;
-            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle4;
             this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
             this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
             this.ServiceMaintenanceCost.ReadOnly = true;
