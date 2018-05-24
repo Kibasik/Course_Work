@@ -127,8 +127,8 @@ namespace Client
             try
             {
                 command = new MySqlCommand("SELECT componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity FROM " +
-                                            "componentslist WHERE componentslist.BasketID = '" + (id + 1) + "' " +
-                                            "AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
+                                           "componentslist WHERE componentslist.BasketID = '" + (id + 1) + "' " +
+                                           "AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
                 using (MySqlDataReader MyReader = command.ExecuteReader())
                 {
                     while (MyReader.Read())
@@ -154,38 +154,48 @@ namespace Client
                 {
                 }
             }
-            if (goodsQuantityTB.Text == "" || Convert.ToInt32(goodsQuantityTB.Text) <= 1)
+            connection.Close();
+            if ((goodsQuantity + Convert.ToInt32(goodsQuantityTB.Text)) > Convert.ToInt32(goodsDGV.CurrentRow.Cells[6].Value.ToString()))
             {
-                if (goodsQuantity == 0)
-                {
-                    command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity) VALUES " +
-                                               "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "', '" + 1 + "')", connection);
-                    command.ExecuteNonQuery();
-                }
-                else
-                {
-                    command = new MySqlCommand("UPDATE componentslist SET componentslist.GoodsQuantity = '" + (goodsQuantity + 1) + "' " +
-                                               "WHERE componentslist.BasketID = '" + (id + 1) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
-                    command.ExecuteNonQuery();
-                }
+                MessageBox.Show("Недостаточно товара для добавления!");
+                goodsQuantityTB.Clear();
             }
             else
             {
-                if (goodsQuantity == 0)
+                connection.Open();
+                if (goodsQuantityTB.Text == "" || Convert.ToInt32(goodsQuantityTB.Text) <= 1)
                 {
-                    command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity) VALUES " +
-                                               "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "', '" + Convert.ToInt32(goodsQuantityTB.Text) + "')", connection);
-                    command.ExecuteNonQuery();
+                    if (goodsQuantity == 0)
+                    {
+                        command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity) VALUES " +
+                                                   "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "', '" + 1 + "')", connection);
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        command = new MySqlCommand("UPDATE componentslist SET componentslist.GoodsQuantity = '" + (goodsQuantity + 1) + "' " +
+                                                   "WHERE componentslist.BasketID = '" + (id + 1) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
+                        command.ExecuteNonQuery();
+                    }
                 }
                 else
                 {
-                    command = new MySqlCommand("UPDATE componentslist SET componentslist.GoodsQuantity = '" + (goodsQuantity + Convert.ToInt32(goodsQuantityTB.Text)) + "' " +
-                                               "WHERE componentslist.BasketID = '" + (id + 1) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
-                    command.ExecuteNonQuery();
+                    if (goodsQuantity == 0)
+                    {
+                        command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity) VALUES " +
+                                                   "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "', '" + Convert.ToInt32(goodsQuantityTB.Text) + "')", connection);
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        command = new MySqlCommand("UPDATE componentslist SET componentslist.GoodsQuantity = '" + (goodsQuantity + Convert.ToInt32(goodsQuantityTB.Text)) + "' " +
+                                                   "WHERE componentslist.BasketID = '" + (id + 1) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
+                        command.ExecuteNonQuery();
+                    }
                 }
-            }
-            goodsQuantityTB.Clear();
-            connection.Close();
+                goodsQuantityTB.Clear();
+                connection.Close();
+            }  
         }
 
         private void goodsCategoryCB_SelectedIndexChanged(object sender, EventArgs e)
