@@ -19,6 +19,7 @@ namespace Client
         public int assemblyID { get; set; }
         public double totalCost = 0;
         public int count = 1;
+        public int assemblyQuantity = 0;
 
         public Assembly()
         {
@@ -87,9 +88,9 @@ namespace Client
         private void basketButton_Click(object sender, EventArgs e)
         {
             connection.Open();
-            int goodsQuantity = 0;
             for (int i = 0; i < assemblyDGV.Rows.Count; i++)
             {
+                int goodsQuantity = 0;
                 try
                 {
                     command = new MySqlCommand("SELECT componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity FROM " +
@@ -134,6 +135,24 @@ namespace Client
                                                "componentslist.GoodsID = '" + assemblyDGV.Rows[i].Cells[7].Value.ToString() + "'", connection);
                     command.ExecuteNonQuery();
                 }
+            }
+            connection.Close();
+            CheckBasketQuantity();
+        }
+
+        private void CheckBasketQuantity()
+        {
+            connection.Open();
+            assemblyQuantity = 0;
+            command = new MySqlCommand("SELECT componentslist.BasketID, COUNT(componentslist.GoodsID) AS Quantity " +
+                                       "FROM componentslist WHERE componentslist.BasketID = '" +  basketID + "' GROUP BY componentslist.BasketID", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    assemblyQuantity += MyReader.GetInt32(1);
+                }
+                MyReader.Close();
             }
             connection.Close();
         }

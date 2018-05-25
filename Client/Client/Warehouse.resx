@@ -120,9 +120,6 @@
   <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 17</value>
   </metadata>
-  <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 17</value>
-  </metadata>
   <metadata name="warehouseTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -137,9 +134,29 @@
   </metadata>
   <data name="warehouseReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 17:17:22" ReportInfo.Modified="05/22/2018 18:16:54" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 17:17:22" ReportInfo.Modified="05/25/2018 23:43:22" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+  &lt;ScriptText&gt;Imports System
+Imports System.Collections
+Imports System.Collections.Generic
+Imports System.ComponentModel
+Imports System.Windows.Forms
+Imports System.Drawing
+Imports Microsoft.VisualBasic
+Imports FastReport
+Imports FastReport.Data
+Imports FastReport.Dialog
+Imports FastReport.Table
+Imports FastReport.Barcode
+Imports FastReport.Utils
+
+Namespace FastReport
+  Public Class ReportScript
+
+  End Class
+End Namespace
+&lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3xDUdJCo44t5ts6nvbxqwen"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wmEku74BCyHjBwdri+ZkQk"&gt;
       &lt;TableDataSource Name="Table" Alias="Warehouse" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  categorygoods.CategoryGoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  warehouse.WarehouseGoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsID&amp;#13;&amp;#10;FROM warehouse&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON warehouse.GoodsID = goodscatalog.GoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&amp;#13;&amp;#10;  INNER JOIN categorygoods&amp;#13;&amp;#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID"&gt;
         &lt;Column Name="CategoryGoodsName" DataType="System.String"/&gt;
         &lt;Column Name="GoodsManufacturerName" DataType="System.String"/&gt;
@@ -154,26 +171,39 @@
     &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
       &lt;TextObject Name="Text1" Left="226.8" Top="9.45" Width="274.05" Height="28.35" Text="Товары на складе" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/&gt;
     &lt;/ReportTitleBand&gt;
-    &lt;PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="47.25"&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="50.45" Width="718.2" Height="47.25"&gt;
       &lt;TextObject Name="Text4" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray" VertAlign="Center" Font="Arial, 16pt, style=Bold"/&gt;
       &lt;TextObject Name="Text2" Top="9.45" Width="614.25" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 16pt, style=Bold"/&gt;
       &lt;TextObject Name="Text3" Left="614.25" Top="9.45" Width="103.95" Height="28.35" Text="КОЛ-ВО" VertAlign="Center" Font="Arial, 16pt, style=Bold"/&gt;
     &lt;/PageHeaderBand&gt;
-    &lt;GroupHeaderBand Name="GroupHeader1" Top="99.07" Width="718.2" Height="37.8" Condition="[Warehouse.CategoryGoodsName]"&gt;
+    &lt;GroupHeaderBand Name="GroupHeader1" Top="100.9" Width="718.2" Height="37.8" Condition="[Warehouse.CategoryGoodsName]"&gt;
       &lt;TextObject Name="Text5" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[Warehouse.CategoryGoodsName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/&gt;
-      &lt;DataBand Name="Data1" Top="139.16" Width="718.2" Height="37.8" DataSource="Table"&gt;
+      &lt;DataBand Name="Data1" Top="141.9" Width="718.2" Height="37.8" DataSource="Table"&gt;
         &lt;TextObject Name="Text6" Top="9.45" Width="189" Height="18.9" Text="[Warehouse.GoodsManufacturerName]" VertAlign="Center"/&gt;
         &lt;TextObject Name="Text7" Left="189" Top="9.45" Width="425.25" Height="18.9" Text="[Warehouse.GoodsName]" VertAlign="Center"/&gt;
         &lt;TextObject Name="Text8" Left="614.25" Top="9.45" Width="103.95" Height="18.9" Text="[Warehouse.WarehouseGoodsAmount]" VertAlign="Center"/&gt;
       &lt;/DataBand&gt;
-      &lt;GroupFooterBand Name="GroupFooter1" Top="179.24" Width="718.2" Height="9.45"/&gt;
+      &lt;GroupFooterBand Name="GroupFooter1" Top="182.9" Width="718.2" Height="9.45"/&gt;
     &lt;/GroupHeaderBand&gt;
-    &lt;PageFooterBand Name="PageFooter1" Top="190.98" Width="718.2" Height="37.8"&gt;
+    &lt;ColumnFooterBand Name="ColumnFooter1" Top="195.55" Width="718.2" Height="37.8"&gt;
       &lt;TextObject Name="Text9" Top="9.45" Width="614.25" Height="18.9" Text="Всего товаров на складе:" HorzAlign="Right" VertAlign="Center" Font="Arial, 12pt, style=Bold"/&gt;
       &lt;TextObject Name="Text10" Left="614.25" Top="9.45" Width="103.95" Height="18.9" Text="[TotalAmount]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/&gt;
-    &lt;/PageFooterBand&gt;
+    &lt;/ColumnFooterBand&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="236.55" Width="718.2" Height="9.45"/&gt;
   &lt;/ReportPage&gt;
 &lt;/Report&gt;
 </value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>666, 17</value>
+  </metadata>
+  <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="warehouseGoods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>781, 17</value>
+  </metadata>
+  <metadata name="dataTableTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>208, 56</value>
+  </metadata>
 </root>

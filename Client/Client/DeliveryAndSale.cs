@@ -18,7 +18,9 @@ namespace Client
         public double deliveryCost = 0;
         public string deliveryMethod { get; set; }
         public int basketID { get; set; }
-        public string clientName;
+        public string clientName { get; set; }
+        public int basketCount { get; set; }
+        public int basketQuantity { get; set; }
 
         public DeliveryAndSale()
         {
@@ -28,6 +30,9 @@ namespace Client
         private void Delivery_Load(object sender, EventArgs e)
         {
             connection.Open();
+            MainWindow mainWindow = new MainWindow();
+            basketCount = mainWindow.basketCount;
+            basketQuantity = mainWindow.basketQuantity;
             deliveryCityTB.Enabled = false;
             deliveryStreetTB.Enabled = false;
             deliveryHouseTB.Enabled = false;
@@ -304,6 +309,8 @@ namespace Client
                 saleReport.SetParameterValue("saleDate", DateTime.Now.ToString("yyyy-MM-dd"));
                 saleReport.Show();
                 connection.Close();
+                basketCount++;
+                basketQuantity = 0;
                 Close();
             }
         }

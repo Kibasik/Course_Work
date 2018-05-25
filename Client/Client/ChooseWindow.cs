@@ -26,8 +26,8 @@ namespace Client
             }
             if (storekeeperRB.Checked == true)
             {
-                Storekeeper storekeeper = new Storekeeper();
-                storekeeper.ShowDialog();
+                Warehouse warehouse = new Warehouse();
+                warehouse.ShowDialog();
             }
         }
     }

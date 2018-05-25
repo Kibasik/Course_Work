@@ -53,8 +53,6 @@
             this.сервисноеОбслуживаниеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сборкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.графикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.складToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поставкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.полныйПрайслистToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -223,8 +221,6 @@
             this.дополнительноToolStripMenuItem,
             this.сборкаToolStripMenuItem,
             this.графикиToolStripMenuItem,
-            this.складToolStripMenuItem,
-            this.поставкаToolStripMenuItem,
             this.сотрудникиToolStripMenuItem,
             this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -299,20 +295,6 @@
             this.графикиToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.графикиToolStripMenuItem.Text = "&Графики";
             this.графикиToolStripMenuItem.Click += new System.EventHandler(this.графикиToolStripMenuItem_Click);
-            // 
-            // складToolStripMenuItem
-            // 
-            this.складToolStripMenuItem.Name = "складToolStripMenuItem";
-            this.складToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.складToolStripMenuItem.Text = "&Склад";
-            this.складToolStripMenuItem.Click += new System.EventHandler(this.складToolStripMenuItem_Click);
-            // 
-            // поставкаToolStripMenuItem
-            // 
-            this.поставкаToolStripMenuItem.Name = "поставкаToolStripMenuItem";
-            this.поставкаToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.поставкаToolStripMenuItem.Text = "&Поставка";
-            this.поставкаToolStripMenuItem.Click += new System.EventHandler(this.поставкаToolStripMenuItem_Click);
             // 
             // сотрудникиToolStripMenuItem
             // 
@@ -693,8 +675,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem графикиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поставкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem складToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

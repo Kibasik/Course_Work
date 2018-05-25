@@ -22,9 +22,6 @@ namespace Client
         public int basketCount = 1;
         public int basketQuantity = 0;
         public int componentsQuantity = 0;
-        public int softwareQuantity;
-        public int additionalServicesQuantity;
-        public int serviceMaintenanceQuantity;
         public List<string> goodsCategory = new List<string>();
         public List<string> goodsAllType = new List<string>();
 
@@ -134,7 +131,11 @@ namespace Client
         {
             Basket basket = new Basket();
             basket.basketID = (id + basketCount);
+            basket.basketCount = basketCount;
+            basket.basketQuantity = basketQuantity;
             basket.ShowDialog();
+            basketCount = basket.basketCount;
+            basketQuantityLabel.Text = basket.basketQuantity.ToString();
         }
 
         private void basketButton_Click(object sender, EventArgs e)
@@ -433,7 +434,10 @@ namespace Client
         {
             Assembly assembly = new Assembly();
             assembly.basketID = (id + basketCount);
+            assembly.assemblyQuantity = componentsQuantity;
             assembly.ShowDialog();
+            basketQuantity = assembly.assemblyQuantity;
+            basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
         private void графикиToolStripMenuItem_Click(object sender, EventArgs e)

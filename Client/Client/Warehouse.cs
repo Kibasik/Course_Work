@@ -26,6 +26,10 @@ namespace Client
 
         private void Warehouse_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouseGoods.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter1.Fill(this.warehouseGoods.DataTable);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouseGoods.DataTable". При необходимости она может быть перемещена или удалена.
+            this.dataTableTableAdapter1.Fill(this.warehouseGoods.DataTable);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouseTable.DataTable". При необходимости она может быть перемещена или удалена.
             this.dataTableTableAdapter.Fill(this.warehouseTable.DataTable);
             connection.Open();
@@ -50,11 +54,6 @@ namespace Client
                 MyReader.Close();
             }
             connection.Close();
-        }
-
-        private void warehouserReportButton_Click(object sender, EventArgs e)
-        {
-            warehouseReport.Show();
         }
 
         private void goodsTypeCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -184,7 +183,12 @@ namespace Client
             }
         }
 
-        private void addGoodsButton_Click(object sender, EventArgs e)
+        private void товарыНаСкладеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            warehouseReport.Show();
+        }
+
+        private void addGoodsButton_Click_1(object sender, EventArgs e)
         {
             connection.Open();
             int warehouseQuantity = 0;
@@ -239,6 +243,7 @@ namespace Client
                 goodsQuantityTB.Clear();
             }
             connection.Close();
+            Warehouse_Load(null, null);
         }
     }
 }

@@ -30,19 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Warehouse));
-            this.label1 = new System.Windows.Forms.Label();
-            this.warehouseDGV = new System.Windows.Forms.DataGridView();
-            this.typeCategoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryGoodsNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsManufacturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warehouseGoodsAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warehouseTable = new Client.WarehouseTable();
             this.dataTableTableAdapter = new Client.WarehouseTableTableAdapters.DataTableTableAdapter();
-            this.warehouserReportButton = new System.Windows.Forms.Button();
             this.warehouseReport = new FastReport.Report();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.товарыНаСкладеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поставкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopGoodsTP = new System.Windows.Forms.TabPage();
+            this.warehouseGoodsTP = new System.Windows.Forms.TabPage();
+            this.warehouseTC = new System.Windows.Forms.TabControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addGoodsButton = new System.Windows.Forms.Button();
+            this.goodsQuantityTB = new System.Windows.Forms.TextBox();
+            this.showAllGoodsButton = new System.Windows.Forms.Button();
             this.goodsTypeCB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.goodsNameTB = new System.Windows.Forms.TextBox();
@@ -52,23 +54,246 @@
             this.manufacturerButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.goodsCategoryCB = new System.Windows.Forms.ComboBox();
-            this.showAllGoodsButton = new System.Windows.Forms.Button();
-            this.goodsQuantityTB = new System.Windows.Forms.TextBox();
-            this.addGoodsButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.warehouseDGV)).BeginInit();
+            this.warehouseDGV = new System.Windows.Forms.DataGridView();
+            this.typeCategoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryGoodsNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsManufacturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.warehouseGoodsAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.goodsDGV = new System.Windows.Forms.DataGridView();
+            this.warehouseGoods = new Client.WarehouseGoods();
+            this.dataTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTableTableAdapter1 = new Client.WarehouseGoodsTableAdapters.DataTableTableAdapter();
+            this.typeCategoryNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryGoodsNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseReport)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            this.shopGoodsTP.SuspendLayout();
+            this.warehouseGoodsTP.SuspendLayout();
+            this.warehouseTC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseGoods)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dataTableBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Товары на складе:";
+            this.dataTableBindingSource.DataMember = "DataTable";
+            this.dataTableBindingSource.DataSource = this.warehouseTable;
+            // 
+            // warehouseTable
+            // 
+            this.warehouseTable.DataSetName = "WarehouseTable";
+            this.warehouseTable.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTableTableAdapter
+            // 
+            this.dataTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // warehouseReport
+            // 
+            this.warehouseReport.NeedRefresh = false;
+            this.warehouseReport.ReportResourceString = resources.GetString("warehouseReport.ReportResourceString");
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчетыToolStripMenuItem,
+            this.поставкиToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(804, 24);
+            this.menuStrip1.TabIndex = 45;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.товарыНаСкладеToolStripMenuItem});
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "&Отчеты";
+            // 
+            // товарыНаСкладеToolStripMenuItem
+            // 
+            this.товарыНаСкладеToolStripMenuItem.Name = "товарыНаСкладеToolStripMenuItem";
+            this.товарыНаСкладеToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.товарыНаСкладеToolStripMenuItem.Text = "&Товары на складе";
+            this.товарыНаСкладеToolStripMenuItem.Click += new System.EventHandler(this.товарыНаСкладеToolStripMenuItem_Click);
+            // 
+            // поставкиToolStripMenuItem
+            // 
+            this.поставкиToolStripMenuItem.Name = "поставкиToolStripMenuItem";
+            this.поставкиToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.поставкиToolStripMenuItem.Text = "&Поставки";
+            // 
+            // shopGoodsTP
+            // 
+            this.shopGoodsTP.BackColor = System.Drawing.SystemColors.Control;
+            this.shopGoodsTP.Controls.Add(this.goodsDGV);
+            this.shopGoodsTP.Location = new System.Drawing.Point(4, 22);
+            this.shopGoodsTP.Name = "shopGoodsTP";
+            this.shopGoodsTP.Padding = new System.Windows.Forms.Padding(3);
+            this.shopGoodsTP.Size = new System.Drawing.Size(774, 295);
+            this.shopGoodsTP.TabIndex = 1;
+            this.shopGoodsTP.Text = "Товары в магазине";
+            // 
+            // warehouseGoodsTP
+            // 
+            this.warehouseGoodsTP.BackColor = System.Drawing.SystemColors.Control;
+            this.warehouseGoodsTP.Controls.Add(this.label3);
+            this.warehouseGoodsTP.Controls.Add(this.addGoodsButton);
+            this.warehouseGoodsTP.Controls.Add(this.goodsQuantityTB);
+            this.warehouseGoodsTP.Controls.Add(this.showAllGoodsButton);
+            this.warehouseGoodsTP.Controls.Add(this.goodsTypeCB);
+            this.warehouseGoodsTP.Controls.Add(this.label2);
+            this.warehouseGoodsTP.Controls.Add(this.goodsNameTB);
+            this.warehouseGoodsTP.Controls.Add(this.label7);
+            this.warehouseGoodsTP.Controls.Add(this.manufacturerTB);
+            this.warehouseGoodsTP.Controls.Add(this.label6);
+            this.warehouseGoodsTP.Controls.Add(this.manufacturerButton);
+            this.warehouseGoodsTP.Controls.Add(this.label8);
+            this.warehouseGoodsTP.Controls.Add(this.goodsCategoryCB);
+            this.warehouseGoodsTP.Controls.Add(this.warehouseDGV);
+            this.warehouseGoodsTP.Controls.Add(this.label1);
+            this.warehouseGoodsTP.Location = new System.Drawing.Point(4, 22);
+            this.warehouseGoodsTP.Name = "warehouseGoodsTP";
+            this.warehouseGoodsTP.Padding = new System.Windows.Forms.Padding(3);
+            this.warehouseGoodsTP.Size = new System.Drawing.Size(774, 295);
+            this.warehouseGoodsTP.TabIndex = 0;
+            this.warehouseGoodsTP.Text = "Товары на складе";
+            // 
+            // warehouseTC
+            // 
+            this.warehouseTC.Controls.Add(this.warehouseGoodsTP);
+            this.warehouseTC.Controls.Add(this.shopGoodsTP);
+            this.warehouseTC.Location = new System.Drawing.Point(12, 27);
+            this.warehouseTC.Name = "warehouseTC";
+            this.warehouseTC.SelectedIndex = 0;
+            this.warehouseTC.Size = new System.Drawing.Size(782, 321);
+            this.warehouseTC.TabIndex = 47;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 13);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Количество товаров:";
+            // 
+            // addGoodsButton
+            // 
+            this.addGoodsButton.Location = new System.Drawing.Point(127, 236);
+            this.addGoodsButton.Name = "addGoodsButton";
+            this.addGoodsButton.Size = new System.Drawing.Size(80, 40);
+            this.addGoodsButton.TabIndex = 60;
+            this.addGoodsButton.Text = "Добавить в магазин";
+            this.addGoodsButton.UseVisualStyleBackColor = true;
+            this.addGoodsButton.Click += new System.EventHandler(this.addGoodsButton_Click_1);
+            // 
+            // goodsQuantityTB
+            // 
+            this.goodsQuantityTB.Location = new System.Drawing.Point(6, 256);
+            this.goodsQuantityTB.Name = "goodsQuantityTB";
+            this.goodsQuantityTB.Size = new System.Drawing.Size(100, 20);
+            this.goodsQuantityTB.TabIndex = 59;
+            // 
+            // showAllGoodsButton
+            // 
+            this.showAllGoodsButton.Location = new System.Drawing.Point(465, 236);
+            this.showAllGoodsButton.Name = "showAllGoodsButton";
+            this.showAllGoodsButton.Size = new System.Drawing.Size(90, 40);
+            this.showAllGoodsButton.TabIndex = 58;
+            this.showAllGoodsButton.Text = "Показать все товары";
+            this.showAllGoodsButton.UseVisualStyleBackColor = true;
+            // 
+            // goodsTypeCB
+            // 
+            this.goodsTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.goodsTypeCB.FormattingEnabled = true;
+            this.goodsTypeCB.Location = new System.Drawing.Point(578, 36);
+            this.goodsTypeCB.Name = "goodsTypeCB";
+            this.goodsTypeCB.Size = new System.Drawing.Size(157, 21);
+            this.goodsTypeCB.TabIndex = 57;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(575, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 13);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Тип комплектующего:";
+            // 
+            // goodsNameTB
+            // 
+            this.goodsNameTB.Location = new System.Drawing.Point(581, 258);
+            this.goodsNameTB.Name = "goodsNameTB";
+            this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
+            this.goodsNameTB.TabIndex = 55;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(578, 238);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 13);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Наименование товара:";
+            // 
+            // manufacturerTB
+            // 
+            this.manufacturerTB.Location = new System.Drawing.Point(578, 145);
+            this.manufacturerTB.Name = "manufacturerTB";
+            this.manufacturerTB.Size = new System.Drawing.Size(100, 20);
+            this.manufacturerTB.TabIndex = 53;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(575, 129);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 13);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "Фирма производитель:";
+            // 
+            // manufacturerButton
+            // 
+            this.manufacturerButton.Location = new System.Drawing.Point(578, 171);
+            this.manufacturerButton.Name = "manufacturerButton";
+            this.manufacturerButton.Size = new System.Drawing.Size(100, 40);
+            this.manufacturerButton.TabIndex = 51;
+            this.manufacturerButton.Text = "Отфильтровать";
+            this.manufacturerButton.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(575, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 13);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Категория комплектующего:";
+            // 
+            // goodsCategoryCB
+            // 
+            this.goodsCategoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.goodsCategoryCB.FormattingEnabled = true;
+            this.goodsCategoryCB.Location = new System.Drawing.Point(578, 87);
+            this.goodsCategoryCB.Name = "goodsCategoryCB";
+            this.goodsCategoryCB.Size = new System.Drawing.Size(188, 21);
+            this.goodsCategoryCB.TabIndex = 49;
             // 
             // warehouseDGV
             // 
@@ -86,11 +311,11 @@
             this.warehouseGoodsAmountDataGridViewTextBoxColumn,
             this.goodsIDDataGridViewTextBoxColumn});
             this.warehouseDGV.DataSource = this.dataTableBindingSource;
-            this.warehouseDGV.Location = new System.Drawing.Point(15, 25);
+            this.warehouseDGV.Location = new System.Drawing.Point(6, 20);
             this.warehouseDGV.Name = "warehouseDGV";
             this.warehouseDGV.ReadOnly = true;
             this.warehouseDGV.Size = new System.Drawing.Size(549, 212);
-            this.warehouseDGV.TabIndex = 1;
+            this.warehouseDGV.TabIndex = 48;
             // 
             // typeCategoryNameDataGridViewTextBoxColumn
             // 
@@ -135,195 +360,152 @@
             this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.goodsIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // dataTableBindingSource
+            // label1
             // 
-            this.dataTableBindingSource.DataMember = "DataTable";
-            this.dataTableBindingSource.DataSource = this.warehouseTable;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Товары на складе:";
             // 
-            // warehouseTable
+            // goodsDGV
             // 
-            this.warehouseTable.DataSetName = "WarehouseTable";
-            this.warehouseTable.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.goodsDGV.AllowUserToAddRows = false;
+            this.goodsDGV.AllowUserToDeleteRows = false;
+            this.goodsDGV.AllowUserToResizeRows = false;
+            this.goodsDGV.AutoGenerateColumns = false;
+            this.goodsDGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.goodsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.goodsDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.typeCategoryNameDataGridViewTextBoxColumn1,
+            this.categoryGoodsNameDataGridViewTextBoxColumn1,
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1,
+            this.goodsNameDataGridViewTextBoxColumn1,
+            this.goodsCostDataGridViewTextBoxColumn,
+            this.goodsIDDataGridViewTextBoxColumn1,
+            this.goodsAmountDataGridViewTextBoxColumn});
+            this.goodsDGV.DataSource = this.dataTableBindingSource1;
+            this.goodsDGV.Location = new System.Drawing.Point(6, 6);
+            this.goodsDGV.Name = "goodsDGV";
+            this.goodsDGV.ReadOnly = true;
+            this.goodsDGV.Size = new System.Drawing.Size(762, 284);
+            this.goodsDGV.TabIndex = 3;
             // 
-            // dataTableTableAdapter
+            // warehouseGoods
             // 
-            this.dataTableTableAdapter.ClearBeforeFill = true;
+            this.warehouseGoods.DataSetName = "WarehouseGoods";
+            this.warehouseGoods.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // warehouserReportButton
+            // dataTableBindingSource1
             // 
-            this.warehouserReportButton.Location = new System.Drawing.Point(15, 243);
-            this.warehouserReportButton.Name = "warehouserReportButton";
-            this.warehouserReportButton.Size = new System.Drawing.Size(120, 40);
-            this.warehouserReportButton.TabIndex = 2;
-            this.warehouserReportButton.Text = "Отчет по товарам на складе";
-            this.warehouserReportButton.UseVisualStyleBackColor = true;
-            this.warehouserReportButton.Click += new System.EventHandler(this.warehouserReportButton_Click);
+            this.dataTableBindingSource1.DataMember = "DataTable";
+            this.dataTableBindingSource1.DataSource = this.warehouseGoods;
             // 
-            // warehouseReport
+            // dataTableTableAdapter1
             // 
-            this.warehouseReport.NeedRefresh = false;
-            this.warehouseReport.ReportResourceString = resources.GetString("warehouseReport.ReportResourceString");
+            this.dataTableTableAdapter1.ClearBeforeFill = true;
             // 
-            // goodsTypeCB
+            // typeCategoryNameDataGridViewTextBoxColumn1
             // 
-            this.goodsTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.goodsTypeCB.FormattingEnabled = true;
-            this.goodsTypeCB.Location = new System.Drawing.Point(587, 41);
-            this.goodsTypeCB.Name = "goodsTypeCB";
-            this.goodsTypeCB.Size = new System.Drawing.Size(157, 21);
-            this.goodsTypeCB.TabIndex = 41;
-            this.goodsTypeCB.SelectedIndexChanged += new System.EventHandler(this.goodsTypeCB_SelectedIndexChanged);
+            this.typeCategoryNameDataGridViewTextBoxColumn1.DataPropertyName = "TypeCategoryName";
+            this.typeCategoryNameDataGridViewTextBoxColumn1.HeaderText = "Тип";
+            this.typeCategoryNameDataGridViewTextBoxColumn1.Name = "typeCategoryNameDataGridViewTextBoxColumn1";
+            this.typeCategoryNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // label2
+            // categoryGoodsNameDataGridViewTextBoxColumn1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(584, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 13);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Тип комплектующего:";
+            this.categoryGoodsNameDataGridViewTextBoxColumn1.DataPropertyName = "CategoryGoodsName";
+            this.categoryGoodsNameDataGridViewTextBoxColumn1.HeaderText = "Категория";
+            this.categoryGoodsNameDataGridViewTextBoxColumn1.Name = "categoryGoodsNameDataGridViewTextBoxColumn1";
+            this.categoryGoodsNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // goodsNameTB
+            // goodsManufacturerNameDataGridViewTextBoxColumn1
             // 
-            this.goodsNameTB.Location = new System.Drawing.Point(590, 263);
-            this.goodsNameTB.Name = "goodsNameTB";
-            this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
-            this.goodsNameTB.TabIndex = 39;
-            this.goodsNameTB.TextChanged += new System.EventHandler(this.goodsNameTB_TextChanged);
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1.DataPropertyName = "GoodsManufacturerName";
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1.HeaderText = "Производитель";
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1.Name = "goodsManufacturerNameDataGridViewTextBoxColumn1";
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.goodsManufacturerNameDataGridViewTextBoxColumn1.Width = 150;
             // 
-            // label7
+            // goodsNameDataGridViewTextBoxColumn1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(587, 243);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 13);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Наименование товара:";
+            this.goodsNameDataGridViewTextBoxColumn1.DataPropertyName = "GoodsName";
+            this.goodsNameDataGridViewTextBoxColumn1.HeaderText = "Наименование";
+            this.goodsNameDataGridViewTextBoxColumn1.Name = "goodsNameDataGridViewTextBoxColumn1";
+            this.goodsNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.goodsNameDataGridViewTextBoxColumn1.Width = 150;
             // 
-            // manufacturerTB
+            // goodsCostDataGridViewTextBoxColumn
             // 
-            this.manufacturerTB.Location = new System.Drawing.Point(587, 150);
-            this.manufacturerTB.Name = "manufacturerTB";
-            this.manufacturerTB.Size = new System.Drawing.Size(100, 20);
-            this.manufacturerTB.TabIndex = 37;
+            this.goodsCostDataGridViewTextBoxColumn.DataPropertyName = "GoodsCost";
+            this.goodsCostDataGridViewTextBoxColumn.HeaderText = "Цена, руб.";
+            this.goodsCostDataGridViewTextBoxColumn.Name = "goodsCostDataGridViewTextBoxColumn";
+            this.goodsCostDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label6
+            // goodsIDDataGridViewTextBoxColumn1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(584, 134);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 13);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Фирма производитель:";
+            this.goodsIDDataGridViewTextBoxColumn1.DataPropertyName = "GoodsID";
+            this.goodsIDDataGridViewTextBoxColumn1.HeaderText = "GoodsID";
+            this.goodsIDDataGridViewTextBoxColumn1.Name = "goodsIDDataGridViewTextBoxColumn1";
+            this.goodsIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.goodsIDDataGridViewTextBoxColumn1.Visible = false;
             // 
-            // manufacturerButton
+            // goodsAmountDataGridViewTextBoxColumn
             // 
-            this.manufacturerButton.Location = new System.Drawing.Point(587, 176);
-            this.manufacturerButton.Name = "manufacturerButton";
-            this.manufacturerButton.Size = new System.Drawing.Size(100, 40);
-            this.manufacturerButton.TabIndex = 35;
-            this.manufacturerButton.Text = "Отфильтровать";
-            this.manufacturerButton.UseVisualStyleBackColor = true;
-            this.manufacturerButton.Click += new System.EventHandler(this.manufacturerButton_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(584, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 13);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Категория комплектующего:";
-            // 
-            // goodsCategoryCB
-            // 
-            this.goodsCategoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.goodsCategoryCB.FormattingEnabled = true;
-            this.goodsCategoryCB.Location = new System.Drawing.Point(587, 92);
-            this.goodsCategoryCB.Name = "goodsCategoryCB";
-            this.goodsCategoryCB.Size = new System.Drawing.Size(188, 21);
-            this.goodsCategoryCB.TabIndex = 27;
-            this.goodsCategoryCB.SelectedIndexChanged += new System.EventHandler(this.goodsCategoryCB_SelectedIndexChanged);
-            // 
-            // showAllGoodsButton
-            // 
-            this.showAllGoodsButton.Location = new System.Drawing.Point(158, 243);
-            this.showAllGoodsButton.Name = "showAllGoodsButton";
-            this.showAllGoodsButton.Size = new System.Drawing.Size(90, 40);
-            this.showAllGoodsButton.TabIndex = 42;
-            this.showAllGoodsButton.Text = "Показать все товары";
-            this.showAllGoodsButton.UseVisualStyleBackColor = true;
-            this.showAllGoodsButton.Click += new System.EventHandler(this.showAllGoodsButton_Click);
-            // 
-            // goodsQuantityTB
-            // 
-            this.goodsQuantityTB.Location = new System.Drawing.Point(273, 243);
-            this.goodsQuantityTB.Name = "goodsQuantityTB";
-            this.goodsQuantityTB.Size = new System.Drawing.Size(100, 20);
-            this.goodsQuantityTB.TabIndex = 43;
-            this.goodsQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsQuantityTB_KeyPress);
-            // 
-            // addGoodsButton
-            // 
-            this.addGoodsButton.Location = new System.Drawing.Point(388, 243);
-            this.addGoodsButton.Name = "addGoodsButton";
-            this.addGoodsButton.Size = new System.Drawing.Size(80, 40);
-            this.addGoodsButton.TabIndex = 44;
-            this.addGoodsButton.Text = "Добавить в магазин";
-            this.addGoodsButton.UseVisualStyleBackColor = true;
-            this.addGoodsButton.Click += new System.EventHandler(this.addGoodsButton_Click);
+            this.goodsAmountDataGridViewTextBoxColumn.DataPropertyName = "GoodsAmount";
+            this.goodsAmountDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.goodsAmountDataGridViewTextBoxColumn.Name = "goodsAmountDataGridViewTextBoxColumn";
+            this.goodsAmountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 291);
-            this.Controls.Add(this.addGoodsButton);
-            this.Controls.Add(this.goodsQuantityTB);
-            this.Controls.Add(this.showAllGoodsButton);
-            this.Controls.Add(this.goodsTypeCB);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.goodsNameTB);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.manufacturerTB);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.manufacturerButton);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.goodsCategoryCB);
-            this.Controls.Add(this.warehouserReportButton);
-            this.Controls.Add(this.warehouseDGV);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(804, 351);
+            this.Controls.Add(this.warehouseTC);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 330);
+            this.MinimumSize = new System.Drawing.Size(820, 390);
             this.Name = "Warehouse";
             this.ShowIcon = false;
             this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Warehouse_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.warehouseDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouseReport)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.shopGoodsTP.ResumeLayout(false);
+            this.warehouseGoodsTP.ResumeLayout(false);
+            this.warehouseGoodsTP.PerformLayout();
+            this.warehouseTC.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseGoods)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView warehouseDGV;
         private WarehouseTable warehouseTable;
         private System.Windows.Forms.BindingSource dataTableBindingSource;
         private WarehouseTableTableAdapters.DataTableTableAdapter dataTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeCategoryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryGoodsNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsManufacturerNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn warehouseGoodsAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button warehouserReportButton;
         private FastReport.Report warehouseReport;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поставкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem товарыНаСкладеToolStripMenuItem;
+        private System.Windows.Forms.TabPage shopGoodsTP;
+        private System.Windows.Forms.TabPage warehouseGoodsTP;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button addGoodsButton;
+        private System.Windows.Forms.TextBox goodsQuantityTB;
+        private System.Windows.Forms.Button showAllGoodsButton;
         private System.Windows.Forms.ComboBox goodsTypeCB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox goodsNameTB;
@@ -333,8 +515,25 @@
         private System.Windows.Forms.Button manufacturerButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox goodsCategoryCB;
-        private System.Windows.Forms.Button showAllGoodsButton;
-        private System.Windows.Forms.TextBox goodsQuantityTB;
-        private System.Windows.Forms.Button addGoodsButton;
+        private System.Windows.Forms.DataGridView warehouseDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeCategoryNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryGoodsNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsManufacturerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn warehouseGoodsAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl warehouseTC;
+        private System.Windows.Forms.DataGridView goodsDGV;
+        private WarehouseGoods warehouseGoods;
+        private System.Windows.Forms.BindingSource dataTableBindingSource1;
+        private WarehouseGoodsTableAdapters.DataTableTableAdapter dataTableTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeCategoryNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryGoodsNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsManufacturerNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsCostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsAmountDataGridViewTextBoxColumn;
     }
 }

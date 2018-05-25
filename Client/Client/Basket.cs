@@ -17,6 +17,8 @@ namespace Client
         MySqlCommand command = new MySqlCommand();
         public int basketID { get; set; }
         public double totalCost = 0;
+        public int basketCount { get; set; }
+        public int basketQuantity { get; set; }
 
         public Basket()
         {
@@ -215,6 +217,9 @@ namespace Client
                 DeliveryAndSale deliveryAndSale = new DeliveryAndSale();
                 deliveryAndSale.basketID = basketID;
                 deliveryAndSale.ShowDialog();
+                basketCount = deliveryAndSale.basketCount;
+                basketQuantity = deliveryAndSale.basketQuantity;
+                Close();
             }
         }
     }
