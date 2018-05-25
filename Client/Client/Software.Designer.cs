@@ -52,7 +52,6 @@
             this.softwareNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.softwarePriceListReport = new FastReport.Report();
-            this.softwarePriceListButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
@@ -143,7 +142,7 @@
             // 
             // showAllSoftwareButton
             // 
-            this.showAllSoftwareButton.Location = new System.Drawing.Point(196, 222);
+            this.showAllSoftwareButton.Location = new System.Drawing.Point(375, 222);
             this.showAllSoftwareButton.Name = "showAllSoftwareButton";
             this.showAllSoftwareButton.Size = new System.Drawing.Size(90, 40);
             this.showAllSoftwareButton.TabIndex = 3;
@@ -153,7 +152,7 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(12, 265);
+            this.basketButton.Location = new System.Drawing.Point(151, 222);
             this.basketButton.Name = "basketButton";
             this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 5;
@@ -252,16 +251,6 @@
             this.softwarePriceListReport.ReportResourceString = resources.GetString("softwarePriceListReport.ReportResourceString");
             this.softwarePriceListReport.RegisterData(this.softwareList, "softwareList");
             // 
-            // softwarePriceListButton
-            // 
-            this.softwarePriceListButton.Location = new System.Drawing.Point(385, 222);
-            this.softwarePriceListButton.Name = "softwarePriceListButton";
-            this.softwarePriceListButton.Size = new System.Drawing.Size(80, 40);
-            this.softwarePriceListButton.TabIndex = 28;
-            this.softwarePriceListButton.Text = "Показать прайс-лист";
-            this.softwarePriceListButton.UseVisualStyleBackColor = true;
-            this.softwarePriceListButton.Click += new System.EventHandler(this.softwarePriceListButton_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -284,10 +273,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 311);
+            this.ClientSize = new System.Drawing.Size(664, 271);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.softwarePriceListButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.softwareNameTB);
             this.Controls.Add(this.softwareQuantityTB);
@@ -304,7 +292,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(700, 350);
+            this.MinimumSize = new System.Drawing.Size(680, 310);
             this.Name = "Software";
             this.ShowIcon = false;
             this.Text = "Software";
@@ -338,7 +326,6 @@
         private System.Windows.Forms.TextBox softwareNameTB;
         private System.Windows.Forms.Label label2;
         private FastReport.Report softwarePriceListReport;
-        private System.Windows.Forms.Button softwarePriceListButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareTypeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareCostDataGridViewTextBoxColumn;

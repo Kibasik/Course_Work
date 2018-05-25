@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="05/19/2018 19:22:16" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="05/25/2018 19:13:25" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
-    <TableDataSource Name="DataTable" ReferenceName="serviceMaintenanceList.DataTable" DataType="System.Int32" Enabled="true">
-      <Column Name="ServiceMaintenanceID" DataType="System.Int32"/>
-      <Column Name="ServiceMaintenanceName" DataType="System.String"/>
-      <Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/>
-      <Column Name="ServiceMaintenancePeriod" DataType="System.Int32"/>
-    </TableDataSource>
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yheSZewdQsUjj2Z9AHi8/w">
+      <TableDataSource Name="Table" Alias="ServiceMaintenance" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  `servicemaintenance`.`ServiceMaintenanceID` AS `ServiceMaintenanceID`,&#13;&#10;  `servicemaintenance`.`ServiceMaintenanceName` AS `ServiceMaintenanceName`,&#13;&#10;  `servicemaintenance`.`ServiceMaintenancePeriod` AS `ServiceMaintenancePeriod`,&#13;&#10;  `servicemaintenance`.`ServiceMaintenanceCost` AS `ServiceMaintenanceCost`&#13;&#10;FROM `servicemaintenance`;">
+        <Column Name="ServiceMaintenanceID" DataType="System.Int32"/>
+        <Column Name="ServiceMaintenanceName" DataType="System.String"/>
+        <Column Name="ServiceMaintenancePeriod" DataType="System.Int32"/>
+        <Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/>
+      </TableDataSource>
+    </OdbcDataConnection>
   </Dictionary>
   <ReportPage Name="Page1">
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
@@ -18,10 +20,10 @@
       <TextObject Name="Text3" Top="9.45" Width="349.65" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
       <TextObject Name="Text7" Left="349.65" Top="9.45" Width="302.4" Height="28.35" Text="СРОК ОБСЛУЖИВАНИЯ, ДНЕЙ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
     </PageHeaderBand>
-    <DataBand Name="Data1" Top="99.07" Width="718.2" Height="37.8" DataSource="DataTable">
-      <TextObject Name="Text5" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
-      <TextObject Name="Text6" Top="9.45" Width="349.65" Height="18.9" Text="[DataTable.ServiceMaintenanceName]" VertAlign="Center"/>
-      <TextObject Name="Text8" Left="349.65" Top="9.45" Width="274.05" Height="18.9" Text="[DataTable.ServiceMaintenancePeriod]" VertAlign="Center"/>
+    <DataBand Name="Data1" Top="99.07" Width="718.2" Height="37.8" DataSource="Table">
+      <TextObject Name="Text5" Top="9.45" Width="349.65" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceName]"/>
+      <TextObject Name="Text6" Left="349.65" Top="9.45" Width="302.4" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenancePeriod]"/>
+      <TextObject Name="Text8" Left="652.05" Top="9.45" Width="66.15" Height="18.9" Text="[ServiceMaintenance.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Trimming="EllipsisCharacter"/>
     </DataBand>
     <PageFooterBand Name="PageFooter1" Top="139.16" Width="718.2" Height="9.45"/>
   </ReportPage>

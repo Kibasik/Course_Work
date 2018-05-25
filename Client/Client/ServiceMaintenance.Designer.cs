@@ -49,7 +49,6 @@
             this.serviceMaintenanceNameTB = new System.Windows.Forms.TextBox();
             this.showAllServiceMaintenanceButton = new System.Windows.Forms.Button();
             this.serviceMaintenancePriceListReport = new FastReport.Report();
-            this.serviceMaintenancePriceListButton = new System.Windows.Forms.Button();
             this.dataTableTableAdapter = new Client.ServiceMaintenanceListTableAdapters.DataTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenanceDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
@@ -222,16 +221,6 @@
             this.serviceMaintenancePriceListReport.ReportResourceString = resources.GetString("serviceMaintenancePriceListReport.ReportResourceString");
             this.serviceMaintenancePriceListReport.RegisterData(this.serviceMaintenanceList, "serviceMaintenanceList");
             // 
-            // serviceMaintenancePriceListButton
-            // 
-            this.serviceMaintenancePriceListButton.Location = new System.Drawing.Point(310, 247);
-            this.serviceMaintenancePriceListButton.Name = "serviceMaintenancePriceListButton";
-            this.serviceMaintenancePriceListButton.Size = new System.Drawing.Size(140, 40);
-            this.serviceMaintenancePriceListButton.TabIndex = 33;
-            this.serviceMaintenancePriceListButton.Text = "Прайс-лист сервисного обслуживания";
-            this.serviceMaintenancePriceListButton.UseVisualStyleBackColor = true;
-            this.serviceMaintenancePriceListButton.Click += new System.EventHandler(this.serviceMaintenancePriceListButton_Click_1);
-            // 
             // dataTableTableAdapter
             // 
             this.dataTableTableAdapter.ClearBeforeFill = true;
@@ -241,7 +230,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 301);
-            this.Controls.Add(this.serviceMaintenancePriceListButton);
             this.Controls.Add(this.showAllServiceMaintenanceButton);
             this.Controls.Add(this.serviceMaintenanceNameTB);
             this.Controls.Add(this.label2);
@@ -286,7 +274,6 @@
         private System.Windows.Forms.TextBox serviceMaintenanceNameTB;
         private System.Windows.Forms.Button showAllServiceMaintenanceButton;
         private FastReport.Report serviceMaintenancePriceListReport;
-        private System.Windows.Forms.Button serviceMaintenancePriceListButton;
         private System.Windows.Forms.BindingSource dataTableBindingSource;
         private ServiceMaintenanceListTableAdapters.DataTableTableAdapter dataTableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceMaintenanceIDDataGridViewTextBoxColumn;

@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:11:20" ReportInfo.Modified="05/19/2018 19:23:12" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:11:20" ReportInfo.Modified="05/25/2018 19:09:24" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
-    <TableDataSource Name="DataTable" ReferenceName="additionalServicesList.DataTable" DataType="System.Int32" Enabled="true">
-      <Column Name="AdditionalServiceID" DataType="System.Int32"/>
-      <Column Name="AdditionalServiceName" DataType="System.String"/>
-      <Column Name="AdditionalServiceCost" DataType="System.Decimal"/>
-    </TableDataSource>
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3y3yc+zk9nEeNW05PdGz/tB">
+      <TableDataSource Name="Table" Alias="AdditionalServices" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  `additionalservices`.`AdditionalServiceID` AS `AdditionalServiceID`,&#13;&#10;  `additionalservices`.`AdditionalServiceName` AS `AdditionalServiceName`,&#13;&#10;  `additionalservices`.`AdditionalServiceCost` AS `AdditionalServiceCost`&#13;&#10;FROM `additionalservices`;">
+        <Column Name="AdditionalServiceID" DataType="System.Int32"/>
+        <Column Name="AdditionalServiceName" DataType="System.String"/>
+        <Column Name="AdditionalServiceCost" DataType="System.Decimal"/>
+      </TableDataSource>
+    </OdbcDataConnection>
   </Dictionary>
   <ReportPage Name="Page1">
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
@@ -16,9 +18,9 @@
       <TextObject Name="Text2" Top="9.45" Width="652.05" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
       <TextObject Name="Text3" Left="652.05" Top="9.45" Width="66.15" Height="28.35" Text="ЦЕНА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
     </PageHeaderBand>
-    <DataBand Name="Data1" Top="99.07" Width="718.2" Height="37.8" DataSource="DataTable">
-      <TextObject Name="Text4" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
-      <TextObject Name="Text5" Top="9.45" Width="623.7" Height="18.9" Text="[DataTable.AdditionalServiceName]" VertAlign="Center"/>
+    <DataBand Name="Data1" Top="99.07" Width="718.2" Height="37.8" DataSource="Table">
+      <TextObject Name="Text4" Top="9.45" Width="652.05" Height="18.9" Text="[AdditionalServices.AdditionalServiceName]"/>
+      <TextObject Name="Text5" Left="652.05" Top="9.45" Width="66.15" Height="18.9" Text="[AdditionalServices.AdditionalServiceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Trimming="EllipsisCharacter"/>
     </DataBand>
     <PageFooterBand Name="PageFooter1" Top="139.16" Width="718.2" Height="9.45"/>
   </ReportPage>

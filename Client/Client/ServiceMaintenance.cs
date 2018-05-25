@@ -17,6 +17,7 @@ namespace Client
         MySqlCommand command = new MySqlCommand();
         public int basketID { get; set; }
         public int count = 1;
+        public int serviceMaintenanceQuantity = 0;
 
         public ServiceMaintenance()
         {
@@ -50,6 +51,7 @@ namespace Client
                                        "('" + basketID + "', '" + serviceMaintenanceDGV.CurrentRow.Cells[0].Value.ToString() + "')", connection);
             command.ExecuteNonQuery();
             connection.Close();
+            CheckBasketQuantity();
         }
 
         private void costButton_Click(object sender, EventArgs e)
@@ -106,9 +108,21 @@ namespace Client
             connection.Close();
         }
 
-        private void serviceMaintenancePriceListButton_Click_1(object sender, EventArgs e)
+        private void CheckBasketQuantity()
         {
-            serviceMaintenancePriceListReport.Show();
+            connection.Open();
+            serviceMaintenanceQuantity = 0;
+            command = new MySqlCommand("SELECT chosenservicemaintenance.BasketID, COUNT(chosenservicemaintenance.ServiceMaintenanceID) AS Quantity " +
+                                       "FROM chosenservicemaintenance WHERE chosenservicemaintenance.BasketID = '" + basketID + "' GROUP BY chosenservicemaintenance.BasketID", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    serviceMaintenanceQuantity += MyReader.GetInt32(1);
+                }
+                MyReader.Close();
+            }
+            connection.Close();
         }
     }
 }

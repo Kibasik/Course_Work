@@ -18,6 +18,7 @@ namespace Client
         public List<string> softwareType = new List<string>();
         public int basketID { get; set; }
         public int count = 1;
+        public int softwareQuantity = 0;
 
         public Software()
         {
@@ -93,20 +94,10 @@ namespace Client
                 {
                 }
             }
-            if (softwareQuantityTB.Text == "" || Convert.ToInt32(softwareQuantityTB.Text) <= 1)
+            if (softwareQuantityTB.Text == "" || Convert.ToInt32(softwareQuantityTB.Text) < 1)
             {
-                if (softwareQuantity == 0)
-                {
-                    command = new MySqlCommand("INSERT INTO chosensoftware (chosensoftware.SoftwareID, chosensoftware.BasketID, chosensoftware.SoftwareQuantity) VALUES " +
-                                               "('" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "', '" + basketID + "', '" + 1 + "')", connection);
-                    command.ExecuteNonQuery();
-                }
-                else
-                {
-                    command = new MySqlCommand("UPDATE chosensoftware SET chosensoftware.SoftwareQuantity = '" + (softwareQuantity + 1) + "' " +
-                                               "WHERE chosensoftware.BasketID = '" + basketID + "' AND chosensoftware.SoftwareID = '" + softwareDGV.CurrentRow.Cells[3].Value.ToString() + "'", connection);
-                    command.ExecuteNonQuery();
-                }
+                MessageBox.Show("Введите количество товара для добавления!");
+                softwareQuantityTB.Clear();
             }
             else
             {
@@ -125,6 +116,7 @@ namespace Client
             }
             softwareQuantityTB.Clear();
             connection.Close();
+            CheckBasketQuantity();
         }
 
         private void costButton_Click(object sender, EventArgs e)
@@ -215,9 +207,21 @@ namespace Client
             connection.Close();
         }
 
-        private void softwarePriceListButton_Click(object sender, EventArgs e)
+        private void CheckBasketQuantity()
         {
-            softwarePriceListReport.Show();
+            connection.Open();
+            softwareQuantity = 0;
+            command = new MySqlCommand("SELECT chosensoftware.BasketID, COUNT(chosensoftware.SoftwareID) AS Quantity FROM chosensoftware " +
+                                       "WHERE chosensoftware.BasketID = '" + basketID + "' GROUP BY chosensoftware.BasketID", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    softwareQuantity += MyReader.GetInt32(1);
+                }
+                MyReader.Close();
+            }
+            connection.Close();
         }
     }
 }

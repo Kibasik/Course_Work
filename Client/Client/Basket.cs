@@ -30,8 +30,8 @@ namespace Client
             softwareDGV.Rows.Clear();
             additionalServicesDGV.Rows.Clear();
             serviceMaintenanceDGV.Rows.Clear();
-            command = new MySqlCommand("SELECT typecategory.TypeCategoryName, categorygoods.CategoryGoodsName, goodscatalog.GoodsName, " +
-                                       "goodsmanufacturer.GoodsManufacturerName, goodscatalog.GoodsCost, componentslist.GoodsQuantity, " +
+            command = new MySqlCommand("SELECT typecategory.TypeCategoryName, categorygoods.CategoryGoodsName, goodsmanufacturer.GoodsManufacturerName, " +
+                                       "goodscatalog.GoodsName, goodscatalog.GoodsCost, componentslist.GoodsQuantity, " +
                                        "goodscatalog.GoodsID, componentslist.BasketID FROM categorygoods INNER JOIN typecategory " +
                                        "ON categorygoods.TypeCategoryID = typecategory.TypeCategoryID " +
                                        "INNER JOIN goodscatalog ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID INNER JOIN componentslist " +

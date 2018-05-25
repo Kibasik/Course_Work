@@ -105,6 +105,12 @@
     <Compile Include="Charts.Designer.cs">
       <DependentUpon>Charts.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseWindow.Designer.cs">
+      <DependentUpon>ChooseWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeliveryAndSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SoftwareQuantity.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Storekeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storekeeper.Designer.cs">
+      <DependentUpon>Storekeeper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Warehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Charts.resx">
       <DependentUpon>Charts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseWindow.resx">
+      <DependentUpon>ChooseWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeliveryAndSale.resx">
       <DependentUpon>DeliveryAndSale.cs</DependentUpon>

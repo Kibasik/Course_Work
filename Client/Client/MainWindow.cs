@@ -17,8 +17,14 @@ namespace Client
     {
         MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
-        public int id { get; set; }
+        public int id = 0;
         public int count = 1;
+        public int basketCount = 1;
+        public int basketQuantity = 0;
+        public int componentsQuantity = 0;
+        public int softwareQuantity;
+        public int additionalServicesQuantity;
+        public int serviceMaintenanceQuantity;
         public List<string> goodsCategory = new List<string>();
         public List<string> goodsAllType = new List<string>();
 
@@ -31,8 +37,8 @@ namespace Client
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "goods.DataTable". При необходимости она может быть перемещена или удалена.
             this.dataTableTableAdapter1.Fill(this.goods.DataTable);
+            basketQuantityLabel.Text = "0";
             connection.Open();
-            id = 0;
             command = new MySqlCommand("SELECT basket.BasketID FROM basket", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
@@ -127,7 +133,7 @@ namespace Client
         private void корзинаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Basket basket = new Basket();
-            basket.basketID = (id + 1);
+            basket.basketID = (id + basketCount);
             basket.ShowDialog();
         }
 
@@ -138,7 +144,7 @@ namespace Client
             try
             {
                 command = new MySqlCommand("SELECT componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity FROM " +
-                                           "componentslist WHERE componentslist.BasketID = '" + (id + 1) + "' " +
+                                           "componentslist WHERE componentslist.BasketID = '" + (id + basketCount) + "' " +
                                            "AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
                 using (MySqlDataReader MyReader = command.ExecuteReader())
                 {
@@ -157,7 +163,7 @@ namespace Client
                 try
                 {
                     command = new MySqlCommand("INSERT INTO basket (basket.BasketID) VALUES " +
-                                               "('" + (id + 1) + "')", connection);
+                                               "('" + (id + basketCount) + "')", connection);
                     command.ExecuteNonQuery();
                     count++;
                 }
@@ -166,7 +172,12 @@ namespace Client
                 }
             }
             connection.Close();
-            if ((goodsQuantity + Convert.ToInt32(goodsQuantityTB.Text)) > Convert.ToInt32(goodsDGV.CurrentRow.Cells[6].Value.ToString()))
+            if (goodsQuantityTB.Text == "" || Convert.ToInt32(goodsQuantityTB.Text) < 1)
+            {
+                MessageBox.Show("Введите количество товара для добавления!");
+                goodsQuantityTB.Clear();
+            }
+            else if ((goodsQuantity + Convert.ToInt32(goodsQuantityTB.Text)) > Convert.ToInt32(goodsDGV.CurrentRow.Cells[6].Value.ToString()))
             {
                 MessageBox.Show("Недостаточно товара для добавления!");
                 goodsQuantityTB.Clear();
@@ -174,38 +185,23 @@ namespace Client
             else
             {
                 connection.Open();
-                if (goodsQuantityTB.Text == "" || Convert.ToInt32(goodsQuantityTB.Text) <= 1)
-                {
                     if (goodsQuantity == 0)
                     {
                         command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity) VALUES " +
-                                                   "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "', '" + 1 + "')", connection);
-                        command.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        command = new MySqlCommand("UPDATE componentslist SET componentslist.GoodsQuantity = '" + (goodsQuantity + 1) + "' " +
-                                                   "WHERE componentslist.BasketID = '" + (id + 1) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
-                        command.ExecuteNonQuery();
-                    }
-                }
-                else
-                {
-                    if (goodsQuantity == 0)
-                    {
-                        command = new MySqlCommand("INSERT INTO componentslist (componentslist.GoodsID, componentslist.BasketID, componentslist.GoodsQuantity) VALUES " +
-                                                   "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + 1) + "', '" + Convert.ToInt32(goodsQuantityTB.Text) + "')", connection);
+                                                   "('" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "', '" + (id + basketCount) + "', '" + Convert.ToInt32(goodsQuantityTB.Text) + "')", connection);
                         command.ExecuteNonQuery();
                     }
                     else
                     {
                         command = new MySqlCommand("UPDATE componentslist SET componentslist.GoodsQuantity = '" + (goodsQuantity + Convert.ToInt32(goodsQuantityTB.Text)) + "' " +
-                                                   "WHERE componentslist.BasketID = '" + (id + 1) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
+                                                   "WHERE componentslist.BasketID = '" + (id + basketCount) + "' AND componentslist.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
                         command.ExecuteNonQuery();
                     }
-                }
                 goodsQuantityTB.Clear();
                 connection.Close();
+                CheckBasketQuantity();
+                basketQuantity = componentsQuantity;
+                basketQuantityLabel.Text = basketQuantity.ToString();
             }
         }
 
@@ -409,33 +405,34 @@ namespace Client
         private void программноеОбеспечениеToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Software software = new Software();
-            software.basketID = (id + 1);
+            software.basketID = (id + basketCount);
             software.ShowDialog();
+            basketQuantity = software.softwareQuantity + componentsQuantity;
+            basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
         private void дополнительныеУслугиToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AdditionalServices additionalServices = new AdditionalServices();
-            additionalServices.basketID = (id + 1);
+            additionalServices.basketID = (id + basketCount);
             additionalServices.ShowDialog();
+            basketQuantity = additionalServices.additionalServicesQuantity + componentsQuantity;
+            basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
         private void сервисноеОбслуживаниеToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ServiceMaintenance serviceMaintenance = new ServiceMaintenance();
-            serviceMaintenance.basketID = (id + 1);
+            serviceMaintenance.basketID = (id + basketCount);
             serviceMaintenance.ShowDialog();
-        }
-
-        private void goodsPriceListButton_Click(object sender, EventArgs e)
-        {
-            componentsPriceListReport.Show();
+            basketQuantity = serviceMaintenance.serviceMaintenanceQuantity + componentsQuantity;
+            basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
         private void сборкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Assembly assembly = new Assembly();
-            assembly.basketID = (id + 1);
+            assembly.basketID = (id + basketCount);
             assembly.ShowDialog();
         }
 
@@ -445,21 +442,11 @@ namespace Client
             charts.ShowDialog();
         }
 
-        private void fullPriceListButton_Click(object sender, EventArgs e)
-        {
-            fullPriceListReport.Show();
-        }
-
         private void складToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Warehouse warehouse = new Warehouse();
             warehouse.ShowDialog();
             MainWindow_Load_1(null, null);
-        }
-
-        private void goodsQuantityReportButton_Click(object sender, EventArgs e)
-        {
-            goodsQuantityReport.Show();
         }
 
         private void поставкаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -471,6 +458,53 @@ namespace Client
         {
             Workers workers = new Workers();
             workers.ShowDialog();
+        }
+
+        private void полныйПрайслистToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fullPriceListReport.Show();
+        }
+
+        private void прайслистКомплектующихToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            componentsPriceListReport.Show();
+        }
+
+        private void прайслистДопУслугToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            additionalServicesPriceListReport.Show();
+        }
+
+        private void прайслистСервисногоОбслуживанияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            serviceMaintenancePriceListReport.Show();
+        }
+
+        private void прайслистПОToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            softwarePriceListReport.Show();
+        }
+
+        private void количествоТовараВМагазинеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            goodsQuantityReport.Show();
+        }
+
+        private void CheckBasketQuantity()
+        {
+            connection.Open();
+            componentsQuantity = 0;
+            command = new MySqlCommand("SELECT componentslist.BasketID, COUNT(componentslist.GoodsID) AS Quantity " +
+                                       "FROM componentslist WHERE componentslist.BasketID = '" + (id + basketCount) + "' GROUP BY componentslist.BasketID", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    componentsQuantity += MyReader.GetInt32(1);
+                }
+                MyReader.Close();
+            }
+            connection.Close();
         }
     }
 }

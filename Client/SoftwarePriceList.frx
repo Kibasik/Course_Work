@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/19/2018 20:25:18" ReportInfo.CreatorVersion="2018.3.1.0">
+<Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/25/2018 19:15:36" ReportInfo.CreatorVersion="2018.3.1.0">
   <Dictionary>
-    <TableDataSource Name="DataTable" ReferenceName="softwareList.DataTable" DataType="System.Int32" Enabled="true">
-      <Column Name="SoftwareTypeName" DataType="System.String"/>
-      <Column Name="SoftwareName" DataType="System.String"/>
-      <Column Name="SoftwareCost" DataType="System.Decimal"/>
-      <Column Name="SoftwareID" DataType="System.Int32"/>
-    </TableDataSource>
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wIw3+0mtgK8hjYDRs7XVeb">
+      <TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  `softwaretype`.`SoftwareTypeName` AS `SoftwareTypeName`,&#13;&#10;  `software`.`SoftwareName` AS `SoftwareName`,&#13;&#10;  `software`.`SoftwareCost` AS `SoftwareCost`,&#13;&#10;  `software`.`SoftwareID` AS `SoftwareID`&#13;&#10;FROM (`software`&#13;&#10;  JOIN `softwaretype`&#13;&#10;    ON ((`software`.`SoftwareTypeID` = `softwaretype`.`SoftwareTypeID`)));">
+        <Column Name="SoftwareTypeName" DataType="System.String"/>
+        <Column Name="SoftwareName" DataType="System.String"/>
+        <Column Name="SoftwareCost" DataType="System.Decimal"/>
+        <Column Name="SoftwareID" DataType="System.Int32"/>
+      </TableDataSource>
+    </OdbcDataConnection>
   </Dictionary>
   <ReportPage Name="Page1">
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
@@ -17,11 +19,11 @@
       <TextObject Name="Text2" Left="652.05" Top="9.45" Width="66.15" Height="28.35" Text="ЦЕНА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
       <TextObject Name="Text3" Top="9.45" Width="652.05" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
     </PageHeaderBand>
-    <GroupHeaderBand Name="GroupHeader1" Top="99.07" Width="718.2" Height="37.8" Condition="[DataTable.SoftwareTypeName]">
-      <TextObject Name="Text5" Top="9.45" Width="718.2" Height="18.9" Fill.Color="Silver" Text="[[DataTable.SoftwareTypeName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
-      <DataBand Name="Data1" Top="139.16" Width="718.2" Height="37.8" DataSource="DataTable">
-        <TextObject Name="Text7" Top="9.45" Width="623.7" Height="18.9" Text="[DataTable.SoftwareName]" VertAlign="Center"/>
-        <TextObject Name="Text8" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+    <GroupHeaderBand Name="GroupHeader1" Top="99.07" Width="718.2" Height="37.8" Condition="[Software.SoftwareTypeName]">
+      <TextObject Name="Text5" Top="9.45" Width="718.2" Height="18.9" Fill.Color="Silver" Text="[[Software.SoftwareTypeName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <DataBand Name="Data1" Top="139.16" Width="718.2" Height="37.8" DataSource="Table">
+        <TextObject Name="Text6" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[Software.SoftwareCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" WordWrap="false" Trimming="EllipsisCharacter"/>
+        <TextObject Name="Text7" Top="9.45" Width="623.7" Height="18.9" Text="[Software.SoftwareName]"/>
       </DataBand>
       <GroupFooterBand Name="GroupFooter1" Top="179.24" Width="718.2" Height="9.45"/>
     </GroupHeaderBand>

@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>194, 17</value>
-  </metadata>
-  <metadata name="serviceMaintenanceList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="serviceMaintenancePriceListReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>556, 17</value>
-  </metadata>
-  <data name="serviceMaintenancePriceListReport.ReportResourceString" xml:space="preserve">
-    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="05/25/2018 19:13:40" ReportInfo.CreatorVersion="2018.3.1.0"&gt;
-  &lt;Dictionary&gt;
-    &lt;TableDataSource Name="DataTable" ReferenceName="serviceMaintenanceList.DataTable" DataType="System.Int32" Enabled="true"&gt;
-      &lt;Column Name="ServiceMaintenanceID" DataType="System.Int32"/&gt;
-      &lt;Column Name="ServiceMaintenanceName" DataType="System.String"/&gt;
-      &lt;Column Name="ServiceMaintenanceCost" DataType="System.Decimal"/&gt;
-      &lt;Column Name="ServiceMaintenancePeriod" DataType="System.Int32"/&gt;
-    &lt;/TableDataSource&gt;
-  &lt;/Dictionary&gt;
-  &lt;ReportPage Name="Page1"&gt;
-    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
-      &lt;TextObject Name="Text1" Left="75.6" Top="9.45" Width="548.1" Height="28.35" Text="Прайс-лист сервисного обслуживания" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/&gt;
-    &lt;/ReportTitleBand&gt;
-    &lt;PageHeaderBand Name="PageHeader1" Top="49.54" Width="718.2" Height="47.25"&gt;
-      &lt;TextObject Name="Text4" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray" VertAlign="Center"/&gt;
-      &lt;TextObject Name="Text2" Left="652.05" Top="9.45" Width="66.15" Height="28.35" Text="ЦЕНА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
-      &lt;TextObject Name="Text3" Top="9.45" Width="349.65" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
-      &lt;TextObject Name="Text7" Left="349.65" Top="9.45" Width="302.4" Height="28.35" Text="СРОК ОБСЛУЖИВАНИЯ, ДНЕЙ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
-    &lt;/PageHeaderBand&gt;
-    &lt;DataBand Name="Data1" Top="99.07" Width="718.2" Height="37.8" DataSource="DataTable"&gt;
-      &lt;TextObject Name="Text5" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[DataTable.ServiceMaintenanceCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
-      &lt;TextObject Name="Text6" Top="9.45" Width="349.65" Height="18.9" Text="[DataTable.ServiceMaintenanceName]" VertAlign="Center"/&gt;
-      &lt;TextObject Name="Text8" Left="349.65" Top="9.45" Width="274.05" Height="18.9" Text="[DataTable.ServiceMaintenancePeriod]" VertAlign="Center"/&gt;
-    &lt;/DataBand&gt;
-    &lt;PageFooterBand Name="PageFooter1" Top="139.16" Width="718.2" Height="9.45"/&gt;
-  &lt;/ReportPage&gt;
-&lt;/Report&gt;
-</value>
-  </data>
-  <metadata name="dataTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>378, 17</value>
-  </metadata>
 </root>

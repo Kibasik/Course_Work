@@ -55,6 +55,14 @@
             this.графикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.складToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поставкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.полныйПрайслистToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прайслистКомплектующихToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прайслистДопУслугToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прайслистСервисногоОбслуживанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прайслистПОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.количествоТовараВМагазинеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionButton = new System.Windows.Forms.Button();
             this.lowPriceTB = new System.Windows.Forms.TextBox();
             this.highPriceTB = new System.Windows.Forms.TextBox();
@@ -73,15 +81,16 @@
             this.goodsTypeCB = new System.Windows.Forms.ComboBox();
             this.дополнительнвеУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goodsQuantityTB = new System.Windows.Forms.TextBox();
-            this.goodsPriceListButton = new System.Windows.Forms.Button();
             this.componentsPriceListReport = new FastReport.Report();
-            this.fullPriceListButton = new System.Windows.Forms.Button();
             this.fullPriceListReport = new FastReport.Report();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.goodsQuantityReportButton = new System.Windows.Forms.Button();
             this.goodsQuantityReport = new FastReport.Report();
-            this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.additionalServicesPriceListReport = new FastReport.Report();
+            this.softwarePriceListReport = new FastReport.Report();
+            this.serviceMaintenancePriceListReport = new FastReport.Report();
+            this.label11 = new System.Windows.Forms.Label();
+            this.basketQuantityLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
@@ -89,6 +98,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.componentsPriceListReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullPriceListReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalServicesPriceListReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwarePriceListReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenancePriceListReport)).BeginInit();
             this.SuspendLayout();
             // 
             // goodsDGV
@@ -195,7 +207,7 @@
             // 
             // showAllGoodsButton
             // 
-            this.showAllGoodsButton.Location = new System.Drawing.Point(193, 302);
+            this.showAllGoodsButton.Location = new System.Drawing.Point(318, 302);
             this.showAllGoodsButton.Name = "showAllGoodsButton";
             this.showAllGoodsButton.Size = new System.Drawing.Size(90, 40);
             this.showAllGoodsButton.TabIndex = 9;
@@ -213,7 +225,8 @@
             this.графикиToolStripMenuItem,
             this.складToolStripMenuItem,
             this.поставкаToolStripMenuItem,
-            this.сотрудникиToolStripMenuItem});
+            this.сотрудникиToolStripMenuItem,
+            this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -301,9 +314,71 @@
             this.поставкаToolStripMenuItem.Text = "&Поставка";
             this.поставкаToolStripMenuItem.Click += new System.EventHandler(this.поставкаToolStripMenuItem_Click);
             // 
+            // сотрудникиToolStripMenuItem
+            // 
+            this.сотрудникиToolStripMenuItem.Name = "сотрудникиToolStripMenuItem";
+            this.сотрудникиToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.сотрудникиToolStripMenuItem.Text = "&Сотрудники";
+            this.сотрудникиToolStripMenuItem.Click += new System.EventHandler(this.сотрудникиToolStripMenuItem_Click_1);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.полныйПрайслистToolStripMenuItem,
+            this.прайслистКомплектующихToolStripMenuItem,
+            this.прайслистДопУслугToolStripMenuItem,
+            this.прайслистСервисногоОбслуживанияToolStripMenuItem,
+            this.прайслистПОToolStripMenuItem,
+            this.количествоТовараВМагазинеToolStripMenuItem});
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "&Отчеты";
+            // 
+            // полныйПрайслистToolStripMenuItem
+            // 
+            this.полныйПрайслистToolStripMenuItem.Name = "полныйПрайслистToolStripMenuItem";
+            this.полныйПрайслистToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.полныйПрайслистToolStripMenuItem.Text = "&Полный прайс-лист";
+            this.полныйПрайслистToolStripMenuItem.Click += new System.EventHandler(this.полныйПрайслистToolStripMenuItem_Click);
+            // 
+            // прайслистКомплектующихToolStripMenuItem
+            // 
+            this.прайслистКомплектующихToolStripMenuItem.Name = "прайслистКомплектующихToolStripMenuItem";
+            this.прайслистКомплектующихToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.прайслистКомплектующихToolStripMenuItem.Text = "&Прайс-лист комплектующих";
+            this.прайслистКомплектующихToolStripMenuItem.Click += new System.EventHandler(this.прайслистКомплектующихToolStripMenuItem_Click);
+            // 
+            // прайслистДопУслугToolStripMenuItem
+            // 
+            this.прайслистДопУслугToolStripMenuItem.Name = "прайслистДопУслугToolStripMenuItem";
+            this.прайслистДопУслугToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.прайслистДопУслугToolStripMenuItem.Text = "&Прайс-лист доп. услуг";
+            this.прайслистДопУслугToolStripMenuItem.Click += new System.EventHandler(this.прайслистДопУслугToolStripMenuItem_Click);
+            // 
+            // прайслистСервисногоОбслуживанияToolStripMenuItem
+            // 
+            this.прайслистСервисногоОбслуживанияToolStripMenuItem.Name = "прайслистСервисногоОбслуживанияToolStripMenuItem";
+            this.прайслистСервисногоОбслуживанияToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.прайслистСервисногоОбслуживанияToolStripMenuItem.Text = "&Прайс-лист сервисного обслуживания";
+            this.прайслистСервисногоОбслуживанияToolStripMenuItem.Click += new System.EventHandler(this.прайслистСервисногоОбслуживанияToolStripMenuItem_Click);
+            // 
+            // прайслистПОToolStripMenuItem
+            // 
+            this.прайслистПОToolStripMenuItem.Name = "прайслистПОToolStripMenuItem";
+            this.прайслистПОToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.прайслистПОToolStripMenuItem.Text = "&Прайс-лист ПО";
+            this.прайслистПОToolStripMenuItem.Click += new System.EventHandler(this.прайслистПОToolStripMenuItem_Click);
+            // 
+            // количествоТовараВМагазинеToolStripMenuItem
+            // 
+            this.количествоТовараВМагазинеToolStripMenuItem.Name = "количествоТовараВМагазинеToolStripMenuItem";
+            this.количествоТовараВМагазинеToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.количествоТовараВМагазинеToolStripMenuItem.Text = "&Количество товара в магазине";
+            this.количествоТовараВМагазинеToolStripMenuItem.Click += new System.EventHandler(this.количествоТовараВМагазинеToolStripMenuItem_Click);
+            // 
             // descriptionButton
             // 
-            this.descriptionButton.Location = new System.Drawing.Point(193, 359);
+            this.descriptionButton.Location = new System.Drawing.Point(477, 302);
             this.descriptionButton.Name = "descriptionButton";
             this.descriptionButton.Size = new System.Drawing.Size(80, 40);
             this.descriptionButton.TabIndex = 11;
@@ -394,7 +469,7 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(12, 349);
+            this.basketButton.Location = new System.Drawing.Point(169, 302);
             this.basketButton.Name = "basketButton";
             this.basketButton.Size = new System.Drawing.Size(80, 40);
             this.basketButton.TabIndex = 21;
@@ -457,31 +532,11 @@
             this.goodsQuantityTB.TabIndex = 27;
             this.goodsQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsQuantityTB_KeyPress);
             // 
-            // goodsPriceListButton
-            // 
-            this.goodsPriceListButton.Location = new System.Drawing.Point(403, 302);
-            this.goodsPriceListButton.Name = "goodsPriceListButton";
-            this.goodsPriceListButton.Size = new System.Drawing.Size(100, 40);
-            this.goodsPriceListButton.TabIndex = 28;
-            this.goodsPriceListButton.Text = "Прайс-лист комплектующих";
-            this.goodsPriceListButton.UseVisualStyleBackColor = true;
-            this.goodsPriceListButton.Click += new System.EventHandler(this.goodsPriceListButton_Click);
-            // 
             // componentsPriceListReport
             // 
             this.componentsPriceListReport.NeedRefresh = false;
             this.componentsPriceListReport.ReportResourceString = resources.GetString("componentsPriceListReport.ReportResourceString");
             this.componentsPriceListReport.RegisterData(this.goods, "goods");
-            // 
-            // fullPriceListButton
-            // 
-            this.fullPriceListButton.Location = new System.Drawing.Point(301, 302);
-            this.fullPriceListButton.Name = "fullPriceListButton";
-            this.fullPriceListButton.Size = new System.Drawing.Size(80, 40);
-            this.fullPriceListButton.TabIndex = 29;
-            this.fullPriceListButton.Text = "Полный прайс-лист";
-            this.fullPriceListButton.UseVisualStyleBackColor = true;
-            this.fullPriceListButton.Click += new System.EventHandler(this.fullPriceListButton_Click);
             // 
             // fullPriceListReport
             // 
@@ -506,27 +561,43 @@
             this.label9.TabIndex = 31;
             this.label9.Text = "Количество комплектующих:";
             // 
-            // goodsQuantityReportButton
-            // 
-            this.goodsQuantityReportButton.Location = new System.Drawing.Point(301, 358);
-            this.goodsQuantityReportButton.Name = "goodsQuantityReportButton";
-            this.goodsQuantityReportButton.Size = new System.Drawing.Size(125, 40);
-            this.goodsQuantityReportButton.TabIndex = 32;
-            this.goodsQuantityReportButton.Text = "Количество товаров в магазине";
-            this.goodsQuantityReportButton.UseVisualStyleBackColor = true;
-            this.goodsQuantityReportButton.Click += new System.EventHandler(this.goodsQuantityReportButton_Click);
-            // 
             // goodsQuantityReport
             // 
             this.goodsQuantityReport.NeedRefresh = false;
             this.goodsQuantityReport.ReportResourceString = resources.GetString("goodsQuantityReport.ReportResourceString");
             // 
-            // сотрудникиToolStripMenuItem
+            // additionalServicesPriceListReport
             // 
-            this.сотрудникиToolStripMenuItem.Name = "сотрудникиToolStripMenuItem";
-            this.сотрудникиToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.сотрудникиToolStripMenuItem.Text = "&Сотрудники";
-            this.сотрудникиToolStripMenuItem.Click += new System.EventHandler(this.сотрудникиToolStripMenuItem_Click_1);
+            this.additionalServicesPriceListReport.NeedRefresh = false;
+            this.additionalServicesPriceListReport.ReportResourceString = resources.GetString("additionalServicesPriceListReport.ReportResourceString");
+            // 
+            // softwarePriceListReport
+            // 
+            this.softwarePriceListReport.NeedRefresh = false;
+            this.softwarePriceListReport.ReportResourceString = resources.GetString("softwarePriceListReport.ReportResourceString");
+            // 
+            // serviceMaintenancePriceListReport
+            // 
+            this.serviceMaintenancePriceListReport.NeedRefresh = false;
+            this.serviceMaintenancePriceListReport.ReportResourceString = resources.GetString("serviceMaintenancePriceListReport.ReportResourceString");
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 365);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(167, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Количество товаров в корзине:";
+            // 
+            // basketQuantityLabel
+            // 
+            this.basketQuantityLabel.AutoSize = true;
+            this.basketQuantityLabel.Location = new System.Drawing.Point(182, 365);
+            this.basketQuantityLabel.Name = "basketQuantityLabel";
+            this.basketQuantityLabel.Size = new System.Drawing.Size(41, 13);
+            this.basketQuantityLabel.TabIndex = 34;
+            this.basketQuantityLabel.Text = "label10";
             // 
             // MainWindow
             // 
@@ -534,11 +605,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(784, 431);
-            this.Controls.Add(this.goodsQuantityReportButton);
+            this.Controls.Add(this.basketQuantityLabel);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.fullPriceListButton);
-            this.Controls.Add(this.goodsPriceListButton);
             this.Controls.Add(this.goodsQuantityTB);
             this.Controls.Add(this.goodsTypeCB);
             this.Controls.Add(this.label1);
@@ -576,6 +646,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.componentsPriceListReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullPriceListReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsQuantityReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.additionalServicesPriceListReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwarePriceListReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenancePriceListReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,10 +687,8 @@
         private System.Windows.Forms.ToolStripMenuItem программноеОбеспечениеToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem дополнительныеУслугиToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem сервисноеОбслуживаниеToolStripMenuItem1;
-        private System.Windows.Forms.Button goodsPriceListButton;
         private FastReport.Report componentsPriceListReport;
         private System.Windows.Forms.ToolStripMenuItem сборкаToolStripMenuItem;
-        private System.Windows.Forms.Button fullPriceListButton;
         private FastReport.Report fullPriceListReport;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -631,9 +702,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsAmount;
-        private System.Windows.Forms.Button goodsQuantityReportButton;
         private FastReport.Report goodsQuantityReport;
         private System.Windows.Forms.ToolStripMenuItem сотрудникиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem полныйПрайслистToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem прайслистКомплектующихToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem прайслистДопУслугToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem прайслистСервисногоОбслуживанияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem прайслистПОToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem количествоТовараВМагазинеToolStripMenuItem;
+        private FastReport.Report additionalServicesPriceListReport;
+        private FastReport.Report softwarePriceListReport;
+        private FastReport.Report serviceMaintenancePriceListReport;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label basketQuantityLabel;
     }
 }
 
