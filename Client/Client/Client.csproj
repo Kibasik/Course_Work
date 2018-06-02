@@ -34,29 +34,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FastReport, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Bars, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport.Bars, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Bars.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Bars.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Editor, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport.Editor, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Editor.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Service, Version=2018.3.11.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Service.dll</HintPath>
+    <Reference Include="FastReport.Service">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Service.dll</HintPath>
     </Reference>
     <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.VSDesign.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.VSDesign.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Web, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport.Web, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Web.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Web.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
@@ -175,6 +174,12 @@
     </Compile>
     <Compile Include="NewComponent.Designer.cs">
       <DependentUpon>NewComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewManufacturer.Designer.cs">
+      <DependentUpon>NewManufacturer.cs</DependentUpon>
     </Compile>
     <Compile Include="NewSoftware.cs">
       <SubType>Form</SubType>
@@ -322,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewComponent.resx">
       <DependentUpon>NewComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewManufacturer.resx">
+      <DependentUpon>NewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSoftware.resx">
       <DependentUpon>NewSoftware.cs</DependentUpon>

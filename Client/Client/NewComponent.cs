@@ -256,5 +256,23 @@ namespace Client
             }
             connection.Close();
         }
+
+        private void newManufacturerButton_Click(object sender, EventArgs e)
+        {
+            NewManufacturer newManufacturer = new NewManufacturer();
+            newManufacturer.ShowDialog();
+            connection.Open();
+            manufacturerNameCB.Items.Clear();
+            command = new MySqlCommand("SELECT goodsmanufacturer.GoodsManufacturerName FROM goodsmanufacturer", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    manufacturerNameCB.Items.Add(MyReader.GetString(0));
+                }
+                MyReader.Close();
+            }
+            connection.Close();
+        }
     }
 }

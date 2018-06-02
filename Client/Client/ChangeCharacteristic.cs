@@ -32,6 +32,8 @@ namespace Client
             warrantyPeriodCB.Items.Clear();
             characteristicValuesRTB.Clear();
             characteristicValueCB.Items.Clear();
+            warrantyPeriodCB.Items.Add("");
+            characteristicNameCB.Items.Add("");
             command = new MySqlCommand("SELECT characteristiclist.CharacteristicName FROM characteristiclist", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
@@ -80,6 +82,7 @@ namespace Client
         {
             connection.Open();
             characteristicValueCB.Items.Clear();
+            characteristicValueCB.Items.Add("");
             command = new MySqlCommand("SELECT characteristiclist.CharacteristicID FROM characteristiclist WHERE characteristiclist.CharacteristicName = '" + characteristicNameCB.SelectedItem.ToString() + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
@@ -100,23 +103,34 @@ namespace Client
             }
             characteristicValueTB.Enabled = true;
             connection.Close();
+            if (characteristicNameCB.SelectedItem.ToString() == "")
+            {
+                characteristicValueCB.Items.Clear();
+            }
         }
 
         private void characteristicValueCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            characteristicValueTB.Enabled = false;
-            connection.Open();
-            command = new MySqlCommand("SELECT defaultcharacteristic.DefaultCharacteristicID FROM defaultcharacteristic WHERE defaultcharacteristic.CharacteristicID = '" + characteristicID + "' " +
-                                       "AND defaultcharacteristic.DefaultCharacteristicValue = '" + characteristicValueCB.SelectedItem + "'", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
+            if (characteristicValueCB.SelectedItem.ToString() == "")
             {
-                while (MyReader.Read())
-                {
-                    defaulCharacteristicID = MyReader.GetInt32(0);
-                }
-                MyReader.Close();
+                characteristicValueTB.Enabled = true;
             }
-            connection.Close();
+            else
+            {
+                characteristicValueTB.Enabled = false;
+                connection.Open();
+                command = new MySqlCommand("SELECT defaultcharacteristic.DefaultCharacteristicID FROM defaultcharacteristic WHERE defaultcharacteristic.CharacteristicID = '" + characteristicID + "' " +
+                                           "AND defaultcharacteristic.DefaultCharacteristicValue = '" + characteristicValueCB.SelectedItem + "'", connection);
+                using (MySqlDataReader MyReader = command.ExecuteReader())
+                {
+                    while (MyReader.Read())
+                    {
+                        defaulCharacteristicID = MyReader.GetInt32(0);
+                    }
+                    MyReader.Close();
+                }
+                connection.Close();
+            }
         }
 
         private void characteristicValueTB_TextChanged(object sender, EventArgs e)

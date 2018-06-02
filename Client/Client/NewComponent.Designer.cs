@@ -45,6 +45,7 @@
             this.manufactureCountryNameCB = new System.Windows.Forms.ComboBox();
             this.manufacturerNameCB = new System.Windows.Forms.ComboBox();
             this.componentDescriptionRTB = new System.Windows.Forms.RichTextBox();
+            this.newManufacturerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -169,7 +170,7 @@
             // 
             // chooseImageButton
             // 
-            this.chooseImageButton.Location = new System.Drawing.Point(209, 105);
+            this.chooseImageButton.Location = new System.Drawing.Point(209, 145);
             this.chooseImageButton.Name = "chooseImageButton";
             this.chooseImageButton.Size = new System.Drawing.Size(166, 40);
             this.chooseImageButton.TabIndex = 16;
@@ -206,11 +207,22 @@
             this.componentDescriptionRTB.TabIndex = 19;
             this.componentDescriptionRTB.Text = "";
             // 
+            // newManufacturerButton
+            // 
+            this.newManufacturerButton.Location = new System.Drawing.Point(209, 105);
+            this.newManufacturerButton.Name = "newManufacturerButton";
+            this.newManufacturerButton.Size = new System.Drawing.Size(21, 21);
+            this.newManufacturerButton.TabIndex = 20;
+            this.newManufacturerButton.Text = "+";
+            this.newManufacturerButton.UseVisualStyleBackColor = true;
+            this.newManufacturerButton.Click += new System.EventHandler(this.newManufacturerButton_Click);
+            // 
             // NewComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 520);
+            this.Controls.Add(this.newManufacturerButton);
             this.Controls.Add(this.componentDescriptionRTB);
             this.Controls.Add(this.manufacturerNameCB);
             this.Controls.Add(this.manufactureCountryNameCB);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.ComboBox manufactureCountryNameCB;
         private System.Windows.Forms.ComboBox manufacturerNameCB;
         private System.Windows.Forms.RichTextBox componentDescriptionRTB;
+        private System.Windows.Forms.Button newManufacturerButton;
     }
 }
