@@ -74,7 +74,7 @@
             this.MinimumSize = new System.Drawing.Size(640, 640);
             this.Name = "Description";
             this.ShowIcon = false;
-            this.Text = "Description";
+            this.Text = "Описание";
             this.Load += new System.EventHandler(this.DescriptionWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.goodsImagePB)).EndInit();
             this.ResumeLayout(false);

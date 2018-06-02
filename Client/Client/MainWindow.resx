@@ -123,6 +123,15 @@
   <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>218, 17</value>
   </metadata>
+  <metadata name="GoodsAmount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>218, 17</value>
+  </metadata>
+  <metadata name="goods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
   <metadata name="goods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
@@ -137,7 +146,7 @@
   </metadata>
   <data name="componentsPriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:51:47" ReportInfo.Modified="05/25/2018 22:05:19" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:51:47" ReportInfo.Modified="05/30/2018 00:09:43" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -197,7 +206,7 @@ End Namespace
   </metadata>
   <data name="fullPriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 19:54:02" ReportInfo.Modified="05/25/2018 22:05:19" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/19/2018 19:54:02" ReportInfo.Modified="05/29/2018 23:22:16" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -219,7 +228,7 @@ Namespace FastReport
 End Namespace
 &lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wOy8qO02OIRDlROQxWJUMF"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3y4MVo5K3b/S9iF3lDJhQWl"&gt;
       &lt;TableDataSource Name="Table" Alias="Components" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodscatalog.GoodsCost,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  categorygoods.CategoryGoodsName&amp;#13;&amp;#10;FROM goodscatalog&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&amp;#13;&amp;#10;  INNER JOIN categorygoods&amp;#13;&amp;#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID"&gt;
         &lt;Column Name="GoodsName" DataType="System.String"/&gt;
         &lt;Column Name="GoodsCost" DataType="System.Decimal"/&gt;
@@ -291,7 +300,7 @@ End Namespace
   </metadata>
   <data name="goodsQuantityReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 19:02:51" ReportInfo.Modified="05/25/2018 22:05:19" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 19:02:51" ReportInfo.Modified="05/29/2018 23:22:16" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -313,7 +322,7 @@ Namespace FastReport
 End Namespace
 &lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wrKalgtWpuL86pcC28dqKY"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3xPPORf7OlJUUURDRrgXg82"&gt;
       &lt;TableDataSource Name="Table" Alias="GoodsQuantity" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  categorygoods.CategoryGoodsName,&amp;#13;&amp;#10;  goodscatalog.GoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName&amp;#13;&amp;#10;FROM goodscatalog&amp;#13;&amp;#10;  INNER JOIN categorygoods&amp;#13;&amp;#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID"&gt;
         &lt;Column Name="CategoryGoodsName" DataType="System.String"/&gt;
         &lt;Column Name="GoodsAmount" DataType="System.Int32"/&gt;
@@ -355,7 +364,7 @@ End Namespace
   </metadata>
   <data name="additionalServicesPriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:11:20" ReportInfo.Modified="05/25/2018 22:05:19" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:11:20" ReportInfo.Modified="05/29/2018 23:22:16" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -377,7 +386,7 @@ Namespace FastReport
 End Namespace
 &lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3yBo2OEfzB77VVte5SEmfAP"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wT9JBn4vLBGXLTpyn4T83y"&gt;
       &lt;TableDataSource Name="Table" Alias="AdditionalServices" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  `additionalservices`.`AdditionalServiceID` AS `AdditionalServiceID`,&amp;#13;&amp;#10;  `additionalservices`.`AdditionalServiceName` AS `AdditionalServiceName`,&amp;#13;&amp;#10;  `additionalservices`.`AdditionalServiceCost` AS `AdditionalServiceCost`&amp;#13;&amp;#10;FROM `additionalservices`;"&gt;
         &lt;Column Name="AdditionalServiceID" DataType="System.Int32"/&gt;
         &lt;Column Name="AdditionalServiceName" DataType="System.String"/&gt;
@@ -408,7 +417,7 @@ End Namespace
   </metadata>
   <data name="softwarePriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/25/2018 22:05:19" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 18:59:05" ReportInfo.Modified="05/29/2018 23:22:16" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -430,7 +439,7 @@ Namespace FastReport
 End Namespace
 &lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3zUJxbfwpjk3pgnMHK+PnzI"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wtC6oTzrPZedDkqFBY/32V"&gt;
       &lt;TableDataSource Name="Table" Alias="Software" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  `softwaretype`.`SoftwareTypeName` AS `SoftwareTypeName`,&amp;#13;&amp;#10;  `software`.`SoftwareName` AS `SoftwareName`,&amp;#13;&amp;#10;  `software`.`SoftwareCost` AS `SoftwareCost`,&amp;#13;&amp;#10;  `software`.`SoftwareID` AS `SoftwareID`&amp;#13;&amp;#10;FROM (`software`&amp;#13;&amp;#10;  JOIN `softwaretype`&amp;#13;&amp;#10;    ON ((`software`.`SoftwareTypeID` = `softwaretype`.`SoftwareTypeID`)));"&gt;
         &lt;Column Name="SoftwareTypeName" DataType="System.String"/&gt;
         &lt;Column Name="SoftwareName" DataType="System.String"/&gt;
@@ -466,7 +475,7 @@ End Namespace
   </metadata>
   <data name="serviceMaintenancePriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="05/25/2018 22:05:19" ReportInfo.CreatorVersion="2018.3.7.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="05/29/2018 23:22:16" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -488,7 +497,7 @@ Namespace FastReport
 End Namespace
 &lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3zZT9qbaSy8pvaPOBHSCfNy"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3zfxaDeDfGoo+QR5eVm7Tau"&gt;
       &lt;TableDataSource Name="Table" Alias="ServiceMaintenance" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  `servicemaintenance`.`ServiceMaintenanceID` AS `ServiceMaintenanceID`,&amp;#13;&amp;#10;  `servicemaintenance`.`ServiceMaintenanceName` AS `ServiceMaintenanceName`,&amp;#13;&amp;#10;  `servicemaintenance`.`ServiceMaintenancePeriod` AS `ServiceMaintenancePeriod`,&amp;#13;&amp;#10;  `servicemaintenance`.`ServiceMaintenanceCost` AS `ServiceMaintenanceCost`&amp;#13;&amp;#10;FROM `servicemaintenance`;"&gt;
         &lt;Column Name="ServiceMaintenanceID" DataType="System.Int32"/&gt;
         &lt;Column Name="ServiceMaintenanceName" DataType="System.String"/&gt;

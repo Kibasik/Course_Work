@@ -52,18 +52,21 @@
             this.softwareNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.softwarePriceListReport = new FastReport.Report();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwarePriceListReport)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(481, 25);
+            this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 13);
             this.label1.TabIndex = 0;
@@ -73,9 +76,9 @@
             // 
             this.softwareTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.softwareTypeCB.FormattingEnabled = true;
-            this.softwareTypeCB.Location = new System.Drawing.Point(484, 41);
+            this.softwareTypeCB.Location = new System.Drawing.Point(9, 32);
             this.softwareTypeCB.Name = "softwareTypeCB";
-            this.softwareTypeCB.Size = new System.Drawing.Size(157, 21);
+            this.softwareTypeCB.Size = new System.Drawing.Size(166, 21);
             this.softwareTypeCB.TabIndex = 1;
             this.softwareTypeCB.SelectedIndexChanged += new System.EventHandler(this.softwareTypeCB_SelectedIndexChanged);
             // 
@@ -93,10 +96,10 @@
             this.softwareCostDataGridViewTextBoxColumn,
             this.softwareIDDataGridViewTextBoxColumn});
             this.softwareDGV.DataSource = this.dataTableBindingSource;
-            this.softwareDGV.Location = new System.Drawing.Point(12, 25);
+            this.softwareDGV.Location = new System.Drawing.Point(6, 19);
             this.softwareDGV.Name = "softwareDGV";
             this.softwareDGV.ReadOnly = true;
-            this.softwareDGV.Size = new System.Drawing.Size(453, 191);
+            this.softwareDGV.Size = new System.Drawing.Size(456, 183);
             this.softwareDGV.TabIndex = 2;
             // 
             // softwareTypeNameDataGridViewTextBoxColumn
@@ -142,9 +145,9 @@
             // 
             // showAllSoftwareButton
             // 
-            this.showAllSoftwareButton.Location = new System.Drawing.Point(375, 222);
+            this.showAllSoftwareButton.Location = new System.Drawing.Point(9, 211);
             this.showAllSoftwareButton.Name = "showAllSoftwareButton";
-            this.showAllSoftwareButton.Size = new System.Drawing.Size(90, 40);
+            this.showAllSoftwareButton.Size = new System.Drawing.Size(166, 33);
             this.showAllSoftwareButton.TabIndex = 3;
             this.showAllSoftwareButton.Text = "Показать весь список";
             this.showAllSoftwareButton.UseVisualStyleBackColor = true;
@@ -152,9 +155,9 @@
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(151, 222);
+            this.basketButton.Location = new System.Drawing.Point(103, 223);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(80, 40);
+            this.basketButton.Size = new System.Drawing.Size(118, 36);
             this.basketButton.TabIndex = 5;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
@@ -166,9 +169,9 @@
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(484, 146);
+            this.costButton.Location = new System.Drawing.Point(9, 124);
             this.costButton.Name = "costButton";
-            this.costButton.Size = new System.Drawing.Size(80, 40);
+            this.costButton.Size = new System.Drawing.Size(106, 25);
             this.costButton.TabIndex = 23;
             this.costButton.Text = "Применить";
             this.costButton.UseVisualStyleBackColor = true;
@@ -177,7 +180,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(481, 120);
+            this.label4.Location = new System.Drawing.Point(6, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 22;
@@ -186,7 +189,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(481, 94);
+            this.label3.Location = new System.Drawing.Point(6, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 21;
@@ -195,7 +198,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(481, 74);
+            this.label5.Location = new System.Drawing.Point(6, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 20;
@@ -203,7 +206,7 @@
             // 
             // highPriceTB
             // 
-            this.highPriceTB.Location = new System.Drawing.Point(510, 120);
+            this.highPriceTB.Location = new System.Drawing.Point(35, 98);
             this.highPriceTB.MaxLength = 10;
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -212,7 +215,7 @@
             // 
             // lowPriceTB
             // 
-            this.lowPriceTB.Location = new System.Drawing.Point(510, 94);
+            this.lowPriceTB.Location = new System.Drawing.Point(35, 72);
             this.lowPriceTB.MaxLength = 10;
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -224,22 +227,22 @@
             this.softwareQuantityTB.Location = new System.Drawing.Point(12, 239);
             this.softwareQuantityTB.MaxLength = 3;
             this.softwareQuantityTB.Name = "softwareQuantityTB";
-            this.softwareQuantityTB.Size = new System.Drawing.Size(100, 20);
+            this.softwareQuantityTB.Size = new System.Drawing.Size(85, 20);
             this.softwareQuantityTB.TabIndex = 24;
             this.softwareQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.softwareQuantityTB_KeyPress);
             // 
             // softwareNameTB
             // 
-            this.softwareNameTB.Location = new System.Drawing.Point(484, 213);
+            this.softwareNameTB.Location = new System.Drawing.Point(9, 168);
             this.softwareNameTB.Name = "softwareNameTB";
-            this.softwareNameTB.Size = new System.Drawing.Size(100, 20);
+            this.softwareNameTB.Size = new System.Drawing.Size(166, 20);
             this.softwareNameTB.TabIndex = 25;
             this.softwareNameTB.TextChanged += new System.EventHandler(this.softwareNameTB_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 197);
+            this.label2.Location = new System.Drawing.Point(6, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 27;
@@ -251,15 +254,6 @@
             this.softwarePriceListReport.ReportResourceString = resources.GetString("softwarePriceListReport.ReportResourceString");
             this.softwarePriceListReport.RegisterData(this.softwareList, "softwareList");
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 13);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Список программного обеспечения:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -269,38 +263,60 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Количество ПО:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.softwareTypeCB);
+            this.groupBox1.Controls.Add(this.lowPriceTB);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.highPriceTB);
+            this.groupBox1.Controls.Add(this.showAllSoftwareButton);
+            this.groupBox1.Controls.Add(this.softwareNameTB);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.costButton);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(486, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(181, 250);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Фильтрация";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.softwareDGV);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(468, 208);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Программное обеспечение";
+            // 
             // Software
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 271);
+            this.ClientSize = new System.Drawing.Size(679, 271);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.softwareNameTB);
             this.Controls.Add(this.softwareQuantityTB);
-            this.Controls.Add(this.costButton);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.highPriceTB);
-            this.Controls.Add(this.lowPriceTB);
             this.Controls.Add(this.basketButton);
-            this.Controls.Add(this.showAllSoftwareButton);
-            this.Controls.Add(this.softwareDGV);
-            this.Controls.Add(this.softwareTypeCB);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(680, 310);
             this.Name = "Software";
             this.ShowIcon = false;
-            this.Text = "Software";
+            this.Text = "Программное обеспечение";
             this.Load += new System.EventHandler(this.Software_Load);
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwarePriceListReport)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +346,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareCostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn softwareIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

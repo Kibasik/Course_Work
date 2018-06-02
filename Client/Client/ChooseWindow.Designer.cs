@@ -89,7 +89,6 @@
             this.MinimumSize = new System.Drawing.Size(300, 250);
             this.Name = "ChooseWindow";
             this.ShowIcon = false;
-            this.Text = "ChooseWindow";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.goodsDGV = new System.Windows.Forms.DataGridView();
+            this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GoodsQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.softwareDGV = new System.Windows.Forms.DataGridView();
@@ -60,13 +67,6 @@
             this.softwareTP = new System.Windows.Forms.TabPage();
             this.additionalServicesTP = new System.Windows.Forms.TabPage();
             this.serviceMaintenanceTP = new System.Windows.Forms.TabPage();
-            this.TypeCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryGoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsManufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GoodsQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesDGV)).BeginInit();
@@ -93,15 +93,56 @@
             this.GoodsCost,
             this.GoodsQuantity,
             this.ID});
-            this.goodsDGV.Location = new System.Drawing.Point(6, 3);
+            this.goodsDGV.Location = new System.Drawing.Point(3, 3);
             this.goodsDGV.Name = "goodsDGV";
-            this.goodsDGV.Size = new System.Drawing.Size(535, 180);
+            this.goodsDGV.Size = new System.Drawing.Size(747, 180);
             this.goodsDGV.TabIndex = 0;
+            // 
+            // TypeCategoryName
+            // 
+            this.TypeCategoryName.HeaderText = "Тип";
+            this.TypeCategoryName.Name = "TypeCategoryName";
+            // 
+            // CategoryGoodsName
+            // 
+            this.CategoryGoodsName.HeaderText = "Категория";
+            this.CategoryGoodsName.Name = "CategoryGoodsName";
+            this.CategoryGoodsName.Width = 120;
+            // 
+            // GoodsManufacturerName
+            // 
+            this.GoodsManufacturerName.HeaderText = "Производитель";
+            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
+            // 
+            // GoodsName
+            // 
+            this.GoodsName.HeaderText = "Наименование";
+            this.GoodsName.Name = "GoodsName";
+            this.GoodsName.Width = 180;
+            // 
+            // GoodsCost
+            // 
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle9;
+            this.GoodsCost.HeaderText = "Цена, руб.";
+            this.GoodsCost.Name = "GoodsCost";
+            // 
+            // GoodsQuantity
+            // 
+            this.GoodsQuantity.HeaderText = "Количество";
+            this.GoodsQuantity.Name = "GoodsQuantity";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(403, 323);
+            this.label1.Location = new System.Drawing.Point(108, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 1;
@@ -110,7 +151,7 @@
             // totalCostLabel
             // 
             this.totalCostLabel.AutoSize = true;
-            this.totalCostLabel.Location = new System.Drawing.Point(511, 323);
+            this.totalCostLabel.Location = new System.Drawing.Point(207, 287);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(52, 13);
             this.totalCostLabel.TabIndex = 2;
@@ -132,7 +173,7 @@
             this.softwareDGV.Location = new System.Drawing.Point(3, 3);
             this.softwareDGV.Name = "softwareDGV";
             this.softwareDGV.ReadOnly = true;
-            this.softwareDGV.Size = new System.Drawing.Size(538, 193);
+            this.softwareDGV.Size = new System.Drawing.Size(747, 180);
             this.softwareDGV.TabIndex = 3;
             // 
             // SoftwareTypeName
@@ -151,9 +192,9 @@
             // 
             // SoftwareCost
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.SoftwareCost.DefaultCellStyle = dataGridViewCellStyle10;
             this.SoftwareCost.HeaderText = "Цена, руб.";
             this.SoftwareCost.Name = "SoftwareCost";
             this.SoftwareCost.ReadOnly = true;
@@ -183,7 +224,7 @@
             // 
             // deleteSoftwareButton
             // 
-            this.deleteSoftwareButton.Location = new System.Drawing.Point(3, 202);
+            this.deleteSoftwareButton.Location = new System.Drawing.Point(6, 189);
             this.deleteSoftwareButton.Name = "deleteSoftwareButton";
             this.deleteSoftwareButton.Size = new System.Drawing.Size(80, 40);
             this.deleteSoftwareButton.TabIndex = 7;
@@ -205,7 +246,7 @@
             this.additionalServicesDGV.Location = new System.Drawing.Point(3, 3);
             this.additionalServicesDGV.Name = "additionalServicesDGV";
             this.additionalServicesDGV.ReadOnly = true;
-            this.additionalServicesDGV.Size = new System.Drawing.Size(294, 180);
+            this.additionalServicesDGV.Size = new System.Drawing.Size(747, 180);
             this.additionalServicesDGV.TabIndex = 9;
             // 
             // AdditionalServiceName
@@ -217,9 +258,9 @@
             // 
             // AdditionalServiceCost
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Format = "N2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.AdditionalServiceCost.DefaultCellStyle = dataGridViewCellStyle11;
             this.AdditionalServiceCost.HeaderText = "Цена, руб.";
             this.AdditionalServiceCost.Name = "AdditionalServiceCost";
             this.AdditionalServiceCost.ReadOnly = true;
@@ -233,7 +274,7 @@
             // 
             // deleteAdditionalServiceButton
             // 
-            this.deleteAdditionalServiceButton.Location = new System.Drawing.Point(3, 189);
+            this.deleteAdditionalServiceButton.Location = new System.Drawing.Point(6, 189);
             this.deleteAdditionalServiceButton.Name = "deleteAdditionalServiceButton";
             this.deleteAdditionalServiceButton.Size = new System.Drawing.Size(80, 40);
             this.deleteAdditionalServiceButton.TabIndex = 10;
@@ -256,7 +297,7 @@
             this.serviceMaintenanceDGV.Location = new System.Drawing.Point(3, 3);
             this.serviceMaintenanceDGV.Name = "serviceMaintenanceDGV";
             this.serviceMaintenanceDGV.ReadOnly = true;
-            this.serviceMaintenanceDGV.Size = new System.Drawing.Size(400, 193);
+            this.serviceMaintenanceDGV.Size = new System.Drawing.Size(747, 180);
             this.serviceMaintenanceDGV.TabIndex = 12;
             // 
             // ServiceMaintenanceName
@@ -268,9 +309,9 @@
             // 
             // ServiceMaintenanceCost
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Format = "N2";
+            dataGridViewCellStyle12.NullValue = null;
+            this.ServiceMaintenanceCost.DefaultCellStyle = dataGridViewCellStyle12;
             this.ServiceMaintenanceCost.HeaderText = "Цена, руб.";
             this.ServiceMaintenanceCost.Name = "ServiceMaintenanceCost";
             this.ServiceMaintenanceCost.ReadOnly = true;
@@ -290,7 +331,7 @@
             // 
             // deleteServiceMaintenanceButton
             // 
-            this.deleteServiceMaintenanceButton.Location = new System.Drawing.Point(3, 202);
+            this.deleteServiceMaintenanceButton.Location = new System.Drawing.Point(6, 189);
             this.deleteServiceMaintenanceButton.Name = "deleteServiceMaintenanceButton";
             this.deleteServiceMaintenanceButton.Size = new System.Drawing.Size(80, 40);
             this.deleteServiceMaintenanceButton.TabIndex = 13;
@@ -300,7 +341,7 @@
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(237, 296);
+            this.buyButton.Location = new System.Drawing.Point(15, 273);
             this.buyButton.Name = "buyButton";
             this.buyButton.Size = new System.Drawing.Size(80, 40);
             this.buyButton.TabIndex = 14;
@@ -314,10 +355,10 @@
             this.basketTC.Controls.Add(this.softwareTP);
             this.basketTC.Controls.Add(this.additionalServicesTP);
             this.basketTC.Controls.Add(this.serviceMaintenanceTP);
-            this.basketTC.Location = new System.Drawing.Point(12, 12);
+            this.basketTC.Location = new System.Drawing.Point(5, 12);
             this.basketTC.Name = "basketTC";
             this.basketTC.SelectedIndex = 0;
-            this.basketTC.Size = new System.Drawing.Size(555, 278);
+            this.basketTC.Size = new System.Drawing.Size(767, 259);
             this.basketTC.TabIndex = 15;
             // 
             // componentsTP
@@ -328,7 +369,7 @@
             this.componentsTP.Location = new System.Drawing.Point(4, 22);
             this.componentsTP.Name = "componentsTP";
             this.componentsTP.Padding = new System.Windows.Forms.Padding(3);
-            this.componentsTP.Size = new System.Drawing.Size(547, 252);
+            this.componentsTP.Size = new System.Drawing.Size(759, 233);
             this.componentsTP.TabIndex = 0;
             this.componentsTP.Text = "Комплектующие";
             // 
@@ -340,7 +381,7 @@
             this.softwareTP.Location = new System.Drawing.Point(4, 22);
             this.softwareTP.Name = "softwareTP";
             this.softwareTP.Padding = new System.Windows.Forms.Padding(3);
-            this.softwareTP.Size = new System.Drawing.Size(547, 252);
+            this.softwareTP.Size = new System.Drawing.Size(759, 233);
             this.softwareTP.TabIndex = 1;
             this.softwareTP.Text = "Программное обеспечение";
             // 
@@ -351,7 +392,7 @@
             this.additionalServicesTP.Controls.Add(this.deleteAdditionalServiceButton);
             this.additionalServicesTP.Location = new System.Drawing.Point(4, 22);
             this.additionalServicesTP.Name = "additionalServicesTP";
-            this.additionalServicesTP.Size = new System.Drawing.Size(547, 252);
+            this.additionalServicesTP.Size = new System.Drawing.Size(759, 233);
             this.additionalServicesTP.TabIndex = 2;
             this.additionalServicesTP.Text = "Дополнительные услуги";
             // 
@@ -362,66 +403,24 @@
             this.serviceMaintenanceTP.Controls.Add(this.deleteServiceMaintenanceButton);
             this.serviceMaintenanceTP.Location = new System.Drawing.Point(4, 22);
             this.serviceMaintenanceTP.Name = "serviceMaintenanceTP";
-            this.serviceMaintenanceTP.Size = new System.Drawing.Size(547, 252);
+            this.serviceMaintenanceTP.Size = new System.Drawing.Size(759, 233);
             this.serviceMaintenanceTP.TabIndex = 3;
             this.serviceMaintenanceTP.Text = "Сервисное обслуживание";
-            // 
-            // TypeCategoryName
-            // 
-            this.TypeCategoryName.HeaderText = "Тип";
-            this.TypeCategoryName.Name = "TypeCategoryName";
-            // 
-            // CategoryGoodsName
-            // 
-            this.CategoryGoodsName.HeaderText = "Категория";
-            this.CategoryGoodsName.Name = "CategoryGoodsName";
-            this.CategoryGoodsName.Width = 120;
-            // 
-            // GoodsManufacturerName
-            // 
-            this.GoodsManufacturerName.HeaderText = "Производитель";
-            this.GoodsManufacturerName.Name = "GoodsManufacturerName";
-            // 
-            // GoodsName
-            // 
-            this.GoodsName.HeaderText = "Наименование";
-            this.GoodsName.Name = "GoodsName";
-            this.GoodsName.Width = 180;
-            // 
-            // GoodsCost
-            // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.GoodsCost.DefaultCellStyle = dataGridViewCellStyle1;
-            this.GoodsCost.HeaderText = "Цена, руб.";
-            this.GoodsCost.Name = "GoodsCost";
-            // 
-            // GoodsQuantity
-            // 
-            this.GoodsQuantity.HeaderText = "Количество";
-            this.GoodsQuantity.Name = "GoodsQuantity";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(775, 319);
             this.Controls.Add(this.basketTC);
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.totalCostLabel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Basket";
             this.ShowIcon = false;
-            this.Text = "Basket";
+            this.Text = "Корзина";
             this.Load += new System.EventHandler(this.Basket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDGV)).EndInit();

@@ -15,13 +15,16 @@ namespace Client
 {
     public partial class MainWindow : Form
     {
-        MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
+        MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = root; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
         public int id = 0;
         public int count = 1;
         public int basketCount = 1;
         public int basketQuantity = 0;
         public int componentsQuantity = 0;
+        public int softwareQuantity = 0;
+        public int additionalServicesQuantity = 0;
+        public int serviceMaintenanceQuantity = 0;
         public List<string> goodsCategory = new List<string>();
         public List<string> goodsAllType = new List<string>();
 
@@ -84,6 +87,18 @@ namespace Client
             Description description = new Description();
             description.goodsName = goodsDGV.CurrentRow.Cells[3].Value.ToString();
             description.goodsManufacturer = goodsDGV.CurrentRow.Cells[2].Value.ToString();
+            command = new MySqlCommand("SELECT characteristiclist.CharacteristicName, IFNULL(specificcharacteristics.SpecificCharacteristicValue, defaultcharacteristic.DefaultCharacteristicValue) AS Value " +
+                                       "FROM specificcharacteristics LEFT OUTER JOIN goodscatalog ON specificcharacteristics.GoodsID = goodscatalog.GoodsID LEFT OUTER JOIN defaultcharacteristic " +
+                                       "ON specificcharacteristics.DefaultCharacteristicID = defaultcharacteristic.DefaultCharacteristicID INNER JOIN characteristiclist " +
+                                       "ON specificcharacteristics.CharacteristicID = characteristiclist.CharacteristicID WHERE goodscatalog.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
+            using (MySqlDataReader MyReader = command.ExecuteReader())
+            {
+                while (MyReader.Read())
+                {
+                    description.description += MyReader.GetString(0) + ": " + MyReader.GetString(1) + "\n";
+                }
+                MyReader.Close();
+            }
             command = new MySqlCommand("SELECT goodsdescription.GoodsDescription, goodscatalog.GoodsName, goodscatalog.GoodsImage FROM goodscatalog INNER JOIN " +
                                        "goodsdescription ON goodscatalog.GoodsDescriptionID = goodsdescription.GoodsDescriptionID WHERE " +
                                        "goodscatalog.GoodsID = '" + goodsDGV.CurrentRow.Cells[5].Value.ToString() + "'", connection);
@@ -92,7 +107,7 @@ namespace Client
                 while (MyReader.Read())
                 {
                     description.image = (byte[])(MyReader[2]);
-                    description.description = MyReader.GetString(0);
+                    description.description += MyReader.GetString(0);
                 }
                 MyReader.Close();
             }
@@ -201,8 +216,7 @@ namespace Client
                 goodsQuantityTB.Clear();
                 connection.Close();
                 CheckBasketQuantity();
-                basketQuantity = componentsQuantity;
-                basketQuantityLabel.Text = basketQuantity.ToString();
+                basketQuantityLabel.Text = componentsQuantity.ToString();
             }
         }
 
@@ -408,7 +422,8 @@ namespace Client
             Software software = new Software();
             software.basketID = (id + basketCount);
             software.ShowDialog();
-            basketQuantity = software.softwareQuantity + componentsQuantity;
+            softwareQuantity = software.softwareQuantity;
+            basketQuantity = componentsQuantity + additionalServicesQuantity + softwareQuantity + serviceMaintenanceQuantity;
             basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
@@ -417,7 +432,8 @@ namespace Client
             AdditionalServices additionalServices = new AdditionalServices();
             additionalServices.basketID = (id + basketCount);
             additionalServices.ShowDialog();
-            basketQuantity = additionalServices.additionalServicesQuantity + componentsQuantity;
+            additionalServicesQuantity = additionalServices.additionalServicesQuantity;
+            basketQuantity = componentsQuantity + additionalServicesQuantity + softwareQuantity + serviceMaintenanceQuantity;
             basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
@@ -426,7 +442,8 @@ namespace Client
             ServiceMaintenance serviceMaintenance = new ServiceMaintenance();
             serviceMaintenance.basketID = (id + basketCount);
             serviceMaintenance.ShowDialog();
-            basketQuantity = serviceMaintenance.serviceMaintenanceQuantity + componentsQuantity;
+            serviceMaintenanceQuantity = serviceMaintenance.serviceMaintenanceQuantity;
+            basketQuantity = componentsQuantity + additionalServicesQuantity + softwareQuantity + serviceMaintenanceQuantity;
             basketQuantityLabel.Text = basketQuantity.ToString();
         }
 
@@ -436,7 +453,8 @@ namespace Client
             assembly.basketID = (id + basketCount);
             assembly.assemblyQuantity = componentsQuantity;
             assembly.ShowDialog();
-            basketQuantity = assembly.assemblyQuantity;
+            CheckBasketQuantity();
+            basketQuantity = componentsQuantity + additionalServicesQuantity + softwareQuantity + serviceMaintenanceQuantity;
             basketQuantityLabel.Text = basketQuantity.ToString();
         }
 

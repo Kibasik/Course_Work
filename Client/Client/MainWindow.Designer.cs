@@ -81,7 +81,6 @@
             this.goodsQuantityTB = new System.Windows.Forms.TextBox();
             this.componentsPriceListReport = new FastReport.Report();
             this.fullPriceListReport = new FastReport.Report();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.goodsQuantityReport = new FastReport.Report();
             this.additionalServicesPriceListReport = new FastReport.Report();
@@ -89,6 +88,9 @@
             this.serviceMaintenancePriceListReport = new FastReport.Report();
             this.label11 = new System.Windows.Forms.Label();
             this.basketQuantityLabel = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods)).BeginInit();
@@ -99,6 +101,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesPriceListReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwarePriceListReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenancePriceListReport)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // goodsDGV
@@ -118,10 +123,10 @@
             this.goodsIDDataGridViewTextBoxColumn,
             this.GoodsAmount});
             this.goodsDGV.DataSource = this.dataTableBindingSource1;
-            this.goodsDGV.Location = new System.Drawing.Point(12, 50);
+            this.goodsDGV.Location = new System.Drawing.Point(6, 19);
             this.goodsDGV.Name = "goodsDGV";
             this.goodsDGV.ReadOnly = true;
-            this.goodsDGV.Size = new System.Drawing.Size(545, 246);
+            this.goodsDGV.Size = new System.Drawing.Size(644, 208);
             this.goodsDGV.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -188,7 +193,7 @@
             // 
             this.goodsCategoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.goodsCategoryCB.FormattingEnabled = true;
-            this.goodsCategoryCB.Location = new System.Drawing.Point(577, 117);
+            this.goodsCategoryCB.Location = new System.Drawing.Point(9, 81);
             this.goodsCategoryCB.Name = "goodsCategoryCB";
             this.goodsCategoryCB.Size = new System.Drawing.Size(188, 21);
             this.goodsCategoryCB.TabIndex = 6;
@@ -197,7 +202,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(574, 101);
+            this.label2.Location = new System.Drawing.Point(6, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 13);
             this.label2.TabIndex = 7;
@@ -205,9 +210,9 @@
             // 
             // showAllGoodsButton
             // 
-            this.showAllGoodsButton.Location = new System.Drawing.Point(318, 302);
+            this.showAllGoodsButton.Location = new System.Drawing.Point(9, 256);
             this.showAllGoodsButton.Name = "showAllGoodsButton";
-            this.showAllGoodsButton.Size = new System.Drawing.Size(90, 40);
+            this.showAllGoodsButton.Size = new System.Drawing.Size(201, 25);
             this.showAllGoodsButton.TabIndex = 9;
             this.showAllGoodsButton.Text = "Показать весь список";
             this.showAllGoodsButton.UseVisualStyleBackColor = true;
@@ -225,7 +230,7 @@
             this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(904, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -360,17 +365,17 @@
             // 
             // descriptionButton
             // 
-            this.descriptionButton.Location = new System.Drawing.Point(477, 302);
+            this.descriptionButton.Location = new System.Drawing.Point(540, 10);
             this.descriptionButton.Name = "descriptionButton";
-            this.descriptionButton.Size = new System.Drawing.Size(80, 40);
+            this.descriptionButton.Size = new System.Drawing.Size(110, 25);
             this.descriptionButton.TabIndex = 11;
-            this.descriptionButton.Text = "Описание";
+            this.descriptionButton.Text = "Описание товара";
             this.descriptionButton.UseVisualStyleBackColor = true;
             this.descriptionButton.Click += new System.EventHandler(this.descriptionButton_Click);
             // 
             // lowPriceTB
             // 
-            this.lowPriceTB.Location = new System.Drawing.Point(603, 272);
+            this.lowPriceTB.Location = new System.Drawing.Point(29, 163);
             this.lowPriceTB.MaxLength = 10;
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -379,7 +384,7 @@
             // 
             // highPriceTB
             // 
-            this.highPriceTB.Location = new System.Drawing.Point(603, 298);
+            this.highPriceTB.Location = new System.Drawing.Point(29, 189);
             this.highPriceTB.MaxLength = 10;
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
@@ -389,7 +394,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(574, 250);
+            this.label5.Location = new System.Drawing.Point(6, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 14;
@@ -398,7 +403,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(574, 272);
+            this.label3.Location = new System.Drawing.Point(6, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 15;
@@ -407,7 +412,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(574, 298);
+            this.label4.Location = new System.Drawing.Point(6, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 16;
@@ -415,9 +420,9 @@
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(577, 324);
+            this.costButton.Location = new System.Drawing.Point(115, 186);
             this.costButton.Name = "costButton";
-            this.costButton.Size = new System.Drawing.Size(80, 40);
+            this.costButton.Size = new System.Drawing.Size(95, 25);
             this.costButton.TabIndex = 17;
             this.costButton.Text = "Применить";
             this.costButton.UseVisualStyleBackColor = true;
@@ -425,9 +430,9 @@
             // 
             // manufacturerButton
             // 
-            this.manufacturerButton.Location = new System.Drawing.Point(577, 201);
+            this.manufacturerButton.Location = new System.Drawing.Point(115, 118);
             this.manufacturerButton.Name = "manufacturerButton";
-            this.manufacturerButton.Size = new System.Drawing.Size(100, 40);
+            this.manufacturerButton.Size = new System.Drawing.Size(95, 25);
             this.manufacturerButton.TabIndex = 18;
             this.manufacturerButton.Text = "Отфильтровать";
             this.manufacturerButton.UseVisualStyleBackColor = true;
@@ -436,7 +441,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(574, 159);
+            this.label6.Location = new System.Drawing.Point(6, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 13);
             this.label6.TabIndex = 19;
@@ -444,16 +449,16 @@
             // 
             // manufacturerTB
             // 
-            this.manufacturerTB.Location = new System.Drawing.Point(577, 175);
+            this.manufacturerTB.Location = new System.Drawing.Point(9, 121);
             this.manufacturerTB.Name = "manufacturerTB";
             this.manufacturerTB.Size = new System.Drawing.Size(100, 20);
             this.manufacturerTB.TabIndex = 20;
             // 
             // basketButton
             // 
-            this.basketButton.Location = new System.Drawing.Point(169, 302);
+            this.basketButton.Location = new System.Drawing.Point(334, 10);
             this.basketButton.Name = "basketButton";
-            this.basketButton.Size = new System.Drawing.Size(80, 40);
+            this.basketButton.Size = new System.Drawing.Size(124, 25);
             this.basketButton.TabIndex = 21;
             this.basketButton.Text = "Добавить в корзину";
             this.basketButton.UseVisualStyleBackColor = true;
@@ -462,7 +467,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(577, 375);
+            this.label7.Location = new System.Drawing.Point(6, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 13);
             this.label7.TabIndex = 22;
@@ -470,9 +475,9 @@
             // 
             // goodsNameTB
             // 
-            this.goodsNameTB.Location = new System.Drawing.Point(580, 395);
+            this.goodsNameTB.Location = new System.Drawing.Point(9, 230);
             this.goodsNameTB.Name = "goodsNameTB";
-            this.goodsNameTB.Size = new System.Drawing.Size(100, 20);
+            this.goodsNameTB.Size = new System.Drawing.Size(201, 20);
             this.goodsNameTB.TabIndex = 23;
             this.goodsNameTB.TextChanged += new System.EventHandler(this.goodsNameTB_TextChanged_1);
             // 
@@ -483,7 +488,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(574, 50);
+            this.label1.Location = new System.Drawing.Point(6, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 25;
@@ -493,9 +498,9 @@
             // 
             this.goodsTypeCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.goodsTypeCB.FormattingEnabled = true;
-            this.goodsTypeCB.Location = new System.Drawing.Point(577, 66);
+            this.goodsTypeCB.Location = new System.Drawing.Point(9, 41);
             this.goodsTypeCB.Name = "goodsTypeCB";
-            this.goodsTypeCB.Size = new System.Drawing.Size(157, 21);
+            this.goodsTypeCB.Size = new System.Drawing.Size(188, 21);
             this.goodsTypeCB.TabIndex = 26;
             this.goodsTypeCB.SelectedIndexChanged += new System.EventHandler(this.goodsTypeCB_SelectedIndexChanged);
             // 
@@ -507,10 +512,10 @@
             // 
             // goodsQuantityTB
             // 
-            this.goodsQuantityTB.Location = new System.Drawing.Point(12, 323);
+            this.goodsQuantityTB.Location = new System.Drawing.Point(166, 13);
             this.goodsQuantityTB.MaxLength = 3;
             this.goodsQuantityTB.Name = "goodsQuantityTB";
-            this.goodsQuantityTB.Size = new System.Drawing.Size(100, 20);
+            this.goodsQuantityTB.Size = new System.Drawing.Size(151, 20);
             this.goodsQuantityTB.TabIndex = 27;
             this.goodsQuantityTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.goodsQuantityTB_KeyPress);
             // 
@@ -525,19 +530,10 @@
             this.fullPriceListReport.NeedRefresh = false;
             this.fullPriceListReport.ReportResourceString = resources.GetString("fullPriceListReport.ReportResourceString");
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 13);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "Список комплектующих:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 307);
+            this.label9.Location = new System.Drawing.Point(6, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 13);
             this.label9.TabIndex = 31;
@@ -566,7 +562,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 365);
+            this.label11.Location = new System.Drawing.Point(6, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(167, 13);
             this.label11.TabIndex = 33;
@@ -575,50 +571,77 @@
             // basketQuantityLabel
             // 
             this.basketQuantityLabel.AutoSize = true;
-            this.basketQuantityLabel.Location = new System.Drawing.Point(182, 365);
+            this.basketQuantityLabel.Location = new System.Drawing.Point(179, 39);
             this.basketQuantityLabel.Name = "basketQuantityLabel";
             this.basketQuantityLabel.Size = new System.Drawing.Size(41, 13);
             this.basketQuantityLabel.TabIndex = 34;
             this.basketQuantityLabel.Text = "label10";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.goodsCategoryCB);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.manufacturerButton);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.showAllGoodsButton);
+            this.groupBox1.Controls.Add(this.manufacturerTB);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.goodsNameTB);
+            this.groupBox1.Controls.Add(this.goodsTypeCB);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lowPriceTB);
+            this.groupBox1.Controls.Add(this.costButton);
+            this.groupBox1.Controls.Add(this.highPriceTB);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(678, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(216, 317);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Фильтрация";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.goodsDGV);
+            this.groupBox2.Location = new System.Drawing.Point(12, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(660, 250);
+            this.groupBox2.TabIndex = 36;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Список комплектующих";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.goodsQuantityTB);
+            this.groupBox3.Controls.Add(this.basketQuantityLabel);
+            this.groupBox3.Controls.Add(this.descriptionButton);
+            this.groupBox3.Controls.Add(this.basketButton);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Location = new System.Drawing.Point(12, 283);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(660, 61);
+            this.groupBox3.TabIndex = 37;
+            this.groupBox3.TabStop = false;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(784, 431);
-            this.Controls.Add(this.basketQuantityLabel);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.goodsQuantityTB);
-            this.Controls.Add(this.goodsTypeCB);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.goodsNameTB);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.basketButton);
-            this.Controls.Add(this.manufacturerTB);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.manufacturerButton);
-            this.Controls.Add(this.costButton);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.highPriceTB);
-            this.Controls.Add(this.lowPriceTB);
-            this.Controls.Add(this.descriptionButton);
-            this.Controls.Add(this.showAllGoodsButton);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.goodsCategoryCB);
-            this.Controls.Add(this.goodsDGV);
+            this.ClientSize = new System.Drawing.Size(904, 350);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 470);
             this.Name = "MainWindow";
             this.ShowIcon = false;
-            this.Text = "MainWIndow";
+            this.Text = "Магазин";
             this.Load += new System.EventHandler(this.MainWindow_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.goodsDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).EndInit();
@@ -631,6 +654,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.additionalServicesPriceListReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwarePriceListReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceMaintenancePriceListReport)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,7 +700,6 @@
         private FastReport.Report componentsPriceListReport;
         private System.Windows.Forms.ToolStripMenuItem сборкаToolStripMenuItem;
         private FastReport.Report fullPriceListReport;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem графикиToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -696,6 +723,9 @@
         private FastReport.Report serviceMaintenancePriceListReport;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label basketQuantityLabel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 

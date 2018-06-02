@@ -34,31 +34,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FastReport, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Bars, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport.Bars, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Bars.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Bars.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Data.MySql, Version=2018.2.2.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
-      <HintPath>..\packages\FastReport.Data.MySql.2018.2.2\lib\net40\FastReport.Data.MySql.dll</HintPath>
-    </Reference>
-    <Reference Include="FastReport.Editor, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport.Editor, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Editor.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Service">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Service.dll</HintPath>
+    <Reference Include="FastReport.Service, Version=2018.3.11.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Service.dll</HintPath>
     </Reference>
     <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.VSDesign.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.VSDesign.dll</HintPath>
     </Reference>
-    <Reference Include="FastReport.Web, Version=2018.3.7.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+    <Reference Include="FastReport.Web, Version=2018.3.10.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Web.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\FastReports\FastReport.Net Trial\Framework 4.0\FastReport.Web.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
@@ -115,6 +113,18 @@
     <Compile Include="Basket.Designer.cs">
       <DependentUpon>Basket.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeCharacteristic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeCharacteristic.Designer.cs">
+      <DependentUpon>ChangeCharacteristic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDescription.Designer.cs">
+      <DependentUpon>ChangeDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Charts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +136,11 @@
     </Compile>
     <Compile Include="ChooseWindow.Designer.cs">
       <DependentUpon>ChooseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateSupplyChart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DateSupplyChart.xsd</DependentUpon>
     </Compile>
     <Compile Include="DeliveryAndSale.cs">
       <SubType>Form</SubType>
@@ -154,6 +169,18 @@
     </Compile>
     <Compile Include="Description.Designer.cs">
       <DependentUpon>Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewComponent.Designer.cs">
+      <DependentUpon>NewComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSoftware.Designer.cs">
+      <DependentUpon>NewSoftware.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,11 +211,50 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SoftwareQuantity.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuppliersChart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuppliersChart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SuppliersList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuppliersList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Supply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supply.Designer.cs">
+      <DependentUpon>Supply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplyStructure.Designer.cs">
+      <DependentUpon>SupplyStructure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Warehouse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Warehouse.Designer.cs">
       <DependentUpon>Warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseCharts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseCharts.Designer.cs">
+      <DependentUpon>WarehouseCharts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseComponentsAmount.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WarehouseComponentsAmount.xsd</DependentUpon>
     </Compile>
     <Compile Include="WarehouseGoods.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -211,6 +277,11 @@
     <Compile Include="Workers.Designer.cs">
       <DependentUpon>Workers.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkersChart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkersChart.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WorkersList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -228,6 +299,12 @@
     <EmbeddedResource Include="Basket.resx">
       <DependentUpon>Basket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCharacteristic.resx">
+      <DependentUpon>ChangeCharacteristic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDescription.resx">
+      <DependentUpon>ChangeDescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Charts.resx">
       <DependentUpon>Charts.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +320,12 @@
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewComponent.resx">
+      <DependentUpon>NewComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSoftware.resx">
+      <DependentUpon>NewSoftware.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -254,8 +337,20 @@
     <EmbeddedResource Include="Software.resx">
       <DependentUpon>Software.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supply.resx">
+      <DependentUpon>Supply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplyStructure.resx">
+      <DependentUpon>SupplyStructure.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Warehouse.resx">
       <DependentUpon>Warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseCharts.resx">
+      <DependentUpon>WarehouseCharts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Workers.resx">
       <DependentUpon>Workers.cs</DependentUpon>
@@ -270,6 +365,17 @@
     </None>
     <None Include="AdditionalServicesList.xss">
       <DependentUpon>AdditionalServicesList.xsd</DependentUpon>
+    </None>
+    <None Include="DateSupplyChart.xsc">
+      <DependentUpon>DateSupplyChart.xsd</DependentUpon>
+    </None>
+    <None Include="DateSupplyChart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DateSupplyChart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DateSupplyChart.xss">
+      <DependentUpon>DateSupplyChart.xsd</DependentUpon>
     </None>
     <None Include="Goods.xsc">
       <DependentUpon>Goods.xsd</DependentUpon>
@@ -341,6 +447,39 @@
     <None Include="SoftwareQuantity.xss">
       <DependentUpon>SoftwareQuantity.xsd</DependentUpon>
     </None>
+    <None Include="SuppliersChart.xsc">
+      <DependentUpon>SuppliersChart.xsd</DependentUpon>
+    </None>
+    <None Include="SuppliersChart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuppliersChart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SuppliersChart.xss">
+      <DependentUpon>SuppliersChart.xsd</DependentUpon>
+    </None>
+    <None Include="SuppliersList.xsc">
+      <DependentUpon>SuppliersList.xsd</DependentUpon>
+    </None>
+    <None Include="SuppliersList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuppliersList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SuppliersList.xss">
+      <DependentUpon>SuppliersList.xsd</DependentUpon>
+    </None>
+    <None Include="WarehouseComponentsAmount.xsc">
+      <DependentUpon>WarehouseComponentsAmount.xsd</DependentUpon>
+    </None>
+    <None Include="WarehouseComponentsAmount.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WarehouseComponentsAmount.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WarehouseComponentsAmount.xss">
+      <DependentUpon>WarehouseComponentsAmount.xsd</DependentUpon>
+    </None>
     <None Include="WarehouseGoods.xsc">
       <DependentUpon>WarehouseGoods.xsd</DependentUpon>
     </None>
@@ -373,6 +512,17 @@
     </None>
     <None Include="WarehouseTable.xss">
       <DependentUpon>WarehouseTable.xsd</DependentUpon>
+    </None>
+    <None Include="WorkersChart.xsc">
+      <DependentUpon>WorkersChart.xsd</DependentUpon>
+    </None>
+    <None Include="WorkersChart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkersChart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WorkersChart.xss">
+      <DependentUpon>WorkersChart.xsd</DependentUpon>
     </None>
     <None Include="WorkersList.xsc">
       <DependentUpon>WorkersList.xsd</DependentUpon>

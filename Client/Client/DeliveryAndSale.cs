@@ -13,7 +13,7 @@ namespace Client
 {
     public partial class DeliveryAndSale : Form
     {
-        MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
+        MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = root; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
         public double deliveryCost = 0;
         public string deliveryMethod { get; set; }
@@ -239,7 +239,7 @@ namespace Client
                     MyReader.Close();
                 }
                 command = new MySqlCommand("SELECT paymentmethod.PaymentMethodID FROM paymentmethod " +
-                                               "WHERE paymentmethod.PaymentMethodName = '" + paymentMethodCB.SelectedItem.ToString() + "'", connection);
+                                           "WHERE paymentmethod.PaymentMethodName = '" + paymentMethodCB.SelectedItem.ToString() + "'", connection);
                 using (MySqlDataReader MyReader = command.ExecuteReader())
                 {
                     while (MyReader.Read())

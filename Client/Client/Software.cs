@@ -13,7 +13,7 @@ namespace Client
 {
     public partial class Software : Form
     {
-        MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = client; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
+        MySqlConnection connection = new MySqlConnection("Data Source = localhost; User = root; Initial Catalog = course; SSL Mode = none; CharSet = utf8");
         MySqlCommand command = new MySqlCommand();
         public List<string> softwareType = new List<string>();
         public int basketID { get; set; }

@@ -33,5 +33,16 @@ namespace Client.Properties {
                 return ((string)(this["courseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Driver={MySQL ODBC 5.2 Unicode Driver};server=localhost;uid=root;database=course;" +
+            "port=3306")]
+        public string courseConnectionString1 {
+            get {
+                return ((string)(this["courseConnectionString1"]));
+            }
+        }
     }
 }

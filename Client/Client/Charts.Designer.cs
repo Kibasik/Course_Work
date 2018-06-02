@@ -38,32 +38,32 @@
             this.chartsTC = new System.Windows.Forms.TabControl();
             this.goodsTP = new System.Windows.Forms.TabPage();
             this.goodsChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsQuantity = new Client.GoodsQuantity();
             this.softwareTP = new System.Windows.Forms.TabPage();
             this.softwareChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.softwareQuantity = new Client.SoftwareQuantity();
-            this.dataTableTableAdapter1 = new Client.SoftwareQuantityTableAdapters.DataTableTableAdapter();
             this.warehouseTB = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.goodsQuantity = new Client.GoodsQuantity();
-            this.dataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTableTableAdapter = new Client.GoodsQuantityTableAdapters.DataTableTableAdapter();
-            this.warehouseQuantity = new Client.WarehouseQuantity();
             this.dataTableBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.warehouseQuantity = new Client.WarehouseQuantity();
+            this.dataTableTableAdapter1 = new Client.SoftwareQuantityTableAdapters.DataTableTableAdapter();
+            this.dataTableTableAdapter = new Client.GoodsQuantityTableAdapters.DataTableTableAdapter();
             this.dataTableTableAdapter2 = new Client.WarehouseQuantityTableAdapters.DataTableTableAdapter();
             this.chartsTC.SuspendLayout();
             this.goodsTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.goodsChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).BeginInit();
             this.softwareTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.softwareChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareQuantity)).BeginInit();
             this.warehouseTB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warehouseQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // chartsTC
@@ -109,6 +109,16 @@
             this.goodsChart.TabIndex = 0;
             this.goodsChart.Text = "chart1";
             // 
+            // dataTableBindingSource
+            // 
+            this.dataTableBindingSource.DataMember = "DataTable";
+            this.dataTableBindingSource.DataSource = this.goodsQuantity;
+            // 
+            // goodsQuantity
+            // 
+            this.goodsQuantity.DataSetName = "GoodsQuantity";
+            this.goodsQuantity.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // softwareTP
             // 
             this.softwareTP.BackColor = System.Drawing.SystemColors.Control;
@@ -151,10 +161,6 @@
             this.softwareQuantity.DataSetName = "SoftwareQuantity";
             this.softwareQuantity.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataTableTableAdapter1
-            // 
-            this.dataTableTableAdapter1.ClearBeforeFill = true;
-            // 
             // warehouseTB
             // 
             this.warehouseTB.BackColor = System.Drawing.SystemColors.Control;
@@ -186,29 +192,23 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // goodsQuantity
+            // dataTableBindingSource2
             // 
-            this.goodsQuantity.DataSetName = "GoodsQuantity";
-            this.goodsQuantity.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTableBindingSource
-            // 
-            this.dataTableBindingSource.DataMember = "DataTable";
-            this.dataTableBindingSource.DataSource = this.goodsQuantity;
-            // 
-            // dataTableTableAdapter
-            // 
-            this.dataTableTableAdapter.ClearBeforeFill = true;
+            this.dataTableBindingSource2.DataMember = "DataTable";
+            this.dataTableBindingSource2.DataSource = this.warehouseQuantity;
             // 
             // warehouseQuantity
             // 
             this.warehouseQuantity.DataSetName = "WarehouseQuantity";
             this.warehouseQuantity.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataTableBindingSource2
+            // dataTableTableAdapter1
             // 
-            this.dataTableBindingSource2.DataMember = "DataTable";
-            this.dataTableBindingSource2.DataSource = this.warehouseQuantity;
+            this.dataTableTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataTableTableAdapter
+            // 
+            this.dataTableTableAdapter.ClearBeforeFill = true;
             // 
             // dataTableTableAdapter2
             // 
@@ -225,21 +225,21 @@
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "Charts";
             this.ShowIcon = false;
-            this.Text = "Charts";
+            this.Text = "Графики";
             this.Load += new System.EventHandler(this.Charts_Load);
             this.chartsTC.ResumeLayout(false);
             this.goodsTP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.goodsChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).EndInit();
             this.softwareTP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.softwareChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareQuantity)).EndInit();
             this.warehouseTB.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warehouseQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }

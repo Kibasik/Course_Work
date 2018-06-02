@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>103, 17</value>
+  </metadata>
+  <metadata name="goods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="dataTableTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>287, 17</value>
+  </metadata>
+  <metadata name="supplyReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>465, 17</value>
+  </metadata>
+  <data name="supplyReport.ReportResourceString" xml:space="preserve">
+    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/26/2018 17:56:51" ReportInfo.Modified="05/29/2018 23:04:33" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+  &lt;Dictionary&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3xLUrvE3v/J1jbsuR1Q15L9"&gt;
+      &lt;TableDataSource Name="Table" Alias="Supply" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  categorygoods.CategoryGoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  supplystructure.GoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsCost,&amp;#13;&amp;#10;  supplystructure.SupplyID&amp;#13;&amp;#10;FROM supplystructure&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON supplystructure.GoodsID = goodscatalog.GoodsID&amp;#13;&amp;#10;  INNER JOIN categorygoods&amp;#13;&amp;#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID"&gt;
+        &lt;Column Name="CategoryGoodsName" DataType="System.String"/&gt;
+        &lt;Column Name="GoodsManufacturerName" DataType="System.String"/&gt;
+        &lt;Column Name="GoodsName" DataType="System.String"/&gt;
+        &lt;Column Name="GoodsAmount" DataType="System.Int32"/&gt;
+        &lt;Column Name="GoodsCost" DataType="System.Decimal"/&gt;
+        &lt;Column Name="SupplyID" DataType="System.Int32"/&gt;
+      &lt;/TableDataSource&gt;
+    &lt;/OdbcDataConnection&gt;
+    &lt;Parameter Name="TotalGoodsCost" DataType="System.Decimal" Expression="[Supply.GoodsAmount]*[Supply.GoodsCost]"/&gt;
+    &lt;Parameter Name="SupplyID" DataType="System.Int32" Expression="3"/&gt;
+    &lt;Total Name="TotalCost" Expression="[TotalGoodsCost]" Evaluator="Data1"/&gt;
+    &lt;Total Name="TotalAmount" Expression="[Supply.GoodsAmount]" Evaluator="Data1"/&gt;
+  &lt;/Dictionary&gt;
+  &lt;ReportPage Name="Page1"&gt;
+    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text1" Left="226.8" Top="9.45" Width="255.15" Height="28.35" Text="Состав поставки" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/&gt;
+    &lt;/ReportTitleBand&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="50.45" Width="718.2" Height="47.25"&gt;
+      &lt;TextObject Name="Text6" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray" VertAlign="Center" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text2" Top="9.45" Width="463.05" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text3" Left="538.65" Top="9.45" Width="85.05" Height="28.35" Text="КОЛ-ВО" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text4" Left="623.7" Top="9.45" Width="94.5" Height="28.35" Text="СУММА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text11" Left="463.05" Top="9.45" Width="75.6" Height="28.35" Text="ЦЕНА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+    &lt;/PageHeaderBand&gt;
+    &lt;GroupHeaderBand Name="GroupHeader1" Top="100.9" Width="718.2" Height="37.8" Condition="[Supply.CategoryGoodsName]"&gt;
+      &lt;TextObject Name="Text5" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[Supply.CategoryGoodsName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;DataBand Name="Data1" Top="141.9" Width="718.2" Height="37.8" DataSource="Table" Filter="[Supply.SupplyID] == [SupplyID]"&gt;
+        &lt;TextObject Name="Text7" Top="9.45" Width="217.35" Height="18.9" Text="[Supply.GoodsManufacturerName]" VertAlign="Center"/&gt;
+        &lt;TextObject Name="Text8" Left="217.35" Top="9.45" Width="245.7" Height="18.9" Text="[Supply.GoodsName]" VertAlign="Center"/&gt;
+        &lt;TextObject Name="Text9" Left="538.65" Top="9.45" Width="85.05" Height="18.9" Text="[Supply.GoodsAmount]" VertAlign="Center"/&gt;
+        &lt;TextObject Name="Text10" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[TotalGoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center"/&gt;
+        &lt;TextObject Name="Text12" Left="463.05" Top="9.45" Width="75.6" Height="18.9" Text="[Supply.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/&gt;
+      &lt;/DataBand&gt;
+      &lt;GroupFooterBand Name="GroupFooter1" Top="182.9" Width="718.2" Height="9.45"/&gt;
+    &lt;/GroupHeaderBand&gt;
+    &lt;ColumnFooterBand Name="ColumnFooter1" Top="195.55" Width="718.2" Height="66.15"&gt;
+      &lt;TextObject Name="Text13" Top="9.45" Width="614.25" Height="18.9" Text="Итого:" HorzAlign="Right" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text14" Top="37.8" Width="614.25" Height="18.9" Text="Товаров в поставке:" HorzAlign="Right" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text15" Left="614.25" Top="9.45" Width="103.95" Height="18.9" Text="[TotalCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" Font="Arial, 12pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text16" Left="614.25" Top="37.8" Width="103.95" Height="18.9" Text="[TotalAmount]" Font="Arial, 12pt, style=Bold"/&gt;
+    &lt;/ColumnFooterBand&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="264.9" Width="718.2" Height="9.45"/&gt;
+  &lt;/ReportPage&gt;
+&lt;/Report&gt;
+</value>
+  </data>
+</root>

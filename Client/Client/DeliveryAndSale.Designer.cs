@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 33);
+            this.label2.Location = new System.Drawing.Point(216, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 2;
@@ -95,7 +95,7 @@
             // deliveryCostLabel
             // 
             this.deliveryCostLabel.AutoSize = true;
-            this.deliveryCostLabel.Location = new System.Drawing.Point(344, 33);
+            this.deliveryCostLabel.Location = new System.Drawing.Point(337, 28);
             this.deliveryCostLabel.Name = "deliveryCostLabel";
             this.deliveryCostLabel.Size = new System.Drawing.Size(61, 13);
             this.deliveryCostLabel.TabIndex = 3;
@@ -201,7 +201,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(223, 68);
+            this.label9.Location = new System.Drawing.Point(216, 68);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(156, 13);
             this.label9.TabIndex = 15;
@@ -387,7 +387,7 @@
             this.MinimumSize = new System.Drawing.Size(580, 440);
             this.Name = "DeliveryAndSale";
             this.ShowIcon = false;
-            this.Text = "Delivery";
+            this.Text = "Оплата";
             this.Load += new System.EventHandler(this.Delivery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.saleReport)).EndInit();
             this.ResumeLayout(false);

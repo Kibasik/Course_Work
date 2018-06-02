@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/26/2018 17:56:51" ReportInfo.Modified="05/26/2018 18:21:53" ReportInfo.CreatorVersion="2018.3.7.0">
+  <Dictionary>
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3w65Qi+jZJEDgVbG4glxE+i">
+      <TableDataSource Name="Table" Alias="Supply" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  categorygoods.CategoryGoodsName,&#13;&#10;  goodsmanufacturer.GoodsManufacturerName,&#13;&#10;  goodscatalog.GoodsName,&#13;&#10;  supplystructure.GoodsAmount,&#13;&#10;  goodscatalog.GoodsCost,&#13;&#10;  supplystructure.SupplyID&#13;&#10;FROM supplystructure&#13;&#10;  INNER JOIN goodscatalog&#13;&#10;    ON supplystructure.GoodsID = goodscatalog.GoodsID&#13;&#10;  INNER JOIN categorygoods&#13;&#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID&#13;&#10;  INNER JOIN goodsmanufacturer&#13;&#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID">
+        <Column Name="CategoryGoodsName" DataType="System.String"/>
+        <Column Name="GoodsManufacturerName" DataType="System.String"/>
+        <Column Name="GoodsName" DataType="System.String"/>
+        <Column Name="GoodsAmount" DataType="System.Int32"/>
+        <Column Name="GoodsCost" DataType="System.Decimal"/>
+        <Column Name="SupplyID" DataType="System.Int32"/>
+      </TableDataSource>
+    </OdbcDataConnection>
+    <Parameter Name="SupplyID" DataType="System.Int32"/>
+    <Total Name="TotalAmount" Expression="[Supply.GoodsAmount]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
+      <TextObject Name="Text1" Left="226.8" Top="9.45" Width="255.15" Height="28.35" Text="Состав поставки" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="50.45" Width="718.2" Height="47.25">
+      <TextObject Name="Text6" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text2" Top="9.45" Width="557.55" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text3" Left="557.55" Top="9.45" Width="85.05" Height="28.35" Text="КОЛ-ВО" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text11" Left="642.6" Top="9.45" Width="75.6" Height="28.35" Text="ЦЕНА" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="100.9" Width="718.2" Height="37.8" Condition="[Supply.CategoryGoodsName]">
+      <TextObject Name="Text5" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[Supply.CategoryGoodsName]]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <DataBand Name="Data1" Top="141.9" Width="718.2" Height="37.8" DataSource="Table" Filter="[Supply.SupplyID] == [SupplyID]">
+        <TextObject Name="Text7" Top="9.45" Width="217.35" Height="18.9" Text="[Supply.GoodsManufacturerName]" VertAlign="Center"/>
+        <TextObject Name="Text8" Left="217.35" Top="9.45" Width="340.2" Height="18.9" Text="[Supply.GoodsName]" VertAlign="Center"/>
+        <TextObject Name="Text9" Left="557.55" Top="9.45" Width="85.05" Height="18.9" Text="[Supply.GoodsAmount]" VertAlign="Center"/>
+        <TextObject Name="Text12" Left="642.6" Top="9.45" Width="75.6" Height="18.9" Text="[Supply.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Trimming="EllipsisCharacter"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="182.9" Width="718.2" Height="9.45"/>
+    </GroupHeaderBand>
+    <ColumnFooterBand Name="ColumnFooter1" Top="195.55" Width="718.2" Height="66.15"/>
+    <PageFooterBand Name="PageFooter1" Top="264.9" Width="718.2" Height="9.45"/>
+  </ReportPage>
+</Report>
