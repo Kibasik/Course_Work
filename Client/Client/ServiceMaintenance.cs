@@ -127,12 +127,18 @@ namespace Client
 
         private void lowPriceTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            return;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
 
         private void highPriceTB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            return;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -44,6 +44,8 @@ namespace Client
             connection.Close();
             suppliersReport.SetParameterValue("SuppliersName", suppliersName);
             suppliersReport.SetParameterValue("SuppliersID", Convert.ToInt32(suppliersDGV.CurrentRow.Cells[0].Value));
+            suppliersReport.SetParameterValue("BeginDate", dateTimePicker1.Value.Date.ToString("yyyy-MM-dd"));
+            suppliersReport.SetParameterValue("EndDate", dateTimePicker2.Value.Date.ToString("yyyy-MM-dd"));
             suppliersReport.Show();
         }
 
