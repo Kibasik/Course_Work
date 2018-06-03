@@ -46,5 +46,15 @@ namespace Client
             suppliersReport.SetParameterValue("SuppliersID", Convert.ToInt32(suppliersDGV.CurrentRow.Cells[0].Value));
             suppliersReport.Show();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            return;
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            return;
+        }
     }
 }

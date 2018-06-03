@@ -123,5 +123,15 @@ namespace Client
             }
             connection.Close();
         }
+
+        private void lowPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            return;
+        }
+
+        private void highPriceTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            return;
+        }
     }
 }

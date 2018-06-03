@@ -187,6 +187,7 @@
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(91, 20);
             this.highPriceTB.TabIndex = 19;
+            this.highPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.highPriceTB_KeyPress);
             // 
             // lowPriceTB
             // 
@@ -195,6 +196,7 @@
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(91, 20);
             this.lowPriceTB.TabIndex = 18;
+            this.lowPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lowPriceTB_KeyPress);
             // 
             // dataTableTableAdapter
             // 

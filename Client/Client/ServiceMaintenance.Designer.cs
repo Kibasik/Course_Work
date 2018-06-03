@@ -173,6 +173,7 @@
             this.highPriceTB.Name = "highPriceTB";
             this.highPriceTB.Size = new System.Drawing.Size(80, 20);
             this.highPriceTB.TabIndex = 25;
+            this.highPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.highPriceTB_KeyPress);
             // 
             // lowPriceTB
             // 
@@ -181,6 +182,7 @@
             this.lowPriceTB.Name = "lowPriceTB";
             this.lowPriceTB.Size = new System.Drawing.Size(80, 20);
             this.lowPriceTB.TabIndex = 24;
+            this.lowPriceTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lowPriceTB_KeyPress);
             // 
             // label2
             // 

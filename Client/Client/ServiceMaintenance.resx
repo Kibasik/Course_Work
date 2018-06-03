@@ -134,7 +134,7 @@
   </metadata>
   <data name="serviceMaintenancePriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="05/29/2018 17:26:54" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:17:00" ReportInfo.Modified="06/03/2018 15:06:09" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic

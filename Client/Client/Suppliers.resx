@@ -137,9 +137,9 @@
   </metadata>
   <data name="suppliersReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2018 01:24:44" ReportInfo.Modified="05/31/2018 17:58:39" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2018 01:24:44" ReportInfo.Modified="06/03/2018 15:15:06" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3xq4JzyHqWTzKxsIehvDnlb"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3w4V2zv3acRkuFIMvwXhW1P"&gt;
       &lt;TableDataSource Name="Table" Alias="SupplyStructure" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  supply.SupplyDate,&amp;#13;&amp;#10;  supplystructure.GoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsCost,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  suppliers.SuppliersID&amp;#13;&amp;#10;FROM supply&amp;#13;&amp;#10;  INNER JOIN suppliers&amp;#13;&amp;#10;    ON supply.SuppliersID = suppliers.SuppliersID&amp;#13;&amp;#10;  INNER JOIN supplystructure&amp;#13;&amp;#10;    ON supplystructure.SupplyID = supply.SupplyID&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON supplystructure.GoodsID = goodscatalog.GoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&amp;#13;&amp;#10;GROUP BY supply.SupplyDate,&amp;#13;&amp;#10;         goodscatalog.GoodsCost,&amp;#13;&amp;#10;         supplystructure.GoodsAmount,&amp;#13;&amp;#10;         goodscatalog.GoodsName,&amp;#13;&amp;#10;         goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;         suppliers.SuppliersID"&gt;
         &lt;Column Name="SupplyDate" DataType="System.DateTime" Format="Date"/&gt;
         &lt;Column Name="GoodsAmount" DataType="System.Int32"/&gt;

@@ -140,7 +140,7 @@
   </metadata>
   <data name="additionalServicesPriceListReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:11:20" ReportInfo.Modified="05/29/2018 16:51:16" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/17/2018 19:11:20" ReportInfo.Modified="06/03/2018 15:04:57" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
