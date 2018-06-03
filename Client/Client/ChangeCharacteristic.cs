@@ -19,6 +19,7 @@ namespace Client
         public int characteristicID = 0;
         public int defaulCharacteristicID = 0;
         public int warrantyID = 0;
+        public string categoryGoodsName { get; set; }
 
         public ChangeCharacteristic()
         {
@@ -34,7 +35,7 @@ namespace Client
             characteristicValueCB.Items.Clear();
             warrantyPeriodCB.Items.Add("");
             characteristicNameCB.Items.Add("");
-            command = new MySqlCommand("SELECT characteristiclist.CharacteristicName FROM characteristiclist", connection);
+            command = new MySqlCommand("SELECT characteristiclist.CharacteristicName FROM characteristiclist WHERE characteristiclist.CategoryGoodsName = '" + categoryGoodsName + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())

@@ -292,6 +292,7 @@ namespace Client
         {
             ChangeCharacteristic changeCharacteristic = new ChangeCharacteristic();
             changeCharacteristic.componentID = Convert.ToInt32(goodsDGV.CurrentRow.Cells[5].Value);
+            changeCharacteristic.categoryGoodsName = goodsDGV.CurrentRow.Cells[1].Value.ToString();
             changeCharacteristic.ShowDialog();
         }
 
