@@ -42,8 +42,8 @@
             this.dataTableTableAdapter = new Client.SuppliersListTableAdapters.DataTableTableAdapter();
             this.reportButton = new System.Windows.Forms.Button();
             this.suppliersReport = new FastReport.Report();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.beginDTP = new System.Windows.Forms.DateTimePicker();
+            this.endDTP = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersList)).BeginInit();
@@ -149,29 +149,27 @@
             this.suppliersReport.ReportResourceString = resources.GetString("suppliersReport.ReportResourceString");
             this.suppliersReport.RegisterData(this.suppliersList, "suppliersList");
             // 
-            // dateTimePicker1
+            // beginDTP
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(329, 193);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.beginDTP.Location = new System.Drawing.Point(329, 193);
+            this.beginDTP.Name = "beginDTP";
+            this.beginDTP.Size = new System.Drawing.Size(139, 20);
+            this.beginDTP.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // endDTP
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(474, 193);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(139, 20);
-            this.dateTimePicker2.TabIndex = 4;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.endDTP.Location = new System.Drawing.Point(474, 193);
+            this.endDTP.Name = "endDTP";
+            this.endDTP.Size = new System.Drawing.Size(139, 20);
+            this.endDTP.TabIndex = 4;
             // 
             // Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 231);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.endDTP);
+            this.Controls.Add(this.beginDTP);
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.suppliersDGV);
@@ -205,7 +203,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn suppliersPhoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button reportButton;
         private FastReport.Report suppliersReport;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker beginDTP;
+        private System.Windows.Forms.DateTimePicker endDTP;
     }
 }

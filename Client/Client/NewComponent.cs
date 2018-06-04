@@ -197,7 +197,7 @@ namespace Client
         {
             connection.Open();
             command = new MySqlCommand("SELECT categorygoods.CategoryGoodsID FROM categorygoods " +
-                                       "WHERE categorygoods.TypeCategoryID = '" + componentTypeID + "'", connection);
+                                       "WHERE categorygoods.TypeCategoryID = '" + componentTypeID + "' AND categorygoods.CategoryGoodsName = '" + componentCategoryCB.SelectedItem.ToString() + "'", connection);
             using (MySqlDataReader MyReader = command.ExecuteReader())
             {
                 while (MyReader.Read())

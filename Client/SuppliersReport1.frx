@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2018 01:24:44" ReportInfo.Modified="06/04/2018 14:08:54" ReportInfo.CreatorVersion="2018.3.10.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2018 01:24:44" ReportInfo.Modified="06/04/2018 14:06:24" ReportInfo.CreatorVersion="2018.3.10.0">
   <Dictionary>
-    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3zV43tRCrkd3oz6YvlqtYvG">
+    <OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wsSaQuQsgmcwkSvmawQxS7">
       <TableDataSource Name="Table" Alias="SupplyStructure" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&#13;&#10;  supply.SupplyDate,&#13;&#10;  supplystructure.GoodsAmount,&#13;&#10;  goodscatalog.GoodsCost,&#13;&#10;  goodscatalog.GoodsName,&#13;&#10;  goodsmanufacturer.GoodsManufacturerName,&#13;&#10;  suppliers.SuppliersID&#13;&#10;FROM supply&#13;&#10;  INNER JOIN suppliers&#13;&#10;    ON supply.SuppliersID = suppliers.SuppliersID&#13;&#10;  INNER JOIN supplystructure&#13;&#10;    ON supplystructure.SupplyID = supply.SupplyID&#13;&#10;  INNER JOIN goodscatalog&#13;&#10;    ON supplystructure.GoodsID = goodscatalog.GoodsID&#13;&#10;  INNER JOIN goodsmanufacturer&#13;&#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&#13;&#10;GROUP BY supply.SupplyDate,&#13;&#10;         goodscatalog.GoodsCost,&#13;&#10;         supplystructure.GoodsAmount,&#13;&#10;         goodscatalog.GoodsName,&#13;&#10;         goodsmanufacturer.GoodsManufacturerName,&#13;&#10;         suppliers.SuppliersID">
         <Column Name="SupplyDate" DataType="System.DateTime" Format="Date"/>
         <Column Name="GoodsAmount" DataType="System.Int32"/>
@@ -32,11 +32,30 @@
     <GroupHeaderBand Name="GroupHeader1" Top="102.5" Width="718.2" Height="37.8" Condition="[SupplyStructure.SupplyDate]">
       <TextObject Name="Text7" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[SupplyStructure.SupplyDate]]" Format="Date" Format.Format="dd.MM.yyyy" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
       <DataBand Name="Data1" Top="144.3" Width="718.2" Height="35.91" DataSource="Table" Filter="[SupplyStructure.SuppliersID] == [SuppliersID] &amp;&amp; [SupplyStructure.SupplyDate] &gt; [BeginDate] &amp;&amp; [SupplyStructure.SupplyDate] &lt; [EndDate]">
-        <TextObject Name="Text8" Top="9.45" Width="198.45" Height="18.9" Text="[SupplyStructure.GoodsManufacturerName]" VertAlign="Center" Font="Arial, 9pt"/>
-        <TextObject Name="Text9" Left="198.45" Top="9.45" Width="264.6" Height="18.9" Text="[SupplyStructure.GoodsName]" VertAlign="Center" Font="Arial, 9pt"/>
-        <TextObject Name="Text10" Left="463.05" Top="9.45" Width="75.6" Height="18.9" Text="[SupplyStructure.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
-        <TextObject Name="Text11" Left="538.65" Top="9.45" Width="85.05" Height="18.9" Text="[SupplyStructure.GoodsAmount]" VertAlign="Center" Font="Arial, 9pt"/>
-        <TextObject Name="Text12" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[Cost]" Format="Currency" Format.UseLocale="true" VertAlign="Center" Font="Arial, 9pt"/>
+        <TableObject Name="Table1" Width="716.2" Height="35.91" Border.Lines="All">
+          <TableColumn Name="Column1" Width="197.95"/>
+          <TableColumn Name="Column2" Width="264.1"/>
+          <TableColumn Name="Column3" Width="75.1"/>
+          <TableColumn Name="Column4" Width="84.55"/>
+          <TableColumn Name="Column5" Width="94.5"/>
+          <TableRow Name="Row1" Height="35.91">
+            <TableCell Name="Cell1" Border.Lines="All">
+              <TextObject Name="Text8" Top="9.45" Width="198.45" Height="18.9" Text="[SupplyStructure.GoodsManufacturerName]" VertAlign="Center" Font="Arial, 9pt"/>
+            </TableCell>
+            <TableCell Name="Cell2" Border.Lines="All">
+              <TextObject Name="Text9" Top="9.45" Width="264.6" Height="18.9" Text="[SupplyStructure.GoodsName]" VertAlign="Center" Font="Arial, 9pt"/>
+            </TableCell>
+            <TableCell Name="Cell3" Border.Lines="All">
+              <TextObject Name="Text10" Top="9.45" Width="75.6" Height="18.9" Text="[SupplyStructure.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/>
+            </TableCell>
+            <TableCell Name="Cell4" Border.Lines="All">
+              <TextObject Name="Text11" Top="9.45" Width="85.05" Height="18.9" Text="[SupplyStructure.GoodsAmount]" VertAlign="Center" Font="Arial, 9pt"/>
+            </TableCell>
+            <TableCell Name="Cell5" Border.Lines="All">
+              <TextObject Name="Text12" Top="9.45" Width="94.5" Height="18.9" Text="[Cost]" Format="Currency" Format.UseLocale="true" VertAlign="Center" Font="Arial, 9pt"/>
+            </TableCell>
+          </TableRow>
+        </TableObject>
       </DataBand>
       <GroupFooterBand Name="GroupFooter1" Top="184.21" Width="718.2" Height="9.45"/>
     </GroupHeaderBand>

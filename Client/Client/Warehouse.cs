@@ -251,12 +251,14 @@ namespace Client
         {
             NewSoftware newSoftware = new NewSoftware();
             newSoftware.ShowDialog();
+            Warehouse_Load(null, null);
         }
 
         private void комплектующееToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewComponent newComponent = new NewComponent();
             newComponent.ShowDialog();
+            Warehouse_Load(null, null);
         }
 
         private void товарыНаСкладеToolStripMenuItem1_Click(object sender, EventArgs e)

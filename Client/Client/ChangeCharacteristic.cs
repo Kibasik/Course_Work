@@ -17,7 +17,7 @@ namespace Client
         MySqlCommand command = new MySqlCommand();
         public int componentID = 0;
         public int characteristicID = 0;
-        public int defaulCharacteristicID = 0;
+        public int defaultCharacteristicID = 0;
         public int warrantyID = 0;
         public string categoryGoodsName { get; set; }
 
@@ -126,7 +126,7 @@ namespace Client
                 {
                     while (MyReader.Read())
                     {
-                        defaulCharacteristicID = MyReader.GetInt32(0);
+                        defaultCharacteristicID = MyReader.GetInt32(0);
                     }
                     MyReader.Close();
                 }
@@ -147,41 +147,47 @@ namespace Client
         {
             connection.Open();
             int tempCharacteristicID = 0;
-            command = new MySqlCommand("SELECT specificcharacteristics.CharacteristicID FROM specificcharacteristics WHERE specificcharacteristics.GoodsID = '" + componentID + "'", connection);
-            using (MySqlDataReader MyReader = command.ExecuteReader())
+            try
             {
-                while (MyReader.Read())
+                command = new MySqlCommand("SELECT specificcharacteristics.CharacteristicID FROM specificcharacteristics WHERE specificcharacteristics.GoodsID = '" + componentID + "' AND specificcharacteristics.CharacteristicID = '" + characteristicID + "'", connection);
+                using (MySqlDataReader MyReader = command.ExecuteReader())
                 {
-                    tempCharacteristicID = MyReader.GetInt32(0);
+                    while (MyReader.Read())
+                    {
+                        tempCharacteristicID = MyReader.GetInt32(0);
+                    }
+                    MyReader.Close();
                 }
-                MyReader.Close();
             }
-            if (defaulCharacteristicID != 0)
+            catch
             {
-                if (tempCharacteristicID != 0)
+            }
+            if (defaultCharacteristicID != 0)
+            {
+                if (tempCharacteristicID == characteristicID)
                 {
-                    command = new MySqlCommand("UPDATE specificcharacteristics SET specificcharacteristics.CharacteristicID = '" + characteristicID + "', specificcharacteristics.SpecificCharacteristicValue = @SpecValue, " +
-                                               "specificcharacteristics.DefaultCharacteristicID = '" + defaulCharacteristicID + "' WHERE specificcharacteristics.GoodsID = '" + componentID + "'", connection);
+                    command = new MySqlCommand("UPDATE specificcharacteristics SET specificcharacteristics.SpecificCharacteristicValue = @SpecValue, " +
+                                               "specificcharacteristics.DefaultCharacteristicID = '" + defaultCharacteristicID + "' WHERE specificcharacteristics.GoodsID = '" + componentID + "' AND specificcharacteristics.CharacteristicID = '" + characteristicID + "'", connection);
                     command.Parameters.AddWithValue("@SpecValue", null);
                     command.ExecuteNonQuery();
                 }
                 else
                 {
                     command = new MySqlCommand("INSERT INTO specificcharacteristics (specificcharacteristics.CharacteristicID, specificcharacteristics.DefaultCharacteristicID, specificcharacteristics.GoodsID) VALUES " +
-                                               "('" + characteristicID + "', '" + defaulCharacteristicID + "', '" + componentID + "')", connection);
+                                               "('" + characteristicID + "', '" + defaultCharacteristicID + "', '" + componentID + "')", connection);
                     command.ExecuteNonQuery();
                 }
             }
             else
             {
-                if (tempCharacteristicID != 0)
+                if (tempCharacteristicID == characteristicID)
                 {
-                    command = new MySqlCommand("UPDATE specificcharacteristics SET specificcharacteristics.CharacteristicID = '" + characteristicID + "', specificcharacteristics.SpecificCharacteristicValue = '" + characteristicValueTB.Text + "', " +
-                                               "specificcharacteristics.DefaultCharacteristicID = @DefaultID WHERE specificcharacteristics.GoodsID = '" + componentID + "'", connection);
+                    command = new MySqlCommand("UPDATE specificcharacteristics SET specificcharacteristics.SpecificCharacteristicValue = '" + characteristicValueTB.Text + "', " +
+                                               "specificcharacteristics.DefaultCharacteristicID = @DefaultID WHERE specificcharacteristics.GoodsID = '" + componentID + "'AND specificcharacteristics.CharacteristicID = '" + characteristicID + "'", connection);
                     command.Parameters.AddWithValue("@DefaultID", null);
                     command.ExecuteNonQuery();
                 }
-                else if (characteristicID != 0)
+                else
                 {
                     command = new MySqlCommand("INSERT INTO specificcharacteristics (specificcharacteristics.CharacteristicID, specificcharacteristics.SpecificCharacteristicValue, specificcharacteristics.GoodsID) VALUES " +
                                                "('" + characteristicID + "', '" + characteristicValueTB.Text + "', '" + componentID + "')", connection);
@@ -209,7 +215,10 @@ namespace Client
             connection.Close();
             ChangeCharacteristic_Load(null, null);
             characteristicValueTB.Clear();
-        }
+            characteristicID = 0;
+            defaultCharacteristicID = 0;
+            warrantyID = 0;
+    }
 
         private void warrantyPeriodCB_SelectedIndexChanged(object sender, EventArgs e)
         {

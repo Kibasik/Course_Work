@@ -120,12 +120,6 @@
   <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
   </metadata>
-  <metadata name="dataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>136, 17</value>
-  </metadata>
-  <metadata name="suppliersList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="suppliersList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -137,9 +131,9 @@
   </metadata>
   <data name="suppliersReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2018 01:24:44" ReportInfo.Modified="06/03/2018 15:15:06" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/29/2018 01:24:44" ReportInfo.Modified="06/04/2018 14:08:58" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3w4V2zv3acRkuFIMvwXhW1P"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wN08zKl3lQPS0sWOyzYeCG"&gt;
       &lt;TableDataSource Name="Table" Alias="SupplyStructure" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  supply.SupplyDate,&amp;#13;&amp;#10;  supplystructure.GoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsCost,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  suppliers.SuppliersID&amp;#13;&amp;#10;FROM supply&amp;#13;&amp;#10;  INNER JOIN suppliers&amp;#13;&amp;#10;    ON supply.SuppliersID = suppliers.SuppliersID&amp;#13;&amp;#10;  INNER JOIN supplystructure&amp;#13;&amp;#10;    ON supplystructure.SupplyID = supply.SupplyID&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON supplystructure.GoodsID = goodscatalog.GoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&amp;#13;&amp;#10;GROUP BY supply.SupplyDate,&amp;#13;&amp;#10;         goodscatalog.GoodsCost,&amp;#13;&amp;#10;         supplystructure.GoodsAmount,&amp;#13;&amp;#10;         goodscatalog.GoodsName,&amp;#13;&amp;#10;         goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;         suppliers.SuppliersID"&gt;
         &lt;Column Name="SupplyDate" DataType="System.DateTime" Format="Date"/&gt;
         &lt;Column Name="GoodsAmount" DataType="System.Int32"/&gt;
@@ -153,30 +147,32 @@
     &lt;Parameter Name="SuppliersName" DataType="System.String"/&gt;
     &lt;Parameter Name="SuppliersID" DataType="System.Int32"/&gt;
     &lt;Parameter Name="Cost" DataType="System.Decimal" Expression="[SupplyStructure.GoodsAmount] * [SupplyStructure.GoodsCost]"/&gt;
+    &lt;Parameter Name="BeginDate" DataType="System.DateTime"/&gt;
+    &lt;Parameter Name="EndDate" DataType="System.DateTime"/&gt;
   &lt;/Dictionary&gt;
   &lt;ReportPage Name="Page1"&gt;
     &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25"&gt;
       &lt;TextObject Name="Text1" Left="226.8" Top="9.45" Width="236.25" Height="28.35" Text="[SuppliersName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/&gt;
     &lt;/ReportTitleBand&gt;
-    &lt;PageHeaderBand Name="PageHeader1" Top="50.45" Width="718.2" Height="47.25"&gt;
+    &lt;PageHeaderBand Name="PageHeader1" Top="51.25" Width="718.2" Height="47.25"&gt;
       &lt;TextObject Name="Text6" Top="9.45" Width="718.2" Height="28.35" Fill.Color="DarkGray" HorzAlign="Right" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
-      &lt;TextObject Name="Text3" Left="538.65" Top="9.45" Width="94.5" Height="28.35" Text="КОЛ-ВО" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text3" Left="538.65" Top="9.45" Width="85.05" Height="28.35" Text="КОЛ-ВО" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
       &lt;TextObject Name="Text4" Left="463.05" Top="9.45" Width="75.6" Height="28.35" Text="ЦЕНА" HorzAlign="Right" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
-      &lt;TextObject Name="Text5" Left="633.15" Top="9.45" Width="85.05" Height="28.35" Text="СУММА" HorzAlign="Right" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
+      &lt;TextObject Name="Text5" Left="623.7" Top="9.45" Width="94.5" Height="28.35" Text="СУММА" HorzAlign="Right" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
       &lt;TextObject Name="Text2" Top="9.45" Width="463.05" Height="28.35" Text="НАИМЕНОВАНИЕ" VertAlign="Center" Font="Arial, 14pt, style=Bold"/&gt;
     &lt;/PageHeaderBand&gt;
-    &lt;GroupHeaderBand Name="GroupHeader1" Top="100.9" Width="718.2" Height="37.8" Condition="[SupplyStructure.SupplyDate]"&gt;
+    &lt;GroupHeaderBand Name="GroupHeader1" Top="102.5" Width="718.2" Height="37.8" Condition="[SupplyStructure.SupplyDate]"&gt;
       &lt;TextObject Name="Text7" Top="9.45" Width="718.2" Height="18.9" Fill.Color="LightGray" Text="[[SupplyStructure.SupplyDate]]" Format="Date" Format.Format="dd.MM.yyyy" VertAlign="Center" Font="Arial, 12pt, style=Bold"/&gt;
-      &lt;DataBand Name="Data1" Top="141.9" Width="718.2" Height="37.8" DataSource="Table" Filter="[SupplyStructure.SuppliersID] == [SuppliersID]"&gt;
+      &lt;DataBand Name="Data1" Top="144.3" Width="718.2" Height="35.91" DataSource="Table" Filter="[SupplyStructure.SuppliersID] == [SuppliersID] &amp;amp;&amp;amp; [SupplyStructure.SupplyDate] &amp;gt; [BeginDate] &amp;amp;&amp;amp; [SupplyStructure.SupplyDate] &amp;lt; [EndDate]"&gt;
         &lt;TextObject Name="Text8" Top="9.45" Width="198.45" Height="18.9" Text="[SupplyStructure.GoodsManufacturerName]" VertAlign="Center" Font="Arial, 9pt"/&gt;
         &lt;TextObject Name="Text9" Left="198.45" Top="9.45" Width="264.6" Height="18.9" Text="[SupplyStructure.GoodsName]" VertAlign="Center" Font="Arial, 9pt"/&gt;
         &lt;TextObject Name="Text10" Left="463.05" Top="9.45" Width="75.6" Height="18.9" Text="[SupplyStructure.GoodsCost]" Format="Currency" Format.UseLocale="true" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Arial, 9pt" Trimming="EllipsisCharacter"/&gt;
-        &lt;TextObject Name="Text11" Left="538.65" Top="9.45" Width="94.5" Height="18.9" Text="[SupplyStructure.GoodsAmount]" VertAlign="Center" Font="Arial, 9pt"/&gt;
-        &lt;TextObject Name="Text12" Left="633.15" Top="9.45" Width="85.05" Height="18.9" Text="[Cost]" Format="Currency" Format.UseLocale="true" VertAlign="Center" Font="Arial, 9pt"/&gt;
+        &lt;TextObject Name="Text11" Left="538.65" Top="9.45" Width="85.05" Height="18.9" Text="[SupplyStructure.GoodsAmount]" VertAlign="Center" Font="Arial, 9pt"/&gt;
+        &lt;TextObject Name="Text12" Left="623.7" Top="9.45" Width="94.5" Height="18.9" Text="[Cost]" Format="Currency" Format.UseLocale="true" VertAlign="Center" Font="Arial, 9pt"/&gt;
       &lt;/DataBand&gt;
-      &lt;GroupFooterBand Name="GroupFooter1" Top="182.9" Width="718.2" Height="9.45"/&gt;
+      &lt;GroupFooterBand Name="GroupFooter1" Top="184.21" Width="718.2" Height="9.45"/&gt;
     &lt;/GroupHeaderBand&gt;
-    &lt;PageFooterBand Name="PageFooter1" Top="195.55" Width="718.2" Height="9.45"/&gt;
+    &lt;PageFooterBand Name="PageFooter1" Top="197.66" Width="718.2" Height="9.45"/&gt;
   &lt;/ReportPage&gt;
 &lt;/Report&gt;
 </value>
