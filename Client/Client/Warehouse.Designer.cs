@@ -227,9 +227,9 @@
             this.groupBox2.Controls.Add(this.shopShowAllButton);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.goodsManufacturerTB);
-            this.groupBox2.Location = new System.Drawing.Point(568, 6);
+            this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 265);
+            this.groupBox2.Size = new System.Drawing.Size(756, 63);
             this.groupBox2.TabIndex = 58;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Фильтрация";
@@ -255,7 +255,7 @@
             // 
             // manufacturerFilterButton
             // 
-            this.manufacturerFilterButton.Location = new System.Drawing.Point(51, 98);
+            this.manufacturerFilterButton.Location = new System.Drawing.Point(394, 29);
             this.manufacturerFilterButton.Name = "manufacturerFilterButton";
             this.manufacturerFilterButton.Size = new System.Drawing.Size(100, 26);
             this.manufacturerFilterButton.TabIndex = 54;
@@ -265,7 +265,7 @@
             // 
             // shopShowAllButton
             // 
-            this.shopShowAllButton.Location = new System.Drawing.Point(9, 229);
+            this.shopShowAllButton.Location = new System.Drawing.Point(565, 28);
             this.shopShowAllButton.Name = "shopShowAllButton";
             this.shopShowAllButton.Size = new System.Drawing.Size(185, 27);
             this.shopShowAllButton.TabIndex = 57;
@@ -276,7 +276,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 56);
+            this.label5.Location = new System.Drawing.Point(200, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 13);
             this.label5.TabIndex = 55;
@@ -284,7 +284,7 @@
             // 
             // goodsManufacturerTB
             // 
-            this.goodsManufacturerTB.Location = new System.Drawing.Point(9, 72);
+            this.goodsManufacturerTB.Location = new System.Drawing.Point(203, 33);
             this.goodsManufacturerTB.Name = "goodsManufacturerTB";
             this.goodsManufacturerTB.Size = new System.Drawing.Size(185, 20);
             this.goodsManufacturerTB.TabIndex = 56;
@@ -326,10 +326,10 @@
             this.goodsIDDataGridViewTextBoxColumn1,
             this.goodsAmountDataGridViewTextBoxColumn});
             this.goodsDGV.DataSource = this.dataTableBindingSource1;
-            this.goodsDGV.Location = new System.Drawing.Point(6, 6);
+            this.goodsDGV.Location = new System.Drawing.Point(6, 75);
             this.goodsDGV.Name = "goodsDGV";
             this.goodsDGV.ReadOnly = true;
-            this.goodsDGV.Size = new System.Drawing.Size(556, 226);
+            this.goodsDGV.Size = new System.Drawing.Size(756, 157);
             this.goodsDGV.TabIndex = 3;
             // 
             // typeCategoryNameDataGridViewTextBoxColumn1

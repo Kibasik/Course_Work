@@ -36,17 +36,17 @@
             // 
             // descriptionRTB
             // 
-            this.descriptionRTB.Location = new System.Drawing.Point(12, 235);
+            this.descriptionRTB.Location = new System.Drawing.Point(295, 25);
             this.descriptionRTB.Name = "descriptionRTB";
             this.descriptionRTB.ReadOnly = true;
-            this.descriptionRTB.Size = new System.Drawing.Size(600, 354);
+            this.descriptionRTB.Size = new System.Drawing.Size(317, 202);
             this.descriptionRTB.TabIndex = 1;
             this.descriptionRTB.Text = "";
             // 
             // goodsNameLabel
             // 
             this.goodsNameLabel.AutoSize = true;
-            this.goodsNameLabel.Location = new System.Drawing.Point(226, 9);
+            this.goodsNameLabel.Location = new System.Drawing.Point(12, 9);
             this.goodsNameLabel.Name = "goodsNameLabel";
             this.goodsNameLabel.Size = new System.Drawing.Size(170, 13);
             this.goodsNameLabel.TabIndex = 2;
@@ -54,7 +54,7 @@
             // 
             // goodsImagePB
             // 
-            this.goodsImagePB.Location = new System.Drawing.Point(168, 25);
+            this.goodsImagePB.Location = new System.Drawing.Point(12, 25);
             this.goodsImagePB.Name = "goodsImagePB";
             this.goodsImagePB.Size = new System.Drawing.Size(277, 202);
             this.goodsImagePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -65,13 +65,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 601);
+            this.ClientSize = new System.Drawing.Size(624, 240);
             this.Controls.Add(this.goodsImagePB);
             this.Controls.Add(this.goodsNameLabel);
             this.Controls.Add(this.descriptionRTB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(640, 640);
             this.Name = "Description";
             this.ShowIcon = false;
             this.Text = "Описание";

@@ -134,7 +134,7 @@
   </metadata>
   <data name="warehouseReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 17:17:22" ReportInfo.Modified="06/01/2018 15:37:27" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+&lt;Report ScriptLanguage="Vb" ReportInfo.Created="05/22/2018 17:17:22" ReportInfo.Modified="06/04/2018 00:32:49" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;ScriptText&gt;Imports System
 Imports System.Collections
 Imports System.Collections.Generic
@@ -156,7 +156,7 @@ Namespace FastReport
 End Namespace
 &lt;/ScriptText&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wcg4HU/Yl9WmvN03gxx5sF"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3w7fhTWGJ+LOg5pBoIAJAjt"&gt;
       &lt;TableDataSource Name="Table" Alias="Warehouse" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  categorygoods.CategoryGoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  warehouse.WarehouseGoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsID&amp;#13;&amp;#10;FROM warehouse&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON warehouse.GoodsID = goodscatalog.GoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID&amp;#13;&amp;#10;  INNER JOIN categorygoods&amp;#13;&amp;#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID"&gt;
         &lt;Column Name="CategoryGoodsName" DataType="System.String"/&gt;
         &lt;Column Name="GoodsManufacturerName" DataType="System.String"/&gt;
@@ -200,9 +200,6 @@ End Namespace
   <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
-  <metadata name="dataTableBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
   <metadata name="warehouseGoods.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>781, 17</value>
   </metadata>
@@ -217,9 +214,9 @@ End Namespace
   </metadata>
   <data name="supplyStructureReport.ReportResourceString" xml:space="preserve">
     <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/26/2018 17:56:51" ReportInfo.Modified="06/01/2018 15:35:21" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/26/2018 17:56:51" ReportInfo.Modified="06/04/2018 00:30:14" ReportInfo.CreatorVersion="2018.3.10.0"&gt;
   &lt;Dictionary&gt;
-    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wvdrewf+i5EwJ+dIyRQyTA"&gt;
+    &lt;OdbcDataConnection Name="Connection" ConnectionString="rijcmlqDsfwzqmpop0DqfGfr49Br1BEBRTg6bCmgJFsVfVGp0qFPEObhd3hT7IFAJw4XsqVYmk56fnGKrcLO+UpGfNk7yovZ1WDCE4n41hnLNhwI3wsMLHgmApMcfCq4fufM0nY"&gt;
       &lt;TableDataSource Name="Table" Alias="Supply" DataType="System.Int32" Enabled="true" SelectCommand="SELECT&amp;#13;&amp;#10;  categorygoods.CategoryGoodsName,&amp;#13;&amp;#10;  goodsmanufacturer.GoodsManufacturerName,&amp;#13;&amp;#10;  goodscatalog.GoodsName,&amp;#13;&amp;#10;  supplystructure.GoodsAmount,&amp;#13;&amp;#10;  goodscatalog.GoodsCost,&amp;#13;&amp;#10;  supplystructure.SupplyID&amp;#13;&amp;#10;FROM supplystructure&amp;#13;&amp;#10;  INNER JOIN goodscatalog&amp;#13;&amp;#10;    ON supplystructure.GoodsID = goodscatalog.GoodsID&amp;#13;&amp;#10;  INNER JOIN categorygoods&amp;#13;&amp;#10;    ON goodscatalog.CategoryGoodsID = categorygoods.CategoryGoodsID&amp;#13;&amp;#10;  INNER JOIN goodsmanufacturer&amp;#13;&amp;#10;    ON goodscatalog.GoodsManufacturerID = goodsmanufacturer.GoodsManufacturerID"&gt;
         &lt;Column Name="CategoryGoodsName" DataType="System.String"/&gt;
         &lt;Column Name="GoodsManufacturerName" DataType="System.String"/&gt;

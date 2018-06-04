@@ -48,16 +48,16 @@
             // componentDescriptionRTB
             // 
             this.componentDescriptionRTB.BackColor = System.Drawing.SystemColors.Control;
-            this.componentDescriptionRTB.Location = new System.Drawing.Point(12, 236);
+            this.componentDescriptionRTB.Location = new System.Drawing.Point(261, 28);
             this.componentDescriptionRTB.Name = "componentDescriptionRTB";
-            this.componentDescriptionRTB.Size = new System.Drawing.Size(600, 353);
+            this.componentDescriptionRTB.Size = new System.Drawing.Size(351, 156);
             this.componentDescriptionRTB.TabIndex = 1;
             this.componentDescriptionRTB.Text = "";
             // 
             // componentNameLabel
             // 
             this.componentNameLabel.AutoSize = true;
-            this.componentNameLabel.Location = new System.Drawing.Point(314, 12);
+            this.componentNameLabel.Location = new System.Drawing.Point(258, 12);
             this.componentNameLabel.Name = "componentNameLabel";
             this.componentNameLabel.Size = new System.Drawing.Size(83, 13);
             this.componentNameLabel.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 601);
+            this.ClientSize = new System.Drawing.Size(624, 240);
             this.Controls.Add(this.changeImageButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.componentNameLabel);
@@ -95,7 +95,6 @@
             this.Controls.Add(this.componentPB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(640, 640);
             this.Name = "ChangeDescription";
             this.ShowIcon = false;
             this.Text = "Изменить описание";
